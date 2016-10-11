@@ -1,0 +1,7 @@
+#   Ignore these files
+*~
+*.bak
+*-cache.lib
+*-rescue.lib
+*.kicad_pcb-bak
+file[A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9].sch
