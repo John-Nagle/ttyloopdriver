@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name cp2102)(type KiCad)(uri "$(KIPRJMOD)/cp2102.pretty")(options "")(descr ""))
+  (lib (name Coilcraft)(type KiCad)(uri "$(KIPRJMOD)/Coilcraft.pretty")(options "")(descr ""))
+)
