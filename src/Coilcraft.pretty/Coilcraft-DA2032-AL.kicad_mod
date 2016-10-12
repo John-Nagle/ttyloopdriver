@@ -22,7 +22,7 @@
   (pad 10 smd rect (at 10.31 -1.25) (size 3.43 1.79) (layers F.Cu F.Paste F.Mask))
   (pad 11 smd rect (at 10.31 -3.75) (size 3.43 1.79) (layers F.Cu F.Paste F.Mask))
   (pad 12 smd rect (at 10.31 -6.25) (size 3.43 1.79) (layers F.Cu F.Paste F.Mask))
-  (model ${KIPRJMOD}/Coilcraft.pretty/SOIC-12_W.wrl
+  (model ${KIPRJMOD}/Coilcraft.3dshapes/SOIC-12_W.wrl
     (at (xyz 0 0 0))
     (scale (xyz 0.98 1.33 1))
     (rotate (xyz 0 0 90))
