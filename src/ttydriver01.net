@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch)
-    (date "Tue 11 Oct 2016 09:59:20 PM PDT")
+    (date "Wed 12 Oct 2016 01:49:23 PM PDT")
     (tool "Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -99,7 +99,7 @@
       (value "ZENER 120V")
       (footprint Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10)
       (fields
-        (field (name Part) 1N530BG))
+        (field (name Part) 1N5380BG))
       (libsource (lib device) (part ZENER))
       (sheetpath (names /) (tstamps /))
       (tstamp 57E5B55A))
@@ -405,10 +405,10 @@
         (pin (num 1) (name K) (type passive))
         (pin (num 2) (name A) (type passive)))))
   (libraries
-    (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
+    (library (logical conn)
+      (uri /usr/share/kicad/library/conn.lib))
     (library (logical ttypowerlib)
       (uri /home/john/projects/teletype/hardware/ttyloopdriver/src/ttypowerlib.lib))
     (library (logical ttydriver01-cache)
