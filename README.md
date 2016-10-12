@@ -8,6 +8,7 @@ WORK IN PROGRESS. NOT YET BUILT AND TESTED.
 This is a board to allow connecting antique Teletype machines to a computer through
 a USB port. It's for Teletype Model 14 and 15 machines, which use 60mA current
 loops.   This board needs no external power supply other than the USB port.
+This approach uses only about 1 watt of power. 
 
 
 # How it works
@@ -45,38 +46,39 @@ turns Q1 on and off. Turning Q1 off produces an inductive
 kick in T1, which has a 1:10 turns ratio.  This can produce
 over 120VDC, which is used to charge C2.  To limit the
 charge, D4, a 120V Zener diode, clamps the voltage
-to 120V.
+to 120V. Charging occurs during SPACE.
 
 When the input signal from the serial port (TxD) goes
-high, it triggers opto-isolator U4, which dumps the
-energy from C2 into the output for the Teletype machine.
+high (a SPACE to MARK transition) it triggers opto-isolator 
+U4, which dumps the energy from C2 into the output for the Teletype machine.
 This briefly provides 120V at 60mA into the expected 4 H load
 of a Teletype selector magnet, which is what the machine
 needs.  Once C2 has discharged, the switcher continues to
 run, but under the load of the 55 ohm selector magnet,
 can only produce a few volts. The component values are
 selected to provie about 60mA continuous in this mode.
+This holds the selector magnet in during the remainder of
+the MARK period.
 
 R1 and C3 are a filter for the inductive spikes from
 the Teletype selector magnet. D6 protects C2 against
-negative spikes from the selector magnet side.
+negative-going spikes from the selector magnet.
 
-On the keyboard side, an off the shelf 5V to 24V DC-DC
-converter produces enough voltage for Teletype keyboard
+On the keyboard side, U5, an very small 5V to 24V DC-DC
+converter, produces enough voltage for Teletype keyboard
 contacts, which may have oil or dirt on them.  A 5V
 logic level is known to be too weak for this.  Another
-opto-isolator isolates the keyboard from the logic
-level circuitry. (TBD).
+opto-isolator, U6, isolates the keyboard from the logic
+level circuitry.
 
-The Teletype side has full galvanic isolation from the
-USB port. 
+On the Teletype side, everything is isolated from ground and from the USB side.
 
 P1 is the Teletype connection. Pins 1 and 2 go to the
 printer, pins 3 and 4 go to the keyboard.
 
 P2 is a connection for a current meter.  A 100mA meter
 is suggested. If a meter is not used, this plug must
-be jumpered.  
+be jumpered.
 
 P3 is a connection for a solid state relay (5V in) to
 turn on the Teletype motor.  Use of this is optional.
