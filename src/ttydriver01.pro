@@ -1,4 +1,4 @@
-update=Tue 11 Oct 2016 03:16:33 PM PDT
+update=Tue 11 Oct 2016 08:31:54 PM PDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,3 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
+LibName30=ttypowerlib

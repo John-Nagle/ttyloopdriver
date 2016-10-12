@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source /home/john/projects/teletype/hardware/ttydriver/ttydriver01.sch)
-    (date "Tue 11 Oct 2016 12:09:43 PM PDT")
+    (source /home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch)
+    (date "Tue 11 Oct 2016 08:33:46 PM PDT")
     (tool "Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -389,14 +389,14 @@
         (pin (num 1) (name K) (type passive))
         (pin (num 2) (name A) (type passive)))))
   (libraries
-    (library (logical ttypowerlib)
-      (uri /home/john/projects/teletype/hardware/footprints/ttypowerlib.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
     (library (logical conn)
       (uri /usr/share/kicad/library/conn.lib))
+    (library (logical ttypowerlib)
+      (uri /home/john/projects/teletype/hardware/ttyloopdriver/src/ttypowerlib.lib))
     (library (logical ttydriver01-cache)
-      (uri /home/john/projects/teletype/hardware/ttydriver/ttydriver01-cache.lib)))
+      (uri /home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01-cache.lib)))
   (nets
     (net (code 1) (name "Net-(D4-Pad1)")
       (node (ref D6) (pin 1))
