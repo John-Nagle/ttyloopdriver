@@ -1,6 +1,7 @@
 #   Ignore these files
 *~
 *.bak
+*.bck
 *-cache.lib
 *-rescue.lib
 *.kicad_pcb-bak

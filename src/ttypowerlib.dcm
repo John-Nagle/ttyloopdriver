@@ -1,3 +1,7 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP IE0524S
+D DC-DC power supply 5V to 24V
+$ENDCMP
+#
 #End Doc Library
