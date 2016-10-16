@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch)
-    (date "Sat 15 Oct 2016 01:03:50 PM PDT")
+    (date "Sun 16 Oct 2016 12:13:55 PM PDT")
     (tool "Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -452,12 +452,12 @@
   (libraries
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
-    (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib))
     (library (logical ttypowerlib)
       (uri /home/john/projects/teletype/hardware/ttyloopdriver/src/ttypowerlib.lib))
     (library (logical ttydriver01-cache)
-      (uri /home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01-cache.lib)))
+      (uri /home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01-cache.lib))
+    (library (logical conn)
+      (uri /usr/share/kicad/library/conn.lib)))
   (nets
     (net (code 1) (name "Net-(Q1-Pad3)")
       (node (ref Q1) (pin 3))
