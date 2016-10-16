@@ -188,7 +188,7 @@
   )
 
   (module Capacitors_ThroughHole:C_Radial_D5_L6_P2.5 (layer F.Cu) (tedit 0) (tstamp 57F95726)
-    (at 85.09 109.22 90)
+    (at 85.09 110.49 90)
     (descr "Radial Electrolytic Capacitor Diameter 5mm x Length 6mm, Pitch 2.5mm")
     (tags "Electrolytic Capacitor")
     (path /57FD3936)
@@ -244,7 +244,7 @@
   )
 
   (module Capacitors_ThroughHole:C_Disc_D3_P2.5 (layer F.Cu) (tedit 0) (tstamp 57F9572C)
-    (at 73.66 139.7 180)
+    (at 73.66 138.43 180)
     (descr "Capacitor 3mm Disc, Pitch 2.5mm")
     (tags Capacitor)
     (path /57E5B66D)
@@ -359,7 +359,7 @@
   )
 
   (module Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10 (layer F.Cu) (tedit 58031BED) (tstamp 57F95744)
-    (at 73.66 121.92 180)
+    (at 73.66 119.38 180)
     (descr "Diode, DO-35,  SOD27, Horizontal, RM 10mm")
     (tags "Diode, DO-35, SOD27, Horizontal, RM 10mm, 1N4148,")
     (path /57E5B382)
@@ -421,7 +421,7 @@
   )
 
   (module Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10 (layer F.Cu) (tedit 58031BDF) (tstamp 57F95750)
-    (at 73.66 118.11 180)
+    (at 73.66 123.19 180)
     (descr "Diode, DO-35,  SOD27, Horizontal, RM 10mm")
     (tags "Diode, DO-35, SOD27, Horizontal, RM 10mm, 1N4148,")
     (path /57E5B55A)
@@ -483,7 +483,7 @@
   )
 
   (module Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10 (layer F.Cu) (tedit 58031BF5) (tstamp 57F9575C)
-    (at 73.66 125.73 180)
+    (at 73.66 127 180)
     (descr "Diode, DO-35,  SOD27, Horizontal, RM 10mm")
     (tags "Diode, DO-35, SOD27, Horizontal, RM 10mm, 1N4148,")
     (path /57E70158)
@@ -706,7 +706,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 58031A71) (tstamp 57F957AA)
-    (at 158.75 97.79)
+    (at 154.94 97.79)
     (descr "Resistor, Axial,  RM 10mm, 1/3W")
     (tags "Resistor Axial RM 10mm 1/3W")
     (path /57F4497E)
@@ -858,7 +858,7 @@
   )
 
   (module cp2102:CP2102-breakout (layer F.Cu) (tedit 57F327F7) (tstamp 57F957F8)
-    (at 100.33 82.55 180)
+    (at 100.33 83.82 180)
     (path /57F094DE)
     (fp_text reference U3 (at 0 1.75 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -955,7 +955,7 @@
   )
 
   (module Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight (layer F.Cu) (tedit 56C6219D) (tstamp 57FA9546)
-    (at 77.47 107.95 180)
+    (at 77.47 109.22 180)
     (descr "Connector Headers with Friction Lock, 22-27-2041, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf")
     (tags "connector molex kk_6410 22-27-2041")
     (path /57F44672)
@@ -1004,7 +1004,7 @@
   )
 
   (module Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight (layer F.Cu) (tedit 56C6219C) (tstamp 57FA954D)
-    (at 63.5 107.95 180)
+    (at 63.5 109.22 180)
     (descr "Connector Headers with Friction Lock, 22-27-2021, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf")
     (tags "connector molex kk_6410 22-27-2021")
     (path /57F43FF1)
@@ -1043,7 +1043,7 @@
   )
 
   (module Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight (layer F.Cu) (tedit 56C6219C) (tstamp 57FA9552)
-    (at 168.91 115.57 90)
+    (at 160.02 115.57 90)
     (descr "Connector Headers with Friction Lock, 22-27-2021, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf")
     (tags "connector molex kk_6410 22-27-2021")
     (path /57F0B03E)
@@ -1082,14 +1082,14 @@
   )
 
   (module Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5 (layer F.Cu) (tedit 0) (tstamp 57FA9CC1)
-    (at 115.57 105.41 180)
+    (at 123.19 104.14)
     (descr "Radial Electrolytic Capacitor Diameter 8mm x Length 11.5mm, Pitch 3.5mm")
     (tags "Electrolytic Capacitor")
     (path /57E5B094)
-    (fp_text reference C1 (at 1.75 -5.3 180) (layer F.SilkS)
+    (fp_text reference C1 (at 1.75 -5.3) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 220uf (at 1.75 5.3 180) (layer F.Fab)
+    (fp_text value 220uf (at 1.75 5.3) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.825 -3.999) (end 1.825 3.999) (layer F.SilkS) (width 0.15))
@@ -1139,9 +1139,9 @@
     (fp_circle (center 3.5 0) (end 3.5 -1) (layer F.SilkS) (width 0.15))
     (fp_circle (center 1.75 0) (end 1.75 -4.0375) (layer F.SilkS) (width 0.15))
     (fp_circle (center 1.75 0) (end 1.75 -4.3) (layer F.CrtYd) (width 0.05))
-    (pad 2 thru_hole circle (at 3.5 0 180) (size 1.3 1.3) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
+    (pad 2 thru_hole circle (at 3.5 0) (size 1.3 1.3) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 2 GND))
-    (pad 1 thru_hole rect (at 0 0 180) (size 1.3 1.3) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
+    (pad 1 thru_hole rect (at 0 0) (size 1.3 1.3) (drill 0.8) (layers *.Cu *.Mask F.SilkS)
       (net 24 "Net-(C1-Pad1)"))
     (model Capacitors_ThroughHole.3dshapes/C_Radial_D8_L11.5_P3.5.wrl
       (at (xyz 0 0 0))
@@ -1306,7 +1306,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 58031A80) (tstamp 58002A51)
-    (at 158.75 105.41)
+    (at 154.94 105.41)
     (descr "Resistor, Axial,  RM 10mm, 1/3W")
     (tags "Resistor Axial RM 10mm 1/3W")
     (path /58003C54)
@@ -1338,7 +1338,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 58031A7B) (tstamp 58002A57)
-    (at 158.75 101.6)
+    (at 154.94 101.6)
     (descr "Resistor, Axial,  RM 10mm, 1/3W")
     (tags "Resistor Axial RM 10mm 1/3W")
     (path /58003DC1)
@@ -1370,7 +1370,7 @@
   )
 
   (module Connectors_Molex:Molex_KK-6410-10_10x2.54mm_Straight (layer F.Cu) (tedit 56C6219D) (tstamp 58006B7D)
-    (at 168.91 142.24 90)
+    (at 160.02 142.24 90)
     (descr "Connector Headers with Friction Lock, 22-27-2101, http://www.molex.com/pdm_docs/sd/022272021_sd.pdf")
     (tags "connector molex kk_6410 22-27-2101")
     (path /58006AF9)
@@ -1455,7 +1455,7 @@
   )
 
   (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 58031C0B) (tstamp 58028C62)
-    (at 73.66 129.54 180)
+    (at 73.66 130.81 180)
     (descr "Resistor, Axial,  RM 10mm, 1/3W")
     (tags "Resistor Axial RM 10mm 1/3W")
     (path /58029311)
@@ -1535,7 +1535,8 @@
     (fill (arc_segments 16) (thermal_gap 1) (thermal_bridge_width 1))
     (polygon
       (pts
-        (xy 55.88 152.4) (xy 175.26 152.4) (xy 175.26 147.32) (xy 55.88 147.32)
+        (xy 95.25 147.32) (xy 175.26 147.32) (xy 175.26 152.4) (xy 55.88 152.4) (xy 55.88 104.14)
+        (xy 95.25 104.14) (xy 95.25 147.32)
       )
     )
   )
