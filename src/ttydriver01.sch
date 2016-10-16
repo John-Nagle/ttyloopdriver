@@ -290,7 +290,7 @@ F 3 "" H 5300 3700 50  0000 C CNN
 	1    5300 3700
 	1    0    0    -1  
 $EndComp
-Text Notes 5850 4300 0    60   ~ 0
+Text Notes 5750 4450 0    60   ~ 0
 100KHz 25% duty cycle
 Text Notes 9900 2200 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
@@ -319,9 +319,7 @@ F 3 "" H 3300 2550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 2600 4250 0    60   ~ 0
-/SUSPEND
-Text Label 3200 2900 0    60   ~ 0
-Vcc
+ENABLE
 $Comp
 L G3VM401E U4
 U 1 1 57EF52FB
@@ -408,12 +406,12 @@ RxD
 $Comp
 L CONN_01X02 P2
 U 1 1 57F43FF1
-P 8700 2450
-F 0 "P2" H 8700 2600 50  0000 C CNN
-F 1 "CONN_01X02" V 8800 2450 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8700 2450 50  0001 C CNN
-F 3 "" H 8700 2450 50  0000 C CNN
-	1    8700 2450
+P 8700 2400
+F 0 "P2" H 8700 2550 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 2400 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 8700 2400 50  0001 C CNN
+F 3 "" H 8700 2400 50  0000 C CNN
+	1    8700 2400
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -676,8 +674,6 @@ Wire Wire Line
 Wire Wire Line
 	4300 2500 4300 3100
 Wire Wire Line
-	7200 2650 8650 2650
-Wire Wire Line
 	4850 4650 4850 1500
 Connection ~ 4850 3100
 Wire Wire Line
@@ -711,15 +707,11 @@ Wire Wire Line
 	2500 3300 2700 3300
 Wire Wire Line
 	1000 1600 1000 4500
-Wire Wire Line
-	8750 2650 8750 3100
 Connection ~ 4850 2950
 Wire Wire Line
 	9500 1400 9500 1850
 Wire Wire Line
 	9500 1400 7650 1400
-Wire Wire Line
-	8750 2650 9100 2650
 Wire Wire Line
 	9100 2650 9100 2050
 Wire Wire Line
@@ -844,4 +836,21 @@ Connection ~ 7900 3100
 Wire Wire Line
 	7900 3600 7900 3500
 Connection ~ 7900 3600
+Wire Wire Line
+	8750 2600 8750 3100
+Wire Wire Line
+	9100 2650 8750 2650
+Connection ~ 8750 2650
+Wire Wire Line
+	7200 2650 8650 2650
+Wire Wire Line
+	8650 2650 8650 2600
+Text Label 9500 3600 0    60   ~ 0
+HVNEG
+Text Label 9100 2650 0    60   ~ 0
+HVPOS
+Text Label 5750 4350 0    60   ~ 0
+OSC
+Text Label 4850 2650 0    60   ~ 0
+VPWR
 $EndSCHEMATC
