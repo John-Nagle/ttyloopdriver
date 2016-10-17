@@ -185,7 +185,10 @@ P 6000 5600
 F 0 "D3" V 6050 5700 50  0000 L CNN
 F 1 "1N4148" V 5950 5700 50  0000 L CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" V 6000 5600 50  0001 C CNN
-F 3 "" V 6000 5600 50  0000 C CNN
+F 3 "http://www.digikey.com/product-detail/en/fairchild-semiconductor/1N4148TR/1N4148FSTR-ND/458811" V 6000 5600 50  0001 C CNN
+F 4 "Fairchild" V 6000 5600 60  0001 C CNN "Mfgr"
+F 5 "1N4148TR" V 6000 5600 60  0001 C CNN "Part"
+F 6 "1N4148FSTR-ND" V 6000 5600 60  0001 C CNN "Digikey"
 	1    6000 5600
 	0    -1   -1   0   
 $EndComp
@@ -210,7 +213,10 @@ P 5000 2950
 F 0 "D1" H 5000 3050 50  0000 C CNN
 F 1 "D" H 5000 2850 50  0000 C CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 5000 2950 50  0001 C CNN
-F 3 "" H 5000 2950 50  0000 C CNN
+F 3 "http://www.fairchildsemi.com/datasheets/1N/1N5817.pdf" H 5000 2950 50  0001 C CNN
+F 4 "1N5817FSTR-ND" H 5000 2950 60  0001 C CNN "Digikey"
+F 5 "Fairchild" H 5000 2950 60  0001 C CNN "Mfgr"
+F 6 "1N5817" H 5000 2950 60  0001 C CNN "Part"
 	1    5000 2950
 	-1   0    0    1   
 $EndComp
@@ -236,6 +242,9 @@ F 0 "D2" H 7350 3200 50  0000 C CNN
 F 1 "D" H 7350 3000 50  0000 C CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 7350 3100 50  0001 C CNN
 F 3 "" H 7350 3100 50  0000 C CNN
+F 4 "1N4004FSTR-ND" H 7350 3100 60  0001 C CNN "Digikey"
+F 5 "Fairchild" H 7350 3100 60  0001 C CNN "Mfgr"
+F 6 "1N4004" H 7350 3100 60  0001 C CNN "Part"
 	1    7350 3100
 	-1   0    0    1   
 $EndComp
@@ -312,7 +321,10 @@ P 8150 3100
 F 0 "D6" H 8150 3200 50  0000 C CNN
 F 1 "D" H 8150 3000 50  0000 C CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8150 3100 50  0001 C CNN
-F 3 "" H 8150 3100 50  0000 C CNN
+F 3 "https://www.fairchildsemi.com/datasheets/1N/1N4007.pdf" H 8150 3100 50  0001 C CNN
+F 4 "1N4004" H 8150 3100 60  0001 C CNN "Part"
+F 5 "Fairchild" H 8150 3100 60  0001 C CNN "Mfgr"
+F 6 "1N4004FSTR-ND" H 8150 3100 60  0001 C CNN "Digikey"
 	1    8150 3100
 	-1   0    0    -1  
 $EndComp
