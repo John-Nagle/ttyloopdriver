@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch)
-    (date "Sun 16 Oct 2016 04:15:53 PM PDT")
+    (date "Sun 16 Oct 2016 06:01:12 PM PDT")
     (tool "Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -171,7 +171,7 @@
       (tstamp 57F094DE))
     (comp (ref Q1)
       (value IRLB8721PBF)
-      (footprint Power_Integrations:TO-220)
+      (footprint DC-DC:TO-220-HV)
       (libsource (lib device) (part Q_NMOS_SDG))
       (sheetpath (names /) (tstamps /))
       (tstamp 57F9D592))
