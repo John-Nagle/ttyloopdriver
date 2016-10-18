@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch</source>
-    <date>Mon 17 Oct 2016 01:10:33 PM PDT</date>
+    <date>Mon 17 Oct 2016 03:32:44 PM PDT</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -78,6 +78,12 @@
     <comp ref="D3">
       <value>1N4148</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <datasheet>http://www.digikey.com/product-detail/en/fairchild-semiconductor/1N4148TR/1N4148FSTR-ND/458811</datasheet>
+      <fields>
+        <field name="Mfgr">Fairchild</field>
+        <field name="Part">1N4148TR</field>
+        <field name="Digikey">1N4148FSTR-ND</field>
+      </fields>
       <libsource lib="device" part="D_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F5</tstamp>
@@ -85,6 +91,12 @@
     <comp ref="U1">
       <value>NE555</value>
       <footprint>Housings_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ne555.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">TI</field>
+        <field name="Part">NE555P</field>
+        <field name="Digikey">296-1411-5-ND</field>
+      </fields>
       <libsource lib="ttydriver01-cache" part="NE555"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F4</tstamp>
@@ -92,6 +104,12 @@
     <comp ref="D1">
       <value>D</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <datasheet>http://www.fairchildsemi.com/datasheets/1N/1N5817.pdf</datasheet>
+      <fields>
+        <field name="Digikey">1N5817FSTR-ND</field>
+        <field name="Mfgr">Fairchild</field>
+        <field name="Part">1N5817</field>
+      </fields>
       <libsource lib="device" part="D"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5AF6F</tstamp>
@@ -99,8 +117,11 @@
     <comp ref="C1">
       <value>220uf</value>
       <footprint>Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5</footprint>
+      <datasheet>http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW</datasheet>
       <fields>
         <field name="DigiKey">P5166-ND</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ECA-1VM221</field>
       </fields>
       <libsource lib="device" part="CP"/>
       <sheetpath names="/" tstamps="/"/>
@@ -109,6 +130,11 @@
     <comp ref="D2">
       <value>D</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <fields>
+        <field name="Digikey">1N4004FSTR-ND</field>
+        <field name="Mfgr">Fairchild</field>
+        <field name="Part">1N4004</field>
+      </fields>
       <libsource lib="device" part="D"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5B382</tstamp>
@@ -116,8 +142,11 @@
     <comp ref="D4">
       <value>ZENER 120V</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF</datasheet>
       <fields>
         <field name="Part">1N5380BG</field>
+        <field name="Mfgr">ON</field>
+        <field name="Digikey">1N5380BGOS-ND</field>
       </fields>
       <libsource lib="device" part="ZENER"/>
       <sheetpath names="/" tstamps="/"/>
@@ -140,6 +169,10 @@
     <comp ref="T1">
       <value>Coilcraft-DA2032</value>
       <footprint>Coilcraft:Coilcraft-DA2032-AL</footprint>
+      <fields>
+        <field name="Mfgr">Coilcraft</field>
+        <field name="Part">DA2032-AL</field>
+      </fields>
       <libsource lib="ttydriver01-cache" part="Coilcraft-DA2032-RESCUE-ttydriver01"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5C846</tstamp>
@@ -147,6 +180,12 @@
     <comp ref="D6">
       <value>D</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/1N/1N4007.pdf</datasheet>
+      <fields>
+        <field name="Part">1N4004</field>
+        <field name="Mfgr">Fairchild</field>
+        <field name="Digikey">1N4004FSTR-ND</field>
+      </fields>
       <libsource lib="device" part="D"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E70158</tstamp>
@@ -154,6 +193,12 @@
     <comp ref="U4">
       <value>G3VM401E</value>
       <footprint>Housings_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.omron.com/ecb/products/pdf/en-g3vm_401by_ey.pdf</datasheet>
+      <fields>
+        <field name="Digikey">Z2093-ND</field>
+        <field name="Mfgr">Omron</field>
+        <field name="Part">G3VM-401BY</field>
+      </fields>
       <libsource lib="ttypowerlib" part="G3VM401E"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57EF52FB</tstamp>
@@ -168,6 +213,11 @@
     <comp ref="P3">
       <value>CONN_01X02</value>
       <footprint>Connect:PINHEAD1-2</footprint>
+      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
+      <fields>
+        <field name="Digikey">WM10153-ND</field>
+        <field name="Mfgr">Molex</field>
+      </fields>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F0B03E</tstamp>
@@ -175,6 +225,11 @@
     <comp ref="P2">
       <value>CONN_01X02</value>
       <footprint>Connect:PINHEAD1-2</footprint>
+      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
+      <fields>
+        <field name="Digikey">WM10153-ND</field>
+        <field name="Mfgr">Molex</field>
+      </fields>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F43FF1</tstamp>
@@ -182,6 +237,11 @@
     <comp ref="P1">
       <value>CONN_01X04</value>
       <footprint>DC-DC:PINHEAD1-4</footprint>
+      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
+      <fields>
+        <field name="Digikey">WM10155-ND</field>
+        <field name="Mfgr">Molex</field>
+      </fields>
       <libsource lib="conn" part="CONN_01X04"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F44672</tstamp>
@@ -196,6 +256,10 @@
     <comp ref="U3">
       <value>CP2102-breakout</value>
       <footprint>cp2102:CP2102-breakout</footprint>
+      <fields>
+        <field name="Mfgr">RobotShop</field>
+        <field name="Part">RB-WAV-49</field>
+      </fields>
       <libsource lib="ttypowerlib" part="CP2102-breakout"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F094DE</tstamp>
@@ -203,6 +267,12 @@
     <comp ref="Q1">
       <value>IRLB8721PBF</value>
       <footprint>DC-DC:TO-220-HV</footprint>
+      <datasheet>http://www.irf.com/product-info/datasheets/data/irlb8721pbf.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Infineon</field>
+        <field name="Part">IRLB8721PBF</field>
+        <field name="Digikey">IRLB8721PBF-ND</field>
+      </fields>
       <libsource lib="device" part="Q_NMOS_SDG"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F9D592</tstamp>
@@ -210,6 +280,12 @@
     <comp ref="U2">
       <value>TPS2030P</value>
       <footprint>Housings_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/tps2031.pdf</datasheet>
+      <fields>
+        <field name="Digikey">296-3392-5-ND</field>
+        <field name="Mfgr">TI</field>
+        <field name="Part">TPS2030P</field>
+      </fields>
       <libsource lib="ttypowerlib" part="TPS2030P"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FC84AA</tstamp>
@@ -217,6 +293,12 @@
     <comp ref="C2">
       <value>1uf</value>
       <footprint>Capacitors_ThroughHole:C_Radial_D5_L6_P2.5</footprint>
+      <datasheet>http://www.digikey.com/product-detail/en/panasonic-electronic-components/ECA-2GHG010I/P19566TB-ND/2688889</datasheet>
+      <fields>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ECA-2GHG010I</field>
+        <field name="Digikey">P19566TB-ND</field>
+      </fields>
       <libsource lib="device" part="CP"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FD3936</tstamp>
@@ -224,6 +306,12 @@
     <comp ref="U5">
       <value>IE0524S</value>
       <footprint>DC-DC:IE0524S</footprint>
+      <datasheet>http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788</datasheet>
+      <fields>
+        <field name="Mfgr">XP Power</field>
+        <field name="Part">IE0524S</field>
+        <field name="Digikey">1470-1407-5-ND</field>
+      </fields>
       <libsource lib="ttypowerlib" part="IE0524S"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FDC5B1</tstamp>
@@ -231,6 +319,12 @@
     <comp ref="U6">
       <value>G3VM401E</value>
       <footprint>Housings_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>https://www.omron.com/ecb/products/pdf/en-g3vm_401by_ey.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Omron</field>
+        <field name="Part">G3VM-401BY</field>
+        <field name="Digikey">Z2093-ND</field>
+      </fields>
       <libsource lib="ttypowerlib" part="G3VM401E"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FDCEDB</tstamp>
@@ -252,6 +346,11 @@
     <comp ref="P4">
       <value>CONN_01X10</value>
       <footprint>DC-DC:PINHEAD1-10</footprint>
+      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
+      <fields>
+        <field name="Digikey">WM10294-ND</field>
+        <field name="Mfgr">Molex</field>
+      </fields>
       <libsource lib="conn" part="CONN_01X10"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58006AF9</tstamp>
@@ -551,14 +650,14 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="device">
-      <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
     <library logical="ttypowerlib">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttypowerlib.lib</uri>
     </library>
     <library logical="ttydriver01-cache">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01-cache.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
     </library>
     <library logical="conn">
       <uri>/usr/share/kicad/library/conn.lib</uri>
