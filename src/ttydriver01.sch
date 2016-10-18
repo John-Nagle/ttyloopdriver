@@ -175,6 +175,9 @@ F 0 "D5" V 6550 5680 50  0000 L CNN
 F 1 "1N4148" V 6650 5650 50  0000 L CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" V 6600 5600 50  0001 C CNN
 F 3 "" V 6600 5600 50  0000 C CNN
+F 4 "1N4148FSTR-ND" V 6600 5600 60  0001 C CNN "Vendorpart"
+F 5 "1N4148TR" V 6600 5600 60  0001 C CNN "Part"
+F 6 "Fairchild" V 6600 5600 60  0001 C CNN "Mfgr"
 	1    6600 5600
 	0    1    1    0   
 $EndComp
@@ -188,7 +191,8 @@ F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" V 6000 5600 50  0001 
 F 3 "http://www.digikey.com/product-detail/en/fairchild-semiconductor/1N4148TR/1N4148FSTR-ND/458811" V 6000 5600 50  0001 C CNN
 F 4 "Fairchild" V 6000 5600 60  0001 C CNN "Mfgr"
 F 5 "1N4148TR" V 6000 5600 60  0001 C CNN "Part"
-F 6 "1N4148FSTR-ND" V 6000 5600 60  0001 C CNN "Digikey"
+F 6 "1N4148FSTR-ND" V 6000 5600 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" V 6000 5600 60  0001 C CNN "Vendor"
 	1    6000 5600
 	0    -1   -1   0   
 $EndComp
@@ -202,7 +206,8 @@ F 2 "Housings_DIP:DIP-8_W7.62mm" H 4950 5200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 4950 5200 50  0001 C CNN
 F 4 "TI" H 4950 5200 60  0001 C CNN "Mfgr"
 F 5 "NE555P" H 4950 5200 60  0001 C CNN "Part"
-F 6 "296-1411-5-ND" H 4950 5200 60  0001 C CNN "Digikey"
+F 6 "296-1411-5-ND" H 4950 5200 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 4950 5200 60  0001 C CNN "Vendor"
 	1    4950 5200
 	1    0    0    -1  
 $EndComp
@@ -214,9 +219,10 @@ F 0 "D1" H 5000 3050 50  0000 C CNN
 F 1 "D" H 5000 2850 50  0000 C CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 5000 2950 50  0001 C CNN
 F 3 "http://www.fairchildsemi.com/datasheets/1N/1N5817.pdf" H 5000 2950 50  0001 C CNN
-F 4 "1N5817FSTR-ND" H 5000 2950 60  0001 C CNN "Digikey"
+F 4 "1N5817FSTR-ND" H 5000 2950 60  0001 C CNN "Vendorpart"
 F 5 "Fairchild" H 5000 2950 60  0001 C CNN "Mfgr"
 F 6 "1N5817" H 5000 2950 60  0001 C CNN "Part"
+F 7 "Digikey" H 5000 2950 60  0001 C CNN "Vendor"
 	1    5000 2950
 	-1   0    0    1   
 $EndComp
@@ -228,9 +234,10 @@ F 0 "C1" H 5325 3300 50  0000 L CNN
 F 1 "220uf" H 5325 3100 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5" H 5338 3050 50  0001 C CNN
 F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW" H 5300 3200 50  0001 C CNN
-F 4 "P5166-ND" H 5300 3200 60  0001 C CNN "DigiKey"
+F 4 "P5166-ND" H 5300 3200 60  0001 C CNN "Vendorpart"
 F 5 "Panasonic" H 5300 3200 60  0001 C CNN "Mfgr"
 F 6 "ECA-1VM221" H 5300 3200 60  0001 C CNN "Part"
+F 7 "Digikey" H 5300 3200 60  0001 C CNN "Vendor"
 	1    5300 3200
 	1    0    0    -1  
 $EndComp
@@ -242,9 +249,10 @@ F 0 "D2" H 7350 3200 50  0000 C CNN
 F 1 "D" H 7350 3000 50  0000 C CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 7350 3100 50  0001 C CNN
 F 3 "" H 7350 3100 50  0000 C CNN
-F 4 "1N4004FSTR-ND" H 7350 3100 60  0001 C CNN "Digikey"
+F 4 "1N4004FSTR-ND" H 7350 3100 60  0001 C CNN "Vendorpart"
 F 5 "Fairchild" H 7350 3100 60  0001 C CNN "Mfgr"
 F 6 "1N4004" H 7350 3100 60  0001 C CNN "Part"
+F 7 "Digikey" H 7350 3100 60  0001 C CNN "Vendor"
 	1    7350 3100
 	-1   0    0    1   
 $EndComp
@@ -258,7 +266,8 @@ F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8400 3350 50  0001 
 F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 8400 3350 50  0001 C CNN
 F 4 "1N5380BG" H 8400 3350 60  0001 C CNN "Part"
 F 5 "ON" H 8400 3350 60  0001 C CNN "Mfgr"
-F 6 "1N5380BGOS-ND" H 8400 3350 60  0001 C CNN "Digikey"
+F 6 "1N5380BGOS-ND" H 8400 3350 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 8400 3350 60  0001 C CNN "Vendor"
 	1    8400 3350
 	0    1    1    0   
 $EndComp
@@ -294,6 +303,8 @@ F 2 "Coilcraft:Coilcraft-DA2032-AL" H 6400 3300 50  0001 C CNN
 F 3 "" H 6400 3300 50  0000 C CNN
 F 4 "Coilcraft" H 6650 3300 60  0001 C CNN "Mfgr"
 F 5 "DA2032-AL" H 6650 3300 60  0001 C CNN "Part"
+F 6 "Coilcraft" H 6650 3300 60  0001 C CNN "Vendor"
+F 7 "DA2032-AL" H 6650 3300 60  0001 C CNN "Vendorpart"
 	1    6650 3300
 	1    0    0    -1  
 $EndComp
@@ -324,7 +335,8 @@ F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8150 3100 50  0001 
 F 3 "https://www.fairchildsemi.com/datasheets/1N/1N4007.pdf" H 8150 3100 50  0001 C CNN
 F 4 "1N4004" H 8150 3100 60  0001 C CNN "Part"
 F 5 "Fairchild" H 8150 3100 60  0001 C CNN "Mfgr"
-F 6 "1N4004FSTR-ND" H 8150 3100 60  0001 C CNN "Digikey"
+F 6 "1N4004FSTR-ND" H 8150 3100 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 8150 3100 60  0001 C CNN "Vendor"
 	1    8150 3100
 	-1   0    0    -1  
 $EndComp
@@ -349,9 +361,10 @@ F 0 "U4" H 6900 2650 60  0000 C CNN
 F 1 "G3VM401E" H 6900 2900 60  0000 C CNN
 F 2 "Housings_DIP:DIP-6_W7.62mm" H 6900 2650 60  0001 C CNN
 F 3 "https://www.omron.com/ecb/products/pdf/en-g3vm_401by_ey.pdf" H 6900 2650 60  0001 C CNN
-F 4 "Z2093-ND" H 6900 2650 60  0001 C CNN "Digikey"
+F 4 "Z2093-ND" H 6900 2650 60  0001 C CNN "Vendorpart"
 F 5 "Omron" H 6900 2650 60  0001 C CNN "Mfgr"
 F 6 "G3VM-401BY" H 6900 2650 60  0001 C CNN "Part"
+F 7 "Digikey" H 6900 2650 60  0001 C CNN "Vendor"
 	1    6900 2650
 	1    0    0    -1  
 $EndComp
@@ -409,8 +422,9 @@ F 0 "P3" H 3150 3500 50  0000 C CNN
 F 1 "CONN_01X02" V 3250 3350 50  0000 C CNN
 F 2 "Connect:PINHEAD1-2" H 3150 3350 50  0001 C CNN
 F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 3150 3350 50  0001 C CNN
-F 4 "WM10153-ND" H 3150 3350 60  0001 C CNN "Digikey"
+F 4 "WM10153-ND" H 3150 3350 60  0001 C CNN "Vendorpart"
 F 5 "Molex" H 3150 3350 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 3150 3350 60  0001 C CNN "Vendor"
 	1    3150 3350
 	1    0    0    1   
 $EndComp
@@ -437,8 +451,9 @@ F 0 "P2" H 8700 2550 50  0000 C CNN
 F 1 "CONN_01X02" V 8800 2400 50  0000 C CNN
 F 2 "Connect:PINHEAD1-2" H 8700 2400 50  0001 C CNN
 F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 8700 2400 50  0001 C CNN
-F 4 "WM10153-ND" H 8700 2400 60  0001 C CNN "Digikey"
+F 4 "WM10153-ND" H 8700 2400 60  0001 C CNN "Vendorpart"
 F 5 "Molex" H 8700 2400 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 8700 2400 60  0001 C CNN "Vendor"
 	1    8700 2400
 	0    -1   -1   0   
 $EndComp
@@ -450,8 +465,9 @@ F 0 "P1" H 9700 2250 50  0000 C CNN
 F 1 "CONN_01X04" V 9800 2000 50  0000 C CNN
 F 2 "DC-DC:PINHEAD1-4" H 9700 2000 50  0001 C CNN
 F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 9700 2000 50  0001 C CNN
-F 4 "WM10155-ND" H 9700 2000 60  0001 C CNN "Digikey"
+F 4 "WM10155-ND" H 9700 2000 60  0001 C CNN "Vendorpart"
 F 5 "Molex" H 9700 2000 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 9700 2000 60  0001 C CNN "Vendor"
 	1    9700 2000
 	1    0    0    1   
 $EndComp
@@ -500,7 +516,8 @@ F 2 "DC-DC:TO-220-HV" H 5950 3700 50  0001 C CNN
 F 3 "http://www.irf.com/product-info/datasheets/data/irlb8721pbf.pdf" H 5750 3600 50  0001 C CNN
 F 4 "Infineon" V 5750 3600 60  0001 C CNN "Mfgr"
 F 5 "IRLB8721PBF" V 5750 3600 60  0001 C CNN "Part"
-F 6 "IRLB8721PBF-ND" V 5750 3600 60  0001 C CNN "Digikey"
+F 6 "IRLB8721PBF-ND" V 5750 3600 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" V 5750 3600 60  0001 C CNN "Vendor"
 	1    5750 3600
 	0    1    -1   0   
 $EndComp
@@ -512,9 +529,10 @@ F 0 "U2" H 3700 2750 60  0000 C CNN
 F 1 "TPS2030P" H 3750 3050 60  0000 C CNN
 F 2 "Housings_DIP:DIP-8_W7.62mm" H 3750 2800 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tps2031.pdf" H 3750 2800 60  0001 C CNN
-F 4 "296-3392-5-ND" H 3750 2800 60  0001 C CNN "Digikey"
+F 4 "296-3392-5-ND" H 3750 2800 60  0001 C CNN "Vendorpart"
 F 5 "TI" H 3750 2800 60  0001 C CNN "Mfgr"
 F 6 "TPS2030P" H 3750 2800 60  0001 C CNN "Part"
+F 7 "Digikey" H 3750 2800 60  0001 C CNN "Vendor"
 	1    3750 2800
 	1    0    0    -1  
 $EndComp
@@ -529,7 +547,8 @@ F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 7588 3200 50  0001 C CNN
 F 3 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ECA-2GHG010I/P19566TB-ND/2688889" H 7550 3350 50  0001 C CNN
 F 4 "Panasonic" H 7550 3350 60  0001 C CNN "Mfgr"
 F 5 "ECA-2GHG010I" H 7550 3350 60  0001 C CNN "Part"
-F 6 "P19566TB-ND" H 7550 3350 60  0001 C CNN "Digikey"
+F 6 "P19566TB-ND" H 7550 3350 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 7550 3350 60  0001 C CNN "Vendor"
 	1    7550 3350
 	1    0    0    -1  
 $EndComp
@@ -543,7 +562,8 @@ F 2 "DC-DC:IE0524S" H 3750 2150 60  0001 C CNN
 F 3 "http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788" H 3750 2150 60  0001 C CNN
 F 4 "XP Power" H 3750 2150 60  0001 C CNN "Mfgr"
 F 5 "IE0524S" H 3750 2150 60  0001 C CNN "Part"
-F 6 "1470-1407-5-ND" H 3750 2150 60  0001 C CNN "Digikey"
+F 6 "1470-1407-5-ND" H 3750 2150 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 3750 2150 60  0001 C CNN "Vendor"
 	1    3750 2150
 	-1   0    0    1   
 $EndComp
@@ -568,7 +588,8 @@ F 2 "Housings_DIP:DIP-6_W7.62mm" H 6900 1500 60  0001 C CNN
 F 3 "https://www.omron.com/ecb/products/pdf/en-g3vm_401by_ey.pdf" H 6900 1500 60  0001 C CNN
 F 4 "Omron" H 6900 1500 60  0001 C CNN "Mfgr"
 F 5 "G3VM-401BY" H 6900 1500 60  0001 C CNN "Part"
-F 6 "Z2093-ND" H 6900 1500 60  0001 C CNN "Digikey"
+F 6 "Z2093-ND" H 6900 1500 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 6900 1500 60  0001 C CNN "Vendor"
 	1    6900 1500
 	-1   0    0    -1  
 $EndComp
@@ -619,8 +640,9 @@ F 0 "P4" H 1500 5800 50  0000 C CNN
 F 1 "CONN_01X10" V 1600 5250 50  0000 C CNN
 F 2 "DC-DC:PINHEAD1-10" H 1500 5250 50  0001 C CNN
 F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 1500 5250 50  0001 C CNN
-F 4 "WM10294-ND" H 1500 5250 60  0001 C CNN "Digikey"
-F 5 "Molex" H 1500 5250 60  0001 C CNN "Mfgr"
+F 4 "Molex" H 1500 5250 60  0001 C CNN "Mfgr"
+F 5 "WM10294-ND" H 1500 5250 60  0001 C CNN "Vendorpart"
+F 6 "Digikey" H 1500 5250 60  0001 C CNN "Vendor"
 	1    1500 5250
 	-1   0    0    -1  
 $EndComp

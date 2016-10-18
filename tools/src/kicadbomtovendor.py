@@ -74,7 +74,8 @@ def main() :
 #   converter -- converts file
 #    
 class Converter(object) :
-    FIXEDFIELDS = ["REF","FOOTPRINT","VALUE"]           # fields we always want
+    FIXEDFIELDS = ["REF","FOOTPRINT","VALUE", "QUANTITY"]           # fields we always want
+    NOTDIFFERENTPART = set(["REF"])                      # still same part if this doesn't match
 
     def __init__(self, selects, verbose = False) :
         self.selects = selects                          # selection list
@@ -105,7 +106,7 @@ class Converter(object) :
         for k in self.selects :                         # for all select rules
             if k not in fieldvals :                     # if not found, fail, unless missing allowed
                 return("" in self.selects[k])           # if "--select FOO=" allow
-            if fieldvals[k] in self.selects[k] :        # if find
+            if fieldvals[k].upper() in self.selects[k] :# if find
                 return(True)
         return(True)                                    # no select failed            
             
@@ -123,6 +124,7 @@ class Converter(object) :
         fieldvals["REF"] = ref
         fieldvals["FOOTPRINT"] = footprint
         fieldvals["VALUE"] = value
+        fieldvals["QUANTITY"] = "1"                 # one item at this point
         if self.verbose :
             print("%s" % (fieldvals,))
         #   Get user-defined fields    
@@ -132,14 +134,13 @@ class Converter(object) :
             fieldvals[name] = field.text
         if self.verbose :
             print("%s" % (fieldvals,))
-        if self.selectitem(fieldvals) :
-            s = self.formatline(fieldvals)
-            return(s)
-        return("")
+        if self.selectitem(fieldvals) :             # if we want this item
+            return(self.assembleline(fieldvals))    # return list of fields
+        return(None)
             
-    def formatline(self, fieldvals) :
+    def assembleline(self, fieldvals) :
         """
-        Assemble output line
+        Assemble output fields into a list
         """
         s = ''                              # empty line
         outfields = []                      # output fields
@@ -149,7 +150,44 @@ class Converter(object) :
             else :
                 val = ""                    # empty string otherwise
             outfields.append(self.cleanstr(val))     # remove things not desirable in CSV files
-        return(",".join(outfields))
+        return(outfields)                   # ordered list of fields
+        
+    def issamepart(self, rowa, rowb) :
+        """
+        True if both lists represent the same part        
+        """
+        if rowa is None or rowb is None :
+            return(False)                       # None doesn't match
+        for i in range(len(self.fieldlist)) :   # across 3 lists in sync
+            if self.fieldlist[i] in self.NOTDIFFERENTPART : # some fields, such as REF, don't mean a new part
+                continue
+            if rowa[i] != rowb[i] :
+                return(False)
+        return(True)                            # all important fields matched
+        
+    def additems(self, rows) :               
+        """
+        Combine multiple instances of same part, adding to quantity
+        """
+        quanpos = self.fieldlist.index("QUANTITY")   # get index of quantity column
+        outrows = []
+        prevrow = None
+        quan = 0
+        for row in rows :                       # for all rows
+            if not self.issamepart(prevrow, row) :  # if control break
+                if prevrow is not None :
+                    prevrow[quanpos] = str(quan) # set quantity
+                    outrows.append(prevrow)     # output stored row
+                    quan = 0
+            prevrow = row                       # process new row
+            quan = quan + int(row[quanpos])     # add this quantity
+
+        if prevrow is not None :                # end of file
+            prevrow[quanpos] = str(quan)        # do last item
+            outrows.append(prevrow)             # output stored row
+        return(outrows)                         # return summed rows
+                
+                
                   
     def convert(self, infname, outfname) :
         """
@@ -170,9 +208,18 @@ class Converter(object) :
         if self.verbose :
             print("Column headings: %s" % (self.fieldlist))
         outf.write(heading + "\n")
-        #   Pass 2 - output columns
+        #   Pass 2 - accumulate rows
+        rows = []
         for comp in root.iter("comp") : 
-            s = self.handlecomp2(comp)
+            row = self.handlecomp2(comp)
+            if row is not None :
+                rows.append(row)
+        #   Pass 3 - combine rows of same items
+        rows.sort()
+        rows = self.additems(rows)              # combine items
+        #   Pass 4 - output rows
+        for row in rows :
+            s = ",".join(row)            
             outf.write(s + "\n")                # print to file
         outf.close()                            # done
             
