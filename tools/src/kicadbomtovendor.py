@@ -11,6 +11,7 @@
 #
 import re
 import sys
+import argparse
 import xml.etree.ElementTree
 #
 #   usage
@@ -24,42 +25,89 @@ def usage(msg) :
 #   Main program
 #
 def main() :
-    if len(sys.argv) < 2 :                      # no args
-        usage("File argument missing,")
-    infname = sys.argv[1]                       # input file
-    try : 
-        (outfname, suffix) = infname.rsplit(".",1)  # remove suffix
-    except ValueError :
-        usage("Filename did not have a suffix.")
-    if suffix.lower() != "xml" :                # must be XML
-        usage("Input must be a .xml file.")
-    outfname = outfname + "." + "csv"          # output becomes comma separated
-    print('Converting "%s" to "%s".' % (infname, outfname))
-    cv = Converter(True)
-    cv.convert(infname, outfname)
-    print("Output file generated.")
+    #   Get command line arguments
+    parser = argparse.ArgumentParser(description="KiCAD XML bill of materials converter to .CSV format")
+    parser.add_argument("--verbose", default=False, action="store_true", help="set verbose mode")
+    parser.add_argument("--select", action="append", help="COLUMN=VALUE to select")
+    parser.add_argument("files", action="append", help="XML file")
+    args = parser.parse_args()                          # parse command line
+    print(args)
+    verbose = args.verbose
+    selects = {}                                        # dict of (k, set(v))
+    #   Accumulate select keys
+    print("Selects: " + repr(args.select))
+    if args.select is not None :
+        for select in args.select :
+            parts = select.split("=")                       # split at "="
+            if len(parts) != 2 :                            # must be COLUMN=VALUE
+                print('"--select COLUMN=VALUE" required.')
+                parser.print_help()
+                exit(1)
+            k = parts[0].strip().upper()
+            v = parts[1].strip().upper()                    # save selects as upper case
+            if k not in selects :
+                selects[k] = set()                          # need set for this key
+            selects[k].add(v)                               # add value to set for this key
+        print("Selection rules: ")
+        for (k, sset) in selects.items() :
+            print('  Select if %s is in %s.' % (k, list(sset)))
+    #   Process all files on command line
+    for infname in args.files :
+        print(infname)
+        try : 
+            (outfname, suffix) = infname.rsplit(".",1)  # remove suffix
+        except ValueError :
+            print("Input must be a .xml file.")
+            parser.print_help()
+            exit(1)
+        if suffix.lower() != "xml" :                    # must be XML
+            print("Input must be a .xml file.")
+            parser.print_help()
+            exit(1)
+        outfname = outfname + "." + "csv"               # output becomes comma separated
+        print('Converting "%s" to "%s".' % (infname, outfname))
+        cv = Converter(selects, verbose)
+        cv.convert(infname, outfname)
+        print('Output file "%s" generated.' % (outfname,))
  
 #
 #   converter -- converts file
 #    
 class Converter(object) :
-    FIXEDFIELDS = ["REF","FOOTPRINT","VALUE"]   # fields we always want
+    FIXEDFIELDS = ["REF","FOOTPRINT","VALUE"]           # fields we always want
 
-    def __init__(self, verbose = False) :
-        self.verbose = verbose                  # debug info
-        self.tree = None                        # no tree yet
-        self.fieldset = set(self.FIXEDFIELDS)   # set of all field names found
-        self.fieldlist = None                   # list of column headings
-        pass
+    def __init__(self, selects, verbose = False) :
+        self.selects = selects                          # selection list
+        self.verbose = verbose                          # debug info
+        self.tree = None                                # no tree yet
+        self.fieldset = set(self.FIXEDFIELDS)           # set of all field names found
+        self.fieldlist = None                           # list of column headings
         
+    def cleanstr(self, s) :
+        """
+        Clean up a string to avoid CSV format problems
+        """
+        return(re.sub(r'\s+|,',' ', s).strip()) # remove tabs, newlines, and commas
+                
     def handlecomp1(self, comp) :
         """
         Handle one component entry, pass 1 - find all field names
         """
-        for field in comp.iter("field") :       # for all "field" items
-            name = field.get("name")            # get all "name" names
+        for field in comp.iter("field") :               # for all "field" items
+            name = field.get("name")                    # get all "name" names
             name = name.upper()
             self.fieldset.add(name)
+            
+    def selectitem(self, fieldvals) :
+        """
+        Given a set of field values, decide if we want to keep this one
+        """
+        for k in self.selects :                         # for all select rules
+            if k not in fieldvals :                     # if not found, fail, unless missing allowed
+                return("" in self.selects[k])           # if "--select FOO=" allow
+            if fieldvals[k] in self.selects[k] :        # if find
+                return(True)
+        return(True)                                    # no select failed            
             
     def handlecomp2(self, comp) :
         """
@@ -84,30 +132,29 @@ class Converter(object) :
             fieldvals[name] = field.text
         if self.verbose :
             print("%s" % (fieldvals,))
-        s = self.formatline(fieldvals)
-        return(s)
+        if self.selectitem(fieldvals) :
+            s = self.formatline(fieldvals)
+            return(s)
+        return("")
             
     def formatline(self, fieldvals) :
         """
         Assemble output line
         """
         s = ''                              # empty line
-        first = True                        # first time
+        outfields = []                      # output fields
         for fname in self.fieldlist :       # for all fields
             if fname in fieldvals :
                 val = fieldvals[fname]      # get value
             else :
                 val = ""                    # empty string otherwise
-            val = re.sub(r',',' ',val)      # remove commas
-            val = re.sub(r'\s+',' ', val)   # remove tabs or newlines
-            val = val.strip()               # remove excess whitespace
-            if not first :                  # if s is not empty
-                s += ","                    # add comma
-            first = False
-            s += val                        # add value
-        return(s)
+            outfields.append(self.cleanstr(val))     # remove things not desirable in CSV files
+        return(",".join(outfields))
                   
     def convert(self, infname, outfname) :
+        """
+        Convert one file
+        """
         self.tree = xml.etree.ElementTree.parse(infname)
         root = self.tree.getroot()              # root element
         #   Pass 1 - inventory fields
