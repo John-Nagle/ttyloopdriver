@@ -702,10 +702,10 @@ F 6 "Digikey" H 1500 5250 60  0001 C CNN "Vendor"
 $EndComp
 NoConn ~ 1700 5400
 $Comp
-L R R12
+L R R8
 U 1 1 58029311
 P 7900 3350
-F 0 "R12" V 7980 3350 50  0000 C CNN
+F 0 "R8" V 7980 3350 50  0000 C CNN
 F 1 "1M" V 7900 3350 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7830 3350 50  0001 C CNN
 F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7900 3350 50  0001 C CNN
