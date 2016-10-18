@@ -101,14 +101,17 @@ class Converter(object) :
             
     def selectitem(self, fieldvals) :
         """
-        Given a set of field values, decide if we want to keep this one
+        Given a set of field values, decide if we want to keep this one.
+        
+        All SELECTs must be true.
         """
         for k in self.selects :                         # for all select rules
             if k not in fieldvals :                     # if not found, fail, unless missing allowed
-                return("" in self.selects[k])           # if "--select FOO=" allow
-            if fieldvals[k].upper() in self.selects[k] :# if find
-                return(True)
-        return(True)                                    # no select failed            
+                if "" not in self.selects[k] :          # if "--select FOO=" allow
+                    return(False)                       # fails
+            if fieldvals[k].upper() not in self.selects[k] :# if no find
+                return(False)
+        return(True)                                    # no select succeeded            
             
     def handlecomp2(self, comp) :
         """

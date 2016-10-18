@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch</source>
-    <date>Mon 17 Oct 2016 09:38:41 PM PDT</date>
+    <date>Mon 17 Oct 2016 10:46:33 PM PDT</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -75,6 +75,7 @@
         <field name="Vendorpart">1N4148FSTR-ND</field>
         <field name="Part">1N4148TR</field>
         <field name="Mfgr">Fairchild</field>
+        <field name="Vendor">Digikey</field>
       </fields>
       <libsource lib="device" part="D_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -139,10 +140,11 @@
     <comp ref="D2">
       <value>D</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <datasheet>http://www.diodes.com/_files/datasheets/ds28002.pdf</datasheet>
       <fields>
-        <field name="Vendorpart">1N4004FSTR-ND</field>
-        <field name="Mfgr">Fairchild</field>
-        <field name="Part">1N4004</field>
+        <field name="Vendorpart">1N4004DICT-ND</field>
+        <field name="Mfgr">Diodes Inc</field>
+        <field name="Part">1N4004-T</field>
         <field name="Vendor">Digikey</field>
       </fields>
       <libsource lib="device" part="D"/>
@@ -193,11 +195,11 @@
     <comp ref="D6">
       <value>D</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
-      <datasheet>https://www.fairchildsemi.com/datasheets/1N/1N4007.pdf</datasheet>
+      <datasheet>http://www.diodes.com/_files/datasheets/ds28002.pdf</datasheet>
       <fields>
-        <field name="Part">1N4004</field>
-        <field name="Mfgr">Fairchild</field>
-        <field name="Vendorpart">1N4004FSTR-ND</field>
+        <field name="Part">1N4004-T</field>
+        <field name="Mfgr">Diodes Inc</field>
+        <field name="Vendorpart">1N4004DICT-ND</field>
         <field name="Vendor">Digikey</field>
       </fields>
       <libsource lib="device" part="D"/>
