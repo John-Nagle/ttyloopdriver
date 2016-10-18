@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch</source>
-    <date>Tue 18 Oct 2016 01:24:52 PM PDT</date>
+    <date>Tue 18 Oct 2016 02:01:31 PM PDT</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -49,6 +49,13 @@
     <comp ref="R6">
       <value>2.2K</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">CF14JT2K20CT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Part">CF14JT2K20</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FB</tstamp>
@@ -56,6 +63,12 @@
     <comp ref="R2">
       <value>4.7K</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <fields>
+        <field name="Vendorpart">CF14JT4K70CT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Part">CF14JT4K70</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FA</tstamp>
@@ -63,6 +76,12 @@
     <comp ref="R3">
       <value>4.7K</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <fields>
+        <field name="Part">CF14JT4K70</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">CF14JT4K70CT-ND</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F9</tstamp>
@@ -70,6 +89,13 @@
     <comp ref="R5">
       <value>68K</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">CF14JT68K0CT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Part">CF14JT68K0</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F8</tstamp>
@@ -77,6 +103,13 @@
     <comp ref="R4">
       <value>22K</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Part">CF14JT22K0</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">CF14JT22K0CT-ND</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F7</tstamp>
@@ -195,6 +228,12 @@
     <comp ref="R1">
       <value>10</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <fields>
+        <field name="Vendorpart">CF14JT10R0CT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">CF14JT10R0</field>
+        <field name="Mfgr">Stackpole</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5B823</tstamp>
@@ -243,6 +282,13 @@
     <comp ref="R9">
       <value>680</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Vendorpart">CF14JT680RCT-ND</field>
+        <field name="Part">CF14JT680R</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57EF57CB</tstamp>
@@ -289,6 +335,13 @@
     <comp ref="R7">
       <value>3.3K</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">CF14JT3K30CT-ND</field>
+        <field name="Part">CF14JT3K30</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F4497E</tstamp>
@@ -299,6 +352,7 @@
       <fields>
         <field name="Mfgr">RobotShop</field>
         <field name="Part">RB-WAV-49</field>
+        <field name="Vendor">Robotshop</field>
       </fields>
       <libsource lib="ttypowerlib" part="CP2102-breakout"/>
       <sheetpath names="/" tstamps="/"/>
@@ -375,15 +429,29 @@
       <tstamp>57FDCEDB</tstamp>
     </comp>
     <comp ref="R10">
-      <value>670</value>
+      <value>680</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Vendorpart">CF14JT680RCT-ND</field>
+        <field name="Part">CF14JT680R</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58003C54</tstamp>
     </comp>
     <comp ref="R11">
-      <value>670</value>
+      <value>680</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Part">CF14JT680R</field>
+        <field name="Vendorpart">CF14JT680RCT-ND</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58003DC1</tstamp>
@@ -404,6 +472,13 @@
     <comp ref="R12">
       <value>1M</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
+      <fields>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Stackpole</field>
+        <field name="Vendorpart">CF14JT1M00CT-ND</field>
+        <field name="Part">CF14JT1M00</field>
+      </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58029311</tstamp>

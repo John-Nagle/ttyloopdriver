@@ -127,7 +127,11 @@ P 6300 6100
 F 0 "R6" H 6380 6100 50  0000 C CNN
 F 1 "2.2K" V 6300 6100 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6230 6100 50  0001 C CNN
-F 3 "" H 6300 6100 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6300 6100 50  0001 C CNN
+F 4 "CF14JT2K20CT-ND" H 6300 6100 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 6300 6100 60  0001 C CNN "Vendor"
+F 6 "Stackpole" H 6300 6100 60  0001 C CNN "Mfgr"
+F 7 "CF14JT2K20" H 6300 6100 60  0001 C CNN "Part"
 	1    6300 6100
 	1    0    0    -1  
 $EndComp
@@ -139,6 +143,10 @@ F 0 "R2" V 6680 5050 50  0000 C CNN
 F 1 "4.7K" V 6600 5050 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6530 5050 50  0001 C CNN
 F 3 "" H 6600 5050 50  0000 C CNN
+F 4 "CF14JT4K70CT-ND" V 6600 5050 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" V 6600 5050 60  0001 C CNN "Vendor"
+F 6 "Stackpole" V 6600 5050 60  0001 C CNN "Mfgr"
+F 7 "CF14JT4K70" V 6600 5050 60  0001 C CNN "Part"
 	1    6600 5050
 	1    0    0    -1  
 $EndComp
@@ -150,6 +158,10 @@ F 0 "R3" V 6680 5350 50  0000 C CNN
 F 1 "4.7K" V 6600 5350 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6530 5350 50  0001 C CNN
 F 3 "" H 6600 5350 50  0000 C CNN
+F 4 "CF14JT4K70" V 6600 5350 60  0001 C CNN "Part"
+F 5 "Stackpole" V 6600 5350 60  0001 C CNN "Mfgr"
+F 6 "Digikey" V 6600 5350 60  0001 C CNN "Vendor"
+F 7 "CF14JT4K70CT-ND" V 6600 5350 60  0001 C CNN "Vendorpart"
 	1    6600 5350
 	1    0    0    -1  
 $EndComp
@@ -160,7 +172,11 @@ P 6450 5850
 F 0 "R5" V 6530 5850 50  0000 C CNN
 F 1 "68K" V 6450 5850 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6380 5850 50  0001 C CNN
-F 3 "" H 6450 5850 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6450 5850 50  0001 C CNN
+F 4 "CF14JT68K0CT-ND" V 6450 5850 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" V 6450 5850 60  0001 C CNN "Vendor"
+F 6 "Stackpole" V 6450 5850 60  0001 C CNN "Mfgr"
+F 7 "CF14JT68K0" V 6450 5850 60  0001 C CNN "Part"
 	1    6450 5850
 	0    1    1    0   
 $EndComp
@@ -171,7 +187,11 @@ P 6150 5850
 F 0 "R4" V 6230 5850 50  0000 C CNN
 F 1 "22K" V 6150 5850 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6080 5850 50  0001 C CNN
-F 3 "" H 6150 5850 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6150 5850 50  0001 C CNN
+F 4 "CF14JT22K0" V 6150 5850 60  0001 C CNN "Part"
+F 5 "Stackpole" V 6150 5850 60  0001 C CNN "Mfgr"
+F 6 "Digikey" V 6150 5850 60  0001 C CNN "Vendor"
+F 7 "CF14JT22K0CT-ND" V 6150 5850 60  0001 C CNN "Vendorpart"
 	1    6150 5850
 	0    1    1    0   
 $EndComp
@@ -303,6 +323,10 @@ F 0 "R1" V 8830 3450 50  0000 C CNN
 F 1 "10" V 8750 3450 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8680 3450 50  0001 C CNN
 F 3 "" H 8750 3450 50  0000 C CNN
+F 4 "CF14JT10R0CT-ND" V 8750 3450 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" V 8750 3450 60  0001 C CNN "Vendor"
+F 6 "CF14JT10R0" V 8750 3450 60  0001 C CNN "Part"
+F 7 "Stackpole" V 8750 3450 60  0001 C CNN "Mfgr"
 	1    8750 3450
 	1    0    0    -1  
 $EndComp
@@ -399,7 +423,11 @@ P 6350 2550
 F 0 "R9" V 6430 2550 50  0000 C CNN
 F 1 "680" V 6350 2550 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6280 2550 50  0001 C CNN
-F 3 "" H 6350 2550 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6350 2550 50  0001 C CNN
+F 4 "Digikey" V 6350 2550 60  0001 C CNN "Vendor"
+F 5 "Stackpole" V 6350 2550 60  0001 C CNN "Mfgr"
+F 6 "CF14JT680RCT-ND" V 6350 2550 60  0001 C CNN "Vendorpart"
+F 7 "CF14JT680R" V 6350 2550 60  0001 C CNN "Part"
 	1    6350 2550
 	0    1    1    0   
 $EndComp
@@ -491,7 +519,11 @@ P 7500 1400
 F 0 "R7" V 7580 1400 50  0000 C CNN
 F 1 "3.3K" V 7500 1400 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7430 1400 50  0001 C CNN
-F 3 "" H 7500 1400 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7500 1400 50  0001 C CNN
+F 4 "Stackpole" V 7500 1400 60  0001 C CNN "Mfgr"
+F 5 "Digikey" V 7500 1400 60  0001 C CNN "Vendor"
+F 6 "CF14JT3K30CT-ND" V 7500 1400 60  0001 C CNN "Vendorpart"
+F 7 "CF14JT3K30" V 7500 1400 60  0001 C CNN "Part"
 	1    7500 1400
 	0    1    1    0   
 $EndComp
@@ -513,6 +545,7 @@ F 2 "cp2102:CP2102-breakout" H 2200 2300 50  0001 C CNN
 F 3 "" H 2200 2300 50  0000 C CNN
 F 4 "RobotShop" H 2200 2600 60  0001 C CNN "Mfgr"
 F 5 "RB-WAV-49" H 2200 2600 60  0001 C CNN "Part"
+F 6 "Robotshop" H 2200 2600 60  0001 C CNN "Vendor"
 	1    2200 2600
 	1    0    0    -1  
 $EndComp
@@ -615,9 +648,13 @@ L R R10
 U 1 1 58003C54
 P 2550 5500
 F 0 "R10" V 2500 5700 50  0000 C CNN
-F 1 "670" V 2550 5500 50  0000 C CNN
+F 1 "680" V 2550 5500 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2480 5500 50  0001 C CNN
-F 3 "" H 2550 5500 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 2550 5500 50  0001 C CNN
+F 4 "Digikey" V 2550 5500 60  0001 C CNN "Vendor"
+F 5 "Stackpole" V 2550 5500 60  0001 C CNN "Mfgr"
+F 6 "CF14JT680RCT-ND" V 2550 5500 60  0001 C CNN "Vendorpart"
+F 7 "CF14JT680R" V 2550 5500 60  0001 C CNN "Part"
 	1    2550 5500
 	0    1    1    0   
 $EndComp
@@ -626,9 +663,13 @@ L R R11
 U 1 1 58003DC1
 P 2550 5600
 F 0 "R11" V 2500 5800 50  0000 C CNN
-F 1 "670" V 2550 5600 50  0000 C CNN
+F 1 "680" V 2550 5600 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2480 5600 50  0001 C CNN
-F 3 "" H 2550 5600 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 2550 5600 50  0001 C CNN
+F 4 "Digikey" V 2550 5600 60  0001 C CNN "Vendor"
+F 5 "Stackpole" V 2550 5600 60  0001 C CNN "Mfgr"
+F 6 "CF14JT680R" V 2550 5600 60  0001 C CNN "Part"
+F 7 "CF14JT680RCT-ND" V 2550 5600 60  0001 C CNN "Vendorpart"
 	1    2550 5600
 	0    1    1    0   
 $EndComp
@@ -667,7 +708,11 @@ P 7900 3350
 F 0 "R12" V 7980 3350 50  0000 C CNN
 F 1 "1M" V 7900 3350 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7830 3350 50  0001 C CNN
-F 3 "" H 7900 3350 50  0000 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7900 3350 50  0001 C CNN
+F 4 "Digikey" V 7900 3350 60  0001 C CNN "Vendor"
+F 5 "Stackpole" V 7900 3350 60  0001 C CNN "Mfgr"
+F 6 "CF14JT1M00CT-ND" V 7900 3350 60  0001 C CNN "Vendorpart"
+F 7 "CF14JT1M00" V 7900 3350 60  0001 C CNN "Part"
 	1    7900 3350
 	1    0    0    -1  
 $EndComp
