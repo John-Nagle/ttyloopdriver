@@ -5,5 +5,6 @@
 *-cache.lib
 *-rescue.lib
 *.kicad_pcb-bak
+*.csv
 _saved_*.sch
 file[A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9][A-F0-9].sch

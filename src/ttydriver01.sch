@@ -336,7 +336,7 @@ F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8150 3100 50  0001 
 F 3 "http://www.diodes.com/_files/datasheets/ds28002.pdf" H 8150 3100 50  0001 C CNN
 F 4 "1N4004-T" H 8150 3100 60  0001 C CNN "Part"
 F 5 "Diodes Inc" H 8150 3100 60  0001 C CNN "Mfgr"
-F 6 "1N4004FSTR-ND" H 8150 3100 60  0001 C CNN "Vendorpart"
+F 6 "1N4004DICT-ND" H 8150 3100 60  0001 C CNN "Vendorpart"
 F 7 "Digikey" H 8150 3100 60  0001 C CNN "Vendor"
 	1    8150 3100
 	-1   0    0    -1  

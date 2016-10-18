@@ -14,28 +14,24 @@ import sys
 import argparse
 import xml.etree.ElementTree
 #
-#   usage
-#
-def usage(msg) :
-    print("Error: %s\n" % (msg,))
-    print("Usage: python3 kicadbomtodigikey.py [options] FILENAME.xml")
-    print("Output will go into FILENAME.tabs")
-    sys.exit(1)
-#
 #   Main program
 #
 def main() :
     #   Get command line arguments
     parser = argparse.ArgumentParser(description="KiCAD XML bill of materials converter to .CSV format")
     parser.add_argument("--verbose", default=False, action="store_true", help="set verbose mode")
-    parser.add_argument("--select", action="append", help="COLUMN=VALUE to select")
+    parser.add_argument("--split", metavar="COLUMN", help="Split BOM into multiple output files based on this column")
+    parser.add_argument("--select", action="append", metavar="COLUMN=VALUE", help="COLUMN=VALUE to select")
     parser.add_argument("files", action="append", help="XML file")
-    args = parser.parse_args()                          # parse command line
+    args = parser.parse_args()                              # parse command line
     print(args)
     verbose = args.verbose
-    selects = {}                                        # dict of (k, set(v))
+    selects = {}                                            # dict of (k, set(v))
+    splitcol = args.split                                   # split on this arg
+    if splitcol is not None :
+        splitcol = splitcol.upper()                         # upper case column name
+        print('Split on column "%s".' % (splitcol,))        # split on this column    
     #   Accumulate select keys
-    print("Selects: " + repr(args.select))
     if args.select is not None :
         for select in args.select :
             parts = select.split("=")                       # split at "="
@@ -64,11 +60,8 @@ def main() :
             print("Input must be a .xml file.")
             parser.print_help()
             exit(1)
-        outfname = outfname + "." + "csv"               # output becomes comma separated
-        print('Converting "%s" to "%s".' % (infname, outfname))
-        cv = Converter(selects, verbose)
-        cv.convert(infname, outfname)
-        print('Output file "%s" generated.' % (outfname,))
+        cv = Converter(selects, splitcol, verbose)
+        cv.convert(infname, outfname)       
  
 #
 #   converter -- converts file
@@ -76,9 +69,11 @@ def main() :
 class Converter(object) :
     FIXEDFIELDS = ["REF","FOOTPRINT","VALUE", "QUANTITY"]           # fields we always want
     NOTDIFFERENTPART = set(["REF"])                      # still same part if this doesn't match
+    OUTPUTSUFFIX = ".csv"                               # file output suffix
 
-    def __init__(self, selects, verbose = False) :
+    def __init__(self, selects, splitcol, verbose = False) :
         self.selects = selects                          # selection list
+        self.splitcol = splitcol                        # split output into multiple files based on this
         self.verbose = verbose                          # debug info
         self.tree = None                                # no tree yet
         self.fieldset = set(self.FIXEDFIELDS)           # set of all field names found
@@ -173,25 +168,63 @@ class Converter(object) :
         Combine multiple instances of same part, adding to quantity
         """
         quanpos = self.fieldlist.index("QUANTITY")   # get index of quantity column
+        refpos = self.fieldlist.index("REF")    # get index of ref column
         outrows = []
         prevrow = None
         quan = 0
+        refs = []                               # concat REF fields
         for row in rows :                       # for all rows
             if not self.issamepart(prevrow, row) :  # if control break
                 if prevrow is not None :
                     prevrow[quanpos] = str(quan) # set quantity
+                    prevrow[refpos] = " ".join(refs) # set list of refs
                     outrows.append(prevrow)     # output stored row
                     quan = 0
+                    refs = []
             prevrow = row                       # process new row
             quan = quan + int(row[quanpos])     # add this quantity
+            refs.append(row[refpos])            # add to list of refs
 
         if prevrow is not None :                # end of file
             prevrow[quanpos] = str(quan)        # do last item
+            prevrow[refpos] = " ".join(refs) # set list of refs
             outrows.append(prevrow)             # output stored row
         return(outrows)                         # return summed rows
                 
-                
-                  
+    def outputfile(self, rows, outfname) :
+        """
+        Output one file containing given rows
+        """
+        heading = ",".join(self.fieldlist)      # heading line
+        outf = open(outfname,"w")               # open output file
+        outf.write(heading + "\n")              # heading line
+        for row in rows :                       # output all rows
+            s = ",".join(row)            
+            outf.write(s + "\n")                # print to file
+        outf.close()                            # done
+        print('Created file "%s".' % (outfname),)   # report
+        
+    def splitrows(self, splitcol, rows) :
+        """
+        Split rows into multiple lists of rows based on values in selected column
+        
+        Usually used to break up a BOM by vendor
+        """
+        rowsets = {}                            # col value, [rows]
+        splitpos = self.fieldlist.index(splitcol)   # get index of split column
+        if splitpos is None :                   # must find
+            print('Column "%s" from --split not found in BOM' % (splitcol,))
+            exit(1)
+        for row in rows :
+            k = row[splitpos]                   # get split column value
+            if k is None or k == "" :
+                k = "NONE"                      # use NONE if no value available
+            k = k.upper()                       # always in upper case
+            if k not in rowsets :
+                rowsets[k] = []                 # add new output file
+            rowsets[k].append(row)              # add this row to appropriate output file
+        return(rowsets)                         # returns col value, [rows]
+                                          
     def convert(self, infname, outfname) :
         """
         Convert one file
@@ -205,12 +238,6 @@ class Converter(object) :
             print("Field names found: %s" % (self.fieldset))
         self.fieldlist = list(self.fieldset)
         self.fieldlist.sort()                   # sort in place
-        #   Worked, OK to output file
-        heading = ",".join(self.fieldlist)     # heading line
-        outf = open(outfname,"w")               # open output file
-        if self.verbose :
-            print("Column headings: %s" % (self.fieldlist))
-        outf.write(heading + "\n")
         #   Pass 2 - accumulate rows
         rows = []
         for comp in root.iter("comp") : 
@@ -221,11 +248,13 @@ class Converter(object) :
         rows.sort()
         rows = self.additems(rows)              # combine items
         #   Pass 4 - output rows
-        for row in rows :
-            s = ",".join(row)            
-            outf.write(s + "\n")                # print to file
-        outf.close()                            # done
-            
+        if self.splitcol is None :                   # all in one file
+            self.outputfile(outfname + self.OUTPUTSUFFIX)   # one file
+        else :                                  # one file per column value
+            rowsets = self.splitrows(self.splitcol, rows)
+            for (colval, rows) in rowsets.items() :    # output multiple files
+                self.outputfile(rows, outfname + "-" + colval + self.OUTPUTSUFFIX)
+             
 
 if __name__ == "__main__" :
     main()    
