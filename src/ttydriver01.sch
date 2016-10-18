@@ -98,6 +98,10 @@ F 0 "C5" H 3910 5370 50  0000 L CNN
 F 1 "0.1uf" H 3910 5220 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 3900 5300 50  0001 C CNN
 F 3 "" H 3900 5300 50  0000 C CNN
+F 4 "BC1160CT-ND" H 3900 5300 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 3900 5300 60  0001 C CNN "Vendor"
+F 6 "Vishay" H 3900 5300 60  0001 C CNN "Mfgr"
+F 7 "BC1160CT-ND" H 3900 5300 60  0001 C CNN "Part"
 	1    3900 5300
 	1    0    0    -1  
 $EndComp
@@ -108,7 +112,11 @@ P 6300 6400
 F 0 "C4" H 6310 6470 50  0000 L CNN
 F 1 "100pf" H 6310 6320 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 6300 6400 50  0001 C CNN
-F 3 "" H 6300 6400 50  0000 C CNN
+F 3 "http://www.vishay.com/docs/45171/kseries.pdf" H 6300 6400 50  0001 C CNN
+F 4 "BC1013CT-ND" H 6300 6400 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 6300 6400 60  0001 C CNN "Vendor"
+F 6 "Vishay" H 6300 6400 60  0001 C CNN "Mfgr"
+F 7 "K101J15C0GF5TL2" H 6300 6400 60  0001 C CNN "Part"
 	1    6300 6400
 	1    0    0    -1  
 $EndComp
@@ -278,8 +286,12 @@ U 1 1 57E5B66D
 P 8750 3200
 F 0 "C3" H 8760 3270 50  0000 L CNN
 F 1 "1000pf" H 8760 3120 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 8750 3200 50  0001 C CNN
-F 3 "" H 8750 3200 50  0000 C CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 8750 3200 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/28549/dseries.pdf" H 8750 3200 50  0001 C CNN
+F 4 "1457PH-ND" H 8750 3200 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 8750 3200 60  0001 C CNN "Vendor"
+F 6 "D102K25Y5PL63L6R" H 8750 3200 60  0001 C CNN "Part"
+F 7 "Vishay" H 8750 3200 60  0001 C CNN "Mfgr"
 	1    8750 3200
 	1    0    0    -1  
 $EndComp

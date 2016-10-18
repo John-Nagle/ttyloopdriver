@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch</source>
-    <date>Tue 18 Oct 2016 12:14:56 PM PDT</date>
+    <date>Tue 18 Oct 2016 01:24:52 PM PDT</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -22,6 +22,12 @@
     <comp ref="C5">
       <value>0.1uf</value>
       <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <fields>
+        <field name="Vendorpart">BC1160CT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Vishay</field>
+        <field name="Part">BC1160CT-ND</field>
+      </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FD</tstamp>
@@ -29,6 +35,13 @@
     <comp ref="C4">
       <value>100pf</value>
       <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <datasheet>http://www.vishay.com/docs/45171/kseries.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">BC1013CT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Vishay</field>
+        <field name="Part">K101J15C0GF5TL2</field>
+      </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FC</tstamp>
@@ -167,7 +180,14 @@
     </comp>
     <comp ref="C3">
       <value>1000pf</value>
-      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+      <footprint>Capacitors_ThroughHole:C_Disc_D6_P5</footprint>
+      <datasheet>http://www.vishay.com/docs/28549/dseries.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">1457PH-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">D102K25Y5PL63L6R</field>
+        <field name="Mfgr">Vishay</field>
+      </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5B66D</tstamp>
