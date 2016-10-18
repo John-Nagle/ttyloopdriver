@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch</source>
-    <date>Mon 17 Oct 2016 10:46:33 PM PDT</date>
+    <date>Tue 18 Oct 2016 12:14:56 PM PDT</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -72,8 +72,8 @@
       <value>1N4148</value>
       <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
       <fields>
-        <field name="Vendorpart">1N4148FSTR-ND</field>
-        <field name="Part">1N4148TR</field>
+        <field name="Vendorpart">1N914FS-ND</field>
+        <field name="Part">1N914</field>
         <field name="Mfgr">Fairchild</field>
         <field name="Vendor">Digikey</field>
       </fields>
@@ -87,8 +87,8 @@
       <datasheet>http://www.digikey.com/product-detail/en/fairchild-semiconductor/1N4148TR/1N4148FSTR-ND/458811</datasheet>
       <fields>
         <field name="Mfgr">Fairchild</field>
-        <field name="Part">1N4148TR</field>
-        <field name="Vendorpart">1N4148FSTR-ND</field>
+        <field name="Part">1N914</field>
+        <field name="Vendorpart">1N914FS-ND</field>
         <field name="Vendor">Digikey</field>
       </fields>
       <libsource lib="device" part="D_Small"/>
@@ -303,10 +303,10 @@
       <footprint>Housings_DIP:DIP-8_W7.62mm</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/tps2031.pdf</datasheet>
       <fields>
-        <field name="Vendorpart">296-3392-5-ND</field>
+        <field name="Vendorpart">595-TPS2030P</field>
         <field name="Mfgr">TI</field>
         <field name="Part">TPS2030P</field>
-        <field name="Vendor">Digikey</field>
+        <field name="Vendor">Mouser</field>
       </fields>
       <libsource lib="ttypowerlib" part="TPS2030P"/>
       <sheetpath names="/" tstamps="/"/>
@@ -679,14 +679,14 @@
     <library logical="device">
       <uri>/usr/share/kicad/library/device.lib</uri>
     </library>
-    <library logical="conn">
-      <uri>/usr/share/kicad/library/conn.lib</uri>
-    </library>
     <library logical="ttypowerlib">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttypowerlib.lib</uri>
     </library>
     <library logical="ttydriver01-cache">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01-cache.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
     </library>
   </libraries>
   <nets>
