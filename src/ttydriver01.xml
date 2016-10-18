@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch</source>
-    <date>Tue 18 Oct 2016 02:01:31 PM PDT</date>
+    <date>Tue 18 Oct 2016 02:06:12 PM PDT</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -469,7 +469,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58006AF9</tstamp>
     </comp>
-    <comp ref="R12">
+    <comp ref="R8">
       <value>1M</value>
       <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
@@ -863,7 +863,7 @@
       <node ref="P1" pin="2"/>
     </net>
     <net code="19" name="Net-(C2-Pad1)">
-      <node ref="R12" pin="1"/>
+      <node ref="R8" pin="1"/>
       <node ref="D2" pin="1"/>
       <node ref="C2" pin="1"/>
       <node ref="D6" pin="2"/>
@@ -927,7 +927,7 @@
       <node ref="T1" pin="6"/>
     </net>
     <net code="30" name="/HVNEG">
-      <node ref="R12" pin="2"/>
+      <node ref="R8" pin="2"/>
       <node ref="P1" pin="1"/>
       <node ref="D4" pin="2"/>
       <node ref="R1" pin="2"/>
