@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01.sch</source>
-    <date>Tue 18 Oct 2016 02:06:12 PM PDT</date>
+    <source>/home/john/projects/teletype/hardware/ttyloopdriver/board/ttydriver01.sch</source>
+    <date>Wed 19 Oct 2016 12:44:56 PM PDT</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -774,14 +774,14 @@
     <library logical="device">
       <uri>/usr/share/kicad/library/device.lib</uri>
     </library>
-    <library logical="ttypowerlib">
-      <uri>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttypowerlib.lib</uri>
-    </library>
-    <library logical="ttydriver01-cache">
-      <uri>/home/john/projects/teletype/hardware/ttyloopdriver/src/ttydriver01-cache.lib</uri>
-    </library>
     <library logical="conn">
       <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="ttypowerlib">
+      <uri>/home/john/projects/teletype/hardware/ttyloopdriver/board/ttypowerlib.lib</uri>
+    </library>
+    <library logical="ttydriver01-cache">
+      <uri>/home/john/projects/teletype/hardware/ttyloopdriver/board/ttydriver01-cache.lib</uri>
     </library>
   </libraries>
   <nets>
