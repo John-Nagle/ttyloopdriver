@@ -361,7 +361,7 @@ Text Notes 5750 4450 0    60   ~ 0
 Text Notes 9900 2200 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
 Text Notes 10600 7650 0    60   ~ 0
-1.0
+1.1
 $Comp
 L D D6
 U 1 1 57E70158
@@ -395,12 +395,12 @@ L G3VM401E U4
 U 1 1 57EF52FB
 P 6900 2650
 F 0 "U4" H 6900 2650 60  0000 C CNN
-F 1 "G3VM401E" H 6900 2900 60  0000 C CNN
+F 1 "CPC1510G" H 6900 2900 60  0000 C CNN
 F 2 "Housings_DIP:DIP-6_W7.62mm" H 6900 2650 60  0001 C CNN
-F 3 "https://www.omron.com/ecb/products/pdf/en-g3vm_401by_ey.pdf" H 6900 2650 60  0001 C CNN
-F 4 "Z2093-ND" H 6900 2650 60  0001 C CNN "Vendorpart"
-F 5 "Omron" H 6900 2650 60  0001 C CNN "Mfgr"
-F 6 "G3VM-401BY" H 6900 2650 60  0001 C CNN "Part"
+F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 6900 2650 60  0001 C CNN
+F 4 "CLA277-ND" H 6900 2650 60  0001 C CNN "Vendorpart"
+F 5 "Ixys" H 6900 2650 60  0001 C CNN "Mfgr"
+F 6 "CPC1510G" H 6900 2650 60  0001 C CNN "Part"
 F 7 "Digikey" H 6900 2650 60  0001 C CNN "Vendor"
 	1    6900 2650
 	1    0    0    -1  
@@ -590,10 +590,10 @@ P 7550 3350
 F 0 "C2" H 7575 3450 50  0000 L CNN
 F 1 "1uf" H 7575 3250 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 7588 3200 50  0001 C CNN
-F 3 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ECA-2GHG010I/P19566TB-ND/2688889" H 7550 3350 50  0001 C CNN
-F 4 "Panasonic" H 7550 3350 60  0001 C CNN "Mfgr"
-F 5 "ECA-2GHG010I" H 7550 3350 60  0001 C CNN "Part"
-F 6 "P19566TB-ND" H 7550 3350 60  0001 C CNN "Vendorpart"
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c49e.ashx" H 7550 3350 50  0001 C CNN
+F 4 "Murata" H 7550 3350 60  0001 C CNN "Mfgr"
+F 5 "RDER72E105MUB1H03B" H 7550 3350 60  0001 C CNN "Part"
+F 6 "490-8911-ND" H 7550 3350 60  0001 C CNN "Vendorpart"
 F 7 "Digikey" H 7550 3350 60  0001 C CNN "Vendor"
 	1    7550 3350
 	1    0    0    -1  
@@ -629,12 +629,12 @@ L G3VM401E U6
 U 1 1 57FDCEDB
 P 6900 1500
 F 0 "U6" H 6900 1500 60  0000 C CNN
-F 1 "G3VM401E" H 6900 1750 60  0000 C CNN
+F 1 "CPC1510G" H 6900 1750 60  0000 C CNN
 F 2 "Housings_DIP:DIP-6_W7.62mm" H 6900 1500 60  0001 C CNN
-F 3 "https://www.omron.com/ecb/products/pdf/en-g3vm_401by_ey.pdf" H 6900 1500 60  0001 C CNN
-F 4 "Omron" H 6900 1500 60  0001 C CNN "Mfgr"
-F 5 "G3VM-401BY" H 6900 1500 60  0001 C CNN "Part"
-F 6 "Z2093-ND" H 6900 1500 60  0001 C CNN "Vendorpart"
+F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 6900 1500 60  0001 C CNN
+F 4 "Ixys" H 6900 1500 60  0001 C CNN "Mfgr"
+F 5 "CLA277-ND" H 6900 1500 60  0001 C CNN "Vendorpart"
+F 6 "CPC1510G" H 6900 1500 60  0001 C CNN "Part"
 F 7 "Digikey" H 6900 1500 60  0001 C CNN "Vendor"
 	1    6900 1500
 	-1   0    0    -1  

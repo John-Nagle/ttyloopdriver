@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/john/projects/teletype/hardware/ttyloopdriver/cables/ttyloopdrivercables01.sch</source>
+    <date>Mon 24 Oct 2016 01:55:39 PM PDT</date>
+    <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ttyloopdrivercables01.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P1">
+      <value>CONN_01X04</value>
+      <datasheet>http://www.molex.com/pdm_docs/sd/022013047_sd.pdf</datasheet>
+      <fields>
+        <field name="Part">0022013047</field>
+        <field name="Mfgr">Molex</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">WM2002-ND</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D270</tstamp>
+    </comp>
+    <comp ref="CON1">
+      <value>BARREL_JACK</value>
+      <datasheet>http://www.switchcraft.com/Documents/EDG4.pdf#page=101</datasheet>
+      <fields>
+        <field name="Vendorpart">SC1315-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Switchcraft</field>
+        <field name="Part">N111X</field>
+      </fields>
+      <libsource lib="conn" part="BARREL_JACK"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D343</tstamp>
+    </comp>
+    <comp ref="CON2">
+      <value>BARREL_JACK</value>
+      <datasheet>http://www.switchcraft.com/Drawings/n110x-mn110x_series_cd.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">N112APCX-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Switchcraft</field>
+        <field name="Part">N112APCX</field>
+      </fields>
+      <libsource lib="conn" part="BARREL_JACK"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D3F0</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>CONN_01X02</value>
+      <datasheet>http://www.molex.com/pdm_docs/sd/022013047_sd.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">WM2000-ND</field>
+        <field name="Part">0022013027</field>
+        <field name="Mfgr">Molex</field>
+        <field name="Vendor">Digikey</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D4B1</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>CONN_01X02</value>
+      <datasheet>http://www.molex.com/pdm_docs/sd/022013047_sd.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">WM2000-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Molex</field>
+        <field name="Part">0022013027</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D558</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>CONN_01X10</value>
+      <datasheet>http://www.molex.com/pdm_docs/sd/022013047_sd.pdf</datasheet>
+      <fields>
+        <field name="Part">0022013107</field>
+        <field name="Vendorpart">WM2008-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Molex</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X10"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D59F</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>Switch_DPST</value>
+      <libsource lib="device" part="Switch_DPST"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D610</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D785</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807D7C6</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_PUSH_NC</value>
+      <libsource lib="panelparts" part="SW_PUSH_NC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807DB23</tstamp>
+    </comp>
+    <comp ref="CON3">
+      <value>BARREL_JACK</value>
+      <datasheet>http://www.cui.com/product/resource/digikeypdf/mj-2508.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">CP-2508-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Cui</field>
+        <field name="Part">MJ-2508</field>
+      </fields>
+      <libsource lib="conn" part="BARREL_JACK"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807E933</tstamp>
+    </comp>
+    <comp ref="M1">
+      <value>100mA</value>
+      <libsource lib="panelparts" part="AMMETER"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5807EE06</tstamp>
+    </comp>
+    <comp ref="WPIN1">
+      <value>TEST_1P</value>
+      <fields>
+        <field name="Vendorpart">WM1114TR-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Molex</field>
+        <field name="Part">0008500113</field>
+      </fields>
+      <libsource lib="conn" part="TEST_1P"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58080762</tstamp>
+    </comp>
+    <comp ref="P5">
+      <value>CONN_01X02</value>
+      <datasheet>http://www.cui.com/product/resource/digikeypdf/mj-2508.pdf</datasheet>
+      <fields>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">MP3-2501</field>
+        <field name="Mfgr">CUI</field>
+        <field name="Vendorpart">CP3-1004-ND</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>580856B7</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="panelparts" part="AMMETER">
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">AMMETER</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="BARREL_JACK">
+      <description>DC Barrel Jack</description>
+      <fields>
+        <field name="Reference">CON</field>
+        <field name="Value">BARREL_JACK</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector 01x02</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X04">
+      <description>Connector 01x04</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X04</fp>
+        <fp>Pin_Header_Angled_1X04</fp>
+        <fp>Socket_Strip_Straight_1X04</fp>
+        <fp>Socket_Strip_Angled_1X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X10">
+      <description>Connector 01x10</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X10</fp>
+        <fp>Pin_Header_Angled_1X10</fp>
+        <fp>Socket_Strip_Straight_1X10</fp>
+        <fp>Socket_Strip_Angled_1X10</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X10</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="LED">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="panelparts" part="SW_PUSH_NC">
+      <description>Button</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_PUSH_NC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Switch_DPST">
+      <description>Double Pole Single Throw (DPST) Switch</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">Switch_DPST</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+        <pin num="3" name="3" type="input"/>
+        <pin num="4" name="4" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="TEST_1P">
+      <description>point</description>
+      <fields>
+        <field name="Reference">W</field>
+        <field name="Value">TEST_1P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="panelparts">
+      <uri>/home/john/projects/teletype/hardware/ttyloopdriver/cables/panelparts.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="P3" pin="8"/>
+    </net>
+    <net code="2" name="Net-(CON2-Pad2)">
+      <node ref="P1" pin="4"/>
+      <node ref="CON2" pin="2"/>
+    </net>
+    <net code="3" name="Net-(CON2-Pad1)">
+      <node ref="CON2" pin="3"/>
+      <node ref="P1" pin="3"/>
+      <node ref="CON2" pin="1"/>
+    </net>
+    <net code="4" name="Net-(CON1-Pad1)">
+      <node ref="CON1" pin="1"/>
+      <node ref="P1" pin="1"/>
+    </net>
+    <net code="5" name="Net-(CON1-Pad2)">
+      <node ref="CON1" pin="2"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="6" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2"/>
+      <node ref="P3" pin="9"/>
+    </net>
+    <net code="7" name="Net-(P3-Pad6)">
+      <node ref="P3" pin="6"/>
+      <node ref="SW2" pin="2"/>
+    </net>
+    <net code="8" name="Net-(M1-Pad2)">
+      <node ref="P4" pin="2"/>
+      <node ref="M1" pin="2"/>
+    </net>
+    <net code="9" name="Net-(P5-Pad2)">
+      <node ref="P5" pin="2"/>
+    </net>
+    <net code="10" name="Net-(P5-Pad1)">
+      <node ref="P5" pin="1"/>
+    </net>
+    <net code="11" name="Net-(WPIN1-Pad1)">
+      <node ref="WPIN1" pin="1"/>
+    </net>
+    <net code="12" name="/MTRCTL+">
+      <node ref="P2" pin="1"/>
+      <node ref="CON3" pin="1"/>
+    </net>
+    <net code="13" name="/AMMETER+">
+      <node ref="P4" pin="1"/>
+      <node ref="M1" pin="1"/>
+    </net>
+    <net code="14" name="Net-(P3-Pad5)">
+      <node ref="SW2" pin="1"/>
+      <node ref="P3" pin="5"/>
+    </net>
+    <net code="15" name="Net-(CON3-Pad2)">
+      <node ref="P2" pin="2"/>
+      <node ref="CON3" pin="2"/>
+    </net>
+    <net code="16" name="Net-(CON3-Pad3)">
+      <node ref="CON3" pin="3"/>
+    </net>
+    <net code="17" name="Net-(P3-Pad7)">
+      <node ref="P3" pin="7"/>
+    </net>
+    <net code="18" name="Net-(P3-Pad4)">
+      <node ref="SW1" pin="4"/>
+      <node ref="P3" pin="4"/>
+    </net>
+    <net code="19" name="Net-(P3-Pad2)">
+      <node ref="SW1" pin="2"/>
+      <node ref="P3" pin="2"/>
+    </net>
+    <net code="20" name="Net-(P3-Pad1)">
+      <node ref="P3" pin="1"/>
+      <node ref="SW1" pin="1"/>
+    </net>
+    <net code="21" name="Net-(CON1-Pad3)">
+      <node ref="CON1" pin="3"/>
+    </net>
+    <net code="22" name="Net-(P3-Pad3)">
+      <node ref="SW1" pin="3"/>
+      <node ref="P3" pin="3"/>
+    </net>
+    <net code="23" name="/GND">
+      <node ref="D2" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="P3" pin="10"/>
+    </net>
+  </nets>
+</export>

@@ -115,10 +115,11 @@ class Converter(object) :
         fieldvals = dict()
         try :
             ref = comp.attrib.get("ref")
-            footprint = comp.find("footprint").text
+            footprint = getattr(comp.find("footprint"),"text","")
             value = comp.find("value").text
-        except ValueError as message :
-            usage("Required field missing from %s" % (comp.attrib))
+        except (ValueError, AttributeError) as message :
+            print("Required field missing from %s" % (comp.attrib))
+            exit(1)
         fieldvals["REF"] = ref
         fieldvals["FOOTPRINT"] = footprint
         fieldvals["VALUE"] = value
@@ -180,7 +181,7 @@ class Converter(object) :
                     prevrow[refpos] = " ".join(refs) # set list of refs
                     outrows.append(prevrow)     # output stored row
                     quan = 0
-                    refs = []
+                    refs = []   
             prevrow = row                       # process new row
             quan = quan + int(row[quanpos])     # add this quantity
             refs.append(row[refpos])            # add to list of refs
