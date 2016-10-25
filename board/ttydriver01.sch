@@ -226,21 +226,6 @@ F 7 "Digikey" V 6000 5600 60  0001 C CNN "Vendor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L NE555 U1
-U 1 1 57E4E2F4
-P 4950 5200
-F 0 "U1" H 4550 5550 50  0000 L CNN
-F 1 "NE555" H 4550 4850 50  0000 L CNN
-F 2 "Housings_DIP:DIP-8_W7.62mm" H 4950 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 4950 5200 50  0001 C CNN
-F 4 "TI" H 4950 5200 60  0001 C CNN "Mfgr"
-F 5 "NE555P" H 4950 5200 60  0001 C CNN "Part"
-F 6 "296-1411-5-ND" H 4950 5200 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 4950 5200 60  0001 C CNN "Vendor"
-	1    4950 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L D D1
 U 1 1 57E5AF6F
 P 5000 2950
@@ -328,21 +313,6 @@ F 5 "Digikey" V 8750 3450 60  0001 C CNN "Vendor"
 F 6 "CF14JT10R0" V 8750 3450 60  0001 C CNN "Part"
 F 7 "Stackpole" V 8750 3450 60  0001 C CNN "Mfgr"
 	1    8750 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Coilcraft-DA2032-RESCUE-ttydriver01 T1
-U 1 1 57E5C846
-P 6650 3300
-F 0 "T1" H 6275 3325 50  0000 C CNN
-F 1 "Coilcraft-DA2032" H 6675 2850 50  0000 C CNN
-F 2 "Coilcraft:Coilcraft-DA2032-AL" H 6400 3300 50  0001 C CNN
-F 3 "" H 6400 3300 50  0000 C CNN
-F 4 "Coilcraft" H 6650 3300 60  0001 C CNN "Mfgr"
-F 5 "DA2032-AL" H 6650 3300 60  0001 C CNN "Part"
-F 6 "Coilcraft" H 6650 3300 60  0001 C CNN "Vendor"
-F 7 "DA2032-AL" H 6650 3300 60  0001 C CNN "Vendorpart"
-	1    6650 3300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -716,6 +686,14 @@ F 7 "CF14JT1M00" V 7900 3350 60  0001 C CNN "Part"
 	1    7900 3350
 	1    0    0    -1  
 $EndComp
+Text Label 9500 3600 0    60   ~ 0
+HVNEG
+Text Label 9100 2650 0    60   ~ 0
+HVPOS
+Text Label 5750 4350 0    60   ~ 0
+OSC
+Text Label 4850 2650 0    60   ~ 0
+VPWR
 Wire Wire Line
 	6000 5850 6000 5700
 Wire Wire Line
@@ -758,13 +736,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 5850 4950 5800
 Connection ~ 8750 3600
-Wire Wire Line
-	5150 2950 6200 2950
 Connection ~ 5300 2950
-Wire Wire Line
-	6200 2950 6200 3100
-Connection ~ 6200 3050
-Connection ~ 6200 3000
 Wire Wire Line
 	5950 3500 6200 3500
 Wire Wire Line
@@ -974,12 +946,41 @@ Wire Wire Line
 	7200 2650 8650 2650
 Wire Wire Line
 	8650 2650 8650 2600
-Text Label 9500 3600 0    60   ~ 0
-HVNEG
-Text Label 9100 2650 0    60   ~ 0
-HVPOS
-Text Label 5750 4350 0    60   ~ 0
-OSC
-Text Label 4850 2650 0    60   ~ 0
-VPWR
+Wire Wire Line
+	5150 2950 6200 2950
+Wire Wire Line
+	6200 2950 6200 3100
+Connection ~ 6200 3050
+Connection ~ 6200 3000
+$Comp
+L Coilcraft-DA2032 T1
+U 1 1 580EBBE5
+P 6675 3300
+F 0 "T1" H 6275 3325 50  0000 C CNN
+F 1 "Coilcraft-DA2032" H 6675 2850 50  0000 C CNN
+F 2 "" H 6400 3300 50  0000 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 6400 3300 50  0001 C CNN
+F 4 "Coilcraft" H 6675 3300 60  0001 C CNN "Mfgr"
+F 5 "DA2032" H 6675 3300 60  0001 C CNN "Part"
+F 6 "Coilcraft" H 6675 3300 60  0001 C CNN "Vendor"
+F 7 "DA2032" H 6675 3300 60  0001 C CNN "Vendorpart"
+	1    6675 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM555N U1
+U 1 1 580EC2F4
+P 4950 5200
+F 0 "U1" H 4550 5550 50  0000 L CNN
+F 1 "LM555N" H 4550 4850 50  0000 L CNN
+F 2 "" H 4950 5200 50  0000 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 4950 5200 50  0000 C CNN
+F 4 "NE555P" H 4950 5200 60  0001 C CNN "Part"
+F 5 "Digikey" H 4950 5200 60  0001 C CNN "Vendor"
+F 6 "TI" H 4950 5200 60  0001 C CNN "Mfgr"
+	1    4950 5200
+	1    0    0    -1  
+$EndComp
+Connection ~ 6200 2950
+Connection ~ 6200 3500
 $EndSCHEMATC
