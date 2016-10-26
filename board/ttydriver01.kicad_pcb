@@ -282,7 +282,7 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
-    (model Pin_Headers.3dshapes/Pin_Header_Angled_1x06.wrl
+    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x06.wrl
       (at (xyz 0.1 0.4 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 -90))
@@ -354,6 +354,11 @@
       (net 2 GND))
     (pad 2 thru_hole oval (at 1.27 0 180) (size 1.50622 3.01498) (drill 0.99822) (layers *.Cu *.Mask)
       (net 11 "Net-(P3-Pad2)"))
+    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x02.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Capacitors_ThroughHole:C_Radial_D5_L6_P2.5 (layer F.Cu) (tedit 5806EF36) (tstamp 57F95726)
@@ -1271,6 +1276,11 @@
       (net 8 "Net-(P1-Pad3)"))
     (pad 4 thru_hole oval (at 3.81 0 180) (size 1.50622 3.01498) (drill 0.99822) (layers *.Cu *.Mask)
       (net 9 "Net-(P1-Pad4)"))
+    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x04.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Connect:PINHEAD1-2 (layer F.Cu) (tedit 0) (tstamp 58040C0B)
@@ -1292,6 +1302,11 @@
       (net 10 "Net-(P2-Pad1)"))
     (pad 2 thru_hole oval (at 1.27 0 180) (size 1.50622 3.01498) (drill 0.99822) (layers *.Cu *.Mask)
       (net 41 /HVPOS))
+    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x02.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module DC-DC:PINHEAD1-10 (layer F.Cu) (tedit 580409D2) (tstamp 58040C1F)
@@ -1337,6 +1352,11 @@
       (net 2 GND))
     (pad 9 thru_hole oval (at 8.89 0.127 90) (size 1.50622 3.01498) (drill 0.99822) (layers *.Cu *.Mask)
       (net 38 "Net-(P4-Pad9)"))
+    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x10.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module DC-DC:TO-220-HV (layer F.Cu) (tedit 5806F062) (tstamp 58042331)
@@ -1366,6 +1386,11 @@
       (net 42 /OSC))
     (pad 1 thru_hole oval (at -2.54 0 90) (size 1.8 2.54) (drill 1.143) (layers *.Cu *.Mask F.SilkS)
       (net 2 GND))
+    (model TO_SOT_Packages_THT.3dshapes/TO-220_Neutral123_Vertical.wrl
+      (at (xyz 0 0 -0.1))
+      (scale (xyz 0.375 0.375 0.375))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Capacitors_ThroughHole:C_Disc_D6_P5 (layer F.Cu) (tedit 0) (tstamp 58068546)
