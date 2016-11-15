@@ -10,7 +10,7 @@ WORK IN PROGRESS. IN TEST.
 This is a board to allow connecting antique Teletype machines to a computer through
 a USB port. It's for Teletype Model 14 and 15 machines, which use 60mA current
 loops.   This board needs no external power supply other than the USB port.
-This approach uses only about 1 watt of power. 
+This approach uses only about 1 watt of power, drawing 200mA from the USB port. 
 
 
 # How it works
@@ -75,6 +75,8 @@ level circuitry.
 
 On the Teletype side, everything is isolated from ground and from the USB side.
 
+# Connectors
+
 P1 is the Teletype connection. Pins 1 and 2 go to the
 printer, pins 3 and 4 go to the keyboard.
 
@@ -84,3 +86,6 @@ be jumpered.
 
 P3 is a connection for a solid state relay (5V in) to
 turn on the Teletype motor.  Use of this is optional.
+
+P4 is for an optional front panel, with on/off switch,
+power and motor lights, and a break button.  If not used, jumper 1-2, 3-4, and 5-6.
