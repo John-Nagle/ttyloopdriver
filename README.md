@@ -1,7 +1,7 @@
 # ttyloopdriver
 Hardware device for driving antique Teletype machines
 
-[Prototype board](board/images/boardpopulatedv1.0.jpg)
+![Prototype board](board/images/boardpopulatedv1.0.jpg)
 
 WORK IN PROGRESS. IN TEST.
 
