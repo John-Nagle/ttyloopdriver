@@ -985,4 +985,10 @@ $EndComp
 Connection ~ 6200 2950
 Connection ~ 6200 3500
 Connection ~ 5100 2150
+Text Notes 5775 3825 0    60   ~ 0
+G
+Text Notes 5500 3575 0    60   ~ 0
+S
+Text Notes 5925 3575 0    60   ~ 0
+D
 $EndSCHEMATC

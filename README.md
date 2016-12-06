@@ -3,7 +3,10 @@ Hardware device for driving antique Teletype machines
 
 ![Prototype board](board/images/boardpopulatedv1.0.jpg)
 
-WORK IN PROGRESS. IN TEST.
+WORK IN PROGRESS. 
+Status: version 1 not successful.  The 555 timer can't produce
+enough peak drive for the MOSFET, and only about 20V comes out.
+Redesign underway.
 
 # What it is
 
