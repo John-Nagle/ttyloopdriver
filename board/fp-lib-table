@@ -2,4 +2,5 @@
   (lib (name cp2102)(type KiCad)(uri "$(KIPRJMOD)/cp2102.pretty")(options "")(descr ""))
   (lib (name Coilcraft)(type KiCad)(uri "$(KIPRJMOD)/Coilcraft.pretty")(options "")(descr ""))
   (lib (name DC-DC)(type KiCad)(uri "$(KIPRJMOD)/DC-DC.pretty")(options "")(descr ""))
+  (lib (name Switchcraft)(type KiCad)(uri "$(KIPRJMOD)/Switchcraft.pretty")(options "")(descr ""))
 )
