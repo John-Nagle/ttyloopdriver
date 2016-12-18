@@ -4,4 +4,14 @@ $CMP IE0524S
 D DC-DC power supply 5V to 24V
 $ENDCMP
 #
+$CMP PHONE-JACK-MONO
+D DC Barrel Jack
+K DC power barrel jack connector
+$ENDCMP
+#
+$CMP PHONE-JACK-MONO-SW
+D DC Barrel Jack
+K DC power barrel jack connector
+$ENDCMP
+#
 #End Doc Library
