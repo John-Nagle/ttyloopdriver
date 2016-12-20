@@ -2,6 +2,9 @@
 *~
 *.bak
 *.bck
+*.log
+*.net
+*.raw
 *-cache.lib
 *-rescue.lib
 *.kicad_pcb-bak
