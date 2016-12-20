@@ -4,9 +4,19 @@ Hardware device for driving antique Teletype machines
 ![Prototype board](board/images/boardpopulatedv1.0.jpg)
 
 WORK IN PROGRESS. 
-Status: version 1 not successful.  The 555 timer can't produce
+# Status 
+
+version 1 not successful.  The 555 timer can't produce
 enough peak drive for the MOSFET, and only about 20V comes out.
 Redesign underway.
+
+Update 2016-12-19
+
+Redesign complete. SPICE model (in directory "circuitsim/ttydriver.asc") works.  Gil Smith is building up a prototype for
+circuit testing.  If that works, a new PC board will be designed.
+
+The next PC board will have switches, LEDs, and phone jacks on the board, so no external wiring harness
+will be required.
 
 # What it is
 
