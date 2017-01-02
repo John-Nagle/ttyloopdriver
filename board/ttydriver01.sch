@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ttydriver01-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -201,7 +202,7 @@ L CP C9
 U 1 1 57E5B094
 P 4350 3950
 F 0 "C9" H 4375 4050 50  0000 L CNN
-F 1 "220uf" H 4375 3850 50  0000 L CNN
+F 1 "1000uf" H 4375 3850 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5" H 4388 3800 50  0001 C CNN
 F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW" H 4350 3950 50  0001 C CNN
 F 4 "P5166-ND" H 4350 3950 60  0001 C CNN "Vendorpart"
@@ -436,7 +437,7 @@ L TPS2030P U2
 U 1 1 57FC84AA
 P 3750 3700
 F 0 "U2" H 3700 3650 60  0000 C CNN
-F 1 "TPS2030P" H 3750 3950 60  0000 C CNN
+F 1 "TPS2055AD" H 3750 3950 60  0000 C CNN
 F 2 "Housings_DIP:DIP-8_W7.62mm" H 3750 3700 60  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tps2031.pdf" H 3750 3700 60  0001 C CNN
 F 4 "595-TPS2030P" H 3750 3700 60  0001 C CNN "Vendorpart"
@@ -571,7 +572,7 @@ F 3 "" H 4325 5075 50  0000 C CNN
 	1    4125 5075
 	0    -1   -1   0   
 $EndComp
-Text Notes 3825 5375 0    60   ~ 0
+Text Notes 3825 5025 0    60   ~ 0
 VPWR\n4.5-5V
 $Comp
 L Coilcraft-STLC3085 T1
@@ -629,7 +630,7 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7300 5850 0    60   ~ 0
-CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device \n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]
+CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device [DONE]\n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]
 $Comp
 L FDS4559 U9
 U 1 1 58675588
@@ -862,7 +863,7 @@ F 7 "Digikey" H 9125 3875 60  0001 C CNN "Vendor"
 $EndComp
 Text Notes 8825 3150 0    39   ~ 0
 Snubbing
-Text Notes 5575 3800 0    39   ~ 0
+Text Notes 6300 3775 0    39   ~ 0
 120V pulse supply
 $Comp
 L LED_3 D13
@@ -1345,23 +1346,23 @@ Connection ~ 4150 5525
 $Comp
 L C C1
 U 1 1 586A5F83
-P 4625 3950
-F 0 "C1" H 4650 4050 50  0000 L CNN
-F 1 "22uf" H 4650 3850 50  0000 L CNN
-F 2 "" H 4663 3800 50  0000 C CNN
-F 3 "" H 4625 3950 50  0000 C CNN
-	1    4625 3950
+P 4700 3950
+F 0 "C1" H 4725 4050 50  0000 L CNN
+F 1 "22uf" H 4725 3850 50  0000 L CNN
+F 2 "" H 4738 3800 50  0000 C CNN
+F 3 "" H 4700 3950 50  0000 C CNN
+	1    4700 3950
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C5
 U 1 1 586A600C
-P 5200 3950
-F 0 "C5" H 5225 4050 50  0000 L CNN
-F 1 "22uf" H 5225 3850 50  0000 L CNN
-F 2 "" H 5238 3800 50  0000 C CNN
-F 3 "" H 5200 3950 50  0000 C CNN
-	1    5200 3950
+P 5100 3950
+F 0 "C5" H 5125 4050 50  0000 L CNN
+F 1 "22uf" H 5125 3850 50  0000 L CNN
+F 2 "" H 5138 3800 50  0000 C CNN
+F 3 "" H 5100 3950 50  0000 C CNN
+	1    5100 3950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1377,17 +1378,33 @@ F 3 "" H 4900 3800 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5050 3800 6275 3800
-Connection ~ 4625 3800
+Connection ~ 4700 3800
 Connection ~ 4350 3800
 Wire Wire Line
 	6275 3800 6275 3825
-Connection ~ 5200 3800
+Connection ~ 5100 3800
 Wire Wire Line
-	4350 4100 5200 4100
-Connection ~ 4625 4100
+	4350 4100 5100 4100
+Connection ~ 4700 4100
 Connection ~ 4950 4100
 Text Notes 4350 4250 0    39   ~ 0
 Filtering of\ninductive kickback
 Wire Wire Line
 	4950 6725 4950 7025
+Wire Wire Line
+	8150 3950 8150 3975
+Connection ~ 8150 3975
+$Comp
+L TEST_1P W3
+U 1 1 586A3D32
+P 8150 3950
+F 0 "W3" H 8225 4000 50  0000 C CNN
+F 1 "TEST_1P" V 8025 4100 50  0001 C CNN
+F 2 "" H 8350 3950 50  0000 C CNN
+F 3 "" H 8350 3950 50  0000 C CNN
+	1    8150 3950
+	1    0    0    -1  
+$EndComp
+Text Notes 7775 3900 0    39   ~ 0
+Cap charge\nto 120VDC
 $EndSCHEMATC
