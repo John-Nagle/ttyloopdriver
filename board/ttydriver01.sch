@@ -107,10 +107,10 @@ F 7 "BC1160CT-ND" H 3900 6425 60  0001 C CNN "Part"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C4
+L C_Small C8
 U 1 1 57E4E2FC
 P 5775 6875
-F 0 "C4" H 5785 6945 50  0000 L CNN
+F 0 "C8" H 5785 6945 50  0000 L CNN
 F 1 "880pf" H 5785 6795 50  0000 L CNN
 F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 5775 6875 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/45171/kseries.pdf" H 5775 6875 50  0001 C CNN
@@ -125,7 +125,7 @@ $Comp
 L R R7
 U 1 1 57E4E2FB
 P 5775 6550
-F 0 "R7" H 5855 6550 50  0000 C CNN
+F 0 "R7" H 5875 6550 50  0000 C CNN
 F 1 "7.2K" V 5775 6550 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5705 6550 50  0001 C CNN
 F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 5775 6550 50  0001 C CNN
@@ -155,7 +155,7 @@ $Comp
 L R R6
 U 1 1 57E4E2F7
 P 5775 6050
-F 0 "R6" V 5855 6050 50  0000 C CNN
+F 0 "R6" H 5675 6050 50  0000 C CNN
 F 1 "720" V 5775 6050 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5705 6050 50  0001 C CNN
 F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 5775 6050 50  0001 C CNN
@@ -230,7 +230,7 @@ $Comp
 L ZENER D7
 U 1 1 57E5B55A
 P 8400 4225
-F 0 "D7" H 8400 4325 50  0000 C CNN
+F 0 "D7" V 8400 4325 50  0000 C CNN
 F 1 "ZENER 120V" H 8400 4125 50  0000 C CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8400 4225 50  0001 C CNN
 F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 8400 4225 50  0001 C CNN
@@ -260,7 +260,7 @@ $Comp
 L R R1
 U 1 1 57E5B823
 P 8750 3700
-F 0 "R1" V 8830 3700 50  0000 C CNN
+F 0 "R1" H 8850 3700 50  0000 C CNN
 F 1 "10" V 8750 3700 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8680 3700 50  0001 C CNN
 F 3 "" H 8750 3700 50  0000 C CNN
@@ -328,10 +328,10 @@ F 3 "" H 7275 2925 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R9
+L R R15
 U 1 1 57EF57CB
 P 7225 2625
-F 0 "R9" V 7305 2625 50  0000 C CNN
+F 0 "R15" V 7305 2625 50  0000 C CNN
 F 1 "680" V 7225 2625 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7155 2625 50  0001 C CNN
 F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7225 2625 50  0001 C CNN
@@ -385,7 +385,7 @@ $Comp
 L CONN_01X02 P2
 U 1 1 57F43FF1
 P 8700 2675
-F 0 "P2" H 8700 2825 50  0000 C CNN
+F 0 "P2" V 8700 2825 50  0000 C CNN
 F 1 "CONN_01X02" V 8800 2675 50  0000 C CNN
 F 2 "Connect:PINHEAD1-2" H 8700 2675 50  0001 C CNN
 F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 8700 2675 50  0001 C CNN
@@ -396,10 +396,10 @@ F 6 "Digikey" H 8700 2675 60  0001 C CNN "Vendor"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R7
+L R R13
 U 1 1 57F4497E
 P 6150 1425
-F 0 "R7" V 6230 1425 50  0000 C CNN
+F 0 "R13" V 6230 1425 50  0000 C CNN
 F 1 "3.3K" V 6150 1425 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6080 1425 50  0001 C CNN
 F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6150 1425 50  0001 C CNN
@@ -506,10 +506,10 @@ $EndComp
 Text Notes 5200 1125 0    60   ~ 0
 Keyboard section - 24V
 $Comp
-L R R8
+L R R14
 U 1 1 58029311
 P 7900 4225
-F 0 "R8" V 7980 4225 50  0000 C CNN
+F 0 "R14" H 8000 4225 50  0000 C CNN
 F 1 "1M" V 7900 4225 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7830 4225 50  0001 C CNN
 F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7900 4225 50  0001 C CNN
@@ -618,10 +618,10 @@ F 3 "" H 5925 5025 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR012
 U 1 1 58676BAC
 P 5700 5200
-F 0 "#PWR?" H 5700 4950 50  0001 C CNN
+F 0 "#PWR012" H 5700 4950 50  0001 C CNN
 F 1 "GND" H 5825 5125 50  0000 C CNN
 F 2 "" H 5700 5200 50  0000 C CNN
 F 3 "" H 5700 5200 50  0000 C CNN
@@ -629,12 +629,12 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7300 5850 0    60   ~ 0
-TODO:\n- Change FET [DONE]\n- Add power filtering\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device \n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]
+CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device \n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]
 $Comp
-L FDS4559 U?
+L FDS4559 U9
 U 1 1 58675588
 P 5850 4275
-F 0 "U?" H 5490 4615 50  0000 L CNN
+F 0 "U9" H 5490 4615 50  0000 L CNN
 F 1 "FDS4559" H 5690 3915 50  0000 L CNN
 F 2 "" H 5745 4295 50  0000 C CNN
 F 3 "" H 5945 4195 50  0000 C CNN
@@ -642,10 +642,10 @@ F 3 "" H 5945 4195 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR013
 U 1 1 586793AC
 P 5550 4575
-F 0 "#PWR?" H 5550 4325 50  0001 C CNN
+F 0 "#PWR013" H 5550 4325 50  0001 C CNN
 F 1 "GND" H 5550 4425 50  0000 C CNN
 F 2 "" H 5550 4575 50  0000 C CNN
 F 3 "" H 5550 4575 50  0000 C CNN
@@ -653,10 +653,10 @@ F 3 "" H 5550 4575 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR014
 U 1 1 58679519
 P 5475 4075
-F 0 "#PWR?" H 5475 3825 50  0001 C CNN
+F 0 "#PWR014" H 5475 3825 50  0001 C CNN
 F 1 "GND" H 5475 3925 50  0000 C CNN
 F 2 "" H 5475 4075 50  0000 C CNN
 F 3 "" H 5475 4075 50  0000 C CNN
@@ -664,10 +664,10 @@ F 3 "" H 5475 4075 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR015
 U 1 1 58679748
 P 6175 4050
-F 0 "#PWR?" H 6175 3800 50  0001 C CNN
+F 0 "#PWR015" H 6175 3800 50  0001 C CNN
 F 1 "GND" H 6175 3900 50  0000 C CNN
 F 2 "" H 6175 4050 50  0000 C CNN
 F 3 "" H 6175 4050 50  0000 C CNN
@@ -675,10 +675,10 @@ F 3 "" H 6175 4050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L IE0524S U?
+L IE0524S U8
 U 1 1 5867471B
 P 5850 3250
-F 0 "U?" H 5950 3300 60  0000 C CNN
+F 0 "U8" H 5950 3300 60  0000 C CNN
 F 1 "IE0512S" H 5850 3500 60  0000 C CNN
 F 2 "DC-DC:IE0524S" H 5850 3250 60  0001 C CNN
 F 3 "http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788" H 5850 3250 60  0001 C CNN
@@ -690,10 +690,10 @@ F 7 "Digikey" H 5850 3250 60  0001 C CNN "Vendor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L PHONE-JACK-MONO-SW J3
+L PHONE-JACK-MONO-SW J2
 U 1 1 58676D1D
 P 6775 1425
-F 0 "J3" H 6575 1565 50  0000 C CNN
+F 0 "J2" H 6575 1565 50  0000 C CNN
 F 1 "KEYBOARD JACK" H 6825 1275 50  0000 C CNN
 F 2 "" H 6775 1525 50  0000 C CNN
 F 3 "" H 6775 1525 50  0000 C CNN
@@ -756,10 +756,10 @@ F 3 "" H 7400 3600 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R?
+L R R9
 U 1 1 5867C471
 P 7800 3600
-F 0 "R?" V 7880 3600 50  0000 C CNN
+F 0 "R9" V 7880 3600 50  0000 C CNN
 F 1 "33" V 7800 3600 50  0000 C CNN
 F 2 "" V 7730 3600 50  0000 C CNN
 F 3 "" H 7800 3600 50  0000 C CNN
@@ -778,10 +778,10 @@ F 3 "" H 6350 2450 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CONN_01X02 P?
+L CONN_01X02 P1
 U 1 1 5867CC0B
 P 7800 3325
-F 0 "P?" H 7800 3475 50  0000 C CNN
+F 0 "P1" V 7800 3475 50  0000 C CNN
 F 1 "CONN_01X02" V 7900 3325 50  0001 C CNN
 F 2 "Connect:PINHEAD1-2" H 7800 3325 50  0001 C CNN
 F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 7800 3325 50  0001 C CNN
@@ -794,10 +794,10 @@ $EndComp
 Text Notes 7325 3400 0    39   ~ 0
 Jumper for\n220 ohm\nselector
 $Comp
-L GND #PWR?
+L GND #PWR016
 U 1 1 5867E37E
 P 6200 3400
-F 0 "#PWR?" H 6200 3150 50  0001 C CNN
+F 0 "#PWR016" H 6200 3150 50  0001 C CNN
 F 1 "GND" H 6200 3250 50  0000 C CNN
 F 2 "" H 6200 3400 50  0000 C CNN
 F 3 "" H 6200 3400 50  0000 C CNN
@@ -820,10 +820,10 @@ F 3 "" H 6200 4725 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR017
 U 1 1 58682515
 P 6200 4925
-F 0 "#PWR?" H 6200 4675 50  0001 C CNN
+F 0 "#PWR017" H 6200 4675 50  0001 C CNN
 F 1 "GND" H 6200 4775 50  0000 C CNN
 F 2 "" H 6200 4925 50  0000 C CNN
 F 3 "" H 6200 4925 50  0000 C CNN
@@ -876,10 +876,10 @@ F 3 "" H 6750 2200 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR018
 U 1 1 5868C75F
 P 7050 2275
-F 0 "#PWR?" H 7050 2025 50  0001 C CNN
+F 0 "#PWR018" H 7050 2025 50  0001 C CNN
 F 1 "GND" H 7175 2200 50  0000 C CNN
 F 2 "" H 7050 2275 50  0000 C CNN
 F 3 "" H 7050 2275 50  0000 C CNN
@@ -887,10 +887,10 @@ F 3 "" H 7050 2275 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
+L R R11
 U 1 1 5868DBB5
 P 6350 2250
-F 0 "R?" V 6430 2250 50  0000 C CNN
+F 0 "R11" V 6430 2250 50  0000 C CNN
 F 1 "390" V 6350 2250 50  0000 C CNN
 F 2 "" V 6280 2250 50  0000 C CNN
 F 3 "" H 6350 2250 50  0000 C CNN
@@ -898,10 +898,10 @@ F 3 "" H 6350 2250 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R?
+L R R12
 U 1 1 5868DC9D
 P 6350 2050
-F 0 "R?" V 6430 2050 50  0000 C CNN
+F 0 "R12" V 6430 2050 50  0000 C CNN
 F 1 "390" V 6350 2050 50  0000 C CNN
 F 2 "" V 6280 2050 50  0000 C CNN
 F 3 "" H 6350 2050 50  0000 C CNN
@@ -943,10 +943,10 @@ Text Notes 1950 6750 0    39   ~ 0
 BREAK\nbutton
 NoConn ~ 1625 5775
 $Comp
-L PHONE-JACK-MONO J?
+L PHONE-JACK-MONO J3
 U 1 1 58691531
 P 3000 7175
-F 0 "J?" H 2475 7175 50  0000 C CNN
+F 0 "J3" H 2475 7175 50  0000 C CNN
 F 1 "MOTOR CTL RELAY JACK" H 3000 7000 50  0000 C CNN
 F 2 "" H 3000 7275 50  0000 C CNN
 F 3 "" H 3000 7275 50  0000 C CNN
@@ -954,10 +954,10 @@ F 3 "" H 3000 7275 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L G3VM401E U?
+L G3VM401E U7
 U 1 1 5869A3C6
 P 2800 6800
-F 0 "U?" H 2800 6800 60  0000 C CNN
+F 0 "U7" H 2800 6800 60  0000 C CNN
 F 1 "CPC1510G" H 2800 7050 60  0000 C CNN
 F 2 "Housings_DIP:DIP-6_W7.62mm" H 2800 6800 60  0001 C CNN
 F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 2800 6800 60  0001 C CNN
@@ -969,10 +969,10 @@ F 7 "Digikey" H 2800 6800 60  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR019
 U 1 1 5869BDA5
 P 2400 6800
-F 0 "#PWR?" H 2400 6550 50  0001 C CNN
+F 0 "#PWR019" H 2400 6550 50  0001 C CNN
 F 1 "GND" H 2400 6650 50  0000 C CNN
 F 2 "" H 2400 6800 50  0000 C CNN
 F 3 "" H 2400 6800 50  0000 C CNN
@@ -987,10 +987,6 @@ Wire Wire Line
 	5550 6525 5450 6525
 Wire Wire Line
 	4150 6525 4450 6525
-Wire Wire Line
-	4950 6725 4950 7025
-Wire Wire Line
-	4950 6975 4950 6925
 Connection ~ 8750 4475
 Connection ~ 8400 4475
 Wire Wire Line
@@ -1192,12 +1188,12 @@ Wire Wire Line
 	5475 4075 5575 4075
 Connection ~ 5575 4075
 Wire Wire Line
-	6125 3975 6125 4150
+	6125 3975 6125 4175
 Wire Wire Line
 	6125 4050 6175 4050
 Connection ~ 6125 4050
 Wire Wire Line
-	4600 1525 5250 1525
+	4150 1525 5250 1525
 Wire Wire Line
 	6300 1425 6475 1425
 Wire Wire Line
@@ -1344,7 +1340,7 @@ Wire Wire Line
 	4150 5075 4125 5075
 Connection ~ 4150 5075
 Wire Wire Line
-	4150 1950 4150 6525
+	4150 1525 4150 6525
 Connection ~ 4150 5525
 $Comp
 L C C1
@@ -1392,4 +1388,6 @@ Connection ~ 4625 4100
 Connection ~ 4950 4100
 Text Notes 4350 4250 0    39   ~ 0
 Filtering of\ninductive kickback
+Wire Wire Line
+	4950 6725 4950 7025
 $EndSCHEMATC
