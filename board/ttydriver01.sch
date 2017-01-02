@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:ttypowerlib
+LIBS:controls
 LIBS:ttydriver01-cache
 EELAYER 25 0
 EELAYER END
@@ -49,946 +50,1346 @@ Text Notes 7550 7500 0    60   ~ 12
 $Comp
 L PWR_FLAG #FLG01
 U 1 1 57E4E306
-P 4650 5850
-F 0 "#FLG01" H 4650 5945 50  0001 C CNN
-F 1 "PWR_FLAG" H 4650 6030 50  0000 C CNN
-F 2 "" H 4650 5850 50  0000 C CNN
-F 3 "" H 4650 5850 50  0000 C CNN
-	1    4650 5850
+P 4650 6975
+F 0 "#FLG01" H 4650 7070 50  0001 C CNN
+F 1 "PWR_FLAG" H 4650 7155 50  0000 C CNN
+F 2 "" H 4650 6975 50  0000 C CNN
+F 3 "" H 4650 6975 50  0000 C CNN
+	1    4650 6975
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR02
 U 1 1 57E4E304
-P 4950 5900
-F 0 "#PWR02" H 4950 5650 50  0001 C CNN
-F 1 "GND" H 4950 5750 50  0000 C CNN
-F 2 "" H 4950 5900 50  0000 C CNN
-F 3 "" H 4950 5900 50  0000 C CNN
-	1    4950 5900
+P 4950 7025
+F 0 "#PWR02" H 4950 6775 50  0001 C CNN
+F 1 "GND" H 4950 6875 50  0000 C CNN
+F 2 "" H 4950 7025 50  0000 C CNN
+F 3 "" H 4950 7025 50  0000 C CNN
+	1    4950 7025
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR03
 U 1 1 57E4E2FF
-P 3900 5400
-F 0 "#PWR03" H 3900 5150 50  0001 C CNN
-F 1 "GND" H 3900 5250 50  0000 C CNN
-F 2 "" H 3900 5400 50  0000 C CNN
-F 3 "" H 3900 5400 50  0000 C CNN
-	1    3900 5400
+P 3900 6525
+F 0 "#PWR03" H 3900 6275 50  0001 C CNN
+F 1 "GND" H 3900 6375 50  0000 C CNN
+F 2 "" H 3900 6525 50  0000 C CNN
+F 3 "" H 3900 6525 50  0000 C CNN
+	1    3900 6525
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR04
 U 1 1 57E4E2FE
-P 6300 6600
-F 0 "#PWR04" H 6300 6350 50  0001 C CNN
-F 1 "GND" H 6300 6450 50  0000 C CNN
-F 2 "" H 6300 6600 50  0000 C CNN
-F 3 "" H 6300 6600 50  0000 C CNN
-	1    6300 6600
+P 5775 7075
+F 0 "#PWR04" H 5775 6825 50  0001 C CNN
+F 1 "GND" H 5775 6925 50  0000 C CNN
+F 2 "" H 5775 7075 50  0000 C CNN
+F 3 "" H 5775 7075 50  0000 C CNN
+	1    5775 7075
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C5
+L C_Small C6
 U 1 1 57E4E2FD
-P 3900 5300
-F 0 "C5" H 3910 5370 50  0000 L CNN
-F 1 "0.1uf" H 3910 5220 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 3900 5300 50  0001 C CNN
-F 3 "" H 3900 5300 50  0000 C CNN
-F 4 "BC1160CT-ND" H 3900 5300 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" H 3900 5300 60  0001 C CNN "Vendor"
-F 6 "Vishay" H 3900 5300 60  0001 C CNN "Mfgr"
-F 7 "BC1160CT-ND" H 3900 5300 60  0001 C CNN "Part"
-	1    3900 5300
+P 3900 6425
+F 0 "C6" H 3910 6495 50  0000 L CNN
+F 1 "10nf" H 3910 6345 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 3900 6425 50  0001 C CNN
+F 3 "" H 3900 6425 50  0000 C CNN
+F 4 "BC1160CT-ND" H 3900 6425 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 3900 6425 60  0001 C CNN "Vendor"
+F 6 "Vishay" H 3900 6425 60  0001 C CNN "Mfgr"
+F 7 "BC1160CT-ND" H 3900 6425 60  0001 C CNN "Part"
+	1    3900 6425
 	1    0    0    -1  
 $EndComp
 $Comp
 L C_Small C4
 U 1 1 57E4E2FC
-P 6300 6400
-F 0 "C4" H 6310 6470 50  0000 L CNN
-F 1 "100pf" H 6310 6320 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 6300 6400 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/45171/kseries.pdf" H 6300 6400 50  0001 C CNN
-F 4 "BC1013CT-ND" H 6300 6400 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" H 6300 6400 60  0001 C CNN "Vendor"
-F 6 "Vishay" H 6300 6400 60  0001 C CNN "Mfgr"
-F 7 "K101J15C0GF5TL2" H 6300 6400 60  0001 C CNN "Part"
-	1    6300 6400
+P 5775 6875
+F 0 "C4" H 5785 6945 50  0000 L CNN
+F 1 "880pf" H 5785 6795 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 5775 6875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/45171/kseries.pdf" H 5775 6875 50  0001 C CNN
+F 4 "BC1013CT-ND" H 5775 6875 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 5775 6875 60  0001 C CNN "Vendor"
+F 6 "Vishay" H 5775 6875 60  0001 C CNN "Mfgr"
+F 7 "K101J15C0GF5TL2" H 5775 6875 60  0001 C CNN "Part"
+	1    5775 6875
 	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 57E4E2FB
+P 5775 6550
+F 0 "R7" H 5855 6550 50  0000 C CNN
+F 1 "7.2K" V 5775 6550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5705 6550 50  0001 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 5775 6550 50  0001 C CNN
+F 4 "CF14JT2K20CT-ND" H 5775 6550 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 5775 6550 60  0001 C CNN "Vendor"
+F 6 "Stackpole" H 5775 6550 60  0001 C CNN "Mfgr"
+F 7 "CF14JT2K20" H 5775 6550 60  0001 C CNN "Part"
+	1    5775 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 57E4E2F8
+P 3525 5875
+F 0 "R8" V 3605 5875 50  0000 C CNN
+F 1 "10K" V 3525 5875 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3455 5875 50  0001 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 3525 5875 50  0001 C CNN
+F 4 "CF14JT68K0CT-ND" V 3525 5875 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" V 3525 5875 60  0001 C CNN "Vendor"
+F 6 "Stackpole" V 3525 5875 60  0001 C CNN "Mfgr"
+F 7 "CF14JT68K0" V 3525 5875 60  0001 C CNN "Part"
+	1    3525 5875
+	0    1    1    0   
 $EndComp
 $Comp
 L R R6
-U 1 1 57E4E2FB
-P 6300 6100
-F 0 "R6" H 6380 6100 50  0000 C CNN
-F 1 "2.2K" V 6300 6100 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6230 6100 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6300 6100 50  0001 C CNN
-F 4 "CF14JT2K20CT-ND" H 6300 6100 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" H 6300 6100 60  0001 C CNN "Vendor"
-F 6 "Stackpole" H 6300 6100 60  0001 C CNN "Mfgr"
-F 7 "CF14JT2K20" H 6300 6100 60  0001 C CNN "Part"
-	1    6300 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R2
-U 1 1 57E4E2FA
-P 6600 5050
-F 0 "R2" V 6680 5050 50  0000 C CNN
-F 1 "4.7K" V 6600 5050 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6530 5050 50  0001 C CNN
-F 3 "" H 6600 5050 50  0000 C CNN
-F 4 "CF14JT4K70CT-ND" V 6600 5050 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" V 6600 5050 60  0001 C CNN "Vendor"
-F 6 "Stackpole" V 6600 5050 60  0001 C CNN "Mfgr"
-F 7 "CF14JT4K70" V 6600 5050 60  0001 C CNN "Part"
-	1    6600 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R3
-U 1 1 57E4E2F9
-P 6600 5350
-F 0 "R3" V 6680 5350 50  0000 C CNN
-F 1 "4.7K" V 6600 5350 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6530 5350 50  0001 C CNN
-F 3 "" H 6600 5350 50  0000 C CNN
-F 4 "CF14JT4K70" V 6600 5350 60  0001 C CNN "Part"
-F 5 "Stackpole" V 6600 5350 60  0001 C CNN "Mfgr"
-F 6 "Digikey" V 6600 5350 60  0001 C CNN "Vendor"
-F 7 "CF14JT4K70CT-ND" V 6600 5350 60  0001 C CNN "Vendorpart"
-	1    6600 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R5
-U 1 1 57E4E2F8
-P 6450 5850
-F 0 "R5" V 6530 5850 50  0000 C CNN
-F 1 "68K" V 6450 5850 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6380 5850 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6450 5850 50  0001 C CNN
-F 4 "CF14JT68K0CT-ND" V 6450 5850 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" V 6450 5850 60  0001 C CNN "Vendor"
-F 6 "Stackpole" V 6450 5850 60  0001 C CNN "Mfgr"
-F 7 "CF14JT68K0" V 6450 5850 60  0001 C CNN "Part"
-	1    6450 5850
-	0    1    1    0   
-$EndComp
-$Comp
-L R R4
 U 1 1 57E4E2F7
-P 6150 5850
-F 0 "R4" V 6230 5850 50  0000 C CNN
-F 1 "22K" V 6150 5850 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6080 5850 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6150 5850 50  0001 C CNN
-F 4 "CF14JT22K0" V 6150 5850 60  0001 C CNN "Part"
-F 5 "Stackpole" V 6150 5850 60  0001 C CNN "Mfgr"
-F 6 "Digikey" V 6150 5850 60  0001 C CNN "Vendor"
-F 7 "CF14JT22K0CT-ND" V 6150 5850 60  0001 C CNN "Vendorpart"
-	1    6150 5850
-	0    1    1    0   
+P 5775 6050
+F 0 "R6" V 5855 6050 50  0000 C CNN
+F 1 "720" V 5775 6050 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5705 6050 50  0001 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 5775 6050 50  0001 C CNN
+F 4 "CF14JT22K0" V 5775 6050 60  0001 C CNN "Part"
+F 5 "Stackpole" V 5775 6050 60  0001 C CNN "Mfgr"
+F 6 "Digikey" V 5775 6050 60  0001 C CNN "Vendor"
+F 7 "CF14JT22K0CT-ND" V 5775 6050 60  0001 C CNN "Vendorpart"
+	1    5775 6050
+	-1   0    0    1   
 $EndComp
 $Comp
-L D_Small D5
+L D_Small D8
 U 1 1 57E4E2F6
-P 6600 5600
-F 0 "D5" V 6550 5680 50  0000 L CNN
-F 1 "1N4148" V 6650 5650 50  0000 L CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" V 6600 5600 50  0001 C CNN
-F 3 "" V 6600 5600 50  0000 C CNN
-F 4 "1N914FS-ND" V 6600 5600 60  0001 C CNN "Vendorpart"
-F 5 "1N914" V 6600 5600 60  0001 C CNN "Part"
-F 6 "Fairchild" V 6600 5600 60  0001 C CNN "Mfgr"
-F 7 "Digikey" V 6600 5600 60  0001 C CNN "Vendor"
-	1    6600 5600
-	0    1    1    0   
+P 4675 5875
+F 0 "D8" H 4625 5955 50  0000 L CNN
+F 1 "1N4148" H 4550 6050 50  0000 L CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" V 4675 5875 50  0001 C CNN
+F 3 "" V 4675 5875 50  0000 C CNN
+F 4 "1N914FS-ND" V 4675 5875 60  0001 C CNN "Vendorpart"
+F 5 "1N914" V 4675 5875 60  0001 C CNN "Part"
+F 6 "Fairchild" V 4675 5875 60  0001 C CNN "Mfgr"
+F 7 "Digikey" V 4675 5875 60  0001 C CNN "Vendor"
+	1    4675 5875
+	1    0    0    -1  
 $EndComp
 $Comp
-L D_Small D3
+L D_Small D9
 U 1 1 57E4E2F5
-P 6000 5600
-F 0 "D3" V 6050 5700 50  0000 L CNN
-F 1 "1N4148" V 5950 5700 50  0000 L CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" V 6000 5600 50  0001 C CNN
-F 3 "http://www.digikey.com/product-detail/en/fairchild-semiconductor/1N4148TR/1N4148FSTR-ND/458811" V 6000 5600 50  0001 C CNN
-F 4 "Fairchild" V 6000 5600 60  0001 C CNN "Mfgr"
-F 5 "1N914" V 6000 5600 60  0001 C CNN "Part"
-F 6 "1N914FS-ND" V 6000 5600 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" V 6000 5600 60  0001 C CNN "Vendor"
-	1    6000 5600
-	0    -1   -1   0   
+P 3825 5875
+F 0 "D9" H 3875 5975 50  0000 L CNN
+F 1 "1N4148" H 3700 6050 50  0000 L CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" V 3825 5875 50  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/fairchild-semiconductor/1N4148TR/1N4148FSTR-ND/458811" V 3825 5875 50  0001 C CNN
+F 4 "Fairchild" V 3825 5875 60  0001 C CNN "Mfgr"
+F 5 "1N914" V 3825 5875 60  0001 C CNN "Part"
+F 6 "1N914FS-ND" V 3825 5875 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" V 3825 5875 60  0001 C CNN "Vendor"
+	1    3825 5875
+	-1   0    0    1   
+$EndComp
+$Comp
+L CP C9
+U 1 1 57E5B094
+P 4350 3950
+F 0 "C9" H 4375 4050 50  0000 L CNN
+F 1 "220uf" H 4375 3850 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5" H 4388 3800 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW" H 4350 3950 50  0001 C CNN
+F 4 "P5166-ND" H 4350 3950 60  0001 C CNN "Vendorpart"
+F 5 "Panasonic" H 4350 3950 60  0001 C CNN "Mfgr"
+F 6 "ECA-1VM221" H 4350 3950 60  0001 C CNN "Part"
+F 7 "Digikey" H 4350 3950 60  0001 C CNN "Vendor"
+	1    4350 3950
+	1    0    0    -1  
 $EndComp
 $Comp
 L D D1
-U 1 1 57E5AF6F
-P 5000 2950
-F 0 "D1" H 5000 3050 50  0000 C CNN
-F 1 "D" H 5000 2850 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 5000 2950 50  0001 C CNN
-F 3 "http://www.fairchildsemi.com/datasheets/1N/1N5817.pdf" H 5000 2950 50  0001 C CNN
-F 4 "1N5817FSTR-ND" H 5000 2950 60  0001 C CNN "Vendorpart"
-F 5 "Fairchild" H 5000 2950 60  0001 C CNN "Mfgr"
-F 6 "1N5817" H 5000 2950 60  0001 C CNN "Part"
-F 7 "Digikey" H 5000 2950 60  0001 C CNN "Vendor"
-	1    5000 2950
-	-1   0    0    1   
-$EndComp
-$Comp
-L CP C1
-U 1 1 57E5B094
-P 5300 3200
-F 0 "C1" H 5325 3300 50  0000 L CNN
-F 1 "220uf" H 5325 3100 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5" H 5338 3050 50  0001 C CNN
-F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW" H 5300 3200 50  0001 C CNN
-F 4 "P5166-ND" H 5300 3200 60  0001 C CNN "Vendorpart"
-F 5 "Panasonic" H 5300 3200 60  0001 C CNN "Mfgr"
-F 6 "ECA-1VM221" H 5300 3200 60  0001 C CNN "Part"
-F 7 "Digikey" H 5300 3200 60  0001 C CNN "Vendor"
-	1    5300 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L D D2
 U 1 1 57E5B382
-P 7350 3100
-F 0 "D2" H 7350 3200 50  0000 C CNN
-F 1 "D" H 7350 3000 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 7350 3100 50  0001 C CNN
-F 3 "http://www.diodes.com/_files/datasheets/ds28002.pdf" H 7350 3100 50  0001 C CNN
-F 4 "1N4004DICT-ND" H 7350 3100 60  0001 C CNN "Vendorpart"
-F 5 "Diodes Inc" H 7350 3100 60  0001 C CNN "Mfgr"
-F 6 "1N4004-T" H 7350 3100 60  0001 C CNN "Part"
-F 7 "Digikey" H 7350 3100 60  0001 C CNN "Vendor"
-	1    7350 3100
+P 7350 3975
+F 0 "D1" H 7350 4075 50  0000 C CNN
+F 1 "D" H 7350 3875 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 7350 3975 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds28002.pdf" H 7350 3975 50  0001 C CNN
+F 4 "1N4004DICT-ND" H 7350 3975 60  0001 C CNN "Vendorpart"
+F 5 "Diodes Inc" H 7350 3975 60  0001 C CNN "Mfgr"
+F 6 "1N4004-T" H 7350 3975 60  0001 C CNN "Part"
+F 7 "Digikey" H 7350 3975 60  0001 C CNN "Vendor"
+	1    7350 3975
 	-1   0    0    1   
 $EndComp
 $Comp
-L ZENER D4
+L ZENER D7
 U 1 1 57E5B55A
-P 8400 3350
-F 0 "D4" H 8400 3450 50  0000 C CNN
-F 1 "ZENER 120V" H 8400 3250 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8400 3350 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 8400 3350 50  0001 C CNN
-F 4 "1N5380BG" H 8400 3350 60  0001 C CNN "Part"
-F 5 "ON" H 8400 3350 60  0001 C CNN "Mfgr"
-F 6 "1N5380BGOS-ND" H 8400 3350 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 8400 3350 60  0001 C CNN "Vendor"
-	1    8400 3350
+P 8400 4225
+F 0 "D7" H 8400 4325 50  0000 C CNN
+F 1 "ZENER 120V" H 8400 4125 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8400 4225 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 8400 4225 50  0001 C CNN
+F 4 "1N5380BG" H 8400 4225 60  0001 C CNN "Part"
+F 5 "ON" H 8400 4225 60  0001 C CNN "Mfgr"
+F 6 "1N5380BGOS-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
+	1    8400 4225
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C3
+L C_Small C7
 U 1 1 57E5B66D
-P 8750 3200
-F 0 "C3" H 8760 3270 50  0000 L CNN
-F 1 "1000pf" H 8760 3120 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 8750 3200 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/28549/dseries.pdf" H 8750 3200 50  0001 C CNN
-F 4 "1457PH-ND" H 8750 3200 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" H 8750 3200 60  0001 C CNN "Vendor"
-F 6 "D102K25Y5PL63L6R" H 8750 3200 60  0001 C CNN "Part"
-F 7 "Vishay" H 8750 3200 60  0001 C CNN "Mfgr"
-	1    8750 3200
+P 8750 3450
+F 0 "C7" H 8760 3520 50  0000 L CNN
+F 1 "1000pf" H 8760 3370 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 8750 3450 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/28549/dseries.pdf" H 8750 3450 50  0001 C CNN
+F 4 "1457PH-ND" H 8750 3450 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 8750 3450 60  0001 C CNN "Vendor"
+F 6 "D102K25Y5PL63L6R" H 8750 3450 60  0001 C CNN "Part"
+F 7 "Vishay" H 8750 3450 60  0001 C CNN "Mfgr"
+	1    8750 3450
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R1
 U 1 1 57E5B823
-P 8750 3450
-F 0 "R1" V 8830 3450 50  0000 C CNN
-F 1 "10" V 8750 3450 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8680 3450 50  0001 C CNN
-F 3 "" H 8750 3450 50  0000 C CNN
-F 4 "CF14JT10R0CT-ND" V 8750 3450 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" V 8750 3450 60  0001 C CNN "Vendor"
-F 6 "CF14JT10R0" V 8750 3450 60  0001 C CNN "Part"
-F 7 "Stackpole" V 8750 3450 60  0001 C CNN "Mfgr"
-	1    8750 3450
+P 8750 3700
+F 0 "R1" V 8830 3700 50  0000 C CNN
+F 1 "10" V 8750 3700 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8680 3700 50  0001 C CNN
+F 3 "" H 8750 3700 50  0000 C CNN
+F 4 "CF14JT10R0CT-ND" V 8750 3700 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" V 8750 3700 60  0001 C CNN "Vendor"
+F 6 "CF14JT10R0" V 8750 3700 60  0001 C CNN "Part"
+F 7 "Stackpole" V 8750 3700 60  0001 C CNN "Mfgr"
+	1    8750 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR05
 U 1 1 57E60F5A
-P 5300 3700
-F 0 "#PWR05" H 5300 3450 50  0001 C CNN
-F 1 "GND" H 5300 3550 50  0000 C CNN
-F 2 "" H 5300 3700 50  0000 C CNN
-F 3 "" H 5300 3700 50  0000 C CNN
-	1    5300 3700
+P 4950 4200
+F 0 "#PWR05" H 4950 3950 50  0001 C CNN
+F 1 "GND" H 4950 4050 50  0000 C CNN
+F 2 "" H 4950 4200 50  0000 C CNN
+F 3 "" H 4950 4200 50  0000 C CNN
+	1    4950 4200
 	1    0    0    -1  
 $EndComp
-Text Notes 5750 4450 0    60   ~ 0
-100KHz 25% duty cycle
-Text Notes 9900 2200 0    60   ~ 0
+Text Notes 4950 5275 0    60   ~ 0
+100KHz\n50% duty\ncycle
+Text Notes 9550 3350 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
 Text Notes 10600 7650 0    60   ~ 0
-1.1
-$Comp
-L D D6
-U 1 1 57E70158
-P 8150 3100
-F 0 "D6" H 8150 3200 50  0000 C CNN
-F 1 "D" H 8150 3000 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8150 3100 50  0001 C CNN
-F 3 "http://www.diodes.com/_files/datasheets/ds28002.pdf" H 8150 3100 50  0001 C CNN
-F 4 "1N4004-T" H 8150 3100 60  0001 C CNN "Part"
-F 5 "Diodes Inc" H 8150 3100 60  0001 C CNN "Mfgr"
-F 6 "1N4004DICT-ND" H 8150 3100 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 8150 3100 60  0001 C CNN "Vendor"
-	1    8150 3100
-	-1   0    0    -1  
-$EndComp
+2.0
 $Comp
 L GND #PWR06
 U 1 1 57EE08E1
-P 3300 2550
-F 0 "#PWR06" H 3300 2300 50  0001 C CNN
-F 1 "GND" H 3300 2400 50  0000 C CNN
-F 2 "" H 3300 2550 50  0000 C CNN
-F 3 "" H 3300 2550 50  0000 C CNN
-	1    3300 2550
+P 3300 3450
+F 0 "#PWR06" H 3300 3200 50  0001 C CNN
+F 1 "GND" H 3300 3300 50  0000 C CNN
+F 2 "" H 3300 3450 50  0000 C CNN
+F 3 "" H 3300 3450 50  0000 C CNN
+	1    3300 3450
 	1    0    0    -1  
 $EndComp
-Text Label 2600 4250 0    60   ~ 0
+Text Label 2600 5125 0    60   ~ 0
 ENABLE
 $Comp
 L G3VM401E U4
 U 1 1 57EF52FB
-P 6900 2650
-F 0 "U4" H 6900 2650 60  0000 C CNN
-F 1 "CPC1510G" H 6900 2900 60  0000 C CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 6900 2650 60  0001 C CNN
-F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 6900 2650 60  0001 C CNN
-F 4 "CLA277-ND" H 6900 2650 60  0001 C CNN "Vendorpart"
-F 5 "Ixys" H 6900 2650 60  0001 C CNN "Mfgr"
-F 6 "CPC1510G" H 6900 2650 60  0001 C CNN "Part"
-F 7 "Digikey" H 6900 2650 60  0001 C CNN "Vendor"
-	1    6900 2650
+P 7675 2925
+F 0 "U4" H 7675 2925 60  0000 C CNN
+F 1 "CPC1510G" H 7675 3175 60  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 7675 2925 60  0001 C CNN
+F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 7675 2925 60  0001 C CNN
+F 4 "CLA277-ND" H 7675 2925 60  0001 C CNN "Vendorpart"
+F 5 "Ixys" H 7675 2925 60  0001 C CNN "Mfgr"
+F 6 "CPC1510G" H 7675 2925 60  0001 C CNN "Part"
+F 7 "Digikey" H 7675 2925 60  0001 C CNN "Vendor"
+	1    7675 2925
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR07
 U 1 1 57EF56E2
-P 6500 2650
-F 0 "#PWR07" H 6500 2400 50  0001 C CNN
-F 1 "GND" H 6500 2500 50  0000 C CNN
-F 2 "" H 6500 2650 50  0000 C CNN
-F 3 "" H 6500 2650 50  0000 C CNN
-	1    6500 2650
+P 7275 2925
+F 0 "#PWR07" H 7275 2675 50  0001 C CNN
+F 1 "GND" H 7275 2775 50  0000 C CNN
+F 2 "" H 7275 2925 50  0000 C CNN
+F 3 "" H 7275 2925 50  0000 C CNN
+	1    7275 2925
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R9
 U 1 1 57EF57CB
-P 6350 2550
-F 0 "R9" V 6430 2550 50  0000 C CNN
-F 1 "680" V 6350 2550 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6280 2550 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6350 2550 50  0001 C CNN
-F 4 "Digikey" V 6350 2550 60  0001 C CNN "Vendor"
-F 5 "Stackpole" V 6350 2550 60  0001 C CNN "Mfgr"
-F 6 "CF14JT680RCT-ND" V 6350 2550 60  0001 C CNN "Vendorpart"
-F 7 "CF14JT680R" V 6350 2550 60  0001 C CNN "Part"
-	1    6350 2550
+P 7225 2625
+F 0 "R9" V 7305 2625 50  0000 C CNN
+F 1 "680" V 7225 2625 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7155 2625 50  0001 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7225 2625 50  0001 C CNN
+F 4 "Digikey" V 7225 2625 60  0001 C CNN "Vendor"
+F 5 "Stackpole" V 7225 2625 60  0001 C CNN "Mfgr"
+F 6 "CF14JT680RCT-ND" V 7225 2625 60  0001 C CNN "Vendorpart"
+F 7 "CF14JT680R" V 7225 2625 60  0001 C CNN "Part"
+	1    7225 2625
 	0    1    1    0   
 $EndComp
-Text Label 3200 1750 0    60   ~ 0
+Text Label 3200 2625 0    60   ~ 0
 TxD
 $Comp
 L GND #PWR08
 U 1 1 57F0A1AD
-P 1400 2300
-F 0 "#PWR08" H 1400 2050 50  0001 C CNN
-F 1 "GND" H 1400 2150 50  0000 C CNN
-F 2 "" H 1400 2300 50  0000 C CNN
-F 3 "" H 1400 2300 50  0000 C CNN
-	1    1400 2300
+P 1400 3175
+F 0 "#PWR08" H 1400 2925 50  0001 C CNN
+F 1 "GND" H 1400 3025 50  0000 C CNN
+F 2 "" H 1400 3175 50  0000 C CNN
+F 3 "" H 1400 3175 50  0000 C CNN
+	1    1400 3175
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR09
 U 1 1 57F0A1F3
-P 1900 3300
-F 0 "#PWR09" H 1900 3050 50  0001 C CNN
-F 1 "GND" H 1900 3150 50  0000 C CNN
-F 2 "" H 1900 3300 50  0000 C CNN
-F 3 "" H 1900 3300 50  0000 C CNN
-	1    1900 3300
+P 1900 4175
+F 0 "#PWR09" H 1900 3925 50  0001 C CNN
+F 1 "GND" H 1900 4025 50  0000 C CNN
+F 2 "" H 1900 4175 50  0000 C CNN
+F 3 "" H 1900 4175 50  0000 C CNN
+	1    1900 4175
 	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 P3
-U 1 1 57F0B03E
-P 3150 3350
-F 0 "P3" H 3150 3500 50  0000 C CNN
-F 1 "CONN_01X02" V 3250 3350 50  0000 C CNN
-F 2 "Connect:PINHEAD1-2" H 3150 3350 50  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 3150 3350 50  0001 C CNN
-F 4 "WM10153-ND" H 3150 3350 60  0001 C CNN "Vendorpart"
-F 5 "Molex" H 3150 3350 60  0001 C CNN "Mfgr"
-F 6 "Digikey" H 3150 3350 60  0001 C CNN "Vendor"
-	1    3150 3350
-	1    0    0    1   
 $EndComp
 $Comp
 L GND #PWR010
 U 1 1 57F0B1AD
-P 2950 3400
-F 0 "#PWR010" H 2950 3150 50  0001 C CNN
-F 1 "GND" H 2950 3250 50  0000 C CNN
-F 2 "" H 2950 3400 50  0000 C CNN
-F 3 "" H 2950 3400 50  0000 C CNN
-	1    2950 3400
+P 3500 7275
+F 0 "#PWR010" H 3500 7025 50  0001 C CNN
+F 1 "GND" H 3500 7125 50  0000 C CNN
+F 2 "" H 3500 7275 50  0000 C CNN
+F 3 "" H 3500 7275 50  0000 C CNN
+	1    3500 7275
 	1    0    0    -1  
 $EndComp
-Text Notes 2250 3750 0    60   ~ 0
-Motor control out
-Text Label 3200 1600 0    60   ~ 0
+Text Notes 2700 6475 0    39   ~ 0
+Motor control
+Text Label 3200 1625 0    60   ~ 0
 RxD
 $Comp
 L CONN_01X02 P2
 U 1 1 57F43FF1
-P 8700 2400
-F 0 "P2" H 8700 2550 50  0000 C CNN
-F 1 "CONN_01X02" V 8800 2400 50  0000 C CNN
-F 2 "Connect:PINHEAD1-2" H 8700 2400 50  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 8700 2400 50  0001 C CNN
-F 4 "WM10153-ND" H 8700 2400 60  0001 C CNN "Vendorpart"
-F 5 "Molex" H 8700 2400 60  0001 C CNN "Mfgr"
-F 6 "Digikey" H 8700 2400 60  0001 C CNN "Vendor"
-	1    8700 2400
+P 8700 2675
+F 0 "P2" H 8700 2825 50  0000 C CNN
+F 1 "CONN_01X02" V 8800 2675 50  0000 C CNN
+F 2 "Connect:PINHEAD1-2" H 8700 2675 50  0001 C CNN
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 8700 2675 50  0001 C CNN
+F 4 "WM10153-ND" H 8700 2675 60  0001 C CNN "Vendorpart"
+F 5 "Molex" H 8700 2675 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 8700 2675 60  0001 C CNN "Vendor"
+	1    8700 2675
 	0    -1   -1   0   
-$EndComp
-$Comp
-L CONN_01X04 P1
-U 1 1 57F44672
-P 9700 2000
-F 0 "P1" H 9700 2250 50  0000 C CNN
-F 1 "CONN_01X04" V 9800 2000 50  0000 C CNN
-F 2 "DC-DC:PINHEAD1-4" H 9700 2000 50  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 9700 2000 50  0001 C CNN
-F 4 "WM10155-ND" H 9700 2000 60  0001 C CNN "Vendorpart"
-F 5 "Molex" H 9700 2000 60  0001 C CNN "Mfgr"
-F 6 "Digikey" H 9700 2000 60  0001 C CNN "Vendor"
-	1    9700 2000
-	1    0    0    1   
 $EndComp
 $Comp
 L R R7
 U 1 1 57F4497E
-P 7500 1400
-F 0 "R7" V 7580 1400 50  0000 C CNN
-F 1 "3.3K" V 7500 1400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7430 1400 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7500 1400 50  0001 C CNN
-F 4 "Stackpole" V 7500 1400 60  0001 C CNN "Mfgr"
-F 5 "Digikey" V 7500 1400 60  0001 C CNN "Vendor"
-F 6 "CF14JT3K30CT-ND" V 7500 1400 60  0001 C CNN "Vendorpart"
-F 7 "CF14JT3K30" V 7500 1400 60  0001 C CNN "Part"
-	1    7500 1400
+P 6150 1425
+F 0 "R7" V 6230 1425 50  0000 C CNN
+F 1 "3.3K" V 6150 1425 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6080 1425 50  0001 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6150 1425 50  0001 C CNN
+F 4 "Stackpole" V 6150 1425 60  0001 C CNN "Mfgr"
+F 5 "Digikey" V 6150 1425 60  0001 C CNN "Vendor"
+F 6 "CF14JT3K30CT-ND" V 6150 1425 60  0001 C CNN "Vendorpart"
+F 7 "CF14JT3K30" V 6150 1425 60  0001 C CNN "Part"
+	1    6150 1425
 	0    1    1    0   
 $EndComp
-Text Notes 9900 1900 0    60   ~ 0
-Keyboard contacts
-Text Notes 8450 2250 0    60   ~ 0
+Text Notes 8450 2525 0    60   ~ 0
 Current meter
-Text Notes 8100 1900 0    60   ~ 0
-24VDC  keyboard power
-NoConn ~ 1500 2900
-NoConn ~ 1500 2500
+NoConn ~ 1500 3775
+NoConn ~ 1500 3375
 $Comp
 L CP2102-breakout U3
 U 1 1 57F094DE
-P 2200 2600
-F 0 "U3" H 2175 2525 50  0000 L CNN
-F 1 "CP2102-breakout" H 1875 2800 50  0000 L CNN
-F 2 "cp2102:CP2102-breakout" H 2200 2300 50  0001 C CNN
-F 3 "" H 2200 2300 50  0000 C CNN
-F 4 "RobotShop" H 2200 2600 60  0001 C CNN "Mfgr"
-F 5 "RB-WAV-49" H 2200 2600 60  0001 C CNN "Part"
-F 6 "Robotshop" H 2200 2600 60  0001 C CNN "Vendor"
-	1    2200 2600
+P 2200 3475
+F 0 "U3" H 2175 3400 50  0000 L CNN
+F 1 "CP2102-breakout" H 1875 3675 50  0000 L CNN
+F 2 "cp2102:CP2102-breakout" H 2200 3175 50  0001 C CNN
+F 3 "" H 2200 3175 50  0000 C CNN
+F 4 "RobotShop" H 2200 3475 60  0001 C CNN "Mfgr"
+F 5 "RB-WAV-49" H 2200 3475 60  0001 C CNN "Part"
+F 6 "Robotshop" H 2200 3475 60  0001 C CNN "Vendor"
+	1    2200 3475
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2900 2300
-NoConn ~ 2900 2500
-NoConn ~ 2900 2700
-$Comp
-L Q_NMOS_SDG Q1
-U 1 1 57F9D592
-P 5750 3600
-F 0 "Q1" V 5700 3800 50  0000 R CNN
-F 1 "IRLB8721PBF" V 5950 3900 50  0000 R CNN
-F 2 "DC-DC:TO-220-HV" H 5950 3700 50  0001 C CNN
-F 3 "http://www.irf.com/product-info/datasheets/data/irlb8721pbf.pdf" H 5750 3600 50  0001 C CNN
-F 4 "Infineon" V 5750 3600 60  0001 C CNN "Mfgr"
-F 5 "IRLB8721PBF" V 5750 3600 60  0001 C CNN "Part"
-F 6 "IRLB8721PBF-ND" V 5750 3600 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" V 5750 3600 60  0001 C CNN "Vendor"
-	1    5750 3600
-	0    1    -1   0   
-$EndComp
+NoConn ~ 2900 3175
+NoConn ~ 2900 3375
+NoConn ~ 2900 3575
 $Comp
 L TPS2030P U2
 U 1 1 57FC84AA
-P 3750 2800
-F 0 "U2" H 3700 2750 60  0000 C CNN
-F 1 "TPS2030P" H 3750 3050 60  0000 C CNN
-F 2 "Housings_DIP:DIP-8_W7.62mm" H 3750 2800 60  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tps2031.pdf" H 3750 2800 60  0001 C CNN
-F 4 "595-TPS2030P" H 3750 2800 60  0001 C CNN "Vendorpart"
-F 5 "TI" H 3750 2800 60  0001 C CNN "Mfgr"
-F 6 "TPS2030P" H 3750 2800 60  0001 C CNN "Part"
-F 7 "Mouser" H 3750 2800 60  0001 C CNN "Vendor"
-	1    3750 2800
+P 3750 3700
+F 0 "U2" H 3700 3650 60  0000 C CNN
+F 1 "TPS2030P" H 3750 3950 60  0000 C CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 3750 3700 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps2031.pdf" H 3750 3700 60  0001 C CNN
+F 4 "595-TPS2030P" H 3750 3700 60  0001 C CNN "Vendorpart"
+F 5 "TI" H 3750 3700 60  0001 C CNN "Mfgr"
+F 6 "TPS2030P" H 3750 3700 60  0001 C CNN "Part"
+F 7 "Mouser" H 3750 3700 60  0001 C CNN "Vendor"
+	1    3750 3700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4050 3000
+NoConn ~ 4050 3900
 $Comp
 L CP C2
 U 1 1 57FD3936
-P 7550 3350
-F 0 "C2" H 7575 3450 50  0000 L CNN
-F 1 "1uf" H 7575 3250 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 7588 3200 50  0001 C CNN
-F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c49e.ashx" H 7550 3350 50  0001 C CNN
-F 4 "Murata" H 7550 3350 60  0001 C CNN "Mfgr"
-F 5 "RDER72E105MUB1H03B" H 7550 3350 60  0001 C CNN "Part"
-F 6 "490-8911-ND" H 7550 3350 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 7550 3350 60  0001 C CNN "Vendor"
-	1    7550 3350
+P 7550 4225
+F 0 "C2" H 7575 4325 50  0000 L CNN
+F 1 "1uf" H 7575 4125 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 7588 4075 50  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c49e.ashx" H 7550 4225 50  0001 C CNN
+F 4 "Murata" H 7550 4225 60  0001 C CNN "Mfgr"
+F 5 "RDER72E105MUB1H03B" H 7550 4225 60  0001 C CNN "Part"
+F 6 "490-8911-ND" H 7550 4225 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 7550 4225 60  0001 C CNN "Vendor"
+	1    7550 4225
 	1    0    0    -1  
 $EndComp
 $Comp
 L IE0524S U5
 U 1 1 57FDC5B1
-P 3750 2150
-F 0 "U5" H 3850 2200 60  0000 C CNN
-F 1 "IE0524S" H 3750 2400 60  0000 C CNN
-F 2 "DC-DC:IE0524S" H 3750 2150 60  0001 C CNN
-F 3 "http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788" H 3750 2150 60  0001 C CNN
-F 4 "XP Power" H 3750 2150 60  0001 C CNN "Mfgr"
-F 5 "IE0524S" H 3750 2150 60  0001 C CNN "Part"
-F 6 "1470-1407-5-ND" H 3750 2150 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 3750 2150 60  0001 C CNN "Vendor"
-	1    3750 2150
+P 3600 1950
+F 0 "U5" H 3700 2000 60  0000 C CNN
+F 1 "IE0524S" H 3600 2200 60  0000 C CNN
+F 2 "DC-DC:IE0524S" H 3600 1950 60  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788" H 3600 1950 60  0001 C CNN
+F 4 "XP Power" H 3600 1950 60  0001 C CNN "Mfgr"
+F 5 "IE0524S" H 3600 1950 60  0001 C CNN "Part"
+F 6 "1470-1407-5-ND" H 3600 1950 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 3600 1950 60  0001 C CNN "Vendor"
+	1    3600 1950
 	-1   0    0    1   
 $EndComp
 $Comp
 L GND #PWR011
 U 1 1 57FDCD1E
-P 4150 2250
-F 0 "#PWR011" H 4150 2000 50  0001 C CNN
-F 1 "GND" H 4150 2100 50  0000 C CNN
-F 2 "" H 4150 2250 50  0000 C CNN
-F 3 "" H 4150 2250 50  0000 C CNN
-	1    4150 2250
+P 4000 2050
+F 0 "#PWR011" H 4000 1800 50  0001 C CNN
+F 1 "GND" H 4000 1900 50  0000 C CNN
+F 2 "" H 4000 2050 50  0000 C CNN
+F 3 "" H 4000 2050 50  0000 C CNN
+	1    4000 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L G3VM401E U6
 U 1 1 57FDCEDB
-P 6900 1500
-F 0 "U6" H 6900 1500 60  0000 C CNN
-F 1 "CPC1510G" H 6900 1750 60  0000 C CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 6900 1500 60  0001 C CNN
-F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 6900 1500 60  0001 C CNN
-F 4 "Ixys" H 6900 1500 60  0001 C CNN "Mfgr"
-F 5 "CLA277-ND" H 6900 1500 60  0001 C CNN "Vendorpart"
-F 6 "CPC1510G" H 6900 1500 60  0001 C CNN "Part"
-F 7 "Digikey" H 6900 1500 60  0001 C CNN "Vendor"
-	1    6900 1500
+P 5550 1525
+F 0 "U6" H 5550 1525 60  0000 C CNN
+F 1 "CPC1510G" H 5550 1775 60  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 5550 1525 60  0001 C CNN
+F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 5550 1525 60  0001 C CNN
+F 4 "Ixys" H 5550 1525 60  0001 C CNN "Mfgr"
+F 5 "CLA277-ND" H 5550 1525 60  0001 C CNN "Vendorpart"
+F 6 "CPC1510G" H 5550 1525 60  0001 C CNN "Part"
+F 7 "Digikey" H 5550 1525 60  0001 C CNN "Vendor"
+	1    5550 1525
 	-1   0    0    -1  
 $EndComp
-Text Notes 6550 1100 0    60   ~ 0
-Opto-isolators
-Text Notes 650  5000 0    60   ~ 0
-Front Panel
-$Comp
-L R R10
-U 1 1 58003C54
-P 2550 5500
-F 0 "R10" V 2500 5700 50  0000 C CNN
-F 1 "680" V 2550 5500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2480 5500 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 2550 5500 50  0001 C CNN
-F 4 "Digikey" V 2550 5500 60  0001 C CNN "Vendor"
-F 5 "Stackpole" V 2550 5500 60  0001 C CNN "Mfgr"
-F 6 "CF14JT680RCT-ND" V 2550 5500 60  0001 C CNN "Vendorpart"
-F 7 "CF14JT680R" V 2550 5500 60  0001 C CNN "Part"
-	1    2550 5500
-	0    1    1    0   
-$EndComp
-$Comp
-L R R11
-U 1 1 58003DC1
-P 2550 5600
-F 0 "R11" V 2500 5800 50  0000 C CNN
-F 1 "680" V 2550 5600 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2480 5600 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 2550 5600 50  0001 C CNN
-F 4 "Digikey" V 2550 5600 60  0001 C CNN "Vendor"
-F 5 "Stackpole" V 2550 5600 60  0001 C CNN "Mfgr"
-F 6 "CF14JT680R" V 2550 5600 60  0001 C CNN "Part"
-F 7 "CF14JT680RCT-ND" V 2550 5600 60  0001 C CNN "Vendorpart"
-	1    2550 5600
-	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR012
-U 1 1 58003F20
-P 1800 5850
-F 0 "#PWR012" H 1800 5600 50  0001 C CNN
-F 1 "GND" H 1800 5700 50  0000 C CNN
-F 2 "" H 1800 5850 50  0000 C CNN
-F 3 "" H 1800 5850 50  0000 C CNN
-	1    1800 5850
-	1    0    0    -1  
-$EndComp
-Text Notes 650  5550 0    39   ~ 0
-1-2 On Sw\n3-4 On Sw\n5-6 BREAK button\n8 Power LED (white)\n9 Motor LED (red)\n10 GND for LEDs
-$Comp
-L CONN_01X10 P4
-U 1 1 58006AF9
-P 1500 5250
-F 0 "P4" H 1500 5800 50  0000 C CNN
-F 1 "CONN_01X10" V 1600 5250 50  0000 C CNN
-F 2 "DC-DC:PINHEAD1-10" H 1500 5250 50  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 1500 5250 50  0001 C CNN
-F 4 "Molex" H 1500 5250 60  0001 C CNN "Mfgr"
-F 5 "WM10294-ND" H 1500 5250 60  0001 C CNN "Vendorpart"
-F 6 "Digikey" H 1500 5250 60  0001 C CNN "Vendor"
-	1    1500 5250
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 1700 5400
+Text Notes 5200 1125 0    60   ~ 0
+Keyboard section - 24V
 $Comp
 L R R8
 U 1 1 58029311
-P 7900 3350
-F 0 "R8" V 7980 3350 50  0000 C CNN
-F 1 "1M" V 7900 3350 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7830 3350 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7900 3350 50  0001 C CNN
-F 4 "Digikey" V 7900 3350 60  0001 C CNN "Vendor"
-F 5 "Stackpole" V 7900 3350 60  0001 C CNN "Mfgr"
-F 6 "CF14JT1M00CT-ND" V 7900 3350 60  0001 C CNN "Vendorpart"
-F 7 "CF14JT1M00" V 7900 3350 60  0001 C CNN "Part"
-	1    7900 3350
+P 7900 4225
+F 0 "R8" V 7980 4225 50  0000 C CNN
+F 1 "1M" V 7900 4225 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7830 4225 50  0001 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7900 4225 50  0001 C CNN
+F 4 "Digikey" V 7900 4225 60  0001 C CNN "Vendor"
+F 5 "Stackpole" V 7900 4225 60  0001 C CNN "Mfgr"
+F 6 "CF14JT1M00CT-ND" V 7900 4225 60  0001 C CNN "Vendorpart"
+F 7 "CF14JT1M00" V 7900 4225 60  0001 C CNN "Part"
+	1    7900 4225
 	1    0    0    -1  
 $EndComp
-Text Label 9500 3600 0    60   ~ 0
+Text Label 9500 4475 0    60   ~ 0
 HVNEG
-Text Label 9100 2650 0    60   ~ 0
+Text Label 9100 2925 0    60   ~ 0
 HVPOS
-Text Label 5750 4350 0    60   ~ 0
+Text Label 5450 5475 0    60   ~ 0
 OSC
-Text Label 4850 2650 0    60   ~ 0
-VPWR
-Wire Wire Line
-	6000 5850 6000 5700
-Wire Wire Line
-	6600 5850 6600 5700
-Wire Wire Line
-	5450 5200 6600 5200
-Wire Wire Line
-	6000 5500 6000 5200
-Connection ~ 6000 5200
-Wire Wire Line
-	3900 5200 4450 5200
-Wire Wire Line
-	6300 5950 6300 5850
-Wire Wire Line
-	6300 6600 6300 6500
-Wire Wire Line
-	6300 6300 6300 6250
-Wire Wire Line
-	4450 5000 4450 4750
-Wire Wire Line
-	4450 4750 5550 4750
-Wire Wire Line
-	5550 4750 5550 6300
-Wire Wire Line
-	5550 5400 5450 5400
-Wire Wire Line
-	5550 6300 6300 6300
-Connection ~ 5550 5400
-Wire Wire Line
-	4350 5400 4450 5400
-Wire Wire Line
-	4350 4650 4350 5400
-Wire Wire Line
-	6600 4650 6600 4900
-Wire Wire Line
-	4950 4650 4950 4800
-Connection ~ 4950 4650
-Wire Wire Line
-	4950 5600 4950 5900
-Wire Wire Line
-	4950 5850 4950 5800
-Connection ~ 8750 3600
-Connection ~ 5300 2950
-Wire Wire Line
-	5950 3500 6200 3500
-Wire Wire Line
-	6200 3500 6200 3650
-Connection ~ 6200 3550
-Connection ~ 6200 3600
-Wire Wire Line
-	5300 3500 5550 3500
-Connection ~ 8400 3600
-Wire Wire Line
-	5450 5000 5450 4350
-Wire Wire Line
-	5450 4350 5750 4350
-Connection ~ 5300 3500
-Wire Wire Line
-	7550 3200 7550 3100
-Connection ~ 7550 3100
-Wire Wire Line
-	7550 3500 7550 3600
-Wire Wire Line
-	8400 3600 8400 3550
-Wire Wire Line
-	8400 2750 8400 3150
-Wire Wire Line
-	5300 3050 5300 2950
-Wire Wire Line
-	5300 3350 5300 3700
-Connection ~ 4850 4650
-Wire Wire Line
-	7500 3100 8000 3100
-Connection ~ 8400 3100
-Wire Wire Line
-	3300 2800 3300 3950
-Wire Wire Line
-	4300 3100 4850 3100
-Wire Wire Line
-	4300 2500 4300 3100
-Wire Wire Line
-	4850 4650 4850 1500
-Connection ~ 4850 3100
-Wire Wire Line
-	7200 2550 7250 2550
-Wire Wire Line
-	7250 2550 7250 2750
-Connection ~ 7250 2750
-Wire Wire Line
-	7200 2750 8400 2750
-Wire Wire Line
-	8300 3100 8400 3100
-Wire Wire Line
-	6200 2550 6200 1750
-Wire Wire Line
-	1500 2700 1100 2700
-Wire Wire Line
-	1100 2700 1100 4250
-Wire Wire Line
-	6200 1750 1200 1750
-Wire Wire Line
-	1200 1750 1200 3500
-Wire Wire Line
-	1200 3500 2100 3500
-Wire Wire Line
-	2100 3500 2100 3300
-Wire Wire Line
-	1700 3300 1700 4800
-Wire Wire Line
-	3300 3100 3300 3100
-Wire Wire Line
-	2500 3300 2700 3300
-Wire Wire Line
-	1000 1600 1000 4500
-Connection ~ 4850 2950
-Wire Wire Line
-	9500 1400 9500 1850
-Wire Wire Line
-	9500 1400 7650 1400
-Wire Wire Line
-	9100 2650 9100 2050
-Wire Wire Line
-	9100 2050 9500 2050
-Wire Wire Line
-	7200 3500 7200 3600
-Connection ~ 7550 3600
-Wire Wire Line
-	9500 3600 9500 2150
-Wire Wire Line
-	5750 4350 5750 3800
-Wire Wire Line
-	1400 2300 1500 2300
-Wire Wire Line
-	4950 5850 4650 5850
-Connection ~ 4950 5850
-Wire Wire Line
-	6500 2550 6600 2550
-Wire Wire Line
-	6500 2650 6600 2650
-Wire Wire Line
-	4300 2700 4050 2700
-Wire Wire Line
-	4050 2900 4300 2900
-Connection ~ 4300 2900
-Wire Wire Line
-	4050 2800 4300 2800
-Connection ~ 4300 2800
-Wire Wire Line
-	3300 2550 3450 2550
-Wire Wire Line
-	3450 2550 3450 2700
-Wire Wire Line
-	3300 2900 3450 2900
-Wire Wire Line
-	3450 2800 3300 2800
-Connection ~ 3300 2900
-Wire Wire Line
-	3450 3000 3450 4250
-Wire Wire Line
-	3450 4250 1100 4250
-Wire Wire Line
-	4050 2150 4850 2150
-Connection ~ 4850 2150
-Wire Wire Line
-	4050 2250 4150 2250
-Wire Wire Line
-	1000 1600 6600 1600
-Wire Wire Line
-	6600 1400 6500 1400
-Wire Wire Line
-	6500 1400 6500 1600
-Connection ~ 6500 1600
-Wire Wire Line
-	4850 1500 6600 1500
-Wire Wire Line
-	9500 1950 4050 1950
-Wire Wire Line
-	7200 1500 7350 1500
-Wire Wire Line
-	7350 1500 7350 2050
-Wire Wire Line
-	7350 2050 4050 2050
-Wire Wire Line
-	7200 1400 7350 1400
-Wire Wire Line
-	1700 4900 1800 4900
-Wire Wire Line
-	1800 4900 1800 3950
-Wire Wire Line
-	1800 3950 3300 3950
-Wire Wire Line
-	2900 2900 3100 2900
-Wire Wire Line
-	3100 2900 3100 2500
-Wire Wire Line
-	3100 2500 4300 2500
-Connection ~ 4300 2700
-Wire Wire Line
-	2950 3300 2800 3300
-Wire Wire Line
-	2800 3300 2800 5600
-Wire Wire Line
-	2800 5100 1700 5100
-Wire Wire Line
-	2500 3300 2500 5000
-Wire Wire Line
-	2500 5000 1700 5000
-Connection ~ 2800 5100
-Wire Wire Line
-	3450 4650 3450 5500
-Wire Wire Line
-	3450 4650 6600 4650
-Connection ~ 4350 4650
-Wire Wire Line
-	1700 5700 1800 5700
-Wire Wire Line
-	1800 5700 1800 5850
-Wire Wire Line
-	1000 4500 1900 4500
-Wire Wire Line
-	3450 5500 2700 5500
-Wire Wire Line
-	2800 5600 2700 5600
-Wire Wire Line
-	2300 3300 2300 5300
-Wire Wire Line
-	2400 5500 1700 5500
-Wire Wire Line
-	1700 5600 2400 5600
-Wire Wire Line
-	2300 5300 1700 5300
-Wire Wire Line
-	1900 4500 1900 5200
-Wire Wire Line
-	1900 5200 1700 5200
-Wire Wire Line
-	7200 3600 9500 3600
-Wire Wire Line
-	7900 3200 7900 3100
-Connection ~ 7900 3100
-Wire Wire Line
-	7900 3600 7900 3500
-Connection ~ 7900 3600
-Wire Wire Line
-	8750 2600 8750 3100
-Wire Wire Line
-	9100 2650 8750 2650
-Connection ~ 8750 2650
-Wire Wire Line
-	7200 2650 8650 2650
-Wire Wire Line
-	8650 2650 8650 2600
-Wire Wire Line
-	5150 2950 6200 2950
-Wire Wire Line
-	6200 2950 6200 3100
-Connection ~ 6200 3050
-Connection ~ 6200 3000
-$Comp
-L Coilcraft-DA2032 T1
-U 1 1 580EBBE5
-P 6675 3300
-F 0 "T1" H 6275 3325 50  0000 C CNN
-F 1 "Coilcraft-DA2032" H 6675 2850 50  0000 C CNN
-F 2 "Coilcraft:Coilcraft-DA2032-AL" H 6400 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 6400 3300 50  0001 C CNN
-F 4 "Coilcraft" H 6675 3300 60  0001 C CNN "Mfgr"
-F 5 "DA2032" H 6675 3300 60  0001 C CNN "Part"
-F 6 "Coilcraft" H 6675 3300 60  0001 C CNN "Vendor"
-F 7 "DA2032" H 6675 3300 60  0001 C CNN "Vendorpart"
-	1    6675 3300
-	1    0    0    -1  
-$EndComp
 $Comp
 L LM555N U1
 U 1 1 580EC2F4
-P 4950 5200
-F 0 "U1" H 4550 5550 50  0000 L CNN
-F 1 "NE555" H 4550 4850 50  0000 L CNN
-F 2 "Housings_DIP:DIP-8_W7.62mm" H 4950 5200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 4950 5200 50  0001 C CNN
-F 4 "NE555P" H 4950 5200 60  0001 C CNN "Part"
-F 5 "Digikey" H 4950 5200 60  0001 C CNN "Vendor"
-F 6 "TI" H 4950 5200 60  0001 C CNN "Mfgr"
-F 7 "296-1411-5-ND" H 4950 5200 60  0001 C CNN "Vendorpart"
-	1    4950 5200
+P 4950 6325
+F 0 "U1" H 4550 6675 50  0000 L CNN
+F 1 "NE555" H 4550 5975 50  0000 L CNN
+F 2 "Housings_DIP:DIP-8_W7.62mm" H 4950 6325 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 4950 6325 50  0001 C CNN
+F 4 "NE555P" H 4950 6325 60  0001 C CNN "Part"
+F 5 "Digikey" H 4950 6325 60  0001 C CNN "Vendor"
+F 6 "TI" H 4950 6325 60  0001 C CNN "Mfgr"
+F 7 "296-1411-5-ND" H 4950 6325 60  0001 C CNN "Vendorpart"
+	1    4950 6325
 	1    0    0    -1  
 $EndComp
-Connection ~ 6200 2950
-Connection ~ 6200 3500
-Connection ~ 5100 2150
-Text Notes 5775 3825 0    60   ~ 0
+Text Notes 5500 4425 0    60   ~ 0
 G
-Text Notes 5500 3575 0    60   ~ 0
+Text Notes 5500 4600 0    60   ~ 0
 S
-Text Notes 5925 3575 0    60   ~ 0
+Text Notes 5925 4450 0    60   ~ 0
 D
+Text Notes 2900 5375 0    60   ~ 0
+TxD - OSC INHIBIT
+$Comp
+L TEST_1P W2
+U 1 1 586734F8
+P 5350 5300
+F 0 "W2" V 5300 5550 50  0000 C CNN
+F 1 "TEST_1P" V 5225 5450 50  0001 C CNN
+F 2 "" H 5550 5300 50  0000 C CNN
+F 3 "" H 5550 5300 50  0000 C CNN
+	1    5350 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST_1P W1
+U 1 1 5867392E
+P 4125 5075
+F 0 "W1" V 4025 5225 50  0000 C CNN
+F 1 "TEST_1P" H 4125 5275 50  0001 C CNN
+F 2 "" H 4325 5075 50  0000 C CNN
+F 3 "" H 4325 5075 50  0000 C CNN
+	1    4125 5075
+	0    -1   -1   0   
+$EndComp
+Text Notes 3825 5375 0    60   ~ 0
+VPWR\n4.5-5V
+$Comp
+L Coilcraft-STLC3085 T1
+U 1 1 5867571F
+P 6575 4025
+F 0 "T1" H 6325 4125 50  0000 C CNN
+F 1 "Coilcraft-STLC3085" H 6575 3775 50  0000 C CNN
+F 2 "" H 6475 4025 50  0000 C CNN
+F 3 "" H 6475 4025 50  0000 C CNN
+	1    6575 4025
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 58676298
+P 5450 5025
+F 0 "R3" V 5530 5025 50  0000 C CNN
+F 1 "22" V 5450 5025 50  0000 C CNN
+F 2 "" V 5380 5025 50  0000 C CNN
+F 3 "" H 5450 5025 50  0000 C CNN
+	1    5450 5025
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 58676319
+P 5700 5025
+F 0 "R4" V 5780 5025 50  0000 C CNN
+F 1 "10K" V 5700 5025 50  0000 C CNN
+F 2 "" V 5630 5025 50  0000 C CNN
+F 3 "" H 5700 5025 50  0000 C CNN
+	1    5700 5025
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 58676388
+P 5925 5025
+F 0 "C3" H 5950 5125 50  0000 L CNN
+F 1 "10pf" H 5950 4925 50  0000 L CNN
+F 2 "" H 5963 4875 50  0000 C CNN
+F 3 "" H 5925 5025 50  0000 C CNN
+	1    5925 5025
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58676BAC
+P 5700 5200
+F 0 "#PWR?" H 5700 4950 50  0001 C CNN
+F 1 "GND" H 5825 5125 50  0000 C CNN
+F 2 "" H 5700 5200 50  0000 C CNN
+F 3 "" H 5700 5200 50  0000 C CNN
+	1    5700 5200
+	1    0    0    -1  
+$EndComp
+Text Notes 7300 5850 0    60   ~ 0
+TODO:\n- Change FET [DONE]\n- Add power filtering\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device \n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]
+$Comp
+L FDS4559 U?
+U 1 1 58675588
+P 5850 4275
+F 0 "U?" H 5490 4615 50  0000 L CNN
+F 1 "FDS4559" H 5690 3915 50  0000 L CNN
+F 2 "" H 5745 4295 50  0000 C CNN
+F 3 "" H 5945 4195 50  0000 C CNN
+	1    5850 4275
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 586793AC
+P 5550 4575
+F 0 "#PWR?" H 5550 4325 50  0001 C CNN
+F 1 "GND" H 5550 4425 50  0000 C CNN
+F 2 "" H 5550 4575 50  0000 C CNN
+F 3 "" H 5550 4575 50  0000 C CNN
+	1    5550 4575
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58679519
+P 5475 4075
+F 0 "#PWR?" H 5475 3825 50  0001 C CNN
+F 1 "GND" H 5475 3925 50  0000 C CNN
+F 2 "" H 5475 4075 50  0000 C CNN
+F 3 "" H 5475 4075 50  0000 C CNN
+	1    5475 4075
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58679748
+P 6175 4050
+F 0 "#PWR?" H 6175 3800 50  0001 C CNN
+F 1 "GND" H 6175 3900 50  0000 C CNN
+F 2 "" H 6175 4050 50  0000 C CNN
+F 3 "" H 6175 4050 50  0000 C CNN
+	1    6175 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L IE0524S U?
+U 1 1 5867471B
+P 5850 3250
+F 0 "U?" H 5950 3300 60  0000 C CNN
+F 1 "IE0512S" H 5850 3500 60  0000 C CNN
+F 2 "DC-DC:IE0524S" H 5850 3250 60  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788" H 5850 3250 60  0001 C CNN
+F 4 "XP Power" H 5850 3250 60  0001 C CNN "Mfgr"
+F 5 "IE0524S" H 5850 3250 60  0001 C CNN "Part"
+F 6 "1470-1407-5-ND" H 5850 3250 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 5850 3250 60  0001 C CNN "Vendor"
+	1    5850 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L PHONE-JACK-MONO-SW J3
+U 1 1 58676D1D
+P 6775 1425
+F 0 "J3" H 6575 1565 50  0000 C CNN
+F 1 "KEYBOARD JACK" H 6825 1275 50  0000 C CNN
+F 2 "" H 6775 1525 50  0000 C CNN
+F 3 "" H 6775 1525 50  0000 C CNN
+	1    6775 1425
+	-1   0    0    -1  
+$EndComp
+$Comp
+L PHONE-JACK-MONO J1
+U 1 1 5867A3B2
+P 9800 2925
+F 0 "J1" H 9600 3065 50  0000 C CNN
+F 1 "PRINTER JACK" H 9800 2750 50  0000 C CNN
+F 2 "" H 9800 3025 50  0000 C CNN
+F 3 "" H 9800 3025 50  0000 C CNN
+	1    9800 2925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L D D5
+U 1 1 5867B008
+P 8400 3300
+F 0 "D5" V 8275 3375 50  0000 C CNN
+F 1 "D" V 8400 3200 50  0000 C CNN
+F 2 "" H 8400 3300 50  0000 C CNN
+F 3 "" H 8400 3300 50  0000 C CNN
+	1    8400 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L D D6
+U 1 1 5867B233
+P 8150 3300
+F 0 "D6" V 8025 3350 50  0000 C CNN
+F 1 "D" V 8150 3200 50  0000 C CNN
+F 2 "" H 8150 3300 50  0000 C CNN
+F 3 "" H 8150 3300 50  0000 C CNN
+	1    8150 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Zener D12
+U 1 1 5867C029
+P 6550 3050
+F 0 "D12" H 6550 3150 50  0000 C CNN
+F 1 "1N750" H 6750 3100 50  0000 C CNN
+F 2 "" H 6550 3050 50  0000 C CNN
+F 3 "" H 6550 3050 50  0000 C CNN
+	1    6550 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5867C198
+P 7400 3600
+F 0 "R5" V 7480 3600 50  0000 C CNN
+F 1 "27" V 7400 3600 50  0000 C CNN
+F 2 "" V 7330 3600 50  0000 C CNN
+F 3 "" H 7400 3600 50  0000 C CNN
+	1    7400 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5867C471
+P 7800 3600
+F 0 "R?" V 7880 3600 50  0000 C CNN
+F 1 "33" V 7800 3600 50  0000 C CNN
+F 2 "" V 7730 3600 50  0000 C CNN
+F 3 "" H 7800 3600 50  0000 C CNN
+	1    7800 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R10
+U 1 1 5867CB06
+P 6350 2450
+F 0 "R10" V 6430 2450 50  0000 C CNN
+F 1 "390" V 6350 2450 50  0000 C CNN
+F 2 "" V 6280 2450 50  0000 C CNN
+F 3 "" H 6350 2450 50  0000 C CNN
+	1    6350 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 5867CC0B
+P 7800 3325
+F 0 "P?" H 7800 3475 50  0000 C CNN
+F 1 "CONN_01X02" V 7900 3325 50  0001 C CNN
+F 2 "Connect:PINHEAD1-2" H 7800 3325 50  0001 C CNN
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 7800 3325 50  0001 C CNN
+F 4 "WM10153-ND" H 7800 3325 60  0001 C CNN "Vendorpart"
+F 5 "Molex" H 7800 3325 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 7800 3325 60  0001 C CNN "Vendor"
+	1    7800 3325
+	0    -1   -1   0   
+$EndComp
+Text Notes 7325 3400 0    39   ~ 0
+Jumper for\n220 ohm\nselector
+$Comp
+L GND #PWR?
+U 1 1 5867E37E
+P 6200 3400
+F 0 "#PWR?" H 6200 3150 50  0001 C CNN
+F 1 "GND" H 6200 3250 50  0000 C CNN
+F 2 "" H 6200 3400 50  0000 C CNN
+F 3 "" H 6200 3400 50  0000 C CNN
+	1    6200 3400
+	1    0    0    -1  
+$EndComp
+Text Notes 5650 2975 0    39   ~ 0
+Sustain supply
+Text Notes 3450 1700 0    39   ~ 0
+Keyboard supply
+$Comp
+L C C4
+U 1 1 58682026
+P 6200 4725
+F 0 "C4" H 6225 4825 50  0000 L CNN
+F 1 "1000pf" H 6225 4625 50  0000 L CNN
+F 2 "" H 6238 4575 50  0000 C CNN
+F 3 "" H 6200 4725 50  0000 C CNN
+	1    6200 4725
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58682515
+P 6200 4925
+F 0 "#PWR?" H 6200 4675 50  0001 C CNN
+F 1 "GND" H 6200 4775 50  0000 C CNN
+F 2 "" H 6200 4925 50  0000 C CNN
+F 3 "" H 6200 4925 50  0000 C CNN
+	1    6200 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D11
+U 1 1 586858DA
+P 9125 3450
+F 0 "D11" V 9125 3600 50  0000 C CNN
+F 1 "ZENER 120V" V 8875 3450 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 9125 3450 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 9125 3450 50  0001 C CNN
+F 4 "1N5380BG" H 9125 3450 60  0001 C CNN "Part"
+F 5 "ON" H 9125 3450 60  0001 C CNN "Mfgr"
+F 6 "1N5380BGOS-ND" H 9125 3450 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 9125 3450 60  0001 C CNN "Vendor"
+	1    9125 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L ZENER D10
+U 1 1 58685A36
+P 9125 3875
+F 0 "D10" V 9125 4025 50  0000 C CNN
+F 1 "ZENER 120V" V 8875 3900 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 9125 3875 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 9125 3875 50  0001 C CNN
+F 4 "1N5380BG" H 9125 3875 60  0001 C CNN "Part"
+F 5 "ON" H 9125 3875 60  0001 C CNN "Mfgr"
+F 6 "1N5380BGOS-ND" H 9125 3875 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" H 9125 3875 60  0001 C CNN "Vendor"
+	1    9125 3875
+	0    1    -1   0   
+$EndComp
+Text Notes 8825 3150 0    39   ~ 0
+Snubbing
+Text Notes 5575 3800 0    39   ~ 0
+120V pulse supply
+$Comp
+L LED_3 D13
+U 1 1 5868B9D6
+P 6750 2250
+F 0 "D13" H 6750 2625 50  0000 C CNN
+F 1 "LED_3" H 6750 2600 50  0001 C CNN
+F 2 "" H 6750 2200 50  0000 C CNN
+F 3 "" H 6750 2200 50  0000 C CNN
+	1    6750 2250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5868C75F
+P 7050 2275
+F 0 "#PWR?" H 7050 2025 50  0001 C CNN
+F 1 "GND" H 7175 2200 50  0000 C CNN
+F 2 "" H 7050 2275 50  0000 C CNN
+F 3 "" H 7050 2275 50  0000 C CNN
+	1    7050 2275
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5868DBB5
+P 6350 2250
+F 0 "R?" V 6430 2250 50  0000 C CNN
+F 1 "390" V 6350 2250 50  0000 C CNN
+F 2 "" V 6280 2250 50  0000 C CNN
+F 3 "" H 6350 2250 50  0000 C CNN
+	1    6350 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5868DC9D
+P 6350 2050
+F 0 "R?" V 6430 2050 50  0000 C CNN
+F 1 "390" V 6350 2050 50  0000 C CNN
+F 2 "" V 6280 2050 50  0000 C CNN
+F 3 "" H 6350 2050 50  0000 C CNN
+	1    6350 2050
+	0    1    1    0   
+$EndComp
+Text Notes 6875 2025 0    39   ~ 0
+Power
+Text Notes 6875 2225 0    39   ~ 0
+Motor
+Text Notes 6875 2425 0    39   ~ 0
+Data
+$Comp
+L Button_SPDT SW2
+U 1 1 586896FE
+P 2050 6425
+F 0 "SW2" H 1925 6600 50  0000 C CNN
+F 1 "Button_SPDT" H 2050 6225 50  0001 C CNN
+F 2 "NKK:Button-BB15AV-FA" H 2050 6150 50  0001 C CNN
+F 3 "" H 2050 6425 50  0000 C CNN
+	1    2050 6425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch_SPDT SW1
+U 1 1 586898A4
+P 1325 5675
+F 0 "SW1" H 1175 5810 50  0000 C CNN
+F 1 "Switch_SPDT" H 1075 5525 50  0001 C CNN
+F 2 "NKK:Toggle- M2012SA2W40" H 1350 5910 50  0001 C CNN
+F 3 "" H 1325 5675 50  0000 C CNN
+	1    1325 5675
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2300 6500
+Text Notes 1125 5875 0    39   ~ 0
+Power sw
+Text Notes 1950 6750 0    39   ~ 0
+BREAK\nbutton
+NoConn ~ 1625 5775
+$Comp
+L PHONE-JACK-MONO J?
+U 1 1 58691531
+P 3000 7175
+F 0 "J?" H 2475 7175 50  0000 C CNN
+F 1 "MOTOR CTL RELAY JACK" H 3000 7000 50  0000 C CNN
+F 2 "" H 3000 7275 50  0000 C CNN
+F 3 "" H 3000 7275 50  0000 C CNN
+	1    3000 7175
+	1    0    0    -1  
+$EndComp
+$Comp
+L G3VM401E U?
+U 1 1 5869A3C6
+P 2800 6800
+F 0 "U?" H 2800 6800 60  0000 C CNN
+F 1 "CPC1510G" H 2800 7050 60  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2800 6800 60  0001 C CNN
+F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 2800 6800 60  0001 C CNN
+F 4 "Ixys" H 2800 6800 60  0001 C CNN "Mfgr"
+F 5 "CLA277-ND" H 2800 6800 60  0001 C CNN "Vendorpart"
+F 6 "CPC1510G" H 2800 6800 60  0001 C CNN "Part"
+F 7 "Digikey" H 2800 6800 60  0001 C CNN "Vendor"
+	1    2800 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5869BDA5
+P 2400 6800
+F 0 "#PWR?" H 2400 6550 50  0001 C CNN
+F 1 "GND" H 2400 6650 50  0000 C CNN
+F 2 "" H 2400 6800 50  0000 C CNN
+F 3 "" H 2400 6800 50  0000 C CNN
+	1    2400 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 6325 4450 6325
+Wire Wire Line
+	4450 6125 4450 5875
+Wire Wire Line
+	5550 6525 5450 6525
+Wire Wire Line
+	4150 6525 4450 6525
+Wire Wire Line
+	4950 6725 4950 7025
+Wire Wire Line
+	4950 6975 4950 6925
+Connection ~ 8750 4475
+Connection ~ 8400 4475
+Wire Wire Line
+	5350 5300 5450 5300
+Wire Wire Line
+	5450 5175 5450 6125
+Wire Wire Line
+	7550 4075 7550 3975
+Connection ~ 7550 3975
+Wire Wire Line
+	7550 4375 7550 4475
+Wire Wire Line
+	8400 4475 8400 4425
+Wire Wire Line
+	8400 3450 8400 4025
+Wire Wire Line
+	7500 3975 8400 3975
+Wire Wire Line
+	3300 3700 3300 4825
+Wire Wire Line
+	7975 2825 8025 2825
+Wire Wire Line
+	8025 2825 8025 3025
+Connection ~ 8025 3025
+Wire Wire Line
+	7975 3025 8400 3025
+Wire Wire Line
+	1200 2625 7075 2625
+Wire Wire Line
+	1500 3575 1100 3575
+Wire Wire Line
+	1100 3575 1100 5125
+Wire Wire Line
+	1200 2625 1200 4375
+Wire Wire Line
+	1200 4375 2100 4375
+Wire Wire Line
+	2100 4175 2100 5375
+Wire Wire Line
+	1000 1625 1000 5375
+Wire Wire Line
+	8750 2925 9500 2925
+Connection ~ 7550 4475
+Wire Wire Line
+	9500 4475 9500 3025
+Wire Wire Line
+	1400 3175 1500 3175
+Wire Wire Line
+	4950 6975 4650 6975
+Connection ~ 4950 6975
+Wire Wire Line
+	7375 2625 7375 2825
+Wire Wire Line
+	7275 2925 7375 2925
+Wire Wire Line
+	4050 3600 6300 3600
+Wire Wire Line
+	4050 3800 4750 3800
+Connection ~ 4150 3800
+Wire Wire Line
+	4150 3700 4050 3700
+Connection ~ 4150 3700
+Wire Wire Line
+	3300 3450 3450 3450
+Wire Wire Line
+	3450 3450 3450 3600
+Wire Wire Line
+	3300 3800 3450 3800
+Wire Wire Line
+	3450 3700 3300 3700
+Connection ~ 3300 3800
+Wire Wire Line
+	3450 3900 3450 5125
+Wire Wire Line
+	3450 5125 1100 5125
+Wire Wire Line
+	3900 2050 4000 2050
+Wire Wire Line
+	1000 1625 5250 1625
+Wire Wire Line
+	5250 1425 5150 1425
+Wire Wire Line
+	5150 1425 5150 1625
+Connection ~ 5150 1625
+Wire Wire Line
+	5850 1525 6000 1525
+Wire Wire Line
+	6000 1525 6000 1850
+Wire Wire Line
+	5850 1425 6000 1425
+Wire Wire Line
+	1800 5575 1800 4825
+Wire Wire Line
+	1800 4825 3300 4825
+Wire Wire Line
+	2900 3775 3100 3775
+Wire Wire Line
+	3100 3775 3100 3375
+Wire Wire Line
+	3100 3375 4150 3375
+Connection ~ 4150 3600
+Wire Wire Line
+	2500 4175 2500 6700
+Wire Wire Line
+	1000 5375 1900 5375
+Wire Wire Line
+	2300 4175 2300 6350
+Wire Wire Line
+	1900 5375 1900 6100
+Wire Wire Line
+	7050 4475 9500 4475
+Wire Wire Line
+	7900 4075 7900 3975
+Connection ~ 7900 3975
+Wire Wire Line
+	7900 4475 7900 4375
+Connection ~ 7900 4475
+Connection ~ 8750 2925
+Wire Wire Line
+	7975 2925 8650 2925
+Wire Wire Line
+	8650 2925 8650 2875
+Wire Wire Line
+	3675 5875 3725 5875
+Wire Wire Line
+	3925 5875 4575 5875
+Connection ~ 4450 5875
+Wire Wire Line
+	4775 5875 5550 5875
+Wire Wire Line
+	2100 5375 3300 5375
+Connection ~ 2100 4375
+Wire Wire Line
+	3375 5875 3300 5875
+Wire Wire Line
+	3300 5875 3300 5375
+Wire Wire Line
+	5775 5525 5775 5900
+Wire Wire Line
+	5775 6200 5775 6400
+Wire Wire Line
+	5450 6325 5775 6325
+Connection ~ 5775 6325
+Wire Wire Line
+	5775 6700 5775 6775
+Wire Wire Line
+	5775 7075 5775 6975
+Wire Wire Line
+	5550 5875 5550 6725
+Wire Wire Line
+	5550 6725 5775 6725
+Connection ~ 5775 6725
+Connection ~ 5550 6525
+Wire Wire Line
+	6875 4225 6975 4225
+Wire Wire Line
+	6975 4225 6975 3975
+Wire Wire Line
+	6975 3975 7200 3975
+Wire Wire Line
+	6875 3825 7050 3825
+Wire Wire Line
+	7050 3150 7050 4475
+Wire Wire Line
+	6200 4225 6200 4575
+Wire Wire Line
+	6200 4225 6275 4225
+Wire Wire Line
+	5450 4350 5450 4875
+Wire Wire Line
+	5450 4825 5925 4825
+Wire Wire Line
+	5700 4825 5700 4875
+Connection ~ 5450 4825
+Wire Wire Line
+	5925 4825 5925 4875
+Connection ~ 5700 4825
+Wire Wire Line
+	5700 5175 5925 5175
+Wire Wire Line
+	5700 5200 5700 5175
+Connection ~ 5450 5300
+Wire Wire Line
+	6125 4350 6200 4350
+Connection ~ 6200 4350
+Wire Wire Line
+	6200 4525 6125 4525
+Wire Wire Line
+	5450 4350 5575 4350
+Wire Wire Line
+	4950 4100 4950 4200
+Wire Wire Line
+	5550 4525 5550 4575
+Wire Wire Line
+	5550 4525 5575 4525
+Wire Wire Line
+	5575 3975 5575 4175
+Wire Wire Line
+	5475 4075 5575 4075
+Connection ~ 5575 4075
+Wire Wire Line
+	6125 3975 6125 4150
+Wire Wire Line
+	6125 4050 6175 4050
+Connection ~ 6125 4050
+Wire Wire Line
+	4600 1525 5250 1525
+Wire Wire Line
+	6300 1425 6475 1425
+Wire Wire Line
+	6475 1325 6400 1325
+Wire Wire Line
+	6400 1325 6400 1750
+Wire Wire Line
+	6475 1525 6400 1525
+Connection ~ 6400 1525
+Wire Wire Line
+	3900 1950 4600 1950
+Wire Wire Line
+	6000 1850 3900 1850
+Wire Wire Line
+	6400 1750 3900 1750
+Wire Wire Line
+	8400 3025 8400 3150
+Wire Wire Line
+	8150 3025 8150 3150
+Connection ~ 8150 3025
+Wire Wire Line
+	7650 3600 7650 3525
+Wire Wire Line
+	7650 3525 7750 3525
+Wire Wire Line
+	7650 3600 7550 3600
+Wire Wire Line
+	7850 3525 7950 3525
+Wire Wire Line
+	7950 3525 7950 3600
+Wire Wire Line
+	7950 3600 8150 3600
+Wire Wire Line
+	8150 3600 8150 3450
+Wire Wire Line
+	6150 3050 6400 3050
+Wire Wire Line
+	6700 3050 7125 3050
+Wire Wire Line
+	7125 3050 7125 3600
+Wire Wire Line
+	7125 3600 7250 3600
+Wire Wire Line
+	6150 3350 6200 3350
+Wire Wire Line
+	6200 3350 6200 3400
+Wire Wire Line
+	6150 3250 6300 3250
+Wire Wire Line
+	6300 3250 6300 3600
+Wire Wire Line
+	7050 3150 6150 3150
+Connection ~ 7050 3825
+Connection ~ 8400 3975
+Wire Wire Line
+	6200 4925 6200 4875
+Connection ~ 6200 4525
+Wire Wire Line
+	8750 3850 8750 4475
+Wire Wire Line
+	8750 3250 9125 3250
+Connection ~ 8750 3250
+Wire Wire Line
+	8750 2875 8750 3350
+Wire Wire Line
+	9125 4075 8750 4075
+Connection ~ 8750 4075
+Wire Wire Line
+	9125 3675 9125 3650
+Wire Wire Line
+	7050 3050 7050 2450
+Wire Wire Line
+	7050 2450 6950 2450
+Connection ~ 7050 3050
+Wire Wire Line
+	6500 2450 6550 2450
+Wire Wire Line
+	6200 2450 6200 3050
+Connection ~ 6200 3050
+Wire Wire Line
+	6950 2250 7050 2250
+Wire Wire Line
+	7050 2050 7050 2275
+Wire Wire Line
+	6950 2050 7050 2050
+Connection ~ 7050 2250
+Wire Wire Line
+	6500 2250 6550 2250
+Wire Wire Line
+	6500 2050 6550 2050
+Wire Wire Line
+	6200 2050 4600 2050
+Wire Wire Line
+	3150 5525 5775 5525
+Wire Wire Line
+	4950 5525 4950 5925
+Connection ~ 4950 5525
+Wire Wire Line
+	1750 6425 1750 6100
+Wire Wire Line
+	1750 6100 1900 6100
+Wire Wire Line
+	1000 5675 1000 5450
+Wire Wire Line
+	1000 5450 1700 5450
+Wire Wire Line
+	1000 5675 1025 5675
+Wire Wire Line
+	1700 5450 1700 4175
+Wire Wire Line
+	1625 5575 1800 5575
+Wire Wire Line
+	3300 7275 3500 7275
+Wire Wire Line
+	2400 6800 2500 6800
+Wire Wire Line
+	3150 6900 3100 6900
+Wire Wire Line
+	3150 5525 3150 6900
+Wire Wire Line
+	3100 6700 3150 6700
+Connection ~ 3150 6700
+Wire Wire Line
+	3100 6800 3300 6800
+Wire Wire Line
+	3300 6375 3300 7175
+Wire Wire Line
+	2700 4175 2700 6375
+Wire Wire Line
+	2700 6375 3300 6375
+Connection ~ 3300 6800
+Wire Wire Line
+	2700 4300 3025 4300
+Wire Wire Line
+	3025 4300 3025 2250
+Wire Wire Line
+	3025 2250 6200 2250
+Connection ~ 2700 4300
+Connection ~ 4150 1950
+Wire Wire Line
+	4600 2050 4600 1950
+Connection ~ 4150 3375
+Wire Wire Line
+	4150 5075 4125 5075
+Connection ~ 4150 5075
+Wire Wire Line
+	4150 1950 4150 6525
+Connection ~ 4150 5525
+$Comp
+L C C1
+U 1 1 586A5F83
+P 4625 3950
+F 0 "C1" H 4650 4050 50  0000 L CNN
+F 1 "22uf" H 4650 3850 50  0000 L CNN
+F 2 "" H 4663 3800 50  0000 C CNN
+F 3 "" H 4625 3950 50  0000 C CNN
+	1    4625 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 586A600C
+P 5200 3950
+F 0 "C5" H 5225 4050 50  0000 L CNN
+F 1 "22uf" H 5225 3850 50  0000 L CNN
+F 2 "" H 5238 3800 50  0000 C CNN
+F 3 "" H 5200 3950 50  0000 C CNN
+	1    5200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L L L3
+U 1 1 586A6166
+P 4900 3800
+F 0 "L3" V 4850 3800 50  0000 C CNN
+F 1 "10uH" V 4975 3800 50  0000 C CNN
+F 2 "" H 4900 3800 50  0000 C CNN
+F 3 "" H 4900 3800 50  0000 C CNN
+	1    4900 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 3800 6275 3800
+Connection ~ 4625 3800
+Connection ~ 4350 3800
+Wire Wire Line
+	6275 3800 6275 3825
+Connection ~ 5200 3800
+Wire Wire Line
+	4350 4100 5200 4100
+Connection ~ 4625 4100
+Connection ~ 4950 4100
+Text Notes 4350 4250 0    39   ~ 0
+Filtering of\ninductive kickback
 $EndSCHEMATC

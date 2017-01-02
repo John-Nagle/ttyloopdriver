@@ -1,7 +1,21 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP Button_SPDT
+D SPDT toggle switch
+K switch
+$ENDCMP
+#
+$CMP FDS4559
+D Dual Transistor N/P-MOSFET 
+K dual n-mosfet p-mosfet transistor
+$ENDCMP
+#
 $CMP IE0524S
 D DC-DC power supply 5V to 24V
+$ENDCMP
+#
+$CMP LED_3
+D LED RGB 6 pins
 $ENDCMP
 #
 $CMP PHONE-JACK-MONO
@@ -12,6 +26,11 @@ $ENDCMP
 $CMP PHONE-JACK-MONO-SW
 D DC Barrel Jack
 K DC power barrel jack connector
+$ENDCMP
+#
+$CMP Switch_SPDT
+D SPDT toggle switch
+K switch
 $ENDCMP
 #
 #End Doc Library
