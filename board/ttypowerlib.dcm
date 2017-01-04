@@ -11,6 +11,11 @@ D SPDT toggle switch
 K switch
 $ENDCMP
 #
+$CMP Coilcraft-FA2469-AL
+D Switching power transformer
+K transformer pulse
+$ENDCMP
+#
 $CMP FDS4559
 D Dual Transistor N/P-MOSFET 
 K dual n-mosfet p-mosfet transistor
