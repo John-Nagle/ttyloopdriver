@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AP2553W6
+D Precision current limited power switch
+K current limit switch USB
+F http://www.diodes.com/_files/datasheets/AP255x.pdf
+$ENDCMP
+#
 $CMP Button_SPDT
 D SPDT toggle switch
 K switch
