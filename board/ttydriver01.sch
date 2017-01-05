@@ -228,21 +228,6 @@ F 7 "Digikey" H 7350 3975 60  0001 C CNN "Vendor"
 	-1   0    0    1   
 $EndComp
 $Comp
-L ZENER D7
-U 1 1 57E5B55A
-P 8400 4225
-F 0 "D7" V 8400 4325 50  0000 C CNN
-F 1 "ZENER 120V" H 8400 4125 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 8400 4225 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 8400 4225 50  0001 C CNN
-F 4 "1N5380BG" H 8400 4225 60  0001 C CNN "Part"
-F 5 "ON" H 8400 4225 60  0001 C CNN "Mfgr"
-F 6 "1N5380BGOS-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
-	1    8400 4225
-	0    1    1    0   
-$EndComp
-$Comp
 L C_Small C7
 U 1 1 57E5B66D
 P 8750 3450
@@ -801,36 +786,6 @@ F 3 "" H 6200 4925 50  0000 C CNN
 	1    6200 4925
 	1    0    0    -1  
 $EndComp
-$Comp
-L ZENER D11
-U 1 1 586858DA
-P 9125 3450
-F 0 "D11" V 9125 3600 50  0000 C CNN
-F 1 "ZENER 120V" V 8875 3450 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 9125 3450 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 9125 3450 50  0001 C CNN
-F 4 "1N5380BG" H 9125 3450 60  0001 C CNN "Part"
-F 5 "ON" H 9125 3450 60  0001 C CNN "Mfgr"
-F 6 "1N5380BGOS-ND" H 9125 3450 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 9125 3450 60  0001 C CNN "Vendor"
-	1    9125 3450
-	0    1    1    0   
-$EndComp
-$Comp
-L ZENER D10
-U 1 1 58685A36
-P 9125 3875
-F 0 "D10" V 9125 4025 50  0000 C CNN
-F 1 "ZENER 120V" V 8875 3900 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 9125 3875 50  0001 C CNN
-F 3 "http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF" H 9125 3875 50  0001 C CNN
-F 4 "1N5380BG" H 9125 3875 60  0001 C CNN "Part"
-F 5 "ON" H 9125 3875 60  0001 C CNN "Mfgr"
-F 6 "1N5380BGOS-ND" H 9125 3875 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 9125 3875 60  0001 C CNN "Vendor"
-	1    9125 3875
-	0    1    -1   0   
-$EndComp
 Text Notes 8825 3150 0    39   ~ 0
 Snubbing
 Text Notes 6300 3775 0    39   ~ 0
@@ -910,7 +865,7 @@ U 1 1 586898A4
 P 1325 5675
 F 0 "SW1" H 1175 5810 50  0000 C CNN
 F 1 "Switch_SPDT" H 1075 5525 50  0001 C CNN
-F 2 "NKK:Toggle- M2012SA2W40" H 1350 5910 50  0001 C CNN
+F 2 "NKK:Toggle-M2012SA2W40" H 1350 5910 50  0001 C CNN
 F 3 "http://www.digikey.ca/product-detail/en/nkk-switches/M2012SA2W40/360-2837-ND/2105230" H 1325 5675 50  0001 C CNN
 F 4 "M2012SA2W40" H 1325 5675 60  0001 C CNN "Part"
 F 5 "NKK" H 1325 5675 60  0001 C CNN "Mfgr"
@@ -982,9 +937,9 @@ Connection ~ 7550 3975
 Wire Wire Line
 	7550 4375 7550 4475
 Wire Wire Line
-	8400 4475 8400 4425
+	8400 4475 8400 4375
 Wire Wire Line
-	8400 3450 8400 4025
+	8400 3450 8400 4075
 Wire Wire Line
 	7500 3975 8400 3975
 Wire Wire Line
@@ -1059,7 +1014,7 @@ Wire Wire Line
 Wire Wire Line
 	2975 3775 2975 3375
 Wire Wire Line
-	2975 3375 4150 3375
+	4150 3375 2975 3375
 Connection ~ 4150 3600
 Wire Wire Line
 	2500 4175 2500 6700
@@ -1235,7 +1190,7 @@ Wire Wire Line
 	9125 4075 8750 4075
 Connection ~ 8750 4075
 Wire Wire Line
-	9125 3675 9125 3650
+	9125 3750 9125 3600
 Wire Wire Line
 	7050 3050 7050 2450
 Wire Wire Line
@@ -1449,7 +1404,7 @@ U 1 1 586D5249
 P 6575 4025
 F 0 "T1" H 6325 4125 50  0000 C CNN
 F 1 "Coilcraft-FA2469-AL" H 6625 3775 50  0000 C CNN
-F 2 "" H 6475 4025 50  0000 C CNN
+F 2 "Coilcraft:Coilcraft-FA2469-AL" H 6800 3700 50  0001 C CNN
 F 3 "http://www.coilcraft.com/fa2469.cfm" H 6475 4025 50  0001 C CNN
 F 4 "FA2469-AL" H 6575 4025 60  0001 C CNN "Part"
 F 5 "Coilcraft" H 6575 4025 60  0001 C CNN "Mfgr"
@@ -1458,4 +1413,53 @@ F 7 "FA2469-AL" H 6575 4025 60  0001 C CNN "Vendorpart"
 	1    6575 4025
 	1    0    0    -1  
 $EndComp
+$Comp
+L D_Zener D7
+U 1 1 586DD17A
+P 8400 4225
+F 0 "D7" H 8400 4325 50  0000 C CNN
+F 1 "D_Zener" H 8400 4125 50  0001 C CNN
+F 2 "Diodes_SMD:SMB_Standard" H 8400 4225 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 8400 4225 50  0001 C CNN
+F 4 "Micro Commercial" H 8400 4225 60  0001 C CNN "Mfgr"
+F 5 "SMBJ5380B-TP" V 8725 4200 60  0000 C CNN "Part"
+F 6 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
+F 7 "SMBJ5380B-TPMSCT-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
+	1    8400 4225
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Zener D11
+U 1 1 586DEFC6
+P 9125 3450
+F 0 "D11" V 9125 3550 50  0000 C CNN
+F 1 "D_Zener" H 9125 3350 50  0001 C CNN
+F 2 "Diodes_SMD:SMB_Standard" H 9125 3450 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3450 50  0001 C CNN
+F 4 "Micro Commercial" H 9125 3450 60  0001 C CNN "Mfgr"
+F 5 "SMBJ5380B-TP" V 9250 3575 39  0000 C CNN "Part"
+F 6 "Digikey" H 9125 3450 60  0001 C CNN "Vendor"
+F 7 "SMBJ5380B-TPMSCT-ND" H 9125 3450 60  0001 C CNN "Vendorpart"
+	1    9125 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Zener D10
+U 1 1 586DF12C
+P 9125 3900
+F 0 "D10" V 9150 3750 50  0000 C CNN
+F 1 "D_Zener" H 9125 3800 50  0001 C CNN
+F 2 "Diodes_SMD:SMB_Standard" H 9125 3900 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3900 50  0001 C CNN
+F 4 "Micro Commercial" H 9125 3900 60  0001 C CNN "Mfgr"
+F 5 "SMBJ5380B-TP" V 9025 3775 39  0000 C CNN "Part"
+F 6 "Digikey" H 9125 3900 60  0001 C CNN "Vendor"
+F 7 "SMBJ5380B-TPMSCT-ND" H 9125 3900 60  0001 C CNN "Vendorpart"
+	1    9125 3900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9125 3250 9125 3300
+Wire Wire Line
+	9125 4075 9125 4050
 $EndSCHEMATC

@@ -18,4 +18,9 @@
   (pad S thru_hole circle (at 0 -4.826) (size 2.5 2.5) (drill 1.45) (layers *.Cu *.Mask))
   (pad T thru_hole circle (at -17.78 -4.826) (size 2.5 2.5) (drill 1.45) (layers *.Cu *.Mask))
   (pad TB thru_hole circle (at -17.78 5.08) (size 2.5 2.5) (drill 1.45) (layers *.Cu *.Mask))
+  (model ${KIPRJMOD}/Switchcraft.3dshapes/SN37A.wrl
+    (at (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 90))
+  )
 )

@@ -1,4 +1,4 @@
-(module "Toggle- M2012SA2W40" (layer F.Cu) (tedit 5857861C)
+(module Toggle-M2012SA2W40 (layer F.Cu) (tedit 5857861C)
   (fp_text reference SW** (at 1.27 6.35) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -14,4 +14,9 @@
   (pad 1 thru_hole circle (at 12.7 0) (size 2.5 2.5) (drill 1.8) (layers *.Cu *.Mask))
   (pad 2 thru_hole circle (at 16.51 0) (size 2.5 2.5) (drill 1.8) (layers *.Cu *.Mask))
   (pad 3 thru_hole circle (at 20.32 0) (size 2.5 2.5) (drill 1.8) (layers *.Cu *.Mask))
+  (model ${KIPRJMOD}/NKK.3dshapes/M2012SA2W40.wrl
+    (at (xyz 0.11 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )

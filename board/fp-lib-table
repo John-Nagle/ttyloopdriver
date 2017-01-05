@@ -3,4 +3,6 @@
   (lib (name Coilcraft)(type KiCad)(uri "$(KIPRJMOD)/Coilcraft.pretty")(options "")(descr ""))
   (lib (name DC-DC)(type KiCad)(uri "$(KIPRJMOD)/DC-DC.pretty")(options "")(descr ""))
   (lib (name Switchcraft)(type KiCad)(uri "$(KIPRJMOD)/Switchcraft.pretty")(options "")(descr ""))
+  (lib (name Dialite)(type KiCad)(uri "$(KIPRJMOD)/Dialite.pretty")(options "")(descr ""))
+  (lib (name NKK)(type KiCad)(uri "$(KIPRJMOD)/NKK.pretty")(options "")(descr ""))
 )
