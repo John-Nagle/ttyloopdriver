@@ -5,4 +5,5 @@
   (lib (name Switchcraft)(type KiCad)(uri "$(KIPRJMOD)/Switchcraft.pretty")(options "")(descr ""))
   (lib (name Dialite)(type KiCad)(uri "$(KIPRJMOD)/Dialite.pretty")(options "")(descr ""))
   (lib (name NKK)(type KiCad)(uri "$(KIPRJMOD)/NKK.pretty")(options "")(descr ""))
+  (lib (name CUI)(type KiCad)(uri "$(KIPRJMOD)/CUI.pretty")(options "")(descr ""))
 )
