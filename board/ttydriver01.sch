@@ -172,11 +172,11 @@ U 1 1 57E4E2F5
 P 3825 5875
 F 0 "D9" H 3875 5975 50  0000 L CNN
 F 1 "Schottky" H 3700 6050 50  0000 L CNN
-F 2 "Diodes_SMD:SMB_Standard" V 3825 5875 50  0001 C CNN
-F 3 "http://www.digikey.com/product-detail/en/diodes-incorporated/B140B-13-F/B140B-FDICT-ND/804889" V 3825 5875 50  0001 C CNN
-F 4 "Diodes Inc" V 3825 5875 60  0001 C CNN "Mfgr"
-F 5 "B140B-13-F" V 3825 5875 60  0001 C CNN "Part"
-F 6 "B140B-FDICT-ND" V 3825 5875 60  0001 C CNN "Vendorpart"
+F 2 "Diodes_SMD:SOD-323" V 3825 5875 50  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/comchip-technology/CDBF0130L/641-1266-1-ND/1973545" V 3825 5875 50  0001 C CNN
+F 4 "Comchip" V 3825 5875 60  0001 C CNN "Mfgr"
+F 5 "CDBF0130L" V 3825 5875 60  0001 C CNN "Part"
+F 6 "641-1266-1-ND" V 3825 5875 60  0001 C CNN "Vendorpart"
 F 7 "Digikey" V 3825 5875 60  0001 C CNN "Vendor"
 	1    3825 5875
 	-1   0    0    1   
@@ -352,10 +352,10 @@ Motor control
 Text Label 3200 1625 0    60   ~ 0
 RxD
 $Comp
-L CONN_01X02 P2
+L CONN_01X02 P1
 U 1 1 57F43FF1
 P 8700 2675
-F 0 "P2" V 8700 2825 50  0000 C CNN
+F 0 "P1" V 8700 2825 50  0000 C CNN
 F 1 "CONN_01X02" V 8800 2675 50  0000 C CNN
 F 2 "Connect:PINHEAD1-2" H 8700 2675 50  0001 C CNN
 F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 8700 2675 50  0001 C CNN
@@ -691,12 +691,12 @@ $EndComp
 $Comp
 L R R5
 U 1 1 5867C198
-P 7400 3600
-F 0 "R5" V 7480 3600 50  0000 C CNN
-F 1 "27" V 7400 3600 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 7330 3600 50  0001 C CNN
-F 3 "" H 7400 3600 50  0000 C CNN
-	1    7400 3600
+P 7325 3600
+F 0 "R5" V 7405 3600 50  0000 C CNN
+F 1 "27" V 7325 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 7255 3600 50  0001 C CNN
+F 3 "" H 7325 3600 50  0000 C CNN
+	1    7325 3600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -721,22 +721,8 @@ F 3 "" H 6350 2450 50  0000 C CNN
 	1    6350 2450
 	0    1    1    0   
 $EndComp
-$Comp
-L CONN_01X02 P1
-U 1 1 5867CC0B
-P 7800 3325
-F 0 "P1" V 7800 3475 50  0000 C CNN
-F 1 "CONN_01X02" V 7900 3325 50  0001 C CNN
-F 2 "Connect:PINHEAD1-2" H 7800 3325 50  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf" H 7800 3325 50  0001 C CNN
-F 4 "WM10153-ND" H 7800 3325 60  0001 C CNN "Vendorpart"
-F 5 "Molex" H 7800 3325 60  0001 C CNN "Mfgr"
-F 6 "Digikey" H 7800 3325 60  0001 C CNN "Vendor"
-	1    7800 3325
-	0    -1   -1   0   
-$EndComp
-Text Notes 7325 3400 0    39   ~ 0
-Jumper for\n220 ohm\nselector
+Text Notes 7225 3350 0    39   ~ 0
+Remove for \n55 ohm selector
 $Comp
 L GND #PWR016
 U 1 1 5867E37E
@@ -892,6 +878,200 @@ F 1 "GND" H 2400 6650 50  0000 C CNN
 F 2 "" H 2400 6800 50  0000 C CNN
 F 3 "" H 2400 6800 50  0000 C CNN
 	1    2400 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 586A5F83
+P 4700 3950
+F 0 "C1" H 4725 4050 50  0000 L CNN
+F 1 "22uf" H 4725 3850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4738 3800 50  0001 C CNN
+F 3 "" H 4700 3950 50  0000 C CNN
+	1    4700 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 586A600C
+P 5100 3950
+F 0 "C5" H 5125 4050 50  0000 L CNN
+F 1 "22uf" H 5125 3850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5138 3800 50  0001 C CNN
+F 3 "" H 5100 3950 50  0000 C CNN
+	1    5100 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L L L3
+U 1 1 586A6166
+P 4900 3800
+F 0 "L3" V 4850 3800 50  0000 C CNN
+F 1 "10uH" V 4975 3800 50  0000 C CNN
+F 2 "Coilcraft:0508PS" H 4900 3800 50  0001 C CNN
+F 3 "http://www.coilcraft.com/0805ps.cfm" H 4900 3800 50  0001 C CNN
+F 4 "0805PS-103KL" V 4900 3800 60  0001 C CNN "Part"
+F 5 "Coilcraft" V 4900 3800 60  0001 C CNN "Mfgr"
+F 6 "0805PS-103KL" V 4900 3800 60  0001 C CNN "Vendorpart"
+F 7 "Coilcraft" V 4900 3800 60  0001 C CNN "Vendor"
+	1    4900 3800
+	0    -1   -1   0   
+$EndComp
+Text Notes 4350 4250 0    39   ~ 0
+Filtering of\ninductive kickback
+$Comp
+L TEST_1P W3
+U 1 1 586A3D32
+P 8150 3950
+F 0 "W3" H 8225 4000 50  0000 C CNN
+F 1 "TEST_1P" V 8025 4100 50  0001 C CNN
+F 2 "Connect:PINTST" H 8350 3950 50  0001 C CNN
+F 3 "" H 8350 3950 50  0000 C CNN
+	1    8150 3950
+	1    0    0    -1  
+$EndComp
+Text Notes 7775 3900 0    39   ~ 0
+Cap charge\nto 120VDC
+$Comp
+L AP2553W6 U2
+U 1 1 586C6F4F
+P 3550 4000
+F 0 "U2" H 3325 4350 50  0000 R CNN
+F 1 "AP2553W6" H 3725 4100 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 3550 3650 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/AP255x.pdf" H 4200 3300 50  0001 C CNN
+F 4 "Diodes" H 3350 4525 60  0001 C CNN "Mfgr"
+F 5 "Digikey" H 3450 4625 60  0001 C CNN "Vendor"
+F 6 "AP2553W6-7DICT-ND" H 3550 4725 60  0001 C CNN "Vendorpart"
+F 7 "AP2553W6-7" H 3650 4825 60  0001 C CNN "Part"
+	1    3550 4000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3950 4200
+$Comp
+L R R16
+U 1 1 586C953C
+P 4000 4350
+F 0 "R16" H 3875 4350 50  0000 C CNN
+F 1 "53.6K" V 4000 4350 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 3930 4350 50  0001 C CNN
+F 3 "" H 4000 4350 50  0000 C CNN
+	1    4000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 586CC85D
+P 4000 4550
+F 0 "#PWR020" H 4000 4300 50  0001 C CNN
+F 1 "GND" H 4000 4400 50  0000 C CNN
+F 2 "" H 4000 4550 50  0000 C CNN
+F 3 "" H 4000 4550 50  0000 C CNN
+	1    4000 4550
+	1    0    0    -1  
+$EndComp
+Text Notes 3400 3675 0    39   ~ 0
+Inrush current\nlimit 400mA
+$Comp
+L PHONE-JACK-MONO-SW J1
+U 1 1 586D25CB
+P 9800 2925
+F 0 "J1" H 9600 3065 50  0000 C CNN
+F 1 "PRINTER JACK" H 9725 2775 50  0000 C CNN
+F 2 "Switchcraft:Switchcraft-SN37A12A" H 9800 3025 50  0001 C CNN
+F 3 "http://www.switchcraft.com/Drawings/SN37A_SERIES_CD.pdf" H 9800 3025 50  0001 C CNN
+F 4 "SN37A12A" H 9800 2925 60  0001 C CNN "Part"
+F 5 "Switchcraft" H 9800 2925 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 9800 2925 60  0001 C CNN "Vendor"
+F 7 "SC2014-ND" H 9800 2925 60  0001 C CNN "Vendorpart"
+	1    9800 2925
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 9500 2825
+$Comp
+L Coilcraft-FA2469-AL T1
+U 1 1 586D5249
+P 6575 4025
+F 0 "T1" H 6325 4125 50  0000 C CNN
+F 1 "Coilcraft-FA2469-AL" H 6625 3775 50  0000 C CNN
+F 2 "Coilcraft:Coilcraft-FA2469-AL" H 6800 3700 50  0001 C CNN
+F 3 "http://www.coilcraft.com/fa2469.cfm" H 6475 4025 50  0001 C CNN
+F 4 "FA2469-AL" H 6575 4025 60  0001 C CNN "Part"
+F 5 "Coilcraft" H 6575 4025 60  0001 C CNN "Mfgr"
+F 6 "Coilcraft" H 6575 4025 60  0001 C CNN "Vendor"
+F 7 "FA2469-AL" H 6575 4025 60  0001 C CNN "Vendorpart"
+	1    6575 4025
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Zener D7
+U 1 1 586DD17A
+P 8400 4225
+F 0 "D7" H 8400 4325 50  0000 C CNN
+F 1 "D_Zener" H 8400 4125 50  0001 C CNN
+F 2 "Diodes_SMD:SMB_Standard" H 8400 4225 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 8400 4225 50  0001 C CNN
+F 4 "Micro Commercial" H 8400 4225 60  0001 C CNN "Mfgr"
+F 5 "SMBJ5380B-TP" V 8725 4200 60  0000 C CNN "Part"
+F 6 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
+F 7 "SMBJ5380B-TPMSCT-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
+	1    8400 4225
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Zener D11
+U 1 1 586DEFC6
+P 9125 3450
+F 0 "D11" V 9125 3550 50  0000 C CNN
+F 1 "D_Zener" H 9125 3350 50  0001 C CNN
+F 2 "Diodes_SMD:SMB_Standard" H 9125 3450 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3450 50  0001 C CNN
+F 4 "Micro Commercial" H 9125 3450 60  0001 C CNN "Mfgr"
+F 5 "SMBJ5380B-TP" V 9250 3575 39  0000 C CNN "Part"
+F 6 "Digikey" H 9125 3450 60  0001 C CNN "Vendor"
+F 7 "SMBJ5380B-TPMSCT-ND" H 9125 3450 60  0001 C CNN "Vendorpart"
+	1    9125 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L D_Zener D10
+U 1 1 586DF12C
+P 9125 3900
+F 0 "D10" V 9150 3750 50  0000 C CNN
+F 1 "D_Zener" H 9125 3800 50  0001 C CNN
+F 2 "Diodes_SMD:SMB_Standard" H 9125 3900 50  0001 C CNN
+F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3900 50  0001 C CNN
+F 4 "Micro Commercial" H 9125 3900 60  0001 C CNN "Mfgr"
+F 5 "SMBJ5380B-TP" V 9025 3775 39  0000 C CNN "Part"
+F 6 "Digikey" H 9125 3900 60  0001 C CNN "Vendor"
+F 7 "SMBJ5380B-TPMSCT-ND" H 9125 3900 60  0001 C CNN "Vendorpart"
+	1    9125 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L PHONE-JACK-MONO J3
+U 1 1 58691531
+P 3000 7175
+F 0 "J3" H 2475 7175 50  0000 C CNN
+F 1 "MOTOR CTL RELAY JACK" H 3000 7000 50  0000 C CNN
+F 2 "CUI:MJ-2509N" H 3000 7275 50  0001 C CNN
+F 3 "http://www.cui.com/product/resource/digikeypdf/mj-2509n.pdf" H 3000 7275 50  0001 C CNN
+F 4 "MJ-2509N" H 3000 7175 60  0001 C CNN "Part"
+F 5 "CUI" H 3000 7175 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 3000 7175 60  0001 C CNN "Vendor"
+F 7 "CP-M2509N-ND" H 3000 7175 60  0001 C CNN "Vendorpart"
+	1    3000 7175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper JP1
+U 1 1 587153BF
+P 7800 3475
+F 0 "JP1" H 7800 3625 50  0000 C CNN
+F 1 "Jumper" H 7800 3700 50  0000 C CNN
+F 2 "Connect:PINHEAD1-2" H 7800 3475 50  0001 C CNN
+F 3 "" H 7800 3475 50  0000 C CNN
+	1    7800 3475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1120,15 +1300,7 @@ Wire Wire Line
 	8150 3025 8150 3150
 Connection ~ 8150 3025
 Wire Wire Line
-	7650 3600 7650 3525
-Wire Wire Line
-	7650 3525 7750 3525
-Wire Wire Line
-	7650 3600 7550 3600
-Wire Wire Line
-	7850 3525 7950 3525
-Wire Wire Line
-	7950 3525 7950 3600
+	7475 3600 7650 3600
 Wire Wire Line
 	7950 3600 8150 3600
 Wire Wire Line
@@ -1140,7 +1312,7 @@ Wire Wire Line
 Wire Wire Line
 	7125 3050 7125 3600
 Wire Wire Line
-	7125 3600 7250 3600
+	7125 3600 7175 3600
 Wire Wire Line
 	6150 3350 6200 3350
 Wire Wire Line
@@ -1247,43 +1419,6 @@ Connection ~ 4150 5075
 Wire Wire Line
 	4150 1525 4150 6525
 Connection ~ 4150 5525
-$Comp
-L C C1
-U 1 1 586A5F83
-P 4700 3950
-F 0 "C1" H 4725 4050 50  0000 L CNN
-F 1 "22uf" H 4725 3850 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 4738 3800 50  0001 C CNN
-F 3 "" H 4700 3950 50  0000 C CNN
-	1    4700 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C5
-U 1 1 586A600C
-P 5100 3950
-F 0 "C5" H 5125 4050 50  0000 L CNN
-F 1 "22uf" H 5125 3850 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 5138 3800 50  0001 C CNN
-F 3 "" H 5100 3950 50  0000 C CNN
-	1    5100 3950
-	1    0    0    -1  
-$EndComp
-$Comp
-L L L3
-U 1 1 586A6166
-P 4900 3800
-F 0 "L3" V 4850 3800 50  0000 C CNN
-F 1 "10uH" V 4975 3800 50  0000 C CNN
-F 2 "Coilcraft:0508PS" H 4900 3800 50  0001 C CNN
-F 3 "http://www.coilcraft.com/0805ps.cfm" H 4900 3800 50  0001 C CNN
-F 4 "0805PS-103KL" V 4900 3800 60  0001 C CNN "Part"
-F 5 "Coilcraft" V 4900 3800 60  0001 C CNN "Mfgr"
-F 6 "0805PS-103KL" V 4900 3800 60  0001 C CNN "Vendorpart"
-F 7 "Coilcraft" V 4900 3800 60  0001 C CNN "Vendor"
-	1    4900 3800
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5050 3800 6275 3800
 Connection ~ 4700 3800
@@ -1295,182 +1430,42 @@ Wire Wire Line
 	4350 4100 5100 4100
 Connection ~ 4700 4100
 Connection ~ 4950 4100
-Text Notes 4350 4250 0    39   ~ 0
-Filtering of\ninductive kickback
 Wire Wire Line
 	4950 6725 4950 7025
 Wire Wire Line
 	8150 3950 8150 3975
 Connection ~ 8150 3975
-$Comp
-L TEST_1P W3
-U 1 1 586A3D32
-P 8150 3950
-F 0 "W3" H 8225 4000 50  0000 C CNN
-F 1 "TEST_1P" V 8025 4100 50  0001 C CNN
-F 2 "Connect:PINTST" H 8350 3950 50  0001 C CNN
-F 3 "" H 8350 3950 50  0000 C CNN
-	1    8150 3950
-	1    0    0    -1  
-$EndComp
-Text Notes 7775 3900 0    39   ~ 0
-Cap charge\nto 120VDC
-$Comp
-L AP2553W6 U2
-U 1 1 586C6F4F
-P 3550 4000
-F 0 "U2" H 3325 4350 50  0000 R CNN
-F 1 "AP2553W6" H 3725 4100 50  0000 R CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-6" H 3550 3650 50  0001 C CNN
-F 3 "http://www.diodes.com/_files/datasheets/AP255x.pdf" H 4200 3300 50  0001 C CNN
-F 4 "Diodes" H 3350 4525 60  0001 C CNN "Mfgr"
-F 5 "Digikey" H 3450 4625 60  0001 C CNN "Vendor"
-F 6 "AP2553W6-7DICT-ND" H 3550 4725 60  0001 C CNN "Vendorpart"
-F 7 "AP2553W6-7" H 3650 4825 60  0001 C CNN "Part"
-	1    3550 4000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3150 4000 3150 4025
-NoConn ~ 3950 4200
-$Comp
-L R R16
-U 1 1 586C953C
-P 4000 4350
-F 0 "R16" H 3875 4350 50  0000 C CNN
-F 1 "53.6K" V 4000 4350 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 3930 4350 50  0001 C CNN
-F 3 "" H 4000 4350 50  0000 C CNN
-	1    4000 4350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3950 4000 4000 4000
 Wire Wire Line
 	4000 4000 4000 4200
-$Comp
-L GND #PWR020
-U 1 1 586CC85D
-P 4000 4550
-F 0 "#PWR020" H 4000 4300 50  0001 C CNN
-F 1 "GND" H 4000 4400 50  0000 C CNN
-F 2 "" H 4000 4550 50  0000 C CNN
-F 3 "" H 4000 4550 50  0000 C CNN
-	1    4000 4550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4000 4550 4000 4500
-Text Notes 3400 3675 0    39   ~ 0
-Inrush current\nlimit 400mA
-$Comp
-L PHONE-JACK-MONO-SW J1
-U 1 1 586D25CB
-P 9800 2925
-F 0 "J1" H 9600 3065 50  0000 C CNN
-F 1 "PRINTER JACK" H 9725 2775 50  0000 C CNN
-F 2 "Switchcraft:Switchcraft-SN37A12A" H 9800 3025 50  0001 C CNN
-F 3 "http://www.switchcraft.com/Drawings/SN37A_SERIES_CD.pdf" H 9800 3025 50  0001 C CNN
-F 4 "SN37A12A" H 9800 2925 60  0001 C CNN "Part"
-F 5 "Switchcraft" H 9800 2925 60  0001 C CNN "Mfgr"
-F 6 "Digikey" H 9800 2925 60  0001 C CNN "Vendor"
-F 7 "SC2014-ND" H 9800 2925 60  0001 C CNN "Vendorpart"
-	1    9800 2925
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 9500 2825
-$Comp
-L Coilcraft-FA2469-AL T1
-U 1 1 586D5249
-P 6575 4025
-F 0 "T1" H 6325 4125 50  0000 C CNN
-F 1 "Coilcraft-FA2469-AL" H 6625 3775 50  0000 C CNN
-F 2 "Coilcraft:Coilcraft-FA2469-AL" H 6800 3700 50  0001 C CNN
-F 3 "http://www.coilcraft.com/fa2469.cfm" H 6475 4025 50  0001 C CNN
-F 4 "FA2469-AL" H 6575 4025 60  0001 C CNN "Part"
-F 5 "Coilcraft" H 6575 4025 60  0001 C CNN "Mfgr"
-F 6 "Coilcraft" H 6575 4025 60  0001 C CNN "Vendor"
-F 7 "FA2469-AL" H 6575 4025 60  0001 C CNN "Vendorpart"
-	1    6575 4025
-	1    0    0    -1  
-$EndComp
-$Comp
-L D_Zener D7
-U 1 1 586DD17A
-P 8400 4225
-F 0 "D7" H 8400 4325 50  0000 C CNN
-F 1 "D_Zener" H 8400 4125 50  0001 C CNN
-F 2 "Diodes_SMD:SMB_Standard" H 8400 4225 50  0001 C CNN
-F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 8400 4225 50  0001 C CNN
-F 4 "Micro Commercial" H 8400 4225 60  0001 C CNN "Mfgr"
-F 5 "SMBJ5380B-TP" V 8725 4200 60  0000 C CNN "Part"
-F 6 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
-F 7 "SMBJ5380B-TPMSCT-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
-	1    8400 4225
-	0    1    1    0   
-$EndComp
-$Comp
-L D_Zener D11
-U 1 1 586DEFC6
-P 9125 3450
-F 0 "D11" V 9125 3550 50  0000 C CNN
-F 1 "D_Zener" H 9125 3350 50  0001 C CNN
-F 2 "Diodes_SMD:SMB_Standard" H 9125 3450 50  0001 C CNN
-F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3450 50  0001 C CNN
-F 4 "Micro Commercial" H 9125 3450 60  0001 C CNN "Mfgr"
-F 5 "SMBJ5380B-TP" V 9250 3575 39  0000 C CNN "Part"
-F 6 "Digikey" H 9125 3450 60  0001 C CNN "Vendor"
-F 7 "SMBJ5380B-TPMSCT-ND" H 9125 3450 60  0001 C CNN "Vendorpart"
-	1    9125 3450
-	0    1    1    0   
-$EndComp
-$Comp
-L D_Zener D10
-U 1 1 586DF12C
-P 9125 3900
-F 0 "D10" V 9150 3750 50  0000 C CNN
-F 1 "D_Zener" H 9125 3800 50  0001 C CNN
-F 2 "Diodes_SMD:SMB_Standard" H 9125 3900 50  0001 C CNN
-F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3900 50  0001 C CNN
-F 4 "Micro Commercial" H 9125 3900 60  0001 C CNN "Mfgr"
-F 5 "SMBJ5380B-TP" V 9025 3775 39  0000 C CNN "Part"
-F 6 "Digikey" H 9125 3900 60  0001 C CNN "Vendor"
-F 7 "SMBJ5380B-TPMSCT-ND" H 9125 3900 60  0001 C CNN "Vendorpart"
-	1    9125 3900
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9125 3250 9125 3300
 Wire Wire Line
 	9125 4075 9125 4050
+Wire Wire Line
+	7500 3475 7500 3600
+Connection ~ 7500 3600
+Wire Wire Line
+	8100 3475 8150 3475
+Connection ~ 8150 3475
 $Comp
 L D_Small D8
-U 1 1 5870C992
+U 1 1 5871CBDA
 P 4675 5875
 F 0 "D8" H 4725 5975 50  0000 L CNN
 F 1 "Schottky" H 4550 6050 50  0000 L CNN
-F 2 "Diodes_SMD:SMB_Standard" V 4675 5875 50  0001 C CNN
-F 3 "http://www.digikey.com/product-detail/en/diodes-incorporated/B140B-13-F/B140B-FDICT-ND/804889" V 4675 5875 50  0001 C CNN
-F 4 "Diodes Inc" V 4675 5875 60  0001 C CNN "Mfgr"
-F 5 "B140B-13-F" V 4675 5875 60  0001 C CNN "Part"
-F 6 "B140B-FDICT-ND" V 4675 5875 60  0001 C CNN "Vendorpart"
+F 2 "Diodes_SMD:SOD-323" V 4675 5875 50  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/comchip-technology/CDBF0130L/641-1266-1-ND/1973545" V 4675 5875 50  0001 C CNN
+F 4 "Comchip" V 4675 5875 60  0001 C CNN "Mfgr"
+F 5 "CDBF0130L" V 4675 5875 60  0001 C CNN "Part"
+F 6 "641-1266-1-ND" V 4675 5875 60  0001 C CNN "Vendorpart"
 F 7 "Digikey" V 4675 5875 60  0001 C CNN "Vendor"
 	1    4675 5875
-	1    0    0    -1  
-$EndComp
-$Comp
-L PHONE-JACK-MONO J3
-U 1 1 58691531
-P 3000 7175
-F 0 "J3" H 2475 7175 50  0000 C CNN
-F 1 "MOTOR CTL RELAY JACK" H 3000 7000 50  0000 C CNN
-F 2 "CUI:MJ-2509N" H 3000 7275 50  0001 C CNN
-F 3 "http://www.cui.com/product/resource/digikeypdf/mj-2509n.pdf" H 3000 7275 50  0001 C CNN
-F 4 "MJ-2509N" H 3000 7175 60  0001 C CNN "Part"
-F 5 "CUI" H 3000 7175 60  0001 C CNN "Mfgr"
-F 6 "Digikey" H 3000 7175 60  0001 C CNN "Vendor"
-F 7 "CP-M2509N-ND" H 3000 7175 60  0001 C CNN "Vendorpart"
-	1    3000 7175
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
