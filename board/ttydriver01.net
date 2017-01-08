@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/john/projects/teletype/hardware/ttyloopdriver/board/ttydriver01.sch)
-    (date "Sat 07 Jan 2017 07:43:42 PM PST")
+    (date "Sat 07 Jan 2017 07:55:01 PM PST")
     (tool "Eeschema 4.0.5-e0-6337~49~ubuntu14.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -159,7 +159,7 @@
       (tstamp 57EF57CB))
     (comp (ref P1)
       (value CONN_01X02)
-      (footprint Connect:PINHEAD1-2)
+      (footprint Sockets_MOLEX_KK-System:Socket_MOLEX-KK-RM2-54mm_Lock_2pin_straight)
       (datasheet http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf)
       (fields
         (field (name Vendorpart) WM10153-ND)
