@@ -34,8 +34,8 @@ With a switching power supply, of course.
 
 At the USB end is a CP2012 breakout board U3.  The Silicon Labs CP2102 is a USB
 to serial converter, one of the few which can be reprogrammed for 45 baud
-opeation.  We reprogram it to map a request for 600 baud to 45 baud.
-We also reprogram it to request 50mA from the USB port.
+operation.  We reprogram it to map a request for 600 baud to 45 baud.
+We also reprogram it to request 500mA from the USB port.
 
 There are two power supplies for the output. One is a custom switching
 power supply which, during SPACE, charges up a 1uF capacitor C2 to
