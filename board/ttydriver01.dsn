@@ -40,10 +40,10 @@
   )
   (placement
     (component Mounting_Holes:MountingHole_2.7mm_M2.5
-      (place REF3 170434 -81280 front 0 (PN MountingHole_2.7mm_M2.5))
-      (place REF4 170434 -148590 front 0 (PN MountingHole_2.7mm_M2.5))
-      (place REF2 60706 -149352 front 0 (PN MountingHole_2.7mm_M2.5))
-      (place REF1 60706 -81026 front 0 (PN MountingHole_2.7mm_M2.5))
+      (place REF3 170180 -80772 front 0 (PN MountingHole_2.7mm_M2.5))
+      (place REF4 170180 -148844 front 0 (PN MountingHole_2.7mm_M2.5))
+      (place REF2 60960 -148844 front 0 (PN MountingHole_2.7mm_M2.5))
+      (place REF1 60960 -80772 front 0 (PN MountingHole_2.7mm_M2.5))
     )
     (component "Dialite:564-0100"
       (place D13 167894 -89662 front 180 (PN LED_3))
@@ -58,13 +58,13 @@
       (place U1 153924 -141986 front 180 (PN NE555))
     )
     (component "Coilcraft:Coilcraft-FA2469-AL"
-      (place T1 127254 -127254 front 180 (PN "Coilcraft-FA2469-AL"))
+      (place T1 127508 -125984 front 180 (PN "Coilcraft-FA2469-AL"))
     )
     (component Resistors_SMD:R_1206
       (place R11 168148 -95504 front 270 (PN 390))
       (place R10 165354 -95504 front 90 (PN 390))
       (place R9 113030 -112014 front 0 (PN 33))
-      (place R8 113284 -138176 front 180 (PN 10K))
+      (place R8 113792 -137160 front 180 (PN 10K))
       (place R7 145542 -141732 front 0 (PN 7.2K))
       (place R6 146050 -133350 front 0 (PN 720))
       (place R5 118364 -112014 front 0 (PN 27))
@@ -72,8 +72,8 @@
       (place R3 168910 -139954 front 0 (PN 22))
       (place R1 92202 -116078 front 0 (PN 10))
       (place R16 162306 -143764 front 0 (PN 53.6K))
-      (place R15 105664 -136398 front 0 (PN 680))
-      (place R14 119888 -137414 front 0 (PN 1M))
+      (place R15 107696 -137160 front 0 (PN 680))
+      (place R14 119888 -137160 front 0 (PN 1M))
       (place R13 87122 -143002 front 0 (PN 3.3K))
       (place R12 170688 -95504 front 270 (PN 390))
     )
@@ -84,19 +84,19 @@
     )
     (component Capacitors_SMD:C_0805
       (place C5 152654 -120904 front 180 (PN 22uf))
-      (place C4 134620 -114808 front 180 (PN 1000pf))
+      (place C4 127508 -134112 front 180 (PN 1000pf))
       (place C3 97900 -127100 front 180 (PN 10pf))
-      (place C2 113538 -132080 front 180 (PN 1uf))
+      (place C2 113538 -132080 front 0 (PN 1uf))
       (place C1 160274 -115062 front 0 (PN 22uf))
       (place C8 141986 -137414 front 180 (PN 880pf))
       (place C7 87376 -116078 front 0 (PN 1000pf))
       (place C6 137160 -137414 front 180 (PN 10nf))
     )
     (component Connect:PINTST
-      (place W3 112014 -144018 front 0 (PN TEST_1P))
+      (place W3 111760 -143764 front 0 (PN TEST_1P))
       (place W2 157734 -136906 front 0 (PN TEST_1P))
-      (place W1 140970 -144272 front 0 (PN TEST_1P))
-      (place W4 135128 -144272 front 0 (PN TEST_1P))
+      (place W1 140208 -143764 front 0 (PN TEST_1P))
+      (place W4 134620 -143764 front 0 (PN TEST_1P))
     )
     (component "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm"
       (place U9 129032 -139700 front 0 (PN FDS4559))
@@ -146,6 +146,9 @@
     )
     (component "Sockets_MOLEX_KK-System:Socket_MOLEX-KK-RM2-54mm_Lock_2pin_straight"
       (place P1 89662 -124460 front 180 (PN CONN_01X02))
+    )
+    (component Fiducials:Fiducial_classic_Small_SilkscreenTop_Type1
+      (place REF5 69088 -80264 front 0 (PN Fiducial_classic_Small_SilkscreenTop_Type1))
     )
   )
   (library
@@ -603,6 +606,17 @@
       (pin Oval[A]Pad_1800.86x3500.12_um 1 -1270 0)
       (pin Oval[A]Pad_1800.86x3500.12_um 2 1270 0)
     )
+    (image Fiducials:Fiducial_classic_Small_SilkscreenTop_Type1
+      (outline (path signal 150  -1501.14 0  1501.14 0))
+      (outline (path signal 150  0 1501.14  0 -1501.14))
+      (outline (path signal 150  1501.14 0  1427.67 -463.878  1214.45 -882.348  882.348 -1214.45
+            463.878 -1427.67  0 -1501.14  -463.878 -1427.67  -882.348 -1214.45
+            -1214.45 -882.348  -1427.67 -463.878  -1501.14 0  -1427.67 463.878
+            -1214.45 882.348  -882.348 1214.45  -463.878 1427.67  0 1501.14
+            463.878 1427.67  882.348 1214.45  1214.45 882.348  1427.67 463.878))
+      (keepout "" (circle F.Cu 0))
+      (keepout "" (circle B.Cu 0))
+    )
     (padstack Round[A]Pad_1143_um
       (shape (circle F.Cu 1143))
       (shape (circle B.Cu 1143))
@@ -841,12 +855,12 @@
     (net "Net-(JP1-Pad1)"
       (pins R9-2 R5-1 JP1-1)
     )
-    (class kicad_default "" /ENABLE /OSC /RxD /TxD "Net-(C2-Pad1)" "Net-(C3-Pad1)"
-      "Net-(C4-Pad1)" "Net-(C5-Pad1)" "Net-(C6-Pad1)" "Net-(C7-Pad2)" "Net-(C8-Pad1)"
-      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D8-Pad1)" "Net-(D9-Pad2)"
-      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(R13-Pad2)" "Net-(R15-Pad1)"
-      "Net-(R16-Pad1)" "Net-(R6-Pad1)" "Net-(SW1-Pad1)" "Net-(SW1-Pad2)" "Net-(SW2-Pad3)"
-      "Net-(U3-Pad3-5)" "Net-(U5-Pad3)"
+    (class kicad_default "" /ENABLE /OSC /RxD /TxD "Net-(C3-Pad1)" "Net-(C4-Pad1)"
+      "Net-(C5-Pad1)" "Net-(C6-Pad1)" "Net-(C7-Pad2)" "Net-(C8-Pad1)" "Net-(D13-Pad2)"
+      "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D8-Pad1)" "Net-(D9-Pad2)" "Net-(J2-PadS)"
+      "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)"
+      "Net-(R6-Pad1)" "Net-(SW1-Pad1)" "Net-(SW1-Pad2)" "Net-(SW2-Pad3)" "Net-(U3-Pad3-5)"
+      "Net-(U5-Pad3)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
@@ -855,8 +869,9 @@
         (clearance 140.1)
       )
     )
-    (class HV /HVNEG /HVPOS "Net-(D1-Pad2)" "Net-(D10-Pad2)" "Net-(D12-Pad1)"
-      "Net-(D12-Pad2)" "Net-(D5-Pad1)" "Net-(D6-Pad2)" "Net-(JP1-Pad1)" "Net-(P1-Pad1)"
+    (class HV /HVNEG /HVPOS "Net-(C2-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
+      "Net-(D12-Pad1)" "Net-(D12-Pad2)" "Net-(D5-Pad1)" "Net-(D6-Pad2)" "Net-(JP1-Pad1)"
+      "Net-(P1-Pad1)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
