@@ -33,9 +33,9 @@
     (via "Via[0-1]_600:400_um")
     (rule
       (width 450)
-      (clearance 140.1)
-      (clearance 140.1 (type default_smd))
-      (clearance 35 (type smd_smd))
+      (clearance 280.1)
+      (clearance 280.1 (type default_smd))
+      (clearance 70 (type smd_smd))
     )
   )
   (placement
@@ -866,7 +866,7 @@
       )
       (rule
         (width 450)
-        (clearance 140.1)
+        (clearance 280.1)
       )
     )
     (class HV /HVNEG /HVPOS "Net-(C2-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
@@ -885,8 +885,8 @@
         (use_via Via[0-1]_600:400_um)
       )
       (rule
-        (width 1000)
-        (clearance 140.1)
+        (width 600)
+        (clearance 280.1)
       )
     )
   )
