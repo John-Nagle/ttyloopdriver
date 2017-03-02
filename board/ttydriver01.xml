@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/board/ttydriver01.sch</source>
-    <date>Mon 24 Oct 2016 02:08:34 PM PDT</date>
-    <tool>Eeschema 4.0.4+e1-6308~48~ubuntu14.04.1-stable</tool>
+    <date>Wed 01 Mar 2017 10:18:11 PM PST</date>
+    <tool>Eeschema 4.0.5-e0-6337~49~ubuntu14.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -19,9 +19,9 @@
     </sheet>
   </design>
   <components>
-    <comp ref="C5">
-      <value>0.1uf</value>
-      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+    <comp ref="C6">
+      <value>10nf</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
       <fields>
         <field name="Vendorpart">BC1160CT-ND</field>
         <field name="Vendor">Digikey</field>
@@ -32,9 +32,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FD</tstamp>
     </comp>
-    <comp ref="C4">
-      <value>100pf</value>
-      <footprint>Capacitors_ThroughHole:C_Disc_D3_P2.5</footprint>
+    <comp ref="C8">
+      <value>880pf</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
       <datasheet>http://www.vishay.com/docs/45171/kseries.pdf</datasheet>
       <fields>
         <field name="Vendorpart">BC1013CT-ND</field>
@@ -46,9 +46,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FC</tstamp>
     </comp>
-    <comp ref="R6">
-      <value>2.2K</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+    <comp ref="R7">
+      <value>7.2K</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Vendorpart">CF14JT2K20CT-ND</field>
@@ -60,35 +60,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FB</tstamp>
     </comp>
-    <comp ref="R2">
-      <value>4.7K</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
-      <fields>
-        <field name="Vendorpart">CF14JT4K70CT-ND</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Part">CF14JT4K70</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E4E2FA</tstamp>
-    </comp>
-    <comp ref="R3">
-      <value>4.7K</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
-      <fields>
-        <field name="Part">CF14JT4K70</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Vendor">Digikey</field>
-        <field name="Vendorpart">CF14JT4K70CT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E4E2F9</tstamp>
-    </comp>
-    <comp ref="R5">
-      <value>68K</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+    <comp ref="R8">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Vendorpart">CF14JT68K0CT-ND</field>
@@ -100,9 +74,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F8</tstamp>
     </comp>
-    <comp ref="R4">
-      <value>22K</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+    <comp ref="R6">
+      <value>720</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Part">CF14JT22K0</field>
@@ -114,62 +88,21 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F7</tstamp>
     </comp>
-    <comp ref="D5">
-      <value>1N4148</value>
-      <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+    <comp ref="D9">
+      <value>Schottky</value>
+      <footprint>Diodes_SMD:SOD-323</footprint>
+      <datasheet>http://www.digikey.com/product-detail/en/comchip-technology/CDBF0130L/641-1266-1-ND/1973545</datasheet>
       <fields>
-        <field name="Vendorpart">1N914FS-ND</field>
-        <field name="Part">1N914</field>
-        <field name="Mfgr">Fairchild</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="device" part="D_Small"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E4E2F6</tstamp>
-    </comp>
-    <comp ref="D3">
-      <value>1N4148</value>
-      <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
-      <datasheet>http://www.digikey.com/product-detail/en/fairchild-semiconductor/1N4148TR/1N4148FSTR-ND/458811</datasheet>
-      <fields>
-        <field name="Mfgr">Fairchild</field>
-        <field name="Part">1N914</field>
-        <field name="Vendorpart">1N914FS-ND</field>
+        <field name="Mfgr">Comchip</field>
+        <field name="Part">CDBF0130L</field>
+        <field name="Vendorpart">641-1266-1-ND</field>
         <field name="Vendor">Digikey</field>
       </fields>
       <libsource lib="device" part="D_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F5</tstamp>
     </comp>
-    <comp ref="U1">
-      <value>NE555</value>
-      <footprint>Housings_DIP:DIP-8_W7.62mm</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/ne555.pdf</datasheet>
-      <fields>
-        <field name="Mfgr">TI</field>
-        <field name="Part">NE555P</field>
-        <field name="Vendorpart">296-1411-5-ND</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="ttydriver01-cache" part="NE555"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E4E2F4</tstamp>
-    </comp>
-    <comp ref="D1">
-      <value>D</value>
-      <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
-      <datasheet>http://www.fairchildsemi.com/datasheets/1N/1N5817.pdf</datasheet>
-      <fields>
-        <field name="Vendorpart">1N5817FSTR-ND</field>
-        <field name="Mfgr">Fairchild</field>
-        <field name="Part">1N5817</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="device" part="D"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E5AF6F</tstamp>
-    </comp>
-    <comp ref="C1">
+    <comp ref="C9">
       <value>220uf</value>
       <footprint>Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5</footprint>
       <datasheet>http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW</datasheet>
@@ -183,9 +116,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5B094</tstamp>
     </comp>
-    <comp ref="D2">
+    <comp ref="D1">
       <value>D</value>
-      <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
+      <footprint>Diodes_SMD:SMA_Standard</footprint>
       <datasheet>http://www.diodes.com/_files/datasheets/ds28002.pdf</datasheet>
       <fields>
         <field name="Vendorpart">1N4004DICT-ND</field>
@@ -197,23 +130,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5B382</tstamp>
     </comp>
-    <comp ref="D4">
-      <value>ZENER 120V</value>
-      <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
-      <datasheet>http://www.onsemi.com/pub_link/Collateral/1N5333B-D.PDF</datasheet>
-      <fields>
-        <field name="Part">1N5380BG</field>
-        <field name="Mfgr">ON</field>
-        <field name="Vendorpart">1N5380BGOS-ND</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="device" part="ZENER"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E5B55A</tstamp>
-    </comp>
-    <comp ref="C3">
+    <comp ref="C7">
       <value>1000pf</value>
-      <footprint>Capacitors_ThroughHole:C_Disc_D6_P5</footprint>
+      <footprint>Capacitors_SMD:C_0805</footprint>
       <datasheet>http://www.vishay.com/docs/28549/dseries.pdf</datasheet>
       <fields>
         <field name="Vendorpart">1457PH-ND</field>
@@ -227,7 +146,7 @@
     </comp>
     <comp ref="R1">
       <value>10</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <footprint>Resistors_SMD:R_1206</footprint>
       <fields>
         <field name="Vendorpart">CF14JT10R0CT-ND</field>
         <field name="Vendor">Digikey</field>
@@ -237,33 +156,6 @@
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E5B823</tstamp>
-    </comp>
-    <comp ref="T1">
-      <value>Coilcraft-DA2032</value>
-      <footprint>Coilcraft:Coilcraft-DA2032-AL</footprint>
-      <fields>
-        <field name="Mfgr">Coilcraft</field>
-        <field name="Part">DA2032-AL</field>
-        <field name="Vendor">Coilcraft</field>
-        <field name="Vendorpart">DA2032-AL</field>
-      </fields>
-      <libsource lib="ttydriver01-cache" part="Coilcraft-DA2032-RESCUE-ttydriver01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E5C846</tstamp>
-    </comp>
-    <comp ref="D6">
-      <value>D</value>
-      <footprint>Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10</footprint>
-      <datasheet>http://www.diodes.com/_files/datasheets/ds28002.pdf</datasheet>
-      <fields>
-        <field name="Part">1N4004-T</field>
-        <field name="Mfgr">Diodes Inc</field>
-        <field name="Vendorpart">1N4004DICT-ND</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="device" part="D"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E70158</tstamp>
     </comp>
     <comp ref="U4">
       <value>CPC1510G</value>
@@ -279,9 +171,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57EF52FB</tstamp>
     </comp>
-    <comp ref="R9">
+    <comp ref="R15">
       <value>680</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Vendor">Digikey</field>
@@ -293,22 +185,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57EF57CB</tstamp>
     </comp>
-    <comp ref="P3">
+    <comp ref="P1">
       <value>CONN_01X02</value>
-      <footprint>Connect:PINHEAD1-2</footprint>
-      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
-      <fields>
-        <field name="Vendorpart">WM10153-ND</field>
-        <field name="Mfgr">Molex</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X02"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57F0B03E</tstamp>
-    </comp>
-    <comp ref="P2">
-      <value>CONN_01X02</value>
-      <footprint>Connect:PINHEAD1-2</footprint>
+      <footprint>Sockets_MOLEX_KK-System:Socket_MOLEX-KK-RM2-54mm_Lock_2pin_straight</footprint>
       <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
       <fields>
         <field name="Vendorpart">WM10153-ND</field>
@@ -319,22 +198,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F43FF1</tstamp>
     </comp>
-    <comp ref="P1">
-      <value>CONN_01X04</value>
-      <footprint>DC-DC:PINHEAD1-4</footprint>
-      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
-      <fields>
-        <field name="Vendorpart">WM10155-ND</field>
-        <field name="Mfgr">Molex</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X04"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57F44672</tstamp>
-    </comp>
-    <comp ref="R7">
+    <comp ref="R13">
       <value>3.3K</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Mfgr">Stackpole</field>
@@ -358,37 +224,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F094DE</tstamp>
     </comp>
-    <comp ref="Q1">
-      <value>IRLB8721PBF</value>
-      <footprint>DC-DC:TO-220-HV</footprint>
-      <datasheet>http://www.irf.com/product-info/datasheets/data/irlb8721pbf.pdf</datasheet>
-      <fields>
-        <field name="Mfgr">Infineon</field>
-        <field name="Part">IRLB8721PBF</field>
-        <field name="Vendorpart">IRLB8721PBF-ND</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="device" part="Q_NMOS_SDG"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57F9D592</tstamp>
-    </comp>
-    <comp ref="U2">
-      <value>TPS2030P</value>
-      <footprint>Housings_DIP:DIP-8_W7.62mm</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/tps2031.pdf</datasheet>
-      <fields>
-        <field name="Vendorpart">595-TPS2030P</field>
-        <field name="Mfgr">TI</field>
-        <field name="Part">TPS2030P</field>
-        <field name="Vendor">Mouser</field>
-      </fields>
-      <libsource lib="ttypowerlib" part="TPS2030P"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57FC84AA</tstamp>
-    </comp>
     <comp ref="C2">
       <value>1uf</value>
-      <footprint>Capacitors_ThroughHole:C_Radial_D5_L6_P2.5</footprint>
+      <footprint>Capacitors_SMD:C_0805</footprint>
       <datasheet>http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c49e.ashx</datasheet>
       <fields>
         <field name="Mfgr">Murata</field>
@@ -428,50 +266,9 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FDCEDB</tstamp>
     </comp>
-    <comp ref="R10">
-      <value>680</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
-      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
-      <fields>
-        <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Vendorpart">CF14JT680RCT-ND</field>
-        <field name="Part">CF14JT680R</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58003C54</tstamp>
-    </comp>
-    <comp ref="R11">
-      <value>680</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
-      <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
-      <fields>
-        <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Part">CF14JT680R</field>
-        <field name="Vendorpart">CF14JT680RCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58003DC1</tstamp>
-    </comp>
-    <comp ref="P4">
-      <value>CONN_01X10</value>
-      <footprint>DC-DC:PINHEAD1-10</footprint>
-      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/Molex%20PDFs/171856,57_Brief.pdf</datasheet>
-      <fields>
-        <field name="Mfgr">Molex</field>
-        <field name="Vendorpart">WM10294-ND</field>
-        <field name="Vendor">Digikey</field>
-      </fields>
-      <libsource lib="conn" part="CONN_01X10"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>58006AF9</tstamp>
-    </comp>
-    <comp ref="R8">
+    <comp ref="R14">
       <value>1M</value>
-      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM10mm</footprint>
+      <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Vendor">Digikey</field>
@@ -483,10 +280,535 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58029311</tstamp>
     </comp>
+    <comp ref="U1">
+      <value>NE555</value>
+      <footprint>Housings_SOIC:SOIJ-8_5.3x5.3mm_Pitch1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ne555.pdf</datasheet>
+      <fields>
+        <field name="Part">NE555PSR</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">TI</field>
+        <field name="Vendorpart">296-6502-1-ND</field>
+      </fields>
+      <libsource lib="linear" part="LM555N"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>580EC2F4</tstamp>
+    </comp>
+    <comp ref="W2">
+      <value>TEST_1P</value>
+      <footprint>Connect:PINTST</footprint>
+      <libsource lib="conn" part="TEST_1P"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586734F8</tstamp>
+    </comp>
+    <comp ref="W1">
+      <value>TEST_1P</value>
+      <footprint>Connect:PINTST</footprint>
+      <libsource lib="conn" part="TEST_1P"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867392E</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>22</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Vendorpart">P22ECT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ERJ-8GEYJ220V</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58676298</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Vendorpart">P10.0KFCT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ERJ-8ENF1002V</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58676319</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>10pf</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Samsung</field>
+        <field name="Vendorpart">1276-2563-1-ND</field>
+        <field name="Part">CL21C100DBANNNC</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58676388</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>FDS4559</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/FD/FDS4559.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Fairchild</field>
+        <field name="Part">FDS4559</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">FDS4559CT-ND</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="FDS4559"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58675588</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>IE0512S</value>
+      <footprint>DC-DC:IE0524S</footprint>
+      <datasheet>http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788</datasheet>
+      <fields>
+        <field name="Mfgr">XP Power</field>
+        <field name="Part">IE0512S</field>
+        <field name="Vendorpart">1470-1402-5-ND</field>
+        <field name="Vendor">Digikey</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="IE0524S"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867471B</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>KEYBOARD JACK</value>
+      <footprint>Switchcraft:Switchcraft-SN37A12A</footprint>
+      <datasheet>http://www.switchcraft.com/Drawings/SN37A_SERIES_CD.pdf</datasheet>
+      <fields>
+        <field name="Part">SN37A12A</field>
+        <field name="Mfgr">Switchcraft</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">SC2014-ND</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="PHONE-JACK-MONO-SW"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58676D1D</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>D</value>
+      <footprint>Diodes_SMD:SMA_Standard</footprint>
+      <fields>
+        <field name="Part">S1G</field>
+        <field name="Mfgr">On</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">S1GFSCT-ND</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867B008</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>D</value>
+      <footprint>Diodes_SMD:SMA_Standard</footprint>
+      <fields>
+        <field name="Vendorpart">S1GFSCT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">S1G</field>
+        <field name="Mfgr">On</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867B233</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>4.7V Zener</value>
+      <footprint>Diodes_SMD:SOD-123</footprint>
+      <datasheet>http://www.semicon.panasonic.co.jp/ds4/DZ2W047_E.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">DZ2W04700LCT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">DZ2W04700L</field>
+        <field name="Mfgr">Panasonic</field>
+      </fields>
+      <libsource lib="device" part="D_Zener"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867C029</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>27</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Vendorpart">P27ECT-ND</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">ERJ-8GEYJ270V</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867C198</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>33</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Vendorpart">P33ECT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ERJ-8GEYJ330V</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867C471</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>390</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Vendorpart">P390ECT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">ERJ-8GEYJ391V</field>
+        <field name="Mfgr">Panasonic</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5867CB06</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>1000pf</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Part">D102K25Y5PL63L6R</field>
+        <field name="Mfgr">Vishay</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">1457PH-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58682026</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>LED_3</value>
+      <footprint>Dialite:564-0100</footprint>
+      <datasheet>http://www.dialight.com/Assets/Brochures_And_Catalogs/Indication/CBI_Selector_Guide.pdf</datasheet>
+      <fields>
+        <field name="Vendorpart">350-1752-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Dialight</field>
+        <field name="Part">5640100222F</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="LED_3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5868B9D6</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>390</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Part">ERJ-8GEYJ391V</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">P390ECT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5868DBB5</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>390</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Vendorpart">P390ECT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">ERJ-8GEYJ391V</field>
+        <field name="Mfgr">Panasonic</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5868DC9D</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>Button_SPDT</value>
+      <footprint>NKK:BB15AH-FA</footprint>
+      <datasheet>http://www.nkkswitches.com/pdf/Bpushbuttons-1.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">NKK</field>
+        <field name="Part">BB15AH-FA</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">360-3265-ND</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="Button_SPDT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586896FE</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>Switch_SPDT</value>
+      <footprint>NKK:Toggle-M2012SA2W40</footprint>
+      <datasheet>http://www.digikey.ca/product-detail/en/nkk-switches/M2012SA2W40/360-2837-ND/2105230</datasheet>
+      <fields>
+        <field name="Part">M2012SA2W40</field>
+        <field name="Mfgr">NKK</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">360-2837-ND</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="Switch_SPDT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586898A4</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>CPC1510G</value>
+      <footprint>Housings_DIP:DIP-6_W7.62mm</footprint>
+      <datasheet>http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Ixys</field>
+        <field name="Vendorpart">CLA277-ND</field>
+        <field name="Part">CPC1510G</field>
+        <field name="Vendor">Digikey</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="G3VM401E"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5869A3C6</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>22uf</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Vendorpart">1276-2412-1-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Part">CL21A226MQCLQNC</field>
+        <field name="Mfgr">Samsung</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586A5F83</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>22uf</value>
+      <footprint>Capacitors_SMD:C_0805</footprint>
+      <fields>
+        <field name="Part">CL21A226MQCLQNC</field>
+        <field name="Mfgr">Samsung</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">1276-2412-1-ND</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586A600C</tstamp>
+    </comp>
+    <comp ref="L3">
+      <value>10uH</value>
+      <footprint>Coilcraft:0508PS</footprint>
+      <datasheet>http://www.coilcraft.com/0805ps.cfm</datasheet>
+      <fields>
+        <field name="Part">0805PS-103KL</field>
+        <field name="Mfgr">Coilcraft</field>
+        <field name="Vendorpart">0805PS-103KL</field>
+        <field name="Vendor">Coilcraft</field>
+      </fields>
+      <libsource lib="device" part="L"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586A6166</tstamp>
+    </comp>
+    <comp ref="W3">
+      <value>TEST_1P</value>
+      <footprint>Connect:PINTST</footprint>
+      <libsource lib="conn" part="TEST_1P"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586A3D32</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>AP2553W6</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23-6</footprint>
+      <datasheet>http://www.diodes.com/_files/datasheets/AP255x.pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Diodes</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">AP2553W6-7DICT-ND</field>
+        <field name="Part">AP2553W6-7</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="AP2553W6"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586C6F4F</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>53.6K</value>
+      <footprint>Resistors_SMD:R_1206</footprint>
+      <fields>
+        <field name="Vendorpart">P53.6FCT-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ERJ-8ENF53R6V</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586C953C</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>PRINTER JACK</value>
+      <footprint>Switchcraft:Switchcraft-SN37A12A</footprint>
+      <datasheet>http://www.switchcraft.com/Drawings/SN37A_SERIES_CD.pdf</datasheet>
+      <fields>
+        <field name="Part">SN37A12A</field>
+        <field name="Mfgr">Switchcraft</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">SC2014-ND</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="PHONE-JACK-MONO-SW"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586D25CB</tstamp>
+    </comp>
+    <comp ref="T1">
+      <value>Coilcraft-FA2469-AL</value>
+      <footprint>Coilcraft:Coilcraft-FA2469-AL</footprint>
+      <datasheet>http://www.coilcraft.com/fa2469.cfm</datasheet>
+      <fields>
+        <field name="Part">FA2469-AL</field>
+        <field name="Mfgr">Coilcraft</field>
+        <field name="Vendor">Coilcraft</field>
+        <field name="Vendorpart">FA2469-AL</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="Coilcraft-FA2469-AL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586D5249</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>D_Zener</value>
+      <footprint>Diodes_SMD:SMB_Standard</footprint>
+      <datasheet>http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Micro Commercial</field>
+        <field name="Part">SMBJ5380B-TP</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">SMBJ5380B-TPMSCT-ND</field>
+      </fields>
+      <libsource lib="device" part="D_Zener"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586DD17A</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>D_Zener</value>
+      <footprint>Diodes_SMD:SMB_Standard</footprint>
+      <datasheet>http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Micro Commercial</field>
+        <field name="Part">SMBJ5380B-TP</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">SMBJ5380B-TPMSCT-ND</field>
+      </fields>
+      <libsource lib="device" part="D_Zener"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586DEFC6</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>D_Zener</value>
+      <footprint>Diodes_SMD:SMB_Standard</footprint>
+      <datasheet>http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf</datasheet>
+      <fields>
+        <field name="Mfgr">Micro Commercial</field>
+        <field name="Part">SMBJ5380B-TP</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">SMBJ5380B-TPMSCT-ND</field>
+      </fields>
+      <libsource lib="device" part="D_Zener"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>586DF12C</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>MOTOR CTL RELAY JACK</value>
+      <footprint>CUI:MJ-2509N</footprint>
+      <datasheet>http://www.cui.com/product/resource/digikeypdf/mj-2509n.pdf</datasheet>
+      <fields>
+        <field name="Part">MJ-2509N</field>
+        <field name="Mfgr">CUI</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">CP-M2509N-ND</field>
+      </fields>
+      <libsource lib="ttypowerlib" part="PHONE-JACK-MONO"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58691531</tstamp>
+    </comp>
+    <comp ref="JP1">
+      <value>Jumper</value>
+      <footprint>Connect:PINHEAD1-2</footprint>
+      <libsource lib="device" part="Jumper"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>587153BF</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>Schottky</value>
+      <footprint>Diodes_SMD:SOD-323</footprint>
+      <datasheet>http://www.digikey.com/product-detail/en/comchip-technology/CDBF0130L/641-1266-1-ND/1973545</datasheet>
+      <fields>
+        <field name="Mfgr">Comchip</field>
+        <field name="Part">CDBF0130L</field>
+        <field name="Vendorpart">641-1266-1-ND</field>
+        <field name="Vendor">Digikey</field>
+      </fields>
+      <libsource lib="device" part="D_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5871CBDA</tstamp>
+    </comp>
+    <comp ref="W4">
+      <value>TEST_1P</value>
+      <footprint>Connect:PINTST</footprint>
+      <libsource lib="conn" part="TEST_1P"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5898BD06</tstamp>
+    </comp>
   </components>
   <libparts>
+    <libpart lib="ttypowerlib" part="AP2553W6">
+      <description>Precision current limited power switch</description>
+      <docs>http://www.diodes.com/_files/datasheets/AP255x.pdf</docs>
+      <footprints>
+        <fp>SOT*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP2553W6</field>
+        <field name="Footprint">TO_SOT_Packages_SMD:SOT-23-6</field>
+        <field name="Datasheet">http://www.diodes.com/_files/datasheets/AP255x.pdf</field>
+        <field name="Mfgr">Diodes</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendorpart">AP2553W6-7DICT-ND</field>
+        <field name="Part">AP2553W6-7</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="FLT" type="output"/>
+        <pin num="5" name="ILIM" type="passive"/>
+        <pin num="6" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="ttypowerlib" part="Button_SPDT">
+      <description>SPDT toggle switch</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">Button_SPDT</field>
+        <field name="Footprint">NKK:Button-BB15AV-FA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="conn" part="CONN_01X02">
-      <description>Connector 01x02</description>
+      <description>Connector, single row, 01x02</description>
       <footprints>
         <fp>Pin_Header_Straight_1X02</fp>
         <fp>Pin_Header_Angled_1X02</fp>
@@ -502,55 +824,12 @@
         <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="CONN_01X04">
-      <description>Connector 01x04</description>
-      <footprints>
-        <fp>Pin_Header_Straight_1X04</fp>
-        <fp>Pin_Header_Angled_1X04</fp>
-        <fp>Socket_Strip_Straight_1X04</fp>
-        <fp>Socket_Strip_Angled_1X04</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X04</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_01X10">
-      <description>Connector 01x10</description>
-      <footprints>
-        <fp>Pin_Header_Straight_1X10</fp>
-        <fp>Pin_Header_Angled_1X10</fp>
-        <fp>Socket_Strip_Straight_1X10</fp>
-        <fp>Socket_Strip_Angled_1X10</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X10</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-        <pin num="5" name="P5" type="passive"/>
-        <pin num="6" name="P6" type="passive"/>
-        <pin num="7" name="P7" type="passive"/>
-        <pin num="8" name="P8" type="passive"/>
-        <pin num="9" name="P9" type="passive"/>
-        <pin num="10" name="P10" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="device" part="CP">
       <description>Polarised capacitor</description>
       <footprints>
         <fp>CP*</fp>
-        <fp>Elko*</fp>
+        <fp>C_Axial*</fp>
+        <fp>C_Radial*</fp>
         <fp>TantalC*</fp>
         <fp>C*elec</fp>
         <fp>c_elec*</fp>
@@ -571,20 +850,20 @@
         <field name="Value">CP2102-breakout</field>
       </fields>
       <pins>
-        <pin num="1-1" name="GND" type="input"/>
+        <pin num="1-1" name="GND" type="power_in"/>
         <pin num="1-2" name="RESET" type="input"/>
         <pin num="1-3" name="/SUSPEND" type="output"/>
         <pin num="1-4" name="SUSPEND" type="output"/>
-        <pin num="2-1" name="RI" type="output"/>
-        <pin num="2-2" name="DCD" type="output"/>
+        <pin num="2-1" name="RI" type="input"/>
+        <pin num="2-2" name="DCD" type="input"/>
         <pin num="2-3" name="DTR" type="output"/>
         <pin num="2-4" name="DSR" type="input"/>
         <pin num="3-1" name="Vcc" type="power_out"/>
         <pin num="3-2" name="GND" type="power_in"/>
-        <pin num="3-3" name="TxD" type="input"/>
-        <pin num="3-4" name="RxD" type="output"/>
-        <pin num="3-5" name="RTS" type="input"/>
-        <pin num="3-6" name="CTS" type="output"/>
+        <pin num="3-3" name="TxD" type="output"/>
+        <pin num="3-4" name="RxD" type="input"/>
+        <pin num="3-5" name="RTS" type="output"/>
+        <pin num="3-6" name="CTS" type="input"/>
       </pins>
     </libpart>
     <libpart lib="device" part="C_Small">
@@ -605,32 +884,30 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="ttydriver01-cache" part="Coilcraft-DA2032-RESCUE-ttydriver01">
+    <libpart lib="ttypowerlib" part="Coilcraft-FA2469-AL">
+      <description>Switching power transformer</description>
       <fields>
         <field name="Reference">T</field>
-        <field name="Value">Coilcraft-DA2032-RESCUE-ttydriver01</field>
+        <field name="Value">Coilcraft-FA2469-AL</field>
       </fields>
       <pins>
-        <pin num="1" name="1" type="output"/>
-        <pin num="3" name="3" type="input"/>
-        <pin num="4" name="4" type="input"/>
-        <pin num="5" name="5" type="input"/>
-        <pin num="6" name="6" type="input"/>
-        <pin num="7" name="~" type="input"/>
-        <pin num="8" name="8" type="input"/>
-        <pin num="9" name="9" type="input"/>
-        <pin num="10" name="10" type="input"/>
-        <pin num="12" name="12" type="output"/>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="NotConnected"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="NotConnected"/>
+        <pin num="6" name="6" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="device" part="D">
       <description>Diode</description>
       <footprints>
         <fp>Diode_*</fp>
-        <fp>D-Pak_TO252AA</fp>
+        <fp>D-*</fp>
         <fp>*SingleDiode</fp>
         <fp>*_Diode_*</fp>
         <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
       </footprints>
       <fields>
         <field name="Reference">D</field>
@@ -642,7 +919,7 @@
       </pins>
     </libpart>
     <libpart lib="device" part="D_Small">
-      <description>Diode</description>
+      <description>Diode, small symbol</description>
       <footprints>
         <fp>Diode_*</fp>
         <fp>D-Pak_TO252AA</fp>
@@ -657,6 +934,43 @@
       <pins>
         <pin num="1" name="K" type="passive"/>
         <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D_Zener">
+      <description>Zener Diode</description>
+      <docs>https://en.wikipedia.org/wiki/Zener_diode</docs>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-Pak_TO252AA</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ttypowerlib" part="FDS4559">
+      <description>Dual Transistor N/P-MOSFET </description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">FDS4559</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="G" type="input"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="input"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="ttypowerlib" part="G3VM401E">
@@ -686,10 +1000,53 @@
         <pin num="4" name="+Vout" type="power_out"/>
       </pins>
     </libpart>
-    <libpart lib="ttydriver01-cache" part="LM555N">
+    <libpart lib="device" part="Jumper">
+      <description>Jumper, generic, normally closed</description>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="L">
+      <description>Inductor</description>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ttypowerlib" part="LED_3">
+      <description>LED RGB 6 pins</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="linear" part="LM555N">
       <aliases>
         <alias>NE555</alias>
       </aliases>
+      <description>555-series timer IC</description>
+      <docs>ns/lm555.pdf</docs>
       <footprints>
         <fp>DIP*</fp>
         <fp>TSSOP*</fp>
@@ -710,16 +1067,27 @@
         <pin num="8" name="VCC" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="Q_NMOS_SDG">
-      <description>Transistor N-MOSFET (general)</description>
+    <libpart lib="ttypowerlib" part="PHONE-JACK-MONO">
+      <description>DC Barrel Jack</description>
       <fields>
-        <field name="Reference">Q</field>
-        <field name="Value">Q_NMOS_SDG</field>
+        <field name="Reference">J</field>
+        <field name="Value">PHONE-JACK-MONO</field>
       </fields>
       <pins>
-        <pin num="1" name="S" type="passive"/>
-        <pin num="2" name="D" type="passive"/>
-        <pin num="3" name="G" type="input"/>
+        <pin num="S" name="~" type="passive"/>
+        <pin num="T" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ttypowerlib" part="PHONE-JACK-MONO-SW">
+      <description>DC Barrel Jack</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PHONE-JACK-MONO-SW</field>
+      </fields>
+      <pins>
+        <pin num="S" name="~" type="passive"/>
+        <pin num="T" name="~" type="passive"/>
+        <pin num="TB" name="~" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="device" part="R">
@@ -737,260 +1105,316 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="ttypowerlib" part="TPS2030P">
+    <libpart lib="ttypowerlib" part="Switch_SPDT">
+      <description>SPDT toggle switch</description>
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value">TPS2030P</field>
+        <field name="Reference">SW</field>
+        <field name="Value">Switch_SPDT</field>
+        <field name="Footprint">NKK:Toggle- M2012SA2W40</field>
       </fields>
       <pins>
-        <pin num="1" name="GND" type="input"/>
-        <pin num="2" name="IN" type="input"/>
-        <pin num="3" name="IN" type="input"/>
-        <pin num="4" name="EN" type="input"/>
-        <pin num="5" name="/OC" type="output"/>
-        <pin num="6" name="OUT" type="passive"/>
-        <pin num="7" name="OUT" type="passive"/>
-        <pin num="8" name="OUT" type="output"/>
+        <pin num="1" name="A" type="power_out"/>
+        <pin num="2" name="B" type="power_in"/>
+        <pin num="3" name="C" type="power_out"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="ZENER">
-      <description>Diode zener</description>
-      <footprints>
-        <fp>D?</fp>
-        <fp>SO*</fp>
-        <fp>SM*</fp>
-      </footprints>
+    <libpart lib="conn" part="TEST_1P">
+      <description>point</description>
       <fields>
-        <field name="Reference">D</field>
-        <field name="Value">ZENER</field>
+        <field name="Reference">W</field>
+        <field name="Value">TEST_1P</field>
       </fields>
       <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
+        <pin num="1" name="1" type="passive"/>
       </pins>
     </libpart>
   </libparts>
   <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
     <library logical="conn">
       <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="linear">
+      <uri>/usr/share/kicad/library/linear.lib</uri>
     </library>
     <library logical="ttypowerlib">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver/board/ttypowerlib.lib</uri>
     </library>
-    <library logical="ttydriver01-cache">
-      <uri>/home/john/projects/teletype/hardware/ttyloopdriver/board/ttydriver01-cache.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(D4-Pad1)">
-      <node ref="D4" pin="1"/>
-      <node ref="U4" pin="6"/>
-      <node ref="U4" pin="4"/>
-      <node ref="D6" pin="1"/>
-    </net>
-    <net code="2" name="/OSC">
-      <node ref="U1" pin="3"/>
-      <node ref="Q1" pin="3"/>
-    </net>
-    <net code="3" name="Net-(P1-Pad4)">
-      <node ref="R7" pin="1"/>
-      <node ref="P1" pin="4"/>
-    </net>
-    <net code="5" name="Net-(P4-Pad1)">
-      <node ref="P4" pin="1"/>
-      <node ref="U3" pin="3-1"/>
-    </net>
-    <net code="6" name="Net-(C5-Pad1)">
-      <node ref="C5" pin="1"/>
-      <node ref="U1" pin="5"/>
-    </net>
-    <net code="7" name="Net-(C4-Pad1)">
-      <node ref="R6" pin="2"/>
-      <node ref="U1" pin="2"/>
+    <net code="1" name="Net-(C8-Pad1)">
+      <node ref="R7" pin="2"/>
       <node ref="U1" pin="6"/>
-      <node ref="C4" pin="1"/>
+      <node ref="C8" pin="1"/>
+      <node ref="D8" pin="2"/>
     </net>
-    <net code="8" name="Net-(R4-Pad1)">
-      <node ref="R5" pin="2"/>
-      <node ref="R4" pin="1"/>
+    <net code="2" name="Net-(R6-Pad1)">
       <node ref="R6" pin="1"/>
-    </net>
-    <net code="9" name="Net-(D3-Pad2)">
-      <node ref="R3" pin="1"/>
-      <node ref="R2" pin="2"/>
-      <node ref="D3" pin="2"/>
+      <node ref="R7" pin="1"/>
       <node ref="U1" pin="7"/>
     </net>
-    <net code="10" name="Net-(D5-Pad2)">
-      <node ref="D5" pin="2"/>
-      <node ref="R5" pin="1"/>
+    <net code="3" name="Net-(D8-Pad1)">
+      <node ref="D9" pin="1"/>
+      <node ref="U1" pin="2"/>
+      <node ref="D8" pin="1"/>
     </net>
-    <net code="11" name="Net-(D3-Pad1)">
-      <node ref="D3" pin="1"/>
-      <node ref="R4" pin="2"/>
+    <net code="4" name="Net-(D9-Pad2)">
+      <node ref="R8" pin="1"/>
+      <node ref="D9" pin="2"/>
     </net>
-    <net code="12" name="Net-(P4-Pad7)">
-      <node ref="P4" pin="7"/>
-    </net>
-    <net code="13" name="Net-(P4-Pad6)">
-      <node ref="P4" pin="6"/>
-      <node ref="U3" pin="3-4"/>
-    </net>
-    <net code="14" name="Net-(P3-Pad2)">
-      <node ref="R11" pin="1"/>
-      <node ref="P4" pin="4"/>
-      <node ref="P3" pin="2"/>
-    </net>
-    <net code="15" name="Net-(P4-Pad8)">
-      <node ref="P4" pin="8"/>
-      <node ref="R10" pin="2"/>
-    </net>
-    <net code="16" name="Net-(P4-Pad3)">
-      <node ref="U3" pin="3-6"/>
-      <node ref="P4" pin="3"/>
-      <node ref="U3" pin="3-5"/>
-    </net>
-    <net code="17" name="Net-(P2-Pad1)">
-      <node ref="P2" pin="1"/>
+    <net code="5" name="Net-(P1-Pad1)">
+      <node ref="P1" pin="1"/>
       <node ref="U4" pin="5"/>
     </net>
-    <net code="18" name="/HVPOS">
-      <node ref="P2" pin="2"/>
+    <net code="6" name="Net-(C4-Pad1)">
+      <node ref="T1" pin="3"/>
+      <node ref="U9" pin="8"/>
+      <node ref="U9" pin="7"/>
+      <node ref="C4" pin="1"/>
+    </net>
+    <net code="7" name="Net-(SW2-Pad3)">
+      <node ref="SW2" pin="3"/>
+      <node ref="U3" pin="3-4"/>
+    </net>
+    <net code="8" name="Net-(C3-Pad1)">
+      <node ref="R3" pin="1"/>
       <node ref="C3" pin="1"/>
-      <node ref="P1" pin="2"/>
+      <node ref="R4" pin="1"/>
+      <node ref="U9" pin="2"/>
     </net>
-    <net code="19" name="Net-(C2-Pad1)">
-      <node ref="R8" pin="1"/>
-      <node ref="D2" pin="1"/>
-      <node ref="C2" pin="1"/>
-      <node ref="D6" pin="2"/>
+    <net code="9" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="T1" pin="6"/>
     </net>
-    <net code="20" name="Net-(P4-Pad9)">
-      <node ref="P4" pin="9"/>
-      <node ref="R11" pin="2"/>
-    </net>
-    <net code="21" name="GND">
-      <node ref="C1" pin="2"/>
-      <node ref="U5" pin="1"/>
-      <node ref="P4" pin="10"/>
-      <node ref="C4" pin="2"/>
-      <node ref="U1" pin="1"/>
-      <node ref="U4" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="Q1" pin="1"/>
+    <net code="10" name="Net-(SW1-Pad1)">
       <node ref="U2" pin="1"/>
-      <node ref="U3" pin="1-1"/>
-      <node ref="P3" pin="1"/>
-      <node ref="U3" pin="3-2"/>
+      <node ref="SW1" pin="1"/>
     </net>
-    <net code="22" name="Net-(P4-Pad2)">
-      <node ref="U2" pin="2"/>
-      <node ref="U2" pin="3"/>
-      <node ref="P4" pin="2"/>
+    <net code="11" name="Net-(U3-Pad3-5)">
+      <node ref="U3" pin="3-5"/>
+      <node ref="U7" pin="1"/>
     </net>
-    <net code="23" name="Net-(R9-Pad1)">
-      <node ref="R9" pin="1"/>
-      <node ref="U4" pin="1"/>
-    </net>
-    <net code="24" name="Net-(R7-Pad2)">
-      <node ref="R7" pin="2"/>
+    <net code="12" name="Net-(R13-Pad2)">
       <node ref="U6" pin="1"/>
+      <node ref="R13" pin="2"/>
     </net>
-    <net code="25" name="Net-(U5-Pad3)">
+    <net code="13" name="Net-(U5-Pad3)">
       <node ref="U5" pin="3"/>
       <node ref="U6" pin="2"/>
     </net>
-    <net code="26" name="Net-(P1-Pad3)">
-      <node ref="U5" pin="4"/>
-      <node ref="P1" pin="3"/>
+    <net code="14" name="Net-(R15-Pad1)">
+      <node ref="R15" pin="1"/>
+      <node ref="U4" pin="1"/>
     </net>
-    <net code="27" name="Net-(D2-Pad2)">
-      <node ref="D2" pin="2"/>
-      <node ref="T1" pin="12"/>
+    <net code="15" name="Net-(J3-PadT)">
+      <node ref="J3" pin="T"/>
+      <node ref="U3" pin="3-6"/>
+      <node ref="U7" pin="5"/>
+      <node ref="R11" pin="2"/>
     </net>
-    <net code="28" name="Net-(C1-Pad1)">
-      <node ref="C1" pin="1"/>
-      <node ref="D1" pin="1"/>
-      <node ref="T1" pin="7"/>
-      <node ref="T1" pin="8"/>
-      <node ref="T1" pin="9"/>
-      <node ref="T1" pin="10"/>
+    <net code="16" name="Net-(SW1-Pad2)">
+      <node ref="U3" pin="3-1"/>
+      <node ref="SW1" pin="2"/>
     </net>
-    <net code="29" name="Net-(Q1-Pad2)">
-      <node ref="Q1" pin="2"/>
-      <node ref="T1" pin="3"/>
-      <node ref="T1" pin="4"/>
-      <node ref="T1" pin="5"/>
-      <node ref="T1" pin="6"/>
-    </net>
-    <net code="30" name="/HVNEG">
-      <node ref="R8" pin="2"/>
-      <node ref="P1" pin="1"/>
-      <node ref="D4" pin="2"/>
-      <node ref="R1" pin="2"/>
-      <node ref="T1" pin="1"/>
-      <node ref="C2" pin="2"/>
-    </net>
-    <net code="31" name="Net-(C3-Pad2)">
-      <node ref="R1" pin="1"/>
-      <node ref="C3" pin="2"/>
-    </net>
-    <net code="32" name="Net-(U4-Pad3)">
-      <node ref="U4" pin="3"/>
-    </net>
-    <net code="33" name="/TxD">
-      <node ref="U3" pin="3-3"/>
-      <node ref="R9" pin="2"/>
-    </net>
-    <net code="34" name="/ENABLE">
-      <node ref="U2" pin="4"/>
-      <node ref="U3" pin="1-3"/>
-    </net>
-    <net code="35" name="Net-(D5-Pad1)">
-      <node ref="D5" pin="1"/>
-      <node ref="R3" pin="2"/>
-    </net>
-    <net code="36" name="VCC">
-      <node ref="U3" pin="2-4"/>
-      <node ref="U6" pin="5"/>
-      <node ref="R10" pin="1"/>
-      <node ref="U1" pin="4"/>
-      <node ref="U2" pin="8"/>
-      <node ref="U2" pin="7"/>
-      <node ref="U2" pin="6"/>
-      <node ref="U5" pin="2"/>
-      <node ref="R2" pin="1"/>
-      <node ref="U1" pin="8"/>
-      <node ref="D1" pin="2"/>
-    </net>
-    <net code="37" name="Net-(U6-Pad3)">
-      <node ref="U6" pin="3"/>
-    </net>
-    <net code="38" name="Net-(U2-Pad5)">
+    <net code="17" name="Net-(R16-Pad1)">
       <node ref="U2" pin="5"/>
+      <node ref="R16" pin="1"/>
     </net>
-    <net code="39" name="Net-(U3-Pad1-2)">
-      <node ref="U3" pin="1-2"/>
+    <net code="18" name="GND">
+      <node ref="U1" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U9" pin="1"/>
+      <node ref="U9" pin="3"/>
+      <node ref="C9" pin="2"/>
+      <node ref="U9" pin="5"/>
+      <node ref="U9" pin="4"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="U5" pin="1"/>
+      <node ref="D13" pin="1"/>
+      <node ref="D13" pin="3"/>
+      <node ref="U3" pin="3-2"/>
+      <node ref="U3" pin="1-1"/>
+      <node ref="J3" pin="S"/>
+      <node ref="C3" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="U7" pin="2"/>
+      <node ref="U4" pin="2"/>
+      <node ref="U2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="U8" pin="1"/>
+      <node ref="C6" pin="2"/>
+      <node ref="U9" pin="6"/>
+      <node ref="W4" pin="1"/>
     </net>
-    <net code="40" name="Net-(U3-Pad1-4)">
-      <node ref="U3" pin="1-4"/>
+    <net code="19" name="Net-(D6-Pad2)">
+      <node ref="R9" pin="1"/>
+      <node ref="JP1" pin="2"/>
+      <node ref="D6" pin="2"/>
     </net>
-    <net code="41" name="Net-(U3-Pad2-1)">
-      <node ref="U3" pin="2-1"/>
+    <net code="20" name="Net-(JP1-Pad1)">
+      <node ref="R9" pin="2"/>
+      <node ref="JP1" pin="1"/>
+      <node ref="R5" pin="1"/>
     </net>
-    <net code="42" name="/RxD">
-      <node ref="P4" pin="5"/>
-      <node ref="U6" pin="4"/>
-      <node ref="U6" pin="6"/>
+    <net code="21" name="Net-(C2-Pad1)">
+      <node ref="R14" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="W3" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="D5" pin="2"/>
     </net>
-    <net code="43" name="Net-(U3-Pad2-3)">
+    <net code="22" name="Net-(D5-Pad1)">
+      <node ref="D6" pin="1"/>
+      <node ref="U4" pin="6"/>
+      <node ref="U4" pin="4"/>
+      <node ref="D5" pin="1"/>
+    </net>
+    <net code="23" name="Net-(J2-PadS)">
+      <node ref="J2" pin="TB"/>
+      <node ref="J2" pin="S"/>
+      <node ref="U5" pin="4"/>
+    </net>
+    <net code="24" name="Net-(J2-PadT)">
+      <node ref="J2" pin="T"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="25" name="Net-(D13-Pad6)">
+      <node ref="D13" pin="6"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="26" name="Net-(D13-Pad2)">
+      <node ref="R12" pin="1"/>
+      <node ref="D13" pin="2"/>
+    </net>
+    <net code="27" name="Net-(D13-Pad4)">
+      <node ref="R11" pin="1"/>
+      <node ref="D13" pin="4"/>
+    </net>
+    <net code="28" name="Net-(D12-Pad1)">
+      <node ref="U8" pin="4"/>
+      <node ref="R10" pin="2"/>
+      <node ref="D12" pin="1"/>
+    </net>
+    <net code="29" name="Net-(D12-Pad2)">
+      <node ref="D13" pin="5"/>
+      <node ref="R5" pin="2"/>
+      <node ref="D12" pin="2"/>
+    </net>
+    <net code="30" name="Net-(D10-Pad2)">
+      <node ref="D11" pin="2"/>
+      <node ref="D10" pin="2"/>
+    </net>
+    <net code="31" name="/HVNEG">
+      <node ref="J1" pin="S"/>
+      <node ref="C2" pin="2"/>
+      <node ref="D7" pin="2"/>
+      <node ref="D10" pin="1"/>
+      <node ref="T1" pin="4"/>
+      <node ref="R14" pin="2"/>
+      <node ref="U8" pin="3"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="32" name="Net-(U3-Pad2-3)">
       <node ref="U3" pin="2-3"/>
     </net>
-    <net code="44" name="Net-(U3-Pad2-2)">
+    <net code="33" name="Net-(U3-Pad2-2)">
       <node ref="U3" pin="2-2"/>
+    </net>
+    <net code="34" name="Net-(U3-Pad2-1)">
+      <node ref="U3" pin="2-1"/>
+    </net>
+    <net code="35" name="Net-(U3-Pad1-4)">
+      <node ref="U3" pin="1-4"/>
+    </net>
+    <net code="36" name="Net-(U3-Pad1-2)">
+      <node ref="U3" pin="1-2"/>
+    </net>
+    <net code="37" name="/OSC">
+      <node ref="U1" pin="3"/>
+      <node ref="R3" pin="2"/>
+      <node ref="W2" pin="1"/>
+    </net>
+    <net code="38" name="/HVPOS">
+      <node ref="C7" pin="1"/>
+      <node ref="D11" pin="1"/>
+      <node ref="J1" pin="T"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="39" name="Net-(U6-Pad3)">
+      <node ref="U6" pin="3"/>
+    </net>
+    <net code="40" name="Net-(C7-Pad2)">
+      <node ref="R1" pin="1"/>
+      <node ref="C7" pin="2"/>
+    </net>
+    <net code="41" name="Net-(C6-Pad1)">
+      <node ref="U1" pin="5"/>
+      <node ref="C6" pin="1"/>
+    </net>
+    <net code="42" name="/RxD">
+      <node ref="U6" pin="6"/>
+      <node ref="SW2" pin="2"/>
+      <node ref="U6" pin="4"/>
+    </net>
+    <net code="43" name="/TxD">
+      <node ref="R8" pin="2"/>
+      <node ref="U3" pin="3-3"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="44" name="Net-(U4-Pad3)">
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="45" name="/ENABLE">
+      <node ref="U2" pin="3"/>
+      <node ref="U3" pin="1-3"/>
+    </net>
+    <net code="46" name="Net-(U2-Pad4)">
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="47" name="Net-(C5-Pad1)">
+      <node ref="T1" pin="1"/>
+      <node ref="L3" pin="2"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="48" name="VCC">
+      <node ref="U1" pin="8"/>
+      <node ref="U6" pin="5"/>
+      <node ref="R6" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="C9" pin="1"/>
+      <node ref="R12" pin="2"/>
+      <node ref="U3" pin="2-4"/>
+      <node ref="U7" pin="4"/>
+      <node ref="W1" pin="1"/>
+      <node ref="U7" pin="6"/>
+      <node ref="U2" pin="6"/>
+      <node ref="C1" pin="1"/>
+      <node ref="L3" pin="1"/>
+      <node ref="U8" pin="2"/>
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="49" name="Net-(U7-Pad3)">
+      <node ref="U7" pin="3"/>
+    </net>
+    <net code="50" name="Net-(SW1-Pad3)">
+      <node ref="SW1" pin="3"/>
+    </net>
+    <net code="51" name="Net-(SW2-Pad1)">
+      <node ref="SW2" pin="1"/>
+    </net>
+    <net code="52" name="Net-(T1-Pad5)">
+      <node ref="T1" pin="5"/>
+    </net>
+    <net code="53" name="Net-(T1-Pad2)">
+      <node ref="T1" pin="2"/>
+    </net>
+    <net code="54" name="Net-(J1-PadTB)">
+      <node ref="J1" pin="TB"/>
     </net>
   </nets>
 </export>
