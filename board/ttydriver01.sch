@@ -116,7 +116,7 @@ F 2 "Capacitors_SMD:C_0805" H 5775 6875 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/45171/kseries.pdf" H 5775 6875 50  0001 C CNN
 F 4 "1276-2698-1-ND" H 5775 6875 60  0001 C CNN "Vendorpart"
 F 5 "Digikey" H 5775 6875 60  0001 C CNN "Vendor"
-F 6 "Vishay" H 5775 6875 60  0001 C CNN "Mfgr"
+F 6 "Samsung" H 5775 6875 60  0001 C CNN "Mfgr"
 F 7 "CL21C911JBCNNNC" H 5775 6875 60  0001 C CNN "Part"
 	1    5775 6875
 	1    0    0    -1  
@@ -204,9 +204,9 @@ F 0 "D1" H 7350 4075 50  0000 C CNN
 F 1 "D" H 7350 3875 50  0000 C CNN
 F 2 "Diodes_SMD:SMA_Standard" H 7350 3975 50  0001 C CNN
 F 3 "http://www.diodes.com/_files/datasheets/ds28002.pdf" H 7350 3975 50  0001 C CNN
-F 4 "1N4004DICT-ND" H 7350 3975 60  0001 C CNN "Vendorpart"
-F 5 "Diodes Inc" H 7350 3975 60  0001 C CNN "Mfgr"
-F 6 "1N4004-T" H 7350 3975 60  0001 C CNN "Part"
+F 4 "S1GFSCT-ND" H 7350 3975 60  0001 C CNN "Vendorpart"
+F 5 "On" H 7350 3975 60  0001 C CNN "Mfgr"
+F 6 "S1G" H 7350 3975 60  0001 C CNN "Part"
 F 7 "Digikey" H 7350 3975 60  0001 C CNN "Vendor"
 	1    7350 3975
 	-1   0    0    1   
@@ -409,9 +409,9 @@ F 0 "C2" H 7575 4325 50  0000 L CNN
 F 1 "1uf" H 7575 4125 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 7588 4075 50  0001 C CNN
 F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c49e.ashx" H 7550 4225 50  0001 C CNN
-F 4 "Murata" H 7550 4225 60  0001 C CNN "Mfgr"
-F 5 "RDER72E105MUB1H03B" H 7550 4225 60  0001 C CNN "Part"
-F 6 "490-8911-ND" H 7550 4225 60  0001 C CNN "Vendorpart"
+F 4 "TDK" H 7550 4225 60  0001 C CNN "Mfgr"
+F 5 "C2012X7S2A105K125AB" H 7550 4225 60  0001 C CNN "Part"
+F 6 "445-5205-1-ND" H 7550 4225 60  0001 C CNN "Vendorpart"
 F 7 "Digikey" H 7550 4225 60  0001 C CNN "Vendor"
 	1    7550 4225
 	1    0    0    -1  
@@ -584,7 +584,7 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7300 5850 0    60   ~ 0
-CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device [DONE]\n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]\n- All resistors and caps surface mount\n- Change footprint for C2 - REQUIRES NEW BOARD.
+CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device [DONE]\n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]\n- All resistors and caps surface mount\n- Change footprint for C2 and use higher voltage cap - REQUIRES NEW BOARD.\n- Change all test points to use available pins. - REQURES NEW BOARD
 $Comp
 L FDS4559 U9
 U 1 1 58675588
@@ -1143,9 +1143,7 @@ Connection ~ 8400 4475
 Wire Wire Line
 	5350 5300 5450 5300
 Wire Wire Line
-	5450 5175 5450 5300
-Wire Wire Line
-	5450 5300 5450 6125
+	5450 5175 5450 6125
 Wire Wire Line
 	7550 4075 7550 3975
 Connection ~ 7550 3975
@@ -1154,17 +1152,9 @@ Wire Wire Line
 Wire Wire Line
 	8400 4475 8400 4375
 Wire Wire Line
-	8400 3450 8400 3975
+	8400 3450 8400 4075
 Wire Wire Line
-	8400 3975 8400 4075
-Wire Wire Line
-	7500 3975 7550 3975
-Wire Wire Line
-	7550 3975 7900 3975
-Wire Wire Line
-	7900 3975 8150 3975
-Wire Wire Line
-	8150 3975 8400 3975
+	7500 3975 8400 3975
 Wire Wire Line
 	3075 3800 3075 4825
 Wire Wire Line
@@ -1173,11 +1163,7 @@ Wire Wire Line
 	8025 2825 8025 3025
 Connection ~ 8025 3025
 Wire Wire Line
-	7975 3025 8025 3025
-Wire Wire Line
-	8025 3025 8150 3025
-Wire Wire Line
-	8150 3025 8400 3025
+	7975 3025 8400 3025
 Wire Wire Line
 	1200 2625 7075 2625
 Wire Wire Line
@@ -1189,9 +1175,7 @@ Wire Wire Line
 Wire Wire Line
 	1200 4375 2100 4375
 Wire Wire Line
-	2100 4175 2100 4375
-Wire Wire Line
-	2100 4375 2100 5375
+	2100 4175 2100 5375
 Wire Wire Line
 	1000 1625 1000 5375
 Wire Wire Line
@@ -1211,13 +1195,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 3600 6300 3600
 Wire Wire Line
-	3950 3800 4150 3800
-Wire Wire Line
-	4150 3800 4350 3800
-Wire Wire Line
-	4350 3800 4700 3800
-Wire Wire Line
-	4700 3800 4750 3800
+	3950 3800 4750 3800
 Connection ~ 4150 3800
 Wire Wire Line
 	3150 3800 3075 3800
@@ -1228,9 +1206,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 2050 4000 2050
 Wire Wire Line
-	1000 1625 5150 1625
-Wire Wire Line
-	5150 1625 5250 1625
+	1000 1625 5250 1625
 Wire Wire Line
 	5250 1425 5150 1425
 Wire Wire Line
@@ -1262,15 +1238,7 @@ Wire Wire Line
 Wire Wire Line
 	1900 5375 1900 6100
 Wire Wire Line
-	7050 4475 7550 4475
-Wire Wire Line
-	7550 4475 7900 4475
-Wire Wire Line
-	7900 4475 8400 4475
-Wire Wire Line
-	8400 4475 8750 4475
-Wire Wire Line
-	8750 4475 9500 4475
+	7050 4475 9500 4475
 Wire Wire Line
 	7900 4075 7900 3975
 Connection ~ 7900 3975
@@ -1285,9 +1253,7 @@ Wire Wire Line
 Wire Wire Line
 	3675 5875 3725 5875
 Wire Wire Line
-	3925 5875 4450 5875
-Wire Wire Line
-	4450 5875 4575 5875
+	3925 5875 4575 5875
 Connection ~ 4450 5875
 Wire Wire Line
 	4775 5875 5550 5875
@@ -1301,22 +1267,16 @@ Wire Wire Line
 Wire Wire Line
 	5775 5525 5775 5900
 Wire Wire Line
-	5775 6200 5775 6325
-Wire Wire Line
-	5775 6325 5775 6400
+	5775 6200 5775 6400
 Wire Wire Line
 	5450 6325 5775 6325
 Connection ~ 5775 6325
 Wire Wire Line
-	5775 6700 5775 6725
-Wire Wire Line
-	5775 6725 5775 6775
+	5775 6700 5775 6775
 Wire Wire Line
 	5775 7075 5775 6975
 Wire Wire Line
-	5550 5875 5550 6525
-Wire Wire Line
-	5550 6525 5550 6725
+	5550 5875 5550 6725
 Wire Wire Line
 	5550 6725 5775 6725
 Connection ~ 5775 6725
@@ -1330,25 +1290,15 @@ Wire Wire Line
 Wire Wire Line
 	6875 3825 7050 3825
 Wire Wire Line
-	7050 3150 7050 3825
+	7050 3150 7050 4475
 Wire Wire Line
-	7050 3825 7050 4475
-Wire Wire Line
-	6200 4225 6200 4350
-Wire Wire Line
-	6200 4350 6200 4525
-Wire Wire Line
-	6200 4525 6200 4575
+	6200 4225 6200 4575
 Wire Wire Line
 	6200 4225 6275 4225
 Wire Wire Line
-	5450 4350 5450 4825
+	5450 4350 5450 4875
 Wire Wire Line
-	5450 4825 5450 4875
-Wire Wire Line
-	5450 4825 5700 4825
-Wire Wire Line
-	5700 4825 5925 4825
+	5450 4825 5925 4825
 Wire Wire Line
 	5700 4825 5700 4875
 Connection ~ 5450 4825
@@ -1374,16 +1324,12 @@ Wire Wire Line
 Wire Wire Line
 	5550 4525 5575 4525
 Wire Wire Line
-	5575 3975 5575 4075
-Wire Wire Line
-	5575 4075 5575 4175
+	5575 3975 5575 4175
 Wire Wire Line
 	5475 4075 5575 4075
 Connection ~ 5575 4075
 Wire Wire Line
-	6125 3975 6125 4050
-Wire Wire Line
-	6125 4050 6125 4175
+	6125 3975 6125 4175
 Wire Wire Line
 	6125 4050 6175 4050
 Connection ~ 6125 4050
@@ -1394,16 +1340,12 @@ Wire Wire Line
 Wire Wire Line
 	6475 1325 6400 1325
 Wire Wire Line
-	6400 1325 6400 1525
-Wire Wire Line
-	6400 1525 6400 1750
+	6400 1325 6400 1750
 Wire Wire Line
 	6475 1525 6400 1525
 Connection ~ 6400 1525
 Wire Wire Line
-	3900 1950 4150 1950
-Wire Wire Line
-	4150 1950 4600 1950
+	3900 1950 4600 1950
 Wire Wire Line
 	6000 1850 3900 1850
 Wire Wire Line
@@ -1414,23 +1356,15 @@ Wire Wire Line
 	8150 3025 8150 3150
 Connection ~ 8150 3025
 Wire Wire Line
-	7475 3600 7500 3600
-Wire Wire Line
-	7500 3600 7650 3600
+	7475 3600 7650 3600
 Wire Wire Line
 	8150 3600 7950 3600
 Wire Wire Line
-	8150 3450 8150 3475
+	8150 3450 8150 3600
 Wire Wire Line
-	8150 3475 8150 3600
+	6150 3050 6400 3050
 Wire Wire Line
-	6150 3050 6200 3050
-Wire Wire Line
-	6200 3050 6400 3050
-Wire Wire Line
-	6700 3050 7050 3050
-Wire Wire Line
-	7050 3050 7125 3050
+	6700 3050 7125 3050
 Wire Wire Line
 	7125 3050 7125 3600
 Wire Wire Line
@@ -1451,18 +1385,12 @@ Wire Wire Line
 	6200 4925 6200 4875
 Connection ~ 6200 4525
 Wire Wire Line
-	8750 3850 8750 4075
-Wire Wire Line
-	8750 4075 8750 4475
+	8750 3850 8750 4475
 Wire Wire Line
 	8750 3250 9125 3250
 Connection ~ 8750 3250
 Wire Wire Line
-	8750 2875 8750 2925
-Wire Wire Line
-	8750 2925 8750 3250
-Wire Wire Line
-	8750 3250 8750 3350
+	8750 2875 8750 3350
 Wire Wire Line
 	9125 4075 8750 4075
 Connection ~ 8750 4075
@@ -1481,9 +1409,7 @@ Connection ~ 6200 3050
 Wire Wire Line
 	6950 2250 7050 2250
 Wire Wire Line
-	7050 2050 7050 2250
-Wire Wire Line
-	7050 2250 7050 2275
+	7050 2050 7050 2275
 Wire Wire Line
 	6950 2050 7050 2050
 Connection ~ 7050 2250
@@ -1494,11 +1420,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 2050 4600 2050
 Wire Wire Line
-	3150 5525 4150 5525
-Wire Wire Line
-	4150 5525 4950 5525
-Wire Wire Line
-	4950 5525 5775 5525
+	3150 5525 5775 5525
 Wire Wire Line
 	4950 5525 4950 5925
 Connection ~ 4950 5525
@@ -1523,22 +1445,16 @@ Wire Wire Line
 Wire Wire Line
 	3150 6900 3100 6900
 Wire Wire Line
-	3150 5525 3150 6700
-Wire Wire Line
-	3150 6700 3150 6900
+	3150 5525 3150 6900
 Wire Wire Line
 	3100 6700 3150 6700
 Connection ~ 3150 6700
 Wire Wire Line
 	3100 6800 3300 6800
 Wire Wire Line
-	3300 6375 3300 6800
+	3300 6375 3300 7175
 Wire Wire Line
-	3300 6800 3300 7175
-Wire Wire Line
-	2700 4175 2700 4300
-Wire Wire Line
-	2700 4300 2700 6375
+	2700 4175 2700 6375
 Wire Wire Line
 	2700 6375 3300 6375
 Connection ~ 3300 6800
@@ -1557,41 +1473,21 @@ Wire Wire Line
 	4150 5075 4125 5075
 Connection ~ 4150 5075
 Wire Wire Line
-	4150 1525 4150 1950
-Wire Wire Line
-	4150 1950 4150 3375
-Wire Wire Line
-	4150 3375 4150 3600
-Wire Wire Line
-	4150 3600 4150 3800
-Wire Wire Line
-	4150 3800 4150 5075
-Wire Wire Line
-	4150 5075 4150 5525
-Wire Wire Line
-	4150 5525 4150 6525
+	4150 1525 4150 6525
 Connection ~ 4150 5525
 Wire Wire Line
-	5050 3800 5100 3800
-Wire Wire Line
-	5100 3800 6275 3800
+	5050 3800 6275 3800
 Connection ~ 4700 3800
 Connection ~ 4350 3800
 Wire Wire Line
 	6275 3800 6275 3825
 Connection ~ 5100 3800
 Wire Wire Line
-	4350 4100 4700 4100
-Wire Wire Line
-	4700 4100 4950 4100
-Wire Wire Line
-	4950 4100 5100 4100
+	4350 4100 5100 4100
 Connection ~ 4700 4100
 Connection ~ 4950 4100
 Wire Wire Line
-	4950 6725 4950 6975
-Wire Wire Line
-	4950 6975 4950 7025
+	4950 6725 4950 7025
 Wire Wire Line
 	8150 3950 8150 3975
 Connection ~ 8150 3975

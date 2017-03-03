@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver/board/ttydriver01.sch</source>
-    <date>Wed 01 Mar 2017 10:18:11 PM PST</date>
+    <date>Thu 02 Mar 2017 09:23:07 PM PST</date>
     <tool>Eeschema 4.0.5-e0-6337~49~ubuntu14.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -23,38 +23,38 @@
       <value>10nf</value>
       <footprint>Capacitors_SMD:C_0805</footprint>
       <fields>
-        <field name="Vendorpart">BC1160CT-ND</field>
+        <field name="Vendorpart">1276-1015-1-ND</field>
         <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Vishay</field>
-        <field name="Part">BC1160CT-ND</field>
+        <field name="Mfgr">Samsung</field>
+        <field name="Part">CL21B103KBANNNC</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FD</tstamp>
     </comp>
     <comp ref="C8">
-      <value>880pf</value>
+      <value>910pf</value>
       <footprint>Capacitors_SMD:C_0805</footprint>
       <datasheet>http://www.vishay.com/docs/45171/kseries.pdf</datasheet>
       <fields>
-        <field name="Vendorpart">BC1013CT-ND</field>
+        <field name="Vendorpart">1276-2698-1-ND</field>
         <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Vishay</field>
-        <field name="Part">K101J15C0GF5TL2</field>
+        <field name="Mfgr">Samsung</field>
+        <field name="Part">CL21C911JBCNNNC</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2FC</tstamp>
     </comp>
     <comp ref="R7">
-      <value>7.2K</value>
+      <value>7.15K</value>
       <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
-        <field name="Vendorpart">CF14JT2K20CT-ND</field>
+        <field name="Vendorpart">P7.15KFCT-ND</field>
         <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Part">CF14JT2K20</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ERJ-8ENF7151V</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -65,24 +65,24 @@
       <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
-        <field name="Vendorpart">CF14JT68K0CT-ND</field>
+        <field name="Vendorpart">P10.0KFCT-ND</field>
         <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Part">CF14JT68K0</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Part">ERJ-8ENF1002V</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E4E2F8</tstamp>
     </comp>
     <comp ref="R6">
-      <value>720</value>
+      <value>715</value>
       <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
-        <field name="Part">CF14JT22K0</field>
-        <field name="Mfgr">Stackpole</field>
+        <field name="Part">ERJ-8ENF7150V</field>
+        <field name="Mfgr">Panasonic</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendorpart">CF14JT22K0CT-ND</field>
+        <field name="Vendorpart">P715FCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -135,10 +135,10 @@
       <footprint>Capacitors_SMD:C_0805</footprint>
       <datasheet>http://www.vishay.com/docs/28549/dseries.pdf</datasheet>
       <fields>
-        <field name="Vendorpart">1457PH-ND</field>
+        <field name="Vendorpart">1276-2431-1-ND</field>
         <field name="Vendor">Digikey</field>
-        <field name="Part">D102K25Y5PL63L6R</field>
-        <field name="Mfgr">Vishay</field>
+        <field name="Part">CL21B102KECSFNC</field>
+        <field name="Mfgr">Samsung</field>
       </fields>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
@@ -148,10 +148,10 @@
       <value>10</value>
       <footprint>Resistors_SMD:R_1206</footprint>
       <fields>
-        <field name="Vendorpart">CF14JT10R0CT-ND</field>
+        <field name="Vendorpart">P10ECT-ND</field>
         <field name="Vendor">Digikey</field>
-        <field name="Part">CF14JT10R0</field>
-        <field name="Mfgr">Stackpole</field>
+        <field name="Part">ERJ-8GEYJ100V</field>
+        <field name="Mfgr">Panasonic</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -177,9 +177,9 @@
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Vendorpart">CF14JT680RCT-ND</field>
-        <field name="Part">CF14JT680R</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Vendorpart">P680ECT-ND</field>
+        <field name="Part">ERJ-8GEYJ681V</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -203,10 +203,10 @@
       <footprint>Resistors_SMD:R_1206</footprint>
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
-        <field name="Mfgr">Stackpole</field>
+        <field name="Mfgr">Panasonic</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendorpart">CF14JT3K30CT-ND</field>
-        <field name="Part">CF14JT3K30</field>
+        <field name="Vendorpart">P3.3KECT-ND</field>
+        <field name="Part">ERJ-8GEYJ332V</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -229,9 +229,9 @@
       <footprint>Capacitors_SMD:C_0805</footprint>
       <datasheet>http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c49e.ashx</datasheet>
       <fields>
-        <field name="Mfgr">Murata</field>
-        <field name="Part">RDER72E105MUB1H03B</field>
-        <field name="Vendorpart">490-8911-ND</field>
+        <field name="Mfgr">TDK</field>
+        <field name="Part">C2012X7S2A105K125AB</field>
+        <field name="Vendorpart">445-5205-1-ND</field>
         <field name="Vendor">Digikey</field>
       </fields>
       <libsource lib="device" part="CP"/>
@@ -272,9 +272,9 @@
       <datasheet>http://www.seielect.com/catalog/SEI-CF_CFM.pdf</datasheet>
       <fields>
         <field name="Vendor">Digikey</field>
-        <field name="Mfgr">Stackpole</field>
-        <field name="Vendorpart">CF14JT1M00CT-ND</field>
-        <field name="Part">CF14JT1M00</field>
+        <field name="Mfgr">Panasonic</field>
+        <field name="Vendorpart">P1.0MECT-ND</field>
+        <field name="Part">ERJ-8GEYJ105V</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -472,10 +472,10 @@
       <value>1000pf</value>
       <footprint>Capacitors_SMD:C_0805</footprint>
       <fields>
-        <field name="Part">D102K25Y5PL63L6R</field>
-        <field name="Mfgr">Vishay</field>
+        <field name="Part">CL21B102KECSFNC</field>
+        <field name="Mfgr">Samsung</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendorpart">1457PH-ND</field>
+        <field name="Vendorpart">1276-2431-1-ND</field>
       </fields>
       <libsource lib="device" part="C"/>
       <sheetpath names="/" tstamps="/"/>
