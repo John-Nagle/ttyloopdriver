@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:ttydriver01-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,7 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:ttypowerlib
-LIBS:ttydriver01-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -586,7 +584,7 @@ $EndComp
 Text Notes 7300 5850 0    60   ~ 0
 CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device [DONE]\n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]\n- All resistors and caps surface mount\n- Change footprint for C2 and use higher voltage cap - REQUIRES NEW BOARD.\n- Change all test points to use available pins. - REQURES NEW BOARD
 $Comp
-L FDS4559 U9
+L FDS4559-RESCUE-ttydriver01 U9
 U 1 1 58675588
 P 5850 4275
 F 0 "U9" H 5490 4615 50  0000 L CNN

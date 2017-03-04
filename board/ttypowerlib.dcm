@@ -16,11 +16,6 @@ D Switching power transformer
 K transformer pulse
 $ENDCMP
 #
-$CMP FDS4559
-D Dual Transistor N/P-MOSFET 
-K dual n-mosfet p-mosfet transistor
-$ENDCMP
-#
 $CMP IE0524S
 D DC-DC power supply 5V to 24V
 $ENDCMP
