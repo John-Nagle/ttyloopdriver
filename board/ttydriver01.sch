@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:ttypowerlib
+LIBS:ttydriver01-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -581,8 +582,8 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    5700 5200
 	1    0    0    -1  
 $EndComp
-Text Notes 7300 5850 0    60   ~ 0
-CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device [DONE]\n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]\n- All resistors and caps surface mount\n- Change footprint for C2 and use higher voltage cap - REQUIRES NEW BOARD.\n- Change all test points to use available pins. - REQURES NEW BOARD
+Text Notes 7050 6225 0    60   ~ 0
+CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device [DONE]\n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]\n- All resistors and caps surface mount\n- Change footprint for C2 and use higher voltage cap - REQUIRES NEW BOARD.\n- Change all test points to use available pins. - REQURES NEW BOARD\n- R16 was ordered as 53.6 ohms, not Kohms.\n- Move R16 closer to U2\n- Need to invert motor-on signal\n- D12 causing too much voltage drop for sustain\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15, add RTS resistor (?)\n- U4 is going into current limit. FIX.
 $Comp
 L FDS4559-RESCUE-ttydriver01 U9
 U 1 1 58675588
