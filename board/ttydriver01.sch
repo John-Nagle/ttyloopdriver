@@ -45,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 7550 7500 0    60   ~ 12
-5VDC to 120 VDC 60mA Teletype current loop supply - proof of concept
+5VDC to 120 VDC 60mA Teletype current loop supply
 $Comp
 L PWR_FLAG #FLG01
 U 1 1 57E4E306
@@ -256,7 +256,7 @@ Text Notes 4950 5275 0    60   ~ 0
 Text Notes 9550 3350 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
 Text Notes 10600 7650 0    60   ~ 0
-2.0
+2.1
 $Comp
 L GND #PWR06
 U 1 1 57EE08E1
@@ -338,17 +338,17 @@ $EndComp
 $Comp
 L GND #PWR010
 U 1 1 57F0B1AD
-P 3500 7275
-F 0 "#PWR010" H 3500 7025 50  0001 C CNN
-F 1 "GND" H 3500 7125 50  0000 C CNN
-F 2 "" H 3500 7275 50  0000 C CNN
-F 3 "" H 3500 7275 50  0000 C CNN
-	1    3500 7275
+P 3550 7275
+F 0 "#PWR010" H 3550 7025 50  0001 C CNN
+F 1 "GND" H 3550 7125 50  0000 C CNN
+F 2 "" H 3550 7275 50  0000 C CNN
+F 3 "" H 3550 7275 50  0000 C CNN
+	1    3550 7275
 	1    0    0    -1  
 $EndComp
-Text Notes 2700 6475 0    39   ~ 0
+Text Notes 2750 6475 0    39   ~ 0
 Motor control
-Text Label 3200 1625 0    60   ~ 0
+Text Label 3075 1525 0    60   ~ 0
 RxD
 $Comp
 L CONN_01X02 P1
@@ -473,7 +473,7 @@ F 7 "ERJ-8GEYJ105V" V 7900 4225 60  0001 C CNN "Part"
 	1    7900 4225
 	1    0    0    -1  
 $EndComp
-Text Label 9500 4475 0    60   ~ 0
+Text Label 9200 4475 0    60   ~ 0
 HVNEG
 Text Label 9100 2925 0    60   ~ 0
 HVPOS
@@ -582,8 +582,8 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    5700 5200
 	1    0    0    -1  
 $EndComp
-Text Notes 7050 6225 0    60   ~ 0
-CHANGES:\n- Change FET [DONE]\n- Add power filtering [DONE]\n- Add sustain supply circuitry. [DONE]\n- Replace TPS2030P with 500mA current limit device [DONE]\n- Add gate to inhibit motor turnon if main switch off [DONE]\n- Revise output from HV supply. [DONE]\n- Revise connectors, switch, and indicators for all-in-one board [DONE]\n- All resistors and caps surface mount\n- Change footprint for C2 and use higher voltage cap - REQUIRES NEW BOARD.\n- Change all test points to use available pins. - REQURES NEW BOARD\n- R16 was ordered as 53.6 ohms, not Kohms.\n- Move R16 closer to U2\n- Need to invert motor-on signal\n- D12 causing too much voltage drop for sustain\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15, add RTS resistor (?)\n- U4 is going into current limit. FIX.
+Text Notes 6575 6250 0    60   ~ 0
+CHANGES:\n\n- Change footprint for C2 and use higher voltage cap - REQUIRES NEW BOARD.\n- Change all test points to use available pins. - REQURES NEW BOARD\n- R16 was ordered as 53.6 ohms, not Kohms. [DONE]\n- Move R16 closer to U2\n- Need to invert motor-on signal - RTS is a pulldown. [DONE]\n- D12 causing too much voltage drop for sustain - redesign LED drive [DONE]\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15, add RTS resistor (?)\n- U4 is going into current limit. FIX.\n- C2 as multilayer ceramic decreases in capacity as voltage increases. Use 1uF leaded ceramic.\n- Output side of U6 may be wired backwards. [DONE]\n- Need pulldown on RxD. [DONE]
 $Comp
 L FDS4559-RESCUE-ttydriver01 U9
 U 1 1 58675588
@@ -691,21 +691,6 @@ F 6 "S1G" V 8150 3300 60  0001 C CNN "Part"
 F 7 "On" V 8150 3300 60  0001 C CNN "Mfgr"
 	1    8150 3300
 	0    1    1    0   
-$EndComp
-$Comp
-L D_Zener D12
-U 1 1 5867C029
-P 6550 3050
-F 0 "D12" H 6550 3150 50  0000 C CNN
-F 1 "4.7V Zener" H 6575 3225 50  0000 C CNN
-F 2 "Diodes_SMD:SOD-123" H 6550 3050 50  0001 C CNN
-F 3 "http://www.semicon.panasonic.co.jp/ds4/DZ2W047_E.pdf" H 6550 3050 50  0001 C CNN
-F 4 "DZ2W04700LCT-ND" H 6550 3050 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" H 6550 3050 60  0001 C CNN "Vendor"
-F 6 "DZ2W04700L" H 6550 3050 60  0001 C CNN "Part"
-F 7 "Panasonic" H 6550 3050 60  0001 C CNN "Mfgr"
-	1    6550 3050
-	1    0    0    -1  
 $EndComp
 $Comp
 L R R5
@@ -817,12 +802,12 @@ $EndComp
 $Comp
 L GND #PWR018
 U 1 1 5868C75F
-P 7050 2275
-F 0 "#PWR018" H 7050 2025 50  0001 C CNN
-F 1 "GND" H 7175 2200 50  0000 C CNN
-F 2 "" H 7050 2275 50  0000 C CNN
-F 3 "" H 7050 2275 50  0000 C CNN
-	1    7050 2275
+P 7200 2250
+F 0 "#PWR018" H 7200 2000 50  0001 C CNN
+F 1 "GND" H 7325 2175 50  0000 C CNN
+F 2 "" H 7200 2250 50  0000 C CNN
+F 3 "" H 7200 2250 50  0000 C CNN
+	1    7200 2250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -900,27 +885,16 @@ NoConn ~ 1625 5775
 $Comp
 L G3VM401E U7
 U 1 1 5869A3C6
-P 2800 6800
-F 0 "U7" H 2800 6800 60  0000 C CNN
-F 1 "CPC1510G" H 2800 7050 60  0000 C CNN
-F 2 "Housings_DIP:DIP-6_W7.62mm" H 2800 6800 60  0001 C CNN
-F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 2800 6800 60  0001 C CNN
-F 4 "Ixys" H 2800 6800 60  0001 C CNN "Mfgr"
-F 5 "CLA277-ND" H 2800 6800 60  0001 C CNN "Vendorpart"
-F 6 "CPC1510G" H 2800 6800 60  0001 C CNN "Part"
-F 7 "Digikey" H 2800 6800 60  0001 C CNN "Vendor"
-	1    2800 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR019
-U 1 1 5869BDA5
-P 2400 6800
-F 0 "#PWR019" H 2400 6550 50  0001 C CNN
-F 1 "GND" H 2400 6650 50  0000 C CNN
-F 2 "" H 2400 6800 50  0000 C CNN
-F 3 "" H 2400 6800 50  0000 C CNN
-	1    2400 6800
+P 2900 6800
+F 0 "U7" H 2900 6800 60  0000 C CNN
+F 1 "CPC1510G" H 2900 7050 60  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm" H 2900 6800 60  0001 C CNN
+F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 2900 6800 60  0001 C CNN
+F 4 "Ixys" H 2900 6800 60  0001 C CNN "Mfgr"
+F 5 "CLA277-ND" H 2900 6800 60  0001 C CNN "Vendorpart"
+F 6 "CPC1510G" H 2900 6800 60  0001 C CNN "Part"
+F 7 "Digikey" H 2900 6800 60  0001 C CNN "Vendor"
+	1    2900 6800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1007,18 +981,18 @@ F 0 "R16" H 3875 4350 50  0000 C CNN
 F 1 "53.6K" V 4000 4350 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 3930 4350 50  0001 C CNN
 F 3 "" H 4000 4350 50  0000 C CNN
-F 4 "P53.6FCT-ND" H 4000 4350 60  0001 C CNN "Vendorpart"
+F 4 "P53.6KFCT-ND" H 4000 4350 60  0001 C CNN "Vendorpart"
 F 5 "Digikey" H 4000 4350 60  0001 C CNN "Vendor"
 F 6 "Panasonic" H 4000 4350 60  0001 C CNN "Mfgr"
-F 7 "ERJ-8ENF53R6V" H 4000 4350 60  0001 C CNN "Part"
+F 7 "ERJ-8ENF5362V" H 4000 4350 60  0001 C CNN "Part"
 	1    4000 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR020
+L GND #PWR019
 U 1 1 586CC85D
 P 4000 4550
-F 0 "#PWR020" H 4000 4300 50  0001 C CNN
+F 0 "#PWR019" H 4000 4300 50  0001 C CNN
 F 1 "GND" H 4000 4400 50  0000 C CNN
 F 2 "" H 4000 4550 50  0000 C CNN
 F 3 "" H 4000 4550 50  0000 C CNN
@@ -1106,16 +1080,16 @@ $EndComp
 $Comp
 L PHONE-JACK-MONO J3
 U 1 1 58691531
-P 3000 7175
-F 0 "J3" H 2475 7175 50  0000 C CNN
-F 1 "MOTOR CTL RELAY JACK" H 3000 7000 50  0000 C CNN
-F 2 "CUI:MJ-2509N" H 3000 7275 50  0001 C CNN
-F 3 "http://www.cui.com/product/resource/digikeypdf/mj-2509n.pdf" H 3000 7275 50  0001 C CNN
-F 4 "MJ-2509N" H 3000 7175 60  0001 C CNN "Part"
-F 5 "CUI" H 3000 7175 60  0001 C CNN "Mfgr"
-F 6 "Digikey" H 3000 7175 60  0001 C CNN "Vendor"
-F 7 "CP-M2509N-ND" H 3000 7175 60  0001 C CNN "Vendorpart"
-	1    3000 7175
+P 3050 7175
+F 0 "J3" H 2525 7175 50  0000 C CNN
+F 1 "MOTOR CTL RELAY JACK" H 3050 7000 50  0000 C CNN
+F 2 "CUI:MJ-2509N" H 3050 7275 50  0001 C CNN
+F 3 "http://www.cui.com/product/resource/digikeypdf/mj-2509n.pdf" H 3050 7275 50  0001 C CNN
+F 4 "MJ-2509N" H 3050 7175 60  0001 C CNN "Part"
+F 5 "CUI" H 3050 7175 60  0001 C CNN "Mfgr"
+F 6 "Digikey" H 3050 7175 60  0001 C CNN "Vendor"
+F 7 "CP-M2509N-ND" H 3050 7175 60  0001 C CNN "Vendorpart"
+	1    3050 7175
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1127,6 +1101,76 @@ F 1 "Jumper" H 7800 3700 50  0000 C CNN
 F 2 "Connect:PINHEAD1-2" H 7800 3475 50  0001 C CNN
 F 3 "" H 7800 3475 50  0000 C CNN
 	1    7800 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Small D8
+U 1 1 5871CBDA
+P 4675 5875
+F 0 "D8" H 4725 5975 50  0000 L CNN
+F 1 "Schottky" H 4550 6050 50  0000 L CNN
+F 2 "Diodes_SMD:SOD-323" V 4675 5875 50  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/comchip-technology/CDBF0130L/641-1266-1-ND/1973545" V 4675 5875 50  0001 C CNN
+F 4 "Comchip" V 4675 5875 60  0001 C CNN "Mfgr"
+F 5 "CDBF0130L" V 4675 5875 60  0001 C CNN "Part"
+F 6 "641-1266-1-ND" V 4675 5875 60  0001 C CNN "Vendorpart"
+F 7 "Digikey" V 4675 5875 60  0001 C CNN "Vendor"
+	1    4675 5875
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P W4
+U 1 1 5898BD06
+P 4575 5075
+F 0 "W4" V 4525 5325 50  0000 C CNN
+F 1 "TEST_1P" V 4450 5225 50  0001 C CNN
+F 2 "Connect:PINTST" H 4775 5075 50  0001 C CNN
+F 3 "" H 4775 5075 50  0000 C CNN
+	1    4575 5075
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 5898E726
+P 4575 5100
+F 0 "#PWR020" H 4575 4850 50  0001 C CNN
+F 1 "GND" H 4575 4950 50  0000 C CNN
+F 2 "" H 4575 5100 50  0000 C CNN
+F 3 "" H 4575 5100 50  0000 C CNN
+	1    4575 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R17
+U 1 1 58EA52A4
+P 2600 6375
+F 0 "R17" V 2550 6575 50  0000 C CNN
+F 1 "510" V 2600 6375 50  0000 C CNN
+F 2 "" V 2530 6375 50  0001 C CNN
+F 3 "" H 2600 6375 50  0001 C CNN
+	1    2600 6375
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R18
+U 1 1 58EB1C4A
+P 2150 5850
+F 0 "R18" V 2230 5850 50  0000 C CNN
+F 1 "2.2K" V 2150 5850 50  0000 C CNN
+F 2 "" V 2080 5850 50  0001 C CNN
+F 3 "" H 2150 5850 50  0001 C CNN
+	1    2150 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR021
+U 1 1 58EB1DF6
+P 2150 6000
+F 0 "#PWR021" H 2150 5750 50  0001 C CNN
+F 1 "GND" H 2150 5850 50  0000 C CNN
+F 2 "" H 2150 6000 50  0001 C CNN
+F 3 "" H 2150 6000 50  0001 C CNN
+	1    2150 6000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1176,7 +1220,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 4175 2100 5375
 Wire Wire Line
-	1000 1625 1000 5375
+	1000 1525 1000 5375
 Wire Wire Line
 	8750 2925 9500 2925
 Connection ~ 7550 4475
@@ -1205,8 +1249,6 @@ Wire Wire Line
 Wire Wire Line
 	3900 2050 4000 2050
 Wire Wire Line
-	1000 1625 5250 1625
-Wire Wire Line
 	5250 1425 5150 1425
 Wire Wire Line
 	5150 1425 5150 1625
@@ -1229,7 +1271,7 @@ Wire Wire Line
 	2975 3375 4150 3375
 Connection ~ 4150 3600
 Wire Wire Line
-	2500 4175 2500 6700
+	2500 4175 2500 6800
 Wire Wire Line
 	1000 5375 1900 5375
 Wire Wire Line
@@ -1257,12 +1299,12 @@ Connection ~ 4450 5875
 Wire Wire Line
 	4775 5875 5550 5875
 Wire Wire Line
-	2100 5375 3300 5375
+	2100 5375 3350 5375
 Connection ~ 2100 4375
 Wire Wire Line
-	3375 5875 3300 5875
+	3375 5875 3350 5875
 Wire Wire Line
-	3300 5875 3300 5375
+	3350 5875 3350 5375
 Wire Wire Line
 	5775 5525 5775 5900
 Wire Wire Line
@@ -1333,8 +1375,6 @@ Wire Wire Line
 	6125 4050 6175 4050
 Connection ~ 6125 4050
 Wire Wire Line
-	4150 1525 5250 1525
-Wire Wire Line
 	6300 1425 6475 1425
 Wire Wire Line
 	6475 1325 6400 1325
@@ -1361,9 +1401,7 @@ Wire Wire Line
 Wire Wire Line
 	8150 3450 8150 3600
 Wire Wire Line
-	6150 3050 6400 3050
-Wire Wire Line
-	6700 3050 7125 3050
+	6150 3050 7125 3050
 Wire Wire Line
 	7125 3050 7125 3600
 Wire Wire Line
@@ -1396,21 +1434,15 @@ Connection ~ 8750 4075
 Wire Wire Line
 	9125 3750 9125 3600
 Wire Wire Line
-	7050 3050 7050 2450
-Wire Wire Line
 	7050 2450 6950 2450
-Connection ~ 7050 3050
 Wire Wire Line
 	6500 2450 6550 2450
 Wire Wire Line
-	6200 2450 6200 3050
-Connection ~ 6200 3050
+	6950 2250 7200 2250
 Wire Wire Line
-	6950 2250 7050 2250
+	7050 2050 7050 2450
 Wire Wire Line
-	7050 2050 7050 2275
-Wire Wire Line
-	6950 2050 7050 2050
+	7050 2050 6950 2050
 Connection ~ 7050 2250
 Wire Wire Line
 	6500 2250 6550 2250
@@ -1418,8 +1450,6 @@ Wire Wire Line
 	6500 2050 6550 2050
 Wire Wire Line
 	6200 2050 4600 2050
-Wire Wire Line
-	3150 5525 5775 5525
 Wire Wire Line
 	4950 5525 4950 5925
 Connection ~ 4950 5525
@@ -1438,25 +1468,15 @@ Wire Wire Line
 Wire Wire Line
 	1625 5575 1800 5575
 Wire Wire Line
-	3300 7275 3500 7275
+	3350 7275 3550 7275
+Connection ~ 3250 6700
 Wire Wire Line
-	2400 6800 2500 6800
-Wire Wire Line
-	3150 6900 3100 6900
-Wire Wire Line
-	3150 5525 3150 6900
-Wire Wire Line
-	3100 6700 3150 6700
-Connection ~ 3150 6700
-Wire Wire Line
-	3100 6800 3300 6800
-Wire Wire Line
-	3300 6375 3300 7175
+	3350 6375 3350 7175
 Wire Wire Line
 	2700 4175 2700 6375
 Wire Wire Line
-	2700 6375 3300 6375
-Connection ~ 3300 6800
+	2700 6375 3350 6375
+Connection ~ 3350 6800
 Wire Wire Line
 	2700 4300 3025 4300
 Wire Wire Line
@@ -1472,7 +1492,9 @@ Wire Wire Line
 	4150 5075 4125 5075
 Connection ~ 4150 5075
 Wire Wire Line
-	4150 1525 4150 6525
+	4150 1625 5250 1625
+Wire Wire Line
+	4150 1625 4150 6525
 Connection ~ 4150 5525
 Wire Wire Line
 	5050 3800 6275 3800
@@ -1508,43 +1530,49 @@ Connection ~ 7500 3600
 Wire Wire Line
 	8100 3475 8150 3475
 Connection ~ 8150 3475
-$Comp
-L D_Small D8
-U 1 1 5871CBDA
-P 4675 5875
-F 0 "D8" H 4725 5975 50  0000 L CNN
-F 1 "Schottky" H 4550 6050 50  0000 L CNN
-F 2 "Diodes_SMD:SOD-323" V 4675 5875 50  0001 C CNN
-F 3 "http://www.digikey.com/product-detail/en/comchip-technology/CDBF0130L/641-1266-1-ND/1973545" V 4675 5875 50  0001 C CNN
-F 4 "Comchip" V 4675 5875 60  0001 C CNN "Mfgr"
-F 5 "CDBF0130L" V 4675 5875 60  0001 C CNN "Part"
-F 6 "641-1266-1-ND" V 4675 5875 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" V 4675 5875 60  0001 C CNN "Vendor"
-	1    4675 5875
-	1    0    0    -1  
-$EndComp
-$Comp
-L TEST_1P W4
-U 1 1 5898BD06
-P 4575 5075
-F 0 "W4" V 4525 5325 50  0000 C CNN
-F 1 "TEST_1P" V 4450 5225 50  0001 C CNN
-F 2 "Connect:PINTST" H 4775 5075 50  0001 C CNN
-F 3 "" H 4775 5075 50  0000 C CNN
-	1    4575 5075
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR021
-U 1 1 5898E726
-P 4575 5100
-F 0 "#PWR021" H 4575 4850 50  0001 C CNN
-F 1 "GND" H 4575 4950 50  0000 C CNN
-F 2 "" H 4575 5100 50  0000 C CNN
-F 3 "" H 4575 5100 50  0000 C CNN
-	1    4575 5100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4575 5075 4575 5100
+Wire Wire Line
+	2500 6800 2600 6800
+Wire Wire Line
+	2600 5525 5775 5525
+Connection ~ 3250 5525
+Wire Wire Line
+	3250 5525 3250 6900
+Wire Wire Line
+	3200 6700 3250 6700
+Wire Wire Line
+	3250 6900 3200 6900
+Wire Wire Line
+	3200 6800 3350 6800
+Wire Wire Line
+	2600 6700 2600 6525
+Wire Wire Line
+	2600 6225 2600 5525
+Wire Wire Line
+	6200 2450 6100 2450
+Wire Wire Line
+	6100 2450 6100 2625
+Connection ~ 6100 2625
+Wire Wire Line
+	2150 5700 2150 5650
+Wire Wire Line
+	2150 5650 2300 5650
+Connection ~ 2300 5650
+Wire Wire Line
+	1000 1525 5250 1525
+$Comp
+L TEST_1P W5
+U 1 1 58EB4E36
+P 9150 4550
+F 0 "W5" H 9225 4625 50  0000 C CNN
+F 1 "TEST_1P" H 9150 4750 50  0001 C CNN
+F 2 "" H 9350 4550 50  0001 C CNN
+F 3 "" H 9350 4550 50  0001 C CNN
+	1    9150 4550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9150 4550 9150 4475
+Connection ~ 9150 4475
 $EndSCHEMATC
