@@ -401,21 +401,6 @@ NoConn ~ 2900 3175
 NoConn ~ 2900 3375
 NoConn ~ 2900 3575
 $Comp
-L CP C2
-U 1 1 57FD3936
-P 7550 4225
-F 0 "C2" H 7575 4325 50  0000 L CNN
-F 1 "1uf" H 7575 4125 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 7588 4075 50  0001 C CNN
-F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c49e.ashx" H 7550 4225 50  0001 C CNN
-F 4 "TDK" H 7550 4225 60  0001 C CNN "Mfgr"
-F 5 "C2012X7S2A105K125AB" H 7550 4225 60  0001 C CNN "Part"
-F 6 "445-5205-1-ND" H 7550 4225 60  0001 C CNN "Vendorpart"
-F 7 "Digikey" H 7550 4225 60  0001 C CNN "Vendor"
-	1    7550 4225
-	1    0    0    -1  
-$EndComp
-$Comp
 L IE0524S U5
 U 1 1 57FDC5B1
 P 3600 1950
@@ -508,7 +493,7 @@ U 1 1 586734F8
 P 5350 5300
 F 0 "W2" V 5300 5550 50  0000 C CNN
 F 1 "TEST_1P" V 5225 5450 50  0001 C CNN
-F 2 "Connect:PINTST" H 5550 5300 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 5550 5300 50  0001 C CNN
 F 3 "" H 5550 5300 50  0000 C CNN
 	1    5350 5300
 	0    -1   -1   0   
@@ -519,7 +504,7 @@ U 1 1 5867392E
 P 4125 5075
 F 0 "W1" V 4025 5225 50  0000 C CNN
 F 1 "TEST_1P" H 4125 5275 50  0001 C CNN
-F 2 "Connect:PINTST" H 4325 5075 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4325 5075 50  0001 C CNN
 F 3 "" H 4325 5075 50  0000 C CNN
 	1    4125 5075
 	0    -1   -1   0   
@@ -583,7 +568,7 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 6575 6250 0    60   ~ 0
-CHANGES:\n\n- Change footprint for C2 and use higher voltage cap - REQUIRES NEW BOARD.\n- Change all test points to use available pins. - REQURES NEW BOARD\n- R16 was ordered as 53.6 ohms, not Kohms. [DONE]\n- Move R16 closer to U2\n- Need to invert motor-on signal - RTS is a pulldown. [DONE]\n- D12 causing too much voltage drop for sustain - redesign LED drive [DONE]\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15, add RTS resistor (?)\n- U4 is going into current limit. FIX.\n- C2 as multilayer ceramic decreases in capacity as voltage increases. Use 1uF leaded ceramic.\n- Output side of U6 may be wired backwards. [DONE]\n- Need pulldown on RxD. [DONE]
+CHANGES:\n\n- Change all test points to use header-type pins [DONE]\n- R16 was ordered as 53.6 ohms, not Kohms. [DONE]\n- Move R16 closer to U2. [IN BOARD LAYOUT]\n- Need to invert motor-on signal - RTS is a pulldown. [DONE]\n- D12 causing too much voltage drop for sustain - redesign LED drive [DONE]\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15.\n- Add RTS resistor [DONE]\n- C2 - Use 1uF leaded ceramic. [DONE]\n- Output side of U6 may be wired backwards. [DONE]\n- Need pulldown on RxD. [DONE]
 $Comp
 L FDS4559-RESCUE-ttydriver01 U9
 U 1 1 58675588
@@ -950,7 +935,7 @@ U 1 1 586A3D32
 P 8150 3950
 F 0 "W3" H 8225 4000 50  0000 C CNN
 F 1 "TEST_1P" V 8025 4100 50  0001 C CNN
-F 2 "Connect:PINTST" H 8350 3950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 8350 3950 50  0001 C CNN
 F 3 "" H 8350 3950 50  0000 C CNN
 	1    8150 3950
 	1    0    0    -1  
@@ -1124,7 +1109,7 @@ U 1 1 5898BD06
 P 4575 5075
 F 0 "W4" V 4525 5325 50  0000 C CNN
 F 1 "TEST_1P" V 4450 5225 50  0001 C CNN
-F 2 "Connect:PINTST" H 4775 5075 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4775 5075 50  0001 C CNN
 F 3 "" H 4775 5075 50  0000 C CNN
 	1    4575 5075
 	0    -1   -1   0   
@@ -1157,7 +1142,7 @@ U 1 1 58EB1C4A
 P 2150 5850
 F 0 "R18" V 2230 5850 50  0000 C CNN
 F 1 "2.2K" V 2150 5850 50  0000 C CNN
-F 2 "" V 2080 5850 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206" V 2080 5850 50  0001 C CNN
 F 3 "" H 2150 5850 50  0001 C CNN
 	1    2150 5850
 	1    0    0    -1  
@@ -1567,7 +1552,7 @@ U 1 1 58EB4E36
 P 9150 4550
 F 0 "W5" H 9225 4625 50  0000 C CNN
 F 1 "TEST_1P" H 9150 4750 50  0001 C CNN
-F 2 "" H 9350 4550 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 9350 4550 50  0001 C CNN
 F 3 "" H 9350 4550 50  0001 C CNN
 	1    9150 4550
 	1    0    0    1   
@@ -1575,4 +1560,19 @@ $EndComp
 Wire Wire Line
 	9150 4550 9150 4475
 Connection ~ 9150 4475
+$Comp
+L C C2
+U 1 1 58EBF1F5
+P 7550 4225
+F 0 "C2" H 7575 4325 50  0000 L CNN
+F 1 "1uf" H 7575 4125 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 7588 4075 50  0001 C CNN
+F 3 "" H 7550 4225 50  0001 C CNN
+F 4 "RDER72E105MUB1H03B" H 7550 4225 60  0001 C CNN "Part"
+F 5 "Digikey" H 7550 4225 60  0001 C CNN "Vendor"
+F 6 "Murata" H 7550 4225 60  0001 C CNN "Mfgr"
+F 7 "490-8911-ND" H 7550 4225 60  0001 C CNN "Vendorpart"
+	1    7550 4225
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
