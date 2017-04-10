@@ -6,5 +6,4 @@
   (lib (name Dialite)(type KiCad)(uri "$(KIPRJMOD)/Dialite.pretty")(options "")(descr ""))
   (lib (name NKK)(type KiCad)(uri "$(KIPRJMOD)/NKK.pretty")(options "")(descr ""))
   (lib (name CUI)(type KiCad)(uri "$(KIPRJMOD)/CUI.pretty")(options "")(descr ""))
-  (lib (name modifiedsmt)(type KiCad)(uri "$(KIPRJMOD)/modifiedsmt.pretty")(options "")(descr ""))
 )
