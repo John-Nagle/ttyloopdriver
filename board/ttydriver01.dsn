@@ -69,7 +69,7 @@
       (place R15 107696 -137160 front 0 (PN 680))
       (place R14 119888 -137160 front 0 (PN 1M))
       (place R13 87122 -143002 front 0 (PN 3.3K))
-      (place R12 170688 -95504 front 270 (PN 390))
+      (place R12 170942 -95504 front 270 (PN 390))
     )
     (component Diodes_SMD:SMA_Standard
       (place D6 105918 -123952 front 0 (PN D))
@@ -144,6 +144,12 @@
       (place W3 111760 -143764 front 0 (PN TEST_1P))
       (place W4 134620 -143764 front 0 (PN TEST_1P))
       (place W5 127254 -143764 front 0 (PN TEST_1P))
+    )
+    (component Mounting_Holes:MountingHole_2.5mm
+      (place H1 60960 -81026 front 0 (PN MountingHole_2.5mm))
+      (place H2 60960 -148590 front 0 (PN MountingHole_2.5mm))
+      (place H4 170180 -81026 front 0 (PN MountingHole_2.5mm))
+      (place H3 170180 -148590 front 0 (PN MountingHole_2.5mm))
     )
   )
   (library
@@ -595,6 +601,20 @@
       (outline (path signal 50  1800 -1800  1800 1800))
       (outline (path signal 50  1800 1800  -1800 1800))
       (pin Rect[A]Pad_1700x1700_um 1 0 0)
+    )
+    (image Mounting_Holes:MountingHole_2.5mm
+      (outline (path signal 150  2500 0  2377.64 -772.542  2022.54 -1469.46  1469.46 -2022.54
+            772.542 -2377.64  0 -2500  -772.542 -2377.64  -1469.46 -2022.54
+            -2022.54 -1469.46  -2377.64 -772.542  -2500 0  -2377.64 772.542
+            -2022.54 1469.46  -1469.46 2022.54  -772.542 2377.64  0 2500
+            772.542 2377.64  1469.46 2022.54  2022.54 1469.46  2377.64 772.542))
+      (outline (path signal 50  2750 0  2615.41 -849.797  2224.8 -1616.41  1616.41 -2224.8
+            849.797 -2615.41  0 -2750  -849.797 -2615.41  -1616.41 -2224.8
+            -2224.8 -1616.41  -2615.41 -849.797  -2750 0  -2615.41 849.797
+            -2224.8 1616.41  -1616.41 2224.8  -849.797 2615.41  0 2750  849.797 2615.41
+            1616.41 2224.8  2224.8 1616.41  2615.41 849.797))
+      (keepout "" (circle F.Cu 2500))
+      (keepout "" (circle B.Cu 2500))
     )
     (padstack Round[A]Pad_1300_um
       (shape (circle F.Cu 1300))
