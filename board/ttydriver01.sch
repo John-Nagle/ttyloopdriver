@@ -301,13 +301,13 @@ L R R15
 U 1 1 57EF57CB
 P 7225 2625
 F 0 "R15" V 7305 2625 50  0000 C CNN
-F 1 "680" V 7225 2625 50  0000 C CNN
+F 1 "560" V 7225 2625 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 7155 2625 50  0001 C CNN
 F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 7225 2625 50  0001 C CNN
 F 4 "Digikey" V 7225 2625 60  0001 C CNN "Vendor"
 F 5 "Panasonic" V 7225 2625 60  0001 C CNN "Mfgr"
-F 6 "P680ECT-ND" V 7225 2625 60  0001 C CNN "Vendorpart"
-F 7 "ERJ-8GEYJ681V" V 7225 2625 60  0001 C CNN "Part"
+F 6 "P560ECT-ND" V 7225 2625 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-8GEYJ561V" V 7225 2625 60  0001 C CNN "Part"
 	1    7225 2625
 	0    1    1    0   
 $EndComp
@@ -568,7 +568,7 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 6575 6250 0    60   ~ 0
-CHANGES:\n\n- Change all test points to use header-type pins [DONE]\n- R16 was ordered as 53.6 ohms, not Kohms. [DONE]\n- Move R16 closer to U2. [IN BOARD LAYOUT]\n- Need to invert motor-on signal - RTS is a pulldown. [DONE]\n- D12 causing too much voltage drop for sustain - redesign LED drive [DONE]\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15.\n- Add RTS resistor [DONE]\n- C2 - Use 1uF leaded ceramic. [DONE]\n- Output side of U6 may be wired backwards. [DONE]\n- Need pulldown on RxD. [DONE]
+CHANGES:\n\n- Change all test points to use header-type pins [DONE]\n- R16 was ordered as 53.6 ohms, not Kohms. [DONE]\n- Move R16 closer to U2. [DONE]\n- Need to invert motor-on signal - RTS is a pulldown. [DONE]\n- D12 causing too much voltage drop for sustain - redesign LED drive [DONE]\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15. [DONE]\n- Add RTS resistor [DONE]\n- C2 - Use 1uF leaded ceramic. [DONE]\n- Output side of U6 may be wired backwards. [DONE]\n- Need pulldown on RxD. [DONE]
 $Comp
 L FDS4559-RESCUE-ttydriver01 U9
 U 1 1 58675588
@@ -679,31 +679,16 @@ F 7 "On" V 8150 3300 60  0001 C CNN "Mfgr"
 $EndComp
 $Comp
 L R R5
-U 1 1 5867C198
-P 7325 3600
-F 0 "R5" V 7405 3600 50  0000 C CNN
-F 1 "27" V 7325 3600 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 7255 3600 50  0001 C CNN
-F 3 "" H 7325 3600 50  0000 C CNN
-F 4 "P27ECT-ND" V 7325 3600 60  0001 C CNN "Vendorpart"
-F 5 "Panasonic" V 7325 3600 60  0001 C CNN "Mfgr"
-F 6 "Digikey" V 7325 3600 60  0001 C CNN "Vendor"
-F 7 "ERJ-8GEYJ270V" V 7325 3600 60  0001 C CNN "Part"
-	1    7325 3600
-	0    1    1    0   
-$EndComp
-$Comp
-L R R9
 U 1 1 5867C471
 P 7800 3600
-F 0 "R9" V 7880 3600 50  0000 C CNN
-F 1 "33" V 7800 3600 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 7730 3600 50  0001 C CNN
+F 0 "R5" V 7880 3600 50  0000 C CNN
+F 1 "150" V 7800 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_2512" V 7730 3600 50  0001 C CNN
 F 3 "" H 7800 3600 50  0000 C CNN
-F 4 "P33ECT-ND" V 7800 3600 60  0001 C CNN "Vendorpart"
+F 4 "PT150XCT-ND" V 7800 3600 60  0001 C CNN "Vendorpart"
 F 5 "Digikey" V 7800 3600 60  0001 C CNN "Vendor"
 F 6 "Panasonic" V 7800 3600 60  0001 C CNN "Mfgr"
-F 7 "ERJ-8GEYJ330V" V 7800 3600 60  0001 C CNN "Part"
+F 7 "ERJ-1TYJ151U" V 7800 3600 60  0001 C CNN "Part"
 	1    7800 3600
 	0    1    1    0   
 $EndComp
@@ -1133,17 +1118,25 @@ F 0 "R17" V 2550 6575 50  0000 C CNN
 F 1 "510" V 2600 6375 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 2530 6375 50  0001 C CNN
 F 3 "" H 2600 6375 50  0001 C CNN
+F 4 "Panasonic" V 2600 6375 60  0001 C CNN "Mfgr"
+F 5 "ERJ-8ENF5100V" V 2600 6375 60  0001 C CNN "Part"
+F 6 "Digikey" V 2600 6375 60  0001 C CNN "Vendor"
+F 7 "P510FCT-ND" V 2600 6375 60  0001 C CNN "Vendorpart"
 	1    2600 6375
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R18
+L R R9
 U 1 1 58EB1C4A
 P 2150 5850
-F 0 "R18" V 2230 5850 50  0000 C CNN
+F 0 "R9" V 2230 5850 50  0000 C CNN
 F 1 "2.2K" V 2150 5850 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 2080 5850 50  0001 C CNN
 F 3 "" H 2150 5850 50  0001 C CNN
+F 4 "Panasonic" V 2150 5850 60  0001 C CNN "Mfgr"
+F 5 "Digikey" V 2150 5850 60  0001 C CNN "Vendor"
+F 6 "P2.2KECT-ND" V 2150 5850 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-8GEYJ222V" V 2150 5850 60  0001 C CNN "Part"
 	1    2150 5850
 	1    0    0    -1  
 $EndComp
@@ -1380,7 +1373,7 @@ Wire Wire Line
 	8150 3025 8150 3150
 Connection ~ 8150 3025
 Wire Wire Line
-	7475 3600 7650 3600
+	7125 3600 7650 3600
 Wire Wire Line
 	8150 3600 7950 3600
 Wire Wire Line
@@ -1389,8 +1382,6 @@ Wire Wire Line
 	6150 3050 7125 3050
 Wire Wire Line
 	7125 3050 7125 3600
-Wire Wire Line
-	7125 3600 7175 3600
 Wire Wire Line
 	6150 3350 6200 3350
 Wire Wire Line
