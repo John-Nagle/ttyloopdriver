@@ -46,7 +46,7 @@
       (place SW2 169164 -104394 front 90 (PN Button_SPDT))
     )
     (component "TO_SOT_Packages_SMD:SOT-23-6"
-      (place U2 154432 -92202 front 180 (PN AP2553W6))
+      (place U2 153162 -92202 front 180 (PN AP2553W6))
     )
     (component "Housings_SOIC:SOIJ-8_5.3x5.3mm_Pitch1.27mm"
       (place U1 153924 -141986 front 180 (PN NE555))
@@ -62,8 +62,8 @@
       (place R7 145542 -141732 front 0 (PN 7.15K))
       (place R6 146050 -133350 front 0 (PN 715))
       (place R5 118364 -112014 front 0 (PN 27))
-      (place R4 162814 -138938 front 0 (PN 10K))
-      (place R3 168910 -139954 front 0 (PN 22))
+      (place R4 164084 -138684 front 0 (PN 10K))
+      (place R3 164084 -141732 front 0 (PN 22))
       (place R1 92202 -116078 front 0 (PN 10))
       (place R16 148336 -95758 front 270 (PN 53.6K))
       (place R15 107696 -137160 front 0 (PN 680))
@@ -828,13 +828,9 @@
     (class kicad_default "" /ENABLE /OSC /RxD /TxD "Net-(C1-Pad1)" "Net-(C3-Pad1)"
       "Net-(C4-Pad1)" "Net-(C5-Pad1)" "Net-(C6-Pad1)" "Net-(C7-Pad2)" "Net-(C8-Pad1)"
       "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D8-Pad1)" "Net-(D9-Pad2)"
-      "Net-(J1-PadTB)" "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(R13-Pad2)"
-      "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R18-Pad1)"
-      "Net-(R5-Pad2)" "Net-(R6-Pad1)" "Net-(SW1-Pad1)" "Net-(SW1-Pad2)" "Net-(SW1-Pad3)"
-      "Net-(SW2-Pad1)" "Net-(SW2-Pad3)" "Net-(T1-Pad2)" "Net-(T1-Pad5)" "Net-(U2-Pad4)"
-      "Net-(U3-Pad1-2)" "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)"
-      "Net-(U3-Pad2-3)" "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)"
-      "Net-(U6-Pad3)" "Net-(U7-Pad3)"
+      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(R13-Pad2)" "Net-(R15-Pad1)"
+      "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R18-Pad1)" "Net-(R5-Pad2)" "Net-(R6-Pad1)"
+      "Net-(SW1-Pad1)" "Net-(SW1-Pad2)" "Net-(U3-Pad3-5)" "Net-(U5-Pad3)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
@@ -844,8 +840,7 @@
       )
     )
     (class HV /HVNEG /HVPOS "Net-(C2-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
-      "Net-(D12-Pad1)" "Net-(D12-Pad2)" "Net-(D5-Pad1)" "Net-(D6-Pad2)" "Net-(JP1-Pad1)"
-      "Net-(P1-Pad1)"
+      "Net-(D5-Pad1)" "Net-(D6-Pad2)" "Net-(JP1-Pad1)" "Net-(P1-Pad1)"
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
@@ -854,7 +849,7 @@
         (clearance 500.1)
       )
     )
-    (class PWR GND VCC
+    (class PWR GND
       (circuit
         (use_via Via[0-1]_600:400_um)
       )
