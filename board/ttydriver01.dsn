@@ -30,7 +30,7 @@
     (keepout "" (polygon B.Cu 0  66040 -78105  66040 -86360  55880 -86360  55880 -77470
             66040 -77470))
     (keepout "" (polygon F.Cu 0  55880 -147066  175260 -147066  175260 -152654  55880 -152400))
-    (via "Via[0-1]_600:400_um")
+    (via "Via[0-1]_1000:400_um")
     (rule
       (width 450)
       (clearance 280.1)
@@ -735,9 +735,9 @@
       (shape (rect F.Cu -890 -510 890 510))
       (attach off)
     )
-    (padstack "Via[0-1]_600:400_um"
-      (shape (circle F.Cu 600))
-      (shape (circle B.Cu 600))
+    (padstack "Via[0-1]_1000:400_um"
+      (shape (circle F.Cu 1000))
+      (shape (circle B.Cu 1000))
       (attach off)
     )
   )
@@ -872,7 +872,7 @@
       "Net-(U3-Pad2-3)" "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)"
       "Net-(U6-Pad3)" "Net-(U7-Pad3)"
       (circuit
-        (use_via Via[0-1]_600:400_um)
+        (use_via Via[0-1]_1000:400_um)
       )
       (rule
         (width 450)
@@ -882,7 +882,7 @@
     (class HV /HVNEG /HVPOS "Net-(C2-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
       "Net-(D5-Pad1)" "Net-(D6-Pad2)" "Net-(JP1-Pad1)" "Net-(P1-Pad1)"
       (circuit
-        (use_via Via[0-1]_600:400_um)
+        (use_via Via[0-1]_1000:400_um)
       )
       (rule
         (width 1000)
@@ -891,7 +891,7 @@
     )
     (class PWR GND
       (circuit
-        (use_via Via[0-1]_600:400_um)
+        (use_via Via[0-1]_1000:400_um)
       )
       (rule
         (width 600)
