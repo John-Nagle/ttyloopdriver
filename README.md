@@ -6,7 +6,7 @@ Hardware device for driving antique Teletype machines
 WORK IN PROGRESS. 
 ## Status 
 
-version 1 not successful.  The 555 timer can't produce
+Version 1 not successful.  The 555 timer can't produce
 enough peak drive for the MOSFET, and only about 20V comes out.
 Redesign underway.
 
@@ -17,6 +17,11 @@ circuit testing.  If that works, a new PC board will be designed.
 
 The next PC board will have switches, LEDs, and phone jacks on the board, so no external wiring harness
 will be required.
+
+### Update 2017-04-18
+
+Board 2.0 will drive a Model 15 Teletype with a few changes to the board.  The keyboard side doesn't work.
+Board 2.1 being built.
 
 # What it is
 
@@ -137,7 +142,21 @@ The AP2553W6 provides overload protection to the USB port.
 The CPC1510G solid state relays also provide current limiting,
 in case the printer output is shorted.
 
+When testing, an inductive load similar to a 4 Henry
+selector magnet must be attached to the printer jack.
+If a resistive load is used, when C2 dumps into the output,
+there will be excessive current flow, and the protection in
+U4 will trip.  Output will then be well below the expected 120V.
+
 On the Teletype side, everything is isolated from ground and from the USB side.
+
+## Test points
+
+- W1 - low-voltage power (4.5-5V to W4 GND when powered up)
+- W2 - 100KHz 50% duty cycle oscillator (to W4 GND)
+- W3 - High side of 1uf cap. Charges to 120V (to W5)
+- W4 - low-voltage ground
+- W5 - high-voltage ground
 
 ## Connectors
 
@@ -172,10 +191,6 @@ D13 is a 3-high set of green LEDs.
  Top - Power ON
  Middle - Motor ON
  Bottom - Data output
- 
- The data output LED shows current flowing in the selector magnet circuit. It won't come on until
- there's a printer plugged in.  It will flicker as data goes to the printer, and light steadily
- when the printer is on and idle.
  
 ## Computer interface
 
