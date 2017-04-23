@@ -23,6 +23,23 @@ will be required.
 Board 2.0 will drive a Model 15 Teletype with a few changes to the board.  The keyboard side doesn't work.
 Board 2.1 being built.
 
+### Update 2018-04-21
+
+Board 2.1 will drive a Model 15 Teletype with the following fixes:
+
+- Bypass USB current limiter U2 by jumpering pins 1 to 6.  It's tripping at too low a current.  Check R16 value again.
+Printer side is then OK. After further testing, the current limiter is working fine; it trips if the printeroutput
+is shorted or there's no selector magnet plugged in. After about 10 seconds, U2 will cool down and re-enable power.
+
+- Keyboard side needs a lower value resistor for R9 than 2.2K. Not enough pulldown.
+
+- Jumpering R9 with a 1.5K resistor makes the keyboard side work. That's equivalent to an R9 value of about 
+900 ohms.  4.5V/900 = 5mA there, for 0.03W. OK.  Try 1K for R9.
+
+- Motor control LED is always on.  Probably a pullup resistor problem.  RTS is an active low. RTS signal
+shows 3V for OFF, 0.2V for ON in current circuit, but U7 remains on even for the OFF condition.
+R17 needs to be larger, or this needs a redesign.
+
 # What it is
 
 This is a board to allow connecting antique Teletype machines to a computer through
