@@ -256,7 +256,7 @@ Text Notes 4950 5275 0    60   ~ 0
 Text Notes 9550 3350 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
 Text Notes 10600 7650 0    60   ~ 0
-2.1
+2.2
 $Comp
 L GND #PWR06
 U 1 1 57EE08E1
@@ -268,7 +268,7 @@ F 3 "" H 3150 4025 50  0000 C CNN
 	1    3150 4025
 	1    0    0    -1  
 $EndComp
-Text Label 2775 5150 0    60   ~ 0
+Text Label 1275 5150 0    60   ~ 0
 ENABLE
 $Comp
 L G3VM401E U4
@@ -567,8 +567,8 @@ F 3 "" H 5700 5200 50  0000 C CNN
 	1    5700 5200
 	1    0    0    -1  
 $EndComp
-Text Notes 6575 6250 0    60   ~ 0
-CHANGES:\n\n- Change all test points to use header-type pins [DONE]\n- R16 was ordered as 53.6 ohms, not Kohms. [DONE]\n- Move R16 closer to U2. [DONE]\n- Need to invert motor-on signal - RTS is a pulldown. [DONE]\n- D12 causing too much voltage drop for sustain - redesign LED drive [DONE]\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15. [DONE]\n- Add RTS resistor [DONE]\n- C2 - Use 1uF leaded ceramic. [DONE]\n- Output side of U6 may be wired backwards. [DONE]\n- Need pulldown on RxD. [DONE]
+Text Notes 6600 6275 0    60   ~ 0
+CHANGES\nV2.1:\n- Change all test points to use header-type pins [DONE]\n- R16 was ordered as 53.6 ohms, not Kohms. [DONE]\n- Move R16 closer to U2. [DONE]\n- Need to invert motor-on signal - RTS is a pulldown. [DONE]\n- D12 causing too much voltage drop for sustain - redesign LED drive [DONE]\n- TxD, RxD, RTS are 3.3V, not 5V; adjust resistor values R15. [DONE]\n- Add RTS resistor [DONE]\n- C2 - Use 1uF leaded ceramic. [DONE]\n- Output side of U6 may be wired backwards. [DONE]\n- Need pulldown on RxD. [DONE]\nV2.2:\n- Change R9 to 1K. Needs more pulldown.[DONE]\n- U2 needs 0.01-μF  to 0.1-μF  X7R  or X5R \nceramic  bypass  capacitor  between  IN  and  GND. [DONE]\n- Motor control high side must be reduced to 3.2V. [DONE]
 $Comp
 L FDS4559-RESCUE-ttydriver01 U9
 U 1 1 58675588
@@ -1007,7 +1007,7 @@ L D_Zener D7
 U 1 1 586DD17A
 P 8400 4225
 F 0 "D7" H 8400 4325 50  0000 C CNN
-F 1 "D_Zener" H 8400 4125 50  0001 C CNN
+F 1 "120V" H 8400 4125 50  0000 C CNN
 F 2 "Diodes_SMD:SMB_Standard" H 8400 4225 50  0001 C CNN
 F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 8400 4225 50  0001 C CNN
 F 4 "Micro Commercial" H 8400 4225 60  0001 C CNN "Mfgr"
@@ -1021,8 +1021,8 @@ $Comp
 L D_Zener D11
 U 1 1 586DEFC6
 P 9125 3450
-F 0 "D11" V 9125 3550 50  0000 C CNN
-F 1 "D_Zener" H 9125 3350 50  0001 C CNN
+F 0 "D11" V 9100 3600 50  0000 C CNN
+F 1 "120V" V 9000 3550 50  0000 C CNN
 F 2 "Diodes_SMD:SMB_Standard" H 9125 3450 50  0001 C CNN
 F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3450 50  0001 C CNN
 F 4 "Micro Commercial" H 9125 3450 60  0001 C CNN "Mfgr"
@@ -1037,7 +1037,7 @@ L D_Zener D10
 U 1 1 586DF12C
 P 9125 3900
 F 0 "D10" V 9150 3750 50  0000 C CNN
-F 1 "D_Zener" H 9125 3800 50  0001 C CNN
+F 1 "120V" V 9225 3800 50  0000 C CNN
 F 2 "Diodes_SMD:SMB_Standard" H 9125 3900 50  0001 C CNN
 F 3 "http://www.mccsemi.com/up_pdf/SMBJ5338B-SMBJ5388B(SMB).pdf" H 9125 3900 50  0001 C CNN
 F 4 "Micro Commercial" H 9125 3900 60  0001 C CNN "Mfgr"
@@ -1130,13 +1130,13 @@ L R R9
 U 1 1 58EB1C4A
 P 2150 5850
 F 0 "R9" V 2230 5850 50  0000 C CNN
-F 1 "2.2K" V 2150 5850 50  0000 C CNN
+F 1 "1K" V 2150 5850 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 2080 5850 50  0001 C CNN
 F 3 "" H 2150 5850 50  0001 C CNN
 F 4 "Panasonic" V 2150 5850 60  0001 C CNN "Mfgr"
 F 5 "Digikey" V 2150 5850 60  0001 C CNN "Vendor"
-F 6 "P2.2KECT-ND" V 2150 5850 60  0001 C CNN "Vendorpart"
-F 7 "ERJ-8GEYJ222V" V 2150 5850 60  0001 C CNN "Part"
+F 6 "P1.0KECT-ND" V 2150 5850 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-8GEYJ102V" V 2150 5850 60  0001 C CNN "Part"
 	1    2150 5850
 	1    0    0    -1  
 $EndComp
@@ -1150,6 +1150,73 @@ F 2 "" H 2150 6000 50  0001 C CNN
 F 3 "" H 2150 6000 50  0001 C CNN
 	1    2150 6000
 	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P W5
+U 1 1 58EB4E36
+P 9150 4550
+F 0 "W5" H 9225 4625 50  0000 C CNN
+F 1 "TEST_1P" H 9150 4750 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 9350 4550 50  0001 C CNN
+F 3 "" H 9350 4550 50  0001 C CNN
+	1    9150 4550
+	1    0    0    1   
+$EndComp
+$Comp
+L C C2
+U 1 1 58EBF1F5
+P 7550 4225
+F 0 "C2" H 7575 4325 50  0000 L CNN
+F 1 "1uf" H 7575 4125 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 7588 4075 50  0001 C CNN
+F 3 "" H 7550 4225 50  0001 C CNN
+F 4 "RDER72E105MUB1H03B" H 7550 4225 60  0001 C CNN "Part"
+F 5 "Digikey" H 7550 4225 60  0001 C CNN "Vendor"
+F 6 "Murata" H 7550 4225 60  0001 C CNN "Mfgr"
+F 7 "490-8911-ND" H 7550 4225 60  0001 C CNN "Vendorpart"
+	1    7550 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C10
+U 1 1 58FCC765
+P 2900 4750
+F 0 "C10" H 2925 4850 50  0000 L CNN
+F 1 "0.1uF" H 2925 4650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2938 4600 50  0001 C CNN
+F 3 "" H 2900 4750 50  0001 C CNN
+F 4 "Digikey" H 2900 4750 60  0001 C CNN "Vendor"
+F 5 "Kemet" H 2900 4750 60  0001 C CNN "Mfgr"
+F 6 "C0805C104K9RACTU" H 2900 4750 60  0001 C CNN "Part"
+F 7 "399-9155-1-ND" H 2900 4750 60  0001 C CNN "Vendorpart"
+	1    2900 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR022
+U 1 1 58FCC83A
+P 2900 4925
+F 0 "#PWR022" H 2900 4675 50  0001 C CNN
+F 1 "GND" H 2900 4775 50  0000 C CNN
+F 2 "" H 2900 4925 50  0001 C CNN
+F 3 "" H 2900 4925 50  0001 C CNN
+	1    2900 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Zener D2
+U 1 1 58FE01E7
+P 2925 5750
+F 0 "D2" H 2925 5850 50  0000 C CNN
+F 1 "1.8V" H 2925 5650 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 2925 5750 50  0001 C CNN
+F 3 "" H 2925 5750 50  0001 C CNN
+F 4 "MMSZ4678-TPMSCT-ND" H 2925 5750 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 2925 5750 60  0001 C CNN "Vendor"
+F 6 "Micro Commercial" H 2925 5750 60  0001 C CNN "Mfgr"
+F 7 "MMSZ4678-TP" H 2925 5750 60  0001 C CNN "Part"
+	1    2925 5750
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	3900 6325 4450 6325
@@ -1177,7 +1244,7 @@ Wire Wire Line
 Wire Wire Line
 	7500 3975 8400 3975
 Wire Wire Line
-	3075 3800 3075 4825
+	3075 4575 3075 3800
 Wire Wire Line
 	7975 2825 8025 2825
 Wire Wire Line
@@ -1219,7 +1286,7 @@ Wire Wire Line
 	3950 3800 4750 3800
 Connection ~ 4150 3800
 Wire Wire Line
-	3150 3800 3075 3800
+	3075 3800 3150 3800
 Wire Wire Line
 	3150 4200 3150 5150
 Wire Wire Line
@@ -1238,9 +1305,9 @@ Wire Wire Line
 Wire Wire Line
 	5850 1425 6000 1425
 Wire Wire Line
-	1800 5575 1800 4825
+	1800 5575 1800 4575
 Wire Wire Line
-	1800 4825 3075 4825
+	1800 4575 3075 4575
 Wire Wire Line
 	2900 3775 2975 3775
 Wire Wire Line
@@ -1449,17 +1516,16 @@ Connection ~ 3250 6700
 Wire Wire Line
 	3350 6375 3350 7175
 Wire Wire Line
-	2700 4175 2700 6375
+	2700 4450 2700 6375
 Wire Wire Line
 	2700 6375 3350 6375
 Connection ~ 3350 6800
 Wire Wire Line
-	2700 4300 3025 4300
+	2700 4450 3025 4450
 Wire Wire Line
-	3025 4300 3025 2250
+	3025 4450 3025 2250
 Wire Wire Line
 	3025 2250 6200 2250
-Connection ~ 2700 4300
 Connection ~ 4150 1950
 Wire Wire Line
 	4600 2050 4600 1950
@@ -1510,8 +1576,6 @@ Wire Wire Line
 	4575 5075 4575 5100
 Wire Wire Line
 	2500 6800 2600 6800
-Wire Wire Line
-	2600 5525 5775 5525
 Connection ~ 3250 5525
 Wire Wire Line
 	3250 5525 3250 6900
@@ -1524,8 +1588,6 @@ Wire Wire Line
 Wire Wire Line
 	2600 6700 2600 6525
 Wire Wire Line
-	2600 6225 2600 5525
-Wire Wire Line
 	6200 2450 6100 2450
 Wire Wire Line
 	6100 2450 6100 2625
@@ -1537,33 +1599,27 @@ Wire Wire Line
 Connection ~ 2300 5650
 Wire Wire Line
 	1000 1525 5250 1525
-$Comp
-L TEST_1P W5
-U 1 1 58EB4E36
-P 9150 4550
-F 0 "W5" H 9225 4625 50  0000 C CNN
-F 1 "TEST_1P" H 9150 4750 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 9350 4550 50  0001 C CNN
-F 3 "" H 9350 4550 50  0001 C CNN
-	1    9150 4550
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	9150 4550 9150 4475
 Connection ~ 9150 4475
-$Comp
-L C C2
-U 1 1 58EBF1F5
-P 7550 4225
-F 0 "C2" H 7575 4325 50  0000 L CNN
-F 1 "1uf" H 7575 4125 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 7588 4075 50  0001 C CNN
-F 3 "" H 7550 4225 50  0001 C CNN
-F 4 "RDER72E105MUB1H03B" H 7550 4225 60  0001 C CNN "Part"
-F 5 "Digikey" H 7550 4225 60  0001 C CNN "Vendor"
-F 6 "Murata" H 7550 4225 60  0001 C CNN "Mfgr"
-F 7 "490-8911-ND" H 7550 4225 60  0001 C CNN "Vendorpart"
-	1    7550 4225
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	2900 4925 2900 4900
+Wire Wire Line
+	2900 4600 2900 4575
+Connection ~ 2900 4575
+Wire Wire Line
+	2925 5600 2925 5525
+Wire Wire Line
+	2925 5975 2600 5975
+Wire Wire Line
+	2600 4375 2600 6225
+Wire Wire Line
+	2925 5525 5775 5525
+Wire Wire Line
+	2600 4375 2700 4375
+Wire Wire Line
+	2700 4375 2700 4175
+Connection ~ 2600 5975
+Wire Wire Line
+	2925 5975 2925 5900
 $EndSCHEMATC
