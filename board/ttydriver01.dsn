@@ -49,7 +49,7 @@
       (place U2 153162 -92202 front 180 (PN AP2553W6))
     )
     (component "Housings_SOIC:SOIJ-8_5.3x5.3mm_Pitch1.27mm"
-      (place U1 153924 -141986 front 180 (PN NE555))
+      (place U1 155448 -139446 front 180 (PN NE555))
     )
     (component "Coilcraft:Coilcraft-FA2469-AL"
       (place T1 130048 -123444 front 180 (PN "Coilcraft-FA2469-AL"))
@@ -58,7 +58,7 @@
       (place R11 168148 -95504 front 270 (PN 390))
       (place R10 165354 -95504 front 90 (PN 390))
       (place R8 113792 -137160 front 180 (PN 10K))
-      (place R7 145542 -141732 front 0 (PN 7.15K))
+      (place R7 151638 -144018 front 180 (PN 7.15K))
       (place R6 146050 -133350 front 0 (PN 715))
       (place R4 164084 -138684 front 0 (PN 10K))
       (place R3 164084 -141732 front 0 (PN 22))
@@ -137,10 +137,10 @@
       (place R17 110236 -85852 front 180 (PN 510))
     )
     (component Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm
-      (place W1 140208 -143764 front 0 (PN TEST_1P))
-      (place W2 157734 -136906 front 0 (PN TEST_1P))
+      (place W1 139446 -143764 front 0 (PN TEST_1P))
+      (place W2 145542 -143764 front 0 (PN TEST_1P))
       (place W3 111760 -143764 front 0 (PN TEST_1P))
-      (place W4 134620 -143764 front 0 (PN TEST_1P))
+      (place W4 133350 -143764 front 0 (PN TEST_1P))
       (place W5 127254 -143764 front 0 (PN TEST_1P))
     )
     (component Mounting_Holes:MountingHole_2.5mm
@@ -914,12 +914,9 @@
     (class kicad_default "" /ENABLE /OSC /RxD /TxD "Net-(C1-Pad1)" "Net-(C10-Pad1)"
       "Net-(C3-Pad1)" "Net-(C4-Pad1)" "Net-(C5-Pad1)" "Net-(C6-Pad1)" "Net-(C7-Pad2)"
       "Net-(C8-Pad1)" "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)"
-      "Net-(D8-Pad1)" "Net-(D9-Pad2)" "Net-(J1-PadTB)" "Net-(J2-PadS)" "Net-(J2-PadT)"
-      "Net-(J3-PadT)" "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)"
-      "Net-(R6-Pad1)" "Net-(R9-Pad1)" "Net-(SW1-Pad1)" "Net-(SW1-Pad2)" "Net-(SW1-Pad3)"
-      "Net-(SW2-Pad1)" "Net-(T1-Pad2)" "Net-(T1-Pad5)" "Net-(U2-Pad4)" "Net-(U3-Pad1-2)"
-      "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)" "Net-(U3-Pad2-3)"
-      "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)" "Net-(U6-Pad3)" "Net-(U7-Pad3)"
+      "Net-(D8-Pad1)" "Net-(D9-Pad2)" "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)"
+      "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)"
+      "Net-(R6-Pad1)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(U3-Pad3-5)" "Net-(U5-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
