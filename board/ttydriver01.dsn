@@ -46,7 +46,7 @@
       (place SW2 169164 -104394 front 90 (PN Button_SPDT))
     )
     (component "TO_SOT_Packages_SMD:SOT-23-6"
-      (place U2 153162 -92202 front 180 (PN AP2553W6))
+      (place U2 151130 -91440 front 180 (PN AP2553W6))
     )
     (component "Housings_SOIC:SOIJ-8_5.3x5.3mm_Pitch1.27mm"
       (place U1 155448 -139446 front 180 (PN NE555))
@@ -63,7 +63,7 @@
       (place R4 164084 -138684 front 0 (PN 10K))
       (place R3 164084 -141732 front 0 (PN 22))
       (place R1 92202 -116078 front 0 (PN 10))
-      (place R16 148336 -95758 front 270 (PN 53.6K))
+      (place R16 151130 -95758 front 0 (PN 53.6K))
       (place R15 107696 -137160 front 0 (PN 560))
       (place R14 119888 -137160 front 0 (PN 1M))
       (place R13 87122 -143002 front 0 (PN 3.3K))
@@ -151,7 +151,7 @@
       (place R5 113030 -111506 front 0 (PN 150))
     )
     (component Capacitors_SMD:C_0805::1
-      (place C10 146812 -137414 front 180 (PN 0.1uF))
+      (place C10 156718 -90932 front 180 (PN 0.1uF))
       (place C13 146304 -129032 front 180 (PN 22uf))
     )
     (component "Diodes_SMD:D_SOD-123"
