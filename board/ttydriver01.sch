@@ -186,11 +186,11 @@ U 1 1 57E5B094
 P 4700 3950
 F 0 "C9" H 4725 4050 50  0000 L CNN
 F 1 "470uf" H 4725 3850 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5" H 4738 3800 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D10.0mm_P5.00mm" H 4738 3800 50  0001 C CNN
 F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW" H 4700 3950 50  0001 C CNN
-F 4 "XXXP5166-ND" H 4700 3950 60  0001 C CNN "Vendorpart"
+F 4 "P5168-ND" H 4700 3950 60  0001 C CNN "Vendorpart"
 F 5 "Panasonic" H 4700 3950 60  0001 C CNN "Mfgr"
-F 6 "XXXECA-1VM221" H 4700 3950 60  0001 C CNN "Part"
+F 6 "ECA-1VM471" H 4700 3950 60  0001 C CNN "Part"
 F 7 "Digikey" H 4700 3950 60  0001 C CNN "Vendor"
 	1    4700 3950
 	1    0    0    -1  
@@ -243,12 +243,12 @@ $EndComp
 $Comp
 L GND #PWR05
 U 1 1 57E60F5A
-P 5525 4200
-F 0 "#PWR05" H 5525 3950 50  0001 C CNN
-F 1 "GND" H 5525 4050 50  0000 C CNN
-F 2 "" H 5525 4200 50  0000 C CNN
-F 3 "" H 5525 4200 50  0000 C CNN
-	1    5525 4200
+P 5675 4150
+F 0 "#PWR05" H 5675 3900 50  0001 C CNN
+F 1 "GND" H 5675 4000 50  0000 C CNN
+F 2 "" H 5675 4150 50  0000 C CNN
+F 3 "" H 5675 4150 50  0000 C CNN
+	1    5675 4150
 	1    0    0    -1  
 $EndComp
 Text Notes 5525 5275 0    60   ~ 0
@@ -897,7 +897,7 @@ F 7 "Coilcraft" V 5475 3800 60  0001 C CNN "Vendor"
 	1    5475 3800
 	0    -1   -1   0   
 $EndComp
-Text Notes 4700 4250 0    39   ~ 0
+Text Notes 5025 4275 0    39   ~ 0
 Filtering of\ninductive kickback
 $Comp
 L TEST_1P W3
@@ -1061,13 +1061,13 @@ $EndComp
 $Comp
 L TEST_1P W4
 U 1 1 5898BD06
-P 4475 4750
-F 0 "W4" V 4400 4875 50  0000 C CNN
-F 1 "TEST_1P" V 4350 4900 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4675 4750 50  0001 C CNN
-F 3 "" H 4675 4750 50  0000 C CNN
-	1    4475 4750
-	0    -1   -1   0   
+P 4875 4750
+F 0 "W4" V 4875 5000 50  0000 C CNN
+F 1 "TEST_1P" V 4750 4900 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 5075 4750 50  0001 C CNN
+F 3 "" H 5075 4750 50  0000 C CNN
+	1    4875 4750
+	0    1    1    0   
 $EndComp
 $Comp
 L GND #PWR020
@@ -1194,36 +1194,14 @@ U 1 1 5916B4CF
 P 4400 3800
 F 0 "R2" V 4480 3800 50  0000 C CNN
 F 1 "2.2" V 4400 3800 50  0000 C CNN
-F 2 "" V 4330 3800 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206" V 4330 3800 50  0001 C CNN
 F 3 "" H 4400 3800 50  0001 C CNN
+F 4 "ERJ-8GEYJ2R2V" V 4400 3800 60  0001 C CNN "Part"
+F 5 "Panasonic" V 4400 3800 60  0001 C CNN "Mfgr"
+F 6 "Digikey" V 4400 3800 60  0001 C CNN "Vendor"
+F 7 "P2.2ECT-ND" V 4400 3800 60  0001 C CNN "Vendorpart"
 	1    4400 3800
 	0    1    1    0   
-$EndComp
-$Comp
-L R R18
-U 1 1 5916B602
-P 5000 3800
-F 0 "R18" V 5080 3800 50  0000 C CNN
-F 1 "2.2" V 5000 3800 50  0000 C CNN
-F 2 "" V 4930 3800 50  0001 C CNN
-F 3 "" H 5000 3800 50  0001 C CNN
-	1    5000 3800
-	0    1    1    0   
-$EndComp
-$Comp
-L CP C14
-U 1 1 5916C429
-P 4525 4575
-F 0 "C14" H 4550 4675 50  0000 L CNN
-F 1 "470uf" H 4550 4475 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D8_L11.5_P3.5" H 4563 4425 50  0001 C CNN
-F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW" H 4525 4575 50  0001 C CNN
-F 4 "XXXP5166-ND" H 4525 4575 60  0001 C CNN "Vendorpart"
-F 5 "Panasonic" H 4525 4575 60  0001 C CNN "Mfgr"
-F 6 "XXXECA-1VM221" H 4525 4575 60  0001 C CNN "Part"
-F 7 "Digikey" H 4525 4575 60  0001 C CNN "Vendor"
-	1    4525 4575
-	1    0    0    -1  
 $EndComp
 $Comp
 L C C13
@@ -1255,10 +1233,10 @@ Wire Wire Line
 Wire Wire Line
 	6025 5175 6025 6125
 Wire Wire Line
-	8175 4075 8175 3975
+	8175 3975 8175 4075
 Connection ~ 8175 3975
 Wire Wire Line
-	8175 4375 8175 4475
+	8175 4475 8175 4375
 Wire Wire Line
 	8975 4475 8975 4375
 Wire Wire Line
@@ -1426,7 +1404,7 @@ Wire Wire Line
 Wire Wire Line
 	6025 4350 6150 4350
 Wire Wire Line
-	5525 4100 5525 4200
+	5675 4100 5675 4150
 Wire Wire Line
 	6125 4525 6125 4575
 Wire Wire Line
@@ -1568,7 +1546,7 @@ Connection ~ 5675 3800
 Wire Wire Line
 	4700 4100 5675 4100
 Connection ~ 5275 4100
-Connection ~ 5525 4100
+Connection ~ 5675 4100
 Wire Wire Line
 	5525 6725 5525 7025
 Wire Wire Line
@@ -1648,8 +1626,6 @@ Connection ~ 4150 4425
 Connection ~ 4525 4425
 Wire Wire Line
 	4850 4725 4850 4775
-Wire Wire Line
-	4475 4750 4850 4750
 Connection ~ 4850 4750
 Wire Wire Line
 	4525 4725 4525 4750
@@ -1675,4 +1651,38 @@ Connection ~ 7950 3975
 Wire Wire Line
 	7950 4375 7950 4475
 Connection ~ 7950 4475
+$Comp
+L CP C14
+U 1 1 591759DE
+P 4525 4575
+F 0 "C14" H 4550 4675 50  0000 L CNN
+F 1 "470uf" H 4550 4475 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:CP_Radial_D10.0mm_P5.00mm" H 4563 4425 50  0001 C CNN
+F 3 "http://industrial.panasonic.com/www-cgi/jvcr13pz.cgi?E+PZ+3+ABA0012+ECA1VM221+7+WW" H 4525 4575 50  0001 C CNN
+F 4 "P5168-ND" H 4525 4575 60  0001 C CNN "Vendorpart"
+F 5 "Panasonic" H 4525 4575 60  0001 C CNN "Mfgr"
+F 6 "ECA-1VM471" H 4525 4575 60  0001 C CNN "Part"
+F 7 "Digikey" H 4525 4575 60  0001 C CNN "Vendor"
+	1    4525 4575
+	1    0    0    -1  
+$EndComp
+Text Notes 4425 4950 0    39   ~ 0
+Filtering of\n+5 supply
+Wire Wire Line
+	4525 4750 4875 4750
+$Comp
+L R R18
+U 1 1 59181DC2
+P 5000 3800
+F 0 "R18" V 5080 3800 50  0000 C CNN
+F 1 "2.2" V 5000 3800 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 4930 3800 50  0001 C CNN
+F 3 "" H 5000 3800 50  0001 C CNN
+F 4 "ERJ-8GEYJ2R2V" V 5000 3800 60  0001 C CNN "Part"
+F 5 "Panasonic" V 5000 3800 60  0001 C CNN "Mfgr"
+F 6 "Digikey" V 5000 3800 60  0001 C CNN "Vendor"
+F 7 "P2.2ECT-ND" V 5000 3800 60  0001 C CNN "Vendorpart"
+	1    5000 3800
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
