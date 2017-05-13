@@ -45,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 7425 7500 0    60   ~ 12
-5VDC to 120 VDC 60mA Teletype current loop supply
+USB to 120 VDC 60mA Teletype current loop interface
 $Comp
 L PWR_FLAG #FLG01
 U 1 1 57E4E306

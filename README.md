@@ -22,7 +22,7 @@ will be required.
 Board 2.0 will drive a Model 15 Teletype with a few changes to the board.  The keyboard side doesn't work.
 Board 2.1 being built.
 
-### Update 2018-04-21
+### Update 2017-04-21
 
 Board 2.1 will drive a Model 15 Teletype with the following fixes:
 
@@ -38,6 +38,13 @@ is shorted or there's no selector magnet plugged in. After about 10 seconds, U2 
 - Motor control LED is always on.  Probably a pullup resistor problem.  RTS is an active low. RTS signal
 shows 3V for OFF, 0.2V for ON in current circuit, but U7 remains on even for the OFF condition.
 R17 needs to be larger, or this needs a redesign.
+
+### Update 2017-05-13
+
+Board 2.2 not built; more pull-in energy is needed. The voltage decays too fast, and only
+one of three Teletypes will work with the 1uf @ 120V cap.  Board 2.3 will have 2uf @ 120V. 
+This should provide enough punch to pull in the selector fast enough. Github files are updated
+to Board v2.3.0, but the board has not been sent to fab yet.
 
 # What it is
 
@@ -59,12 +66,16 @@ operation.  We reprogram it to map a request for 600 baud to 45 baud.
 We also reprogram it to request 500mA from the USB port.
 
 There are two power supplies for the output. One is a custom switching
-power supply which, during SPACE, charges up a 1uF capacitor C2 to
-120V. This provides the initial power to pull in the selector magnet,
-pushing 60mA through the huge 4H inductance of the magnet coils.
+power supply which, during SPACE, charges up a pair of 1uF ceramic capacitors C2 and C11 to
+120V. These are through-hole components because very large SMT capacitors have capactance
+which declines with voltage, which is unacceptable here. They're ceramics for low internal
+resistance. 
+
+These caps provide the initial power to pull in the selector magnet,
+pushing 60mA through the huge (measured) at 5.5H inductance of the magnet coils.
 The other is a 12V supply U8 which provides sustaining current at 60mA
-once C2 has discharged.  Both power supplies feed, through diodes D6
-and D5, a solid-state relay U4. The relay is controlled by the transmit
+once C2 and C11 have discharged.  Both power supplies feed, through diodes D6,
+a solid-state relay U4. The relay is controlled by the transmit
 data line TxD from U3.
 
 The switching power supply consists of an oscillator and a
@@ -134,7 +145,7 @@ the board.  It also has a built-in power limit, set to 400mA by
 resistor R16, which limits the inrush current as C1 charges at power
 up.  If turn-on is successful, and SW1 is on, the VPWR line comes
 up and everything on the board gets power, including the top
-LED of D13.
+LED of D13. 
 
 With some operating systems, this won't happen until
 the USB port is opened by software.  If the computer goes to sleep,
@@ -155,8 +166,11 @@ On the input side, C9, C1, C5, and L3 keep the inductive
 kickback from T1 from getting back into the USB power supply.
 
 The AP2553W6 provides overload protection to the USB port.
+It first acts as a current limiter, and if the overload continues,
+it heats up, detects the overtemp condition, and cuts power.
 The CPC1510G solid state relays also provide current limiting,
-in case the printer output is shorted.
+in case the printer output is shorted. A dead short across the
+output will not damage anything. 
 
 When testing, an inductive load similar to a 4 Henry
 selector magnet must be attached to the printer jack.
