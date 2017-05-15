@@ -39,11 +39,6 @@
     )
   )
   (placement
-    (component Fiducials_SEEED:Fiducial_Image_Seeed_Top
-      (place REF3 163000 -122174 front 0 (PN Fiducial_Image_Seeed))
-      (place REF2 163000 -84000 front 0 (PN Fiducial_Image_Seeed))
-      (place REF1 67437 -122174 front 0 (PN Fiducial_Image_Seeed))
-    )
     (component "Dialite:564-0100"
       (place D13 167894 -89662 front 180 (PN LED_3))
     )
@@ -69,7 +64,7 @@
       (place R3 164000 -141000 front 0 (PN 22))
       (place R1 92202 -116078 front 0 (PN 10))
       (place R16 151130 -95758 front 0 (PN 53.6K))
-      (place R15 107696 -137160 front 0 (PN 560))
+      (place R15 106426 -137160 front 0 (PN 560))
       (place R14 119888 -137160 front 0 (PN 1M))
       (place R13 87122 -143002 front 0 (PN 3.3K))
       (place R12 170942 -95504 front 270 (PN 390))
@@ -80,7 +75,7 @@
     )
     (component Capacitors_SMD:C_0805
       (place C5 148336 -120777 front 180 (PN 22uf))
-      (place C4 127508 -131826 front 180 (PN 1000pf))
+      (place C4 127381 -131318 front 180 (PN 1000pf))
       (place C3 97900 -127100 front 180 (PN 10pf))
       (place C1 155956 -114935 front 0 (PN 22uf))
       (place C8 141986 -137414 front 180 (PN 910pf))
@@ -166,30 +161,13 @@
       (place C9 152146 -104902 front 0 (PN 470uf))
       (place C14 140716 -104902 front 0 (PN 470uf))
     )
+    (component Fiducials_SEEED:Fiducial_Image_Seeed_Top
+      (place REF1 67437 -122174 front 0 (PN Fiducial_Image_Seeed))
+      (place REF2 163000 -84000 front 0 (PN Fiducial_Image_Seeed))
+      (place REF3 163000 -122174 front 0 (PN Fiducial_Image_Seeed))
+    )
   )
   (library
-    (image Fiducials_SEEED:Fiducial_Image_Seeed_Top
-      (outline (path signal 10  0 0  1500 1500))
-      (outline (path signal 10  1500 0  1426.59 -463.525  1213.53 -881.678  881.678 -1213.53
-            463.525 -1426.59  0 -1500  -463.525 -1426.59  -881.678 -1213.53
-            -1213.53 -881.678  -1426.59 -463.525  -1500 0  -1426.59 463.525
-            -1213.53 881.678  -881.678 1213.53  -463.525 1426.59  0 1500
-            463.525 1426.59  881.678 1213.53  1213.53 881.678  1426.59 463.525))
-      (outline (path signal 50  1000 0  951.057 -309.017  809.017 -587.785  587.785 -809.017
-            309.017 -951.057  0 -1000  -309.017 -951.057  -587.785 -809.017
-            -809.017 -587.785  -951.057 -309.017  -1000 0  -951.057 309.017
-            -809.017 587.785  -587.785 809.017  -309.017 951.057  0 1000
-            309.017 951.057  587.785 809.017  809.017 587.785  951.057 309.017))
-      (pin Round[T]Pad_1000_um ~ 0 0)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um ~@1 0 1390)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 45) ~@2 -982.878 982.878)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 90) ~@3 -1390 0)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 135) ~@4 -982.878 -982.878)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 180) ~@5 0 -1390)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 225) ~@6 982.878 -982.878)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 270) ~@7 1390 0)
-      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 315) ~@8 982.878 982.878)
-    )
     (image "Dialite:564-0100"
       (outline (path signal 700  4572 -2286  4572 2286))
       (outline (path signal 700  -7112 2286  -7112 -2286))
@@ -844,6 +822,28 @@
       (pin Rect[A]Pad_2000x2000_um 1 0 0)
       (pin Round[A]Pad_2000_um 2 5000 0)
     )
+    (image Fiducials_SEEED:Fiducial_Image_Seeed_Top
+      (outline (path signal 10  0 0  1500 1500))
+      (outline (path signal 10  1500 0  1426.59 -463.525  1213.53 -881.678  881.678 -1213.53
+            463.525 -1426.59  0 -1500  -463.525 -1426.59  -881.678 -1213.53
+            -1213.53 -881.678  -1426.59 -463.525  -1500 0  -1426.59 463.525
+            -1213.53 881.678  -881.678 1213.53  -463.525 1426.59  0 1500
+            463.525 1426.59  881.678 1213.53  1213.53 881.678  1426.59 463.525))
+      (outline (path signal 50  1000 0  951.057 -309.017  809.017 -587.785  587.785 -809.017
+            309.017 -951.057  0 -1000  -309.017 -951.057  -587.785 -809.017
+            -809.017 -587.785  -951.057 -309.017  -1000 0  -951.057 309.017
+            -809.017 587.785  -587.785 809.017  -309.017 951.057  0 1000
+            309.017 951.057  587.785 809.017  809.017 587.785  951.057 309.017))
+      (pin Round[T]Pad_1000_um ~ 0 0)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um ~@1 0 1390)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 45) ~@2 -982.878 982.878)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 90) ~@3 -1390 0)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 135) ~@4 -982.878 -982.878)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 180) ~@5 0 -1390)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 225) ~@6 982.878 -982.878)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 270) ~@7 1390 0)
+      (pin Trapz[T]Pad_1190x225_p0xn60_um (rotate 315) ~@8 982.878 982.878)
+    )
     (padstack Round[T]Pad_1000_um
       (shape (circle F.Cu 1000))
       (attach off)
@@ -1090,12 +1090,12 @@
       (pins U2-6 U1-4 U1-8 R6-2 U8-2 U7-4 U7-6 R12-2 U5-2 U6-4 U6-6 U3-"2-4" W1-1
         D2-1 C13-1 C14-1 R2-2)
     )
-    (class kicad_default "" /ENABLE /OSC /RxD /TxD "Net-(C10-Pad1)" "Net-(C11-Pad1)"
-      "Net-(C3-Pad1)" "Net-(C4-Pad1)" "Net-(C6-Pad1)" "Net-(C7-Pad2)" "Net-(C8-Pad1)"
-      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(D9-Pad2)"
-      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(R13-Pad2)" "Net-(R15-Pad1)"
-      "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R6-Pad1)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)"
-      "Net-(U3-Pad3-5)" "Net-(U5-Pad3)"
+    (class kicad_default "" /ENABLE /OSC /RxD /TxD "Net-(C10-Pad1)" "Net-(C3-Pad1)"
+      "Net-(C4-Pad1)" "Net-(C6-Pad1)" "Net-(C7-Pad2)" "Net-(C8-Pad1)" "Net-(D13-Pad2)"
+      "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(D9-Pad2)" "Net-(J2-PadS)"
+      "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)"
+      "Net-(R17-Pad2)" "Net-(R6-Pad1)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(U3-Pad3-5)"
+      "Net-(U5-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
@@ -1104,8 +1104,8 @@
         (clearance 280.1)
       )
     )
-    (class HV /HVNEG /HVPOS "Net-(D1-Pad2)" "Net-(D10-Pad2)" "Net-(D6-Pad2)"
-      "Net-(JP1-Pad1)" "Net-(P1-Pad1)"
+    (class HV /HVNEG /HVPOS "Net-(C11-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
+      "Net-(D6-Pad2)" "Net-(JP1-Pad1)" "Net-(P1-Pad1)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
