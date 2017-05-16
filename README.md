@@ -46,6 +46,10 @@ one of three Teletypes will work with the 1uf @ 120V cap.  Board 2.3 will have 2
 This should provide enough punch to pull in the selector fast enough. Github files are updated
 to Board v2.3.0, but the board has not been sent to fab yet.
 
+### Update 2017-05-15
+
+Board 2.3 sent to fab.
+
 # What it is
 
 This is a board to allow connecting antique Teletype machines to a computer through
