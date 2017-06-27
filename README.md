@@ -50,6 +50,21 @@ to Board v2.3.0, but the board has not been sent to fab yet.
 
 Board 2.3 sent to fab.
 
+### Update 2017-06-20
+
+Board 2.3 can't charge its 2uf of capacitors in less than 40ms.
+The LTSPICE model and the real board disagree in transformer current
+by about 2x. Unclear why.  Possible transformer saturation.
+
+Efficiency calc: 
+    
+2uf at 120V is  14.4mJ
+    
+400mA at 4.8V is 1.92W. 1.92W x 20ms = 0.0384 watt-seconds = 0.0384 joules = 38.4 mJ
+
+Efficiency needed is 14.4 / 38.4 = 38%. Should be easily achieveable.
+    
+
 # What it is
 
 This is a board to allow connecting antique Teletype machines to a computer through
