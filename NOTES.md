@@ -27,3 +27,4 @@ Why so high?
 Beginning new board design with Linear Technology cap charger IC.
 
 - Motor control jack shorts during plug pull. Change connector.
+- Footprint for inverter may be wrong.

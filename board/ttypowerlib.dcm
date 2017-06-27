@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 74HC1GU04
+D Inverter
+K CMOD NOT
+$ENDCMP
+#
 $CMP AP2553W6
 D Precision current limited power switch
 K current limit switch USB
