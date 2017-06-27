@@ -24,6 +24,12 @@ $CMP LED_3
 D LED RGB 6 pins
 $ENDCMP
 #
+$CMP LT3750
+D Capacitor charger controller
+K charger controller switching
+F http://cds.linear.com/docs/en/datasheet/3750fa.pdf
+$ENDCMP
+#
 $CMP PHONE-JACK-MONO
 D DC Barrel Jack
 K DC power barrel jack connector
