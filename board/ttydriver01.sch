@@ -435,7 +435,7 @@ Text Notes 3450 1700 0    39   ~ 0
 Keyboard supply
 Text Notes 9400 3150 0    39   ~ 0
 Snubbing
-Text Notes 6875 3775 0    39   ~ 0
+Text Notes 6650 3850 0    39   ~ 0
 120V pulse supply
 $Comp
 L LED_3 D13
@@ -820,12 +820,12 @@ $EndComp
 $Comp
 L GND #PWR013
 U 1 1 5951C44C
-P 4650 5975
-F 0 "#PWR013" H 4650 5725 50  0001 C CNN
-F 1 "GND" H 4650 5825 50  0000 C CNN
-F 2 "" H 4650 5975 50  0000 C CNN
-F 3 "" H 4650 5975 50  0000 C CNN
-	1    4650 5975
+P 4625 5975
+F 0 "#PWR013" H 4625 5725 50  0001 C CNN
+F 1 "GND" H 4625 5825 50  0000 C CNN
+F 2 "" H 4625 5975 50  0000 C CNN
+F 3 "" H 4625 5975 50  0000 C CNN
+	1    4625 5975
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1204,8 +1204,6 @@ Connection ~ 7625 4475
 Wire Wire Line
 	4150 6825 4150 6875
 Wire Wire Line
-	4650 5975 4650 5900
-Wire Wire Line
 	4650 5700 4150 5700
 Connection ~ 4150 5700
 Wire Wire Line
@@ -1279,17 +1277,15 @@ $EndComp
 Wire Wire Line
 	5450 5100 7000 5100
 Connection ~ 6725 5100
-Wire Wire Line
-	6725 5400 7000 5400
 $Comp
 L GND #PWR015
 U 1 1 5952520A
-P 6725 5400
-F 0 "#PWR015" H 6725 5150 50  0001 C CNN
-F 1 "GND" H 6725 5250 50  0000 C CNN
-F 2 "" H 6725 5400 50  0001 C CNN
-F 3 "" H 6725 5400 50  0001 C CNN
-	1    6725 5400
+P 6725 5425
+F 0 "#PWR015" H 6725 5175 50  0001 C CNN
+F 1 "GND" H 6725 5275 50  0000 C CNN
+F 2 "" H 6725 5425 50  0001 C CNN
+F 3 "" H 6725 5425 50  0001 C CNN
+	1    6725 5425
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1310,7 +1306,7 @@ Wire Wire Line
 	3100 6025 4150 6025
 Connection ~ 4150 6025
 Wire Wire Line
-	3250 6025 3250 6875
+	3250 6025 3250 6900
 Connection ~ 3250 6025
 Wire Wire Line
 	3950 5500 4650 5500
@@ -1318,4 +1314,16 @@ Wire Wire Line
 	3050 5500 2975 5500
 Wire Wire Line
 	2975 5500 2975 5375
+Wire Wire Line
+	4650 5900 4625 5900
+Wire Wire Line
+	4625 5900 4625 5975
+Wire Wire Line
+	6725 5425 6725 5400
+Wire Wire Line
+	6725 5425 7000 5425
+Wire Wire Line
+	7000 5425 7000 5400
+Text Notes 4750 4850 0    39   ~ 0
+Cap charging control
 $EndSCHEMATC
