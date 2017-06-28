@@ -3,7 +3,7 @@
   (general
     (links 109)
     (no_connects 105)
-    (area 55.804999 77.394999 175.335001 152.475001)
+    (area 52.531429 76.251 193.291156 161.450001)
     (thickness 1.6)
     (drawings 12)
     (tracks 0)
@@ -38,7 +38,7 @@
 
   (setup
     (last_trace_width 0.45)
-    (trace_clearance 0.28)
+    (trace_clearance 0.2)
     (zone_clearance 0.6)
     (zone_45_only yes)
     (trace_min 0.2)
@@ -131,7 +131,7 @@
   (net 38 "Net-(U1-Pad3)")
 
   (net_class Default "This is the default net class."
-    (clearance 0.28)
+    (clearance 0.2)
     (trace_width 0.45)
     (via_dia 1)
     (via_drill 0.4)
