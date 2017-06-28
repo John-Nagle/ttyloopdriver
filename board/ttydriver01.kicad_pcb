@@ -2228,7 +2228,7 @@
   (gr_text "CAUTION  120VDC" (at 101.346 148.082) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text "The Aetheric Message Machine Co., Ltd.\nUSB to 60mA current loop Teletype driver  V2.3" (at 139 86) (layer F.SilkS)
+  (gr_text "The Aetheric Message Machine Co., Ltd.\nUSB to 60mA current loop Teletype driver  V3.0" (at 139 86) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25)))
   )
   (gr_line (start 175.26 90.17) (end 175.26 77.47) (angle 90) (layer Edge.Cuts) (width 0.15))
