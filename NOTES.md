@@ -28,3 +28,15 @@ Beginning new board design with Linear Technology cap charger IC.
 
 - Motor control jack shorts during plug pull. Change connector.
 - Footprint for inverter may be wrong.
+
+2017-06-28
+
+Some devices have 0.3mm pin width with 0.5mm pin spacing. So
+inter-pin clearance is only 0.2mm. This is incompatible with
+the old design rules.
+
+It's a problem with GND and Vcc pins, because those traces
+belong to class POWER, which is wide. Need to create a
+dummy "device" which just narrows a trace to 0.3mm, and
+a narrow trace type with 0.3mm width, 0.2mm clearance.
+This is only needed in two places.

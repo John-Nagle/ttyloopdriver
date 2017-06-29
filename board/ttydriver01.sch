@@ -805,12 +805,12 @@ $EndComp
 $Comp
 L GND #PWR013
 U 1 1 5951C44C
-P 4625 5975
-F 0 "#PWR013" H 4625 5725 50  0001 C CNN
-F 1 "GND" H 4625 5825 50  0000 C CNN
-F 2 "" H 4625 5975 50  0000 C CNN
-F 3 "" H 4625 5975 50  0000 C CNN
-	1    4625 5975
+P 4625 6100
+F 0 "#PWR013" H 4625 5850 50  0001 C CNN
+F 1 "GND" H 4625 5950 50  0000 C CNN
+F 2 "" H 4625 6100 50  0000 C CNN
+F 3 "" H 4625 6100 50  0000 C CNN
+	1    4625 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1166,7 +1166,6 @@ Wire Wire Line
 	2600 4375 2700 4375
 Wire Wire Line
 	2700 4375 2700 4175
-Connection ~ 4150 4425
 Wire Wire Line
 	7950 4075 7950 3975
 Connection ~ 7950 3975
@@ -1180,19 +1179,11 @@ Wire Wire Line
 Connection ~ 7625 4475
 Wire Wire Line
 	4150 6825 4150 6875
-Wire Wire Line
-	4150 5700 4650 5700
 Connection ~ 4150 5700
-Wire Wire Line
-	4150 5100 4650 5100
 Connection ~ 4150 5100
 Wire Wire Line
 	4600 5300 4650 5300
-Wire Wire Line
-	3450 5300 4300 5300
 Connection ~ 4150 5300
-Wire Wire Line
-	5450 5700 5950 5700
 Wire Wire Line
 	6250 4475 6250 5500
 Connection ~ 6250 4625
@@ -1205,8 +1196,6 @@ Connection ~ 6250 3975
 Connection ~ 6250 3925
 Wire Wire Line
 	6250 5950 6250 5900
-Wire Wire Line
-	6250 5900 5450 5900
 $Comp
 L GND #PWR014
 U 1 1 59522DD7
@@ -1283,8 +1272,6 @@ Wire Wire Line
 Wire Wire Line
 	4650 5900 4625 5900
 Wire Wire Line
-	4625 5900 4625 5975
-Wire Wire Line
 	6725 5425 6725 5400
 Wire Wire Line
 	6725 5425 7000 5425
@@ -1299,7 +1286,7 @@ L 74HC1GU04 U9
 U 1 1 595306FC
 P 3500 5500
 F 0 "U9" H 3425 5500 50  0000 C CNN
-F 1 "74HC1GU04" H 3525 5300 50  0000 C CNN
+F 1 "74HC1GU04" H 3500 5775 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:SOT-353_SC-70-5" H 3500 5500 39  0001 C CNN
 F 3 "" H 3500 5500 39  0001 C CNN
 F 4 "Digikey" H 3500 5500 60  0001 C CNN "Vendor"
@@ -1314,16 +1301,104 @@ Wire Wire Line
 $Comp
 L GND #PWR016
 U 1 1 595312B8
-P 3450 5750
-F 0 "#PWR016" H 3450 5500 50  0001 C CNN
-F 1 "GND" H 3450 5600 50  0000 C CNN
-F 2 "" H 3450 5750 50  0001 C CNN
-F 3 "" H 3450 5750 50  0001 C CNN
-	1    3450 5750
+P 3450 5825
+F 0 "#PWR016" H 3450 5575 50  0001 C CNN
+F 1 "GND" H 3450 5675 50  0000 C CNN
+F 2 "" H 3450 5825 50  0001 C CNN
+F 3 "" H 3450 5825 50  0001 C CNN
+	1    3450 5825
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3450 5750 3450 5600
-Wire Wire Line
 	4150 1625 4150 6525
+$Comp
+L narrower_0.3mm M2
+U 1 1 595415A5
+P 5550 5700
+F 0 "M2" H 5550 5650 39  0000 C CNN
+F 1 "narrower_0.3mm" H 5600 5600 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 5550 5700 39  0001 C CNN
+F 3 "" H 5550 5700 39  0001 C CNN
+	1    5550 5700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 5700 5450 5700
+Wire Wire Line
+	5625 5700 5950 5700
+Wire Wire Line
+	4625 6100 4625 6050
+$Comp
+L narrower_0.3mm M3
+U 1 1 595470CF
+P 5550 5900
+F 0 "M3" H 5550 5850 39  0000 C CNN
+F 1 "narrower_0.3mm" H 5600 5800 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 5550 5900 39  0001 C CNN
+F 3 "" H 5550 5900 39  0001 C CNN
+	1    5550 5900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 5900 5475 5900
+Wire Wire Line
+	6250 5900 5625 5900
+$Comp
+L narrower_0.3mm M5
+U 1 1 595479E3
+P 4525 5700
+F 0 "M5" H 4525 5650 39  0000 C CNN
+F 1 "narrower_0.3mm" H 4575 5600 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 4525 5700 39  0001 C CNN
+F 3 "" H 4525 5700 39  0001 C CNN
+	1    4525 5700
+	1    0    0    1   
+$EndComp
+$Comp
+L narrower_0.3mm M4
+U 1 1 59547C6F
+P 4550 5100
+F 0 "M4" H 4550 5050 39  0000 C CNN
+F 1 "narrower_0.3mm" H 4600 5000 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 4550 5100 39  0001 C CNN
+F 3 "" H 4550 5100 39  0001 C CNN
+	1    4550 5100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4625 5100 4650 5100
+Wire Wire Line
+	4475 5100 4150 5100
+Wire Wire Line
+	4600 5700 4650 5700
+Wire Wire Line
+	4450 5700 4150 5700
+$Comp
+L narrower_0.3mm M1
+U 1 1 59544DCC
+P 4625 5975
+F 0 "M1" H 4625 5925 39  0000 C CNN
+F 1 "narrower_0.3mm" H 4675 5875 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 4625 5975 39  0001 C CNN
+F 3 "" H 4625 5975 39  0001 C CNN
+	1    4625 5975
+	0    1    -1   0   
+$EndComp
+$Comp
+L narrower_0.3mm M7
+U 1 1 59547738
+P 3450 5700
+F 0 "M7" H 3450 5650 39  0000 C CNN
+F 1 "narrower_0.3mm" H 3500 5600 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 3450 5700 39  0001 C CNN
+F 3 "" H 3450 5700 39  0001 C CNN
+	1    3450 5700
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3450 5300 4300 5300
+Wire Wire Line
+	3450 5625 3450 5600
+Wire Wire Line
+	3450 5825 3450 5775
 $EndSCHEMATC

@@ -50,4 +50,9 @@ D SPDT toggle switch
 K switch
 $ENDCMP
 #
+$CMP narrower_0.3mm
+D Trace narrower for 0.3mm traces
+K narrower, utility
+$ENDCMP
+#
 #End Doc Library

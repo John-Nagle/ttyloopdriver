@@ -561,4 +561,18 @@ X SW_PLDN 14 500 -800 200 L 50 39 1 1 I
 ENDDRAW
 ENDDEF
 #
+# narrower_0.3mm
+#
+DEF narrower_0.3mm M 0 0 N N 1 F N
+F0 "M" 0 -75 39 H V C CNN
+F1 "narrower_0.3mm" 25 75 39 H V C CNN
+F2 "" 0 0 39 H I C CNN
+F3 "" 0 0 39 H I C CNN
+DRAW
+P 9 0 1 0 -50 25 -5 25 5 15 50 15 50 -15 5 -15 -5 -25 -50 -25 -50 25 N
+X ~ 1 -75 0 79 R 39 50 1 1 P
+X ~ 2 75 0 79 L 39 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 #End Library
