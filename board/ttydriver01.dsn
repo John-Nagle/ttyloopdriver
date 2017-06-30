@@ -71,9 +71,6 @@
       (place C1 112268 -137541 front 0 (PN 1uf))
       (place C2 112268 -131064 front 0 (PN 1uf))
     )
-    (component "TO_SOT_Packages_SMD:TO-263-3_TabPin2"
-      (place Q1 149606 -111887 front 0 (PN IRL530NS))
-    )
     (component Resistors_SMD:R_1206
       (place R2 151511 -121666 front 180 (PN 100K))
       (place R17 110236 -85852 front 180 (PN 510))
@@ -149,6 +146,9 @@
     )
     (component "Dialite:564-0100"
       (place D13 167894 -89662 front 180 (PN LED_3))
+    )
+    (component "Footprint_Repair:TO-263-3_TabPin2"
+      (place Q1 149606 -111887 front 0 (PN IRL530NS))
     )
   )
   (library
@@ -460,43 +460,6 @@
       (pin Round[A]Pad_1600_um 1 0 0)
       (pin Round[A]Pad_1600_um 2 5000 0)
     )
-    (image "TO_SOT_Packages_SMD:TO-263-3_TabPin2"
-      (outline (path signal 100  6500 5000  7500 5000))
-      (outline (path signal 100  7500 5000  7500 -5000))
-      (outline (path signal 100  7500 -5000  6500 -5000))
-      (outline (path signal 100  6500 5000  6500 -5000))
-      (outline (path signal 100  6500 -5000  -2750 -5000))
-      (outline (path signal 100  -2750 -5000  -2750 4000))
-      (outline (path signal 100  -2750 4000  -1750 5000))
-      (outline (path signal 100  -1750 5000  6500 5000))
-      (outline (path signal 100  -2750 3040  -7450 3040))
-      (outline (path signal 100  -7450 3040  -7450 2040))
-      (outline (path signal 100  -7450 2040  -2750 2040))
-      (outline (path signal 100  -2750 500  -7450 500))
-      (outline (path signal 100  -7450 500  -7450 -500))
-      (outline (path signal 100  -7450 -500  -2750 -500))
-      (outline (path signal 100  -2750 -2040  -7450 -2040))
-      (outline (path signal 100  -7450 -2040  -7450 -3040))
-      (outline (path signal 100  -7450 -3040  -2750 -3040))
-      (outline (path signal 120  -1450 5200  -2950 5200))
-      (outline (path signal 120  -2950 5200  -2950 3390))
-      (outline (path signal 120  -2950 3390  -8075 3390))
-      (outline (path signal 120  -1450 -5200  -2950 -5200))
-      (outline (path signal 120  -2950 -5200  -2950 -3390))
-      (outline (path signal 120  -2950 -3390  -4050 -3390))
-      (outline (path signal 50  -8320 5650  -8320 -5650))
-      (outline (path signal 50  -8320 -5650  8320 -5650))
-      (outline (path signal 50  8320 -5650  8320 5650))
-      (outline (path signal 50  8320 5650  -8320 5650))
-      (pin Rect[T]Pad_4600x1100_um 1 -5775 2540)
-      (pin Rect[T]Pad_4600x1100_um 2 -5775 0)
-      (pin Rect[T]Pad_4600x1100_um 3 -5775 -2540)
-      (pin Rect[T]Pad_9400x10800_um 2@1 3375 0)
-      (pin Rect[T]Pad_4550x5250_um 2@2 5800 -2775)
-      (pin Rect[T]Pad_4550x5250_um 2@3 950 2775)
-      (pin Rect[T]Pad_4550x5250_um 2@4 5800 2775)
-      (pin Rect[T]Pad_4550x5250_um 2@5 950 -2775)
-    )
     (image Resistors_SMD:R_1206
       (outline (path signal 100  -1600 -800  -1600 800))
       (outline (path signal 100  1600 -800  -1600 -800))
@@ -766,6 +729,39 @@
       (pin Round[A]Pad_1524_um 3 0 -1270)
       (pin Round[A]Pad_1524_um 1 -2540 -1270)
     )
+    (image "Footprint_Repair:TO-263-3_TabPin2"
+      (outline (path signal 100  6500 5000  7500 5000))
+      (outline (path signal 100  7500 5000  7500 -5000))
+      (outline (path signal 100  7500 -5000  6500 -5000))
+      (outline (path signal 100  6500 5000  6500 -5000))
+      (outline (path signal 100  6500 -5000  -2750 -5000))
+      (outline (path signal 100  -2750 -5000  -2750 4000))
+      (outline (path signal 100  -2750 4000  -1750 5000))
+      (outline (path signal 100  -1750 5000  6500 5000))
+      (outline (path signal 100  -2750 3040  -7450 3040))
+      (outline (path signal 100  -7450 3040  -7450 2040))
+      (outline (path signal 100  -7450 2040  -2750 2040))
+      (outline (path signal 100  -2750 500  -7450 500))
+      (outline (path signal 100  -7450 500  -7450 -500))
+      (outline (path signal 100  -7450 -500  -2750 -500))
+      (outline (path signal 100  -2750 -2040  -7450 -2040))
+      (outline (path signal 100  -7450 -2040  -7450 -3040))
+      (outline (path signal 100  -7450 -3040  -2750 -3040))
+      (outline (path signal 120  -1450 5200  -2950 5200))
+      (outline (path signal 120  -2950 5200  -2950 3390))
+      (outline (path signal 120  -2950 3390  -8075 3390))
+      (outline (path signal 120  -1450 -5200  -2950 -5200))
+      (outline (path signal 120  -2950 -5200  -2950 -3390))
+      (outline (path signal 120  -2950 -3390  -4050 -3390))
+      (outline (path signal 50  -8320 5650  -8320 -5650))
+      (outline (path signal 50  -8320 -5650  8320 -5650))
+      (outline (path signal 50  8320 -5650  8320 5650))
+      (outline (path signal 50  8320 5650  -8320 5650))
+      (pin Rect[T]Pad_4600x1100_um 1 -5775 2540)
+      (pin Rect[T]Pad_8600x1100_um 2 -3775 0)
+      (pin Rect[T]Pad_4600x1100_um 3 -5775 -2540)
+      (pin Rect[T]Pad_9400x10800_um 2@1 3375 0)
+    )
     (padstack Round[A]Pad_1524_um
       (shape (circle F.Cu 1524))
       (shape (circle B.Cu 1524))
@@ -817,10 +813,6 @@
       (shape (rect F.Cu -1715 -895 1715 895))
       (attach off)
     )
-    (padstack Rect[T]Pad_4550x5250_um
-      (shape (rect F.Cu -2275 -2625 2275 2625))
-      (attach off)
-    )
     (padstack Rect[T]Pad_4600x1100_um
       (shape (rect F.Cu -2300 -550 2300 550))
       (attach off)
@@ -831,6 +823,10 @@
     )
     (padstack Rect[T]Pad_650x400_um
       (shape (rect F.Cu -325 -200 325 200))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_8600x1100_um
+      (shape (rect F.Cu -4300 -550 4300 550))
       (attach off)
     )
     (padstack Rect[T]Pad_900x1200_um
@@ -979,7 +975,7 @@
       (pins D2-2 R17-1 U3-"3-6")
     )
     (net "Net-(Q1-Pad3)"
-      (pins T1-3 T1-4 T1-5 T1-6 Q1-3 R4-1 R6-1)
+      (pins T1-3 T1-4 T1-5 T1-6 R4-1 R6-1 Q1-3)
     )
     (net "Net-(R2-Pad1)"
       (pins U1-2 R2-1)
@@ -997,7 +993,7 @@
       (pins M2-1 Q1-1)
     )
     (net "Net-(M3-Pad1)"
-      (pins M3-1 Q1-2 Q1-2@1 Q1-2@2 Q1-2@3 Q1-2@4 Q1-2@5 R3-1)
+      (pins M3-1 R3-1 Q1-2 Q1-2@1)
     )
     (net "Net-(M4-Pad2)"
       (pins M4-2 U1-1)
@@ -1018,13 +1014,10 @@
       (pins U9-3 M7-2)
     )
     (class kicad_default "" /ENABLE /RxD "Net-(C10-Pad1)" "Net-(C7-Pad2)"
-      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J1-PadTB)"
-      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(M3-Pad1)" "Net-(M6-Pad2)"
-      "Net-(Q1-Pad3)" "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)"
-      "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(SW1-Pad3)" "Net-(SW2-Pad1)" "Net-(U2-Pad4)"
-      "Net-(U3-Pad1-2)" "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)"
-      "Net-(U3-Pad2-3)" "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)"
-      "Net-(U6-Pad3)" "Net-(U7-Pad3)" "Net-(U9-Pad1)"
+      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J2-PadS)"
+      "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(M3-Pad1)" "Net-(Q1-Pad3)" "Net-(R13-Pad2)"
+      "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)"
+      "Net-(U3-Pad3-5)" "Net-(U5-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
