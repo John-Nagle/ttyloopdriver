@@ -8,4 +8,5 @@
   (lib (name CUI)(type KiCad)(uri "$(KIPRJMOD)/CUI.pretty")(options "")(descr ""))
   (lib (name Fiducials_SEEED)(type KiCad)(uri "$(KIPRJMOD)/Fiducials_SEEED.pretty")(options "")(descr ""))
   (lib (name Utility)(type KiCad)(uri "$(KIPRJMOD)/Utility.pretty")(options "")(descr ""))
+  (lib (name SMD_Misc)(type KiCad)(uri "$(KIPRJMOD)/SMD_Misc.pretty")(options "")(descr ""))
 )
