@@ -898,6 +898,192 @@ F 3 "" H 5800 5500 50  0001 C CNN
 	1    5800 5500
 	0    1    1    0   
 $EndComp
+$Comp
+L GND #PWR014
+U 1 1 59522DD7
+P 6250 6450
+F 0 "#PWR014" H 6250 6200 50  0001 C CNN
+F 1 "GND" H 6250 6300 50  0000 C CNN
+F 2 "" H 6250 6450 50  0000 C CNN
+F 3 "" H 6250 6450 50  0000 C CNN
+	1    6250 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 59524A1D
+P 6725 5250
+F 0 "R7" V 6805 5250 50  0000 C CNN
+F 1 "2.49K" V 6725 5250 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 6655 5250 50  0001 C CNN
+F 3 "" H 6725 5250 50  0001 C CNN
+	1    6725 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 59524AB0
+P 7000 5250
+F 0 "C5" H 7025 5350 50  0000 L CNN
+F 1 "100pf" H 7025 5150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7038 5100 50  0001 C CNN
+F 3 "" H 7000 5250 50  0001 C CNN
+	1    7000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 5952520A
+P 6725 5425
+F 0 "#PWR015" H 6725 5175 50  0001 C CNN
+F 1 "GND" H 6725 5275 50  0000 C CNN
+F 2 "" H 6725 5425 50  0001 C CNN
+F 3 "" H 6725 5425 50  0001 C CNN
+	1    6725 5425
+	1    0    0    -1  
+$EndComp
+Text Notes 4750 4850 0    39   ~ 0
+Cap charging control
+$Comp
+L 74HC1GU04 U9
+U 1 1 595306FC
+P 3500 5500
+F 0 "U9" H 3425 5500 50  0000 C CNN
+F 1 "74HC1GU04" H 3500 5775 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-353_SC-70-5" H 3500 5500 39  0001 C CNN
+F 3 "" H 3500 5500 39  0001 C CNN
+F 4 "Digikey" H 3500 5500 60  0001 C CNN "Vendor"
+F 5 "1727-6043-1-ND" H 3500 5500 60  0001 C CNN "Vendorpart"
+F 6 "Nexperia" H 3500 5500 60  0001 C CNN "Mfgr"
+F 7 "74HC1GU04GW,125" H 3500 5500 60  0001 C CNN "Part"
+	1    3500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR016
+U 1 1 595312B8
+P 3450 5825
+F 0 "#PWR016" H 3450 5575 50  0001 C CNN
+F 1 "GND" H 3450 5675 50  0000 C CNN
+F 2 "" H 3450 5825 50  0001 C CNN
+F 3 "" H 3450 5825 50  0001 C CNN
+	1    3450 5825
+	1    0    0    -1  
+$EndComp
+$Comp
+L narrower_0.3mm M3
+U 1 1 595470CF
+P 5550 5900
+F 0 "M3" H 5550 5850 39  0000 C CNN
+F 1 "narrower_0.3mm" H 5600 5800 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 5550 5900 39  0001 C CNN
+F 3 "" H 5550 5900 39  0001 C CNN
+	1    5550 5900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L narrower_0.3mm M5
+U 1 1 595479E3
+P 4525 5700
+F 0 "M5" H 4525 5650 39  0000 C CNN
+F 1 "narrower_0.3mm" H 4575 5600 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 4525 5700 39  0001 C CNN
+F 3 "" H 4525 5700 39  0001 C CNN
+	1    4525 5700
+	1    0    0    1   
+$EndComp
+$Comp
+L narrower_0.3mm M4
+U 1 1 59547C6F
+P 4550 5100
+F 0 "M4" H 4550 5050 39  0000 C CNN
+F 1 "narrower_0.3mm" H 4600 5000 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 4550 5100 39  0001 C CNN
+F 3 "" H 4550 5100 39  0001 C CNN
+	1    4550 5100
+	1    0    0    1   
+$EndComp
+$Comp
+L narrower_0.3mm M1
+U 1 1 59544DCC
+P 4625 5975
+F 0 "M1" H 4625 5925 39  0000 C CNN
+F 1 "narrower_0.3mm" H 4675 5875 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 4625 5975 39  0001 C CNN
+F 3 "" H 4625 5975 39  0001 C CNN
+	1    4625 5975
+	0    1    -1   0   
+$EndComp
+$Comp
+L narrower_0.3mm M7
+U 1 1 59547738
+P 3450 5700
+F 0 "M7" H 3450 5650 39  0000 C CNN
+F 1 "narrower_0.3mm" H 3500 5600 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 3450 5700 39  0001 C CNN
+F 3 "" H 3450 5700 39  0001 C CNN
+	1    3450 5700
+	0    1    -1   0   
+$EndComp
+$Comp
+L C C3
+U 1 1 5959E090
+P 8400 4225
+F 0 "C3" H 8425 4325 50  0000 L CNN
+F 1 "1uf" H 8425 4125 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 8438 4075 50  0001 C CNN
+F 3 "" H 8400 4225 50  0001 C CNN
+F 4 "RDER72E105MUB1H03B" H 8400 4225 60  0001 C CNN "Part"
+F 5 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
+F 6 "Murata" H 8400 4225 60  0001 C CNN "Mfgr"
+F 7 "490-8911-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
+	1    8400 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P W1
+U 1 1 5959F953
+P 4150 6950
+F 0 "W1" V 4225 7025 50  0000 C CNN
+F 1 "TEST_1P" H 4150 7150 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4350 6950 50  0001 C CNN
+F 3 "" H 4350 6950 50  0001 C CNN
+	1    4150 6950
+	0    -1   1    0   
+$EndComp
+$Comp
+L TEST_1P W3
+U 1 1 595A1EBA
+P 6250 4875
+F 0 "W3" V 6325 4950 50  0000 C CNN
+F 1 "TEST_1P" H 6250 5075 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 6450 4875 50  0001 C CNN
+F 3 "" H 6450 4875 50  0001 C CNN
+	1    6250 4875
+	0    -1   1    0   
+$EndComp
+$Comp
+L TEST_1P W4
+U 1 1 595A2616
+P 6250 6000
+F 0 "W4" V 6325 6075 50  0000 C CNN
+F 1 "TEST_1P" H 6250 6200 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 6450 6000 50  0001 C CNN
+F 3 "" H 6450 6000 50  0001 C CNN
+	1    6250 6000
+	0    -1   1    0   
+$EndComp
+$Comp
+L narrower_0.3mm M2
+U 1 1 595B4AE4
+P 3600 5300
+F 0 "M2" H 3600 5250 39  0000 C CNN
+F 1 "narrower_0.3mm" H 3650 5200 39  0001 C CNN
+F 2 "Utility:trace_narrower_0.3mm" H 3600 5300 39  0001 C CNN
+F 3 "" H 3600 5300 39  0001 C CNN
+	1    3600 5300
+	-1   0    0    -1  
+$EndComp
 Connection ~ 9325 4475
 Wire Wire Line
 	8175 3975 8175 4075
@@ -1194,17 +1380,6 @@ Connection ~ 6250 3975
 Connection ~ 6250 3925
 Wire Wire Line
 	6250 5900 6250 6050
-$Comp
-L GND #PWR014
-U 1 1 59522DD7
-P 6250 6450
-F 0 "#PWR014" H 6250 6200 50  0001 C CNN
-F 1 "GND" H 6250 6300 50  0000 C CNN
-F 2 "" H 6250 6450 50  0000 C CNN
-F 3 "" H 6250 6450 50  0000 C CNN
-	1    6250 6450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6250 6450 6250 6350
 Wire Wire Line
@@ -1216,42 +1391,9 @@ Wire Wire Line
 Connection ~ 6250 5300
 Wire Wire Line
 	6250 5500 5950 5500
-$Comp
-L R R7
-U 1 1 59524A1D
-P 6725 5250
-F 0 "R7" V 6805 5250 50  0000 C CNN
-F 1 "2.49K" V 6725 5250 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 6655 5250 50  0001 C CNN
-F 3 "" H 6725 5250 50  0001 C CNN
-	1    6725 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C5
-U 1 1 59524AB0
-P 7000 5250
-F 0 "C5" H 7025 5350 50  0000 L CNN
-F 1 "100pf" H 7025 5150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 7038 5100 50  0001 C CNN
-F 3 "" H 7000 5250 50  0001 C CNN
-	1    7000 5250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5450 5100 7000 5100
 Connection ~ 6725 5100
-$Comp
-L GND #PWR015
-U 1 1 5952520A
-P 6725 5425
-F 0 "#PWR015" H 6725 5175 50  0001 C CNN
-F 1 "GND" H 6725 5275 50  0000 C CNN
-F 2 "" H 6725 5425 50  0001 C CNN
-F 3 "" H 6725 5425 50  0001 C CNN
-	1    6725 5425
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2600 6025 2800 6025
 Connection ~ 2600 6025
@@ -1275,94 +1417,20 @@ Wire Wire Line
 	6725 5425 7000 5425
 Wire Wire Line
 	7000 5425 7000 5400
-Text Notes 4750 4850 0    39   ~ 0
-Cap charging control
 Wire Wire Line
 	8975 3025 8975 3975
-$Comp
-L 74HC1GU04 U9
-U 1 1 595306FC
-P 3500 5500
-F 0 "U9" H 3425 5500 50  0000 C CNN
-F 1 "74HC1GU04" H 3500 5775 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-353_SC-70-5" H 3500 5500 39  0001 C CNN
-F 3 "" H 3500 5500 39  0001 C CNN
-F 4 "Digikey" H 3500 5500 60  0001 C CNN "Vendor"
-F 5 "1727-6043-1-ND" H 3500 5500 60  0001 C CNN "Vendorpart"
-F 6 "Nexperia" H 3500 5500 60  0001 C CNN "Mfgr"
-F 7 "74HC1GU04GW,125" H 3500 5500 60  0001 C CNN "Part"
-	1    3500 5500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3450 5400 3450 5300
-$Comp
-L GND #PWR016
-U 1 1 595312B8
-P 3450 5825
-F 0 "#PWR016" H 3450 5575 50  0001 C CNN
-F 1 "GND" H 3450 5675 50  0000 C CNN
-F 2 "" H 3450 5825 50  0001 C CNN
-F 3 "" H 3450 5825 50  0001 C CNN
-	1    3450 5825
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4150 1625 4150 6525
-$Comp
-L narrower_0.3mm M2
-U 1 1 595415A5
-P 5550 5700
-F 0 "M2" H 5550 5650 39  0000 C CNN
-F 1 "narrower_0.3mm" H 5600 5600 39  0001 C CNN
-F 2 "Utility:trace_narrower_0.3mm" H 5550 5700 39  0001 C CNN
-F 3 "" H 5550 5700 39  0001 C CNN
-	1    5550 5700
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
-	5475 5700 5450 5700
-Wire Wire Line
-	5625 5700 5950 5700
+	5450 5700 5950 5700
 Wire Wire Line
 	4625 6100 4625 6050
-$Comp
-L narrower_0.3mm M3
-U 1 1 595470CF
-P 5550 5900
-F 0 "M3" H 5550 5850 39  0000 C CNN
-F 1 "narrower_0.3mm" H 5600 5800 39  0001 C CNN
-F 2 "Utility:trace_narrower_0.3mm" H 5550 5900 39  0001 C CNN
-F 3 "" H 5550 5900 39  0001 C CNN
-	1    5550 5900
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	5450 5900 5475 5900
 Wire Wire Line
 	6250 5900 5625 5900
-$Comp
-L narrower_0.3mm M5
-U 1 1 595479E3
-P 4525 5700
-F 0 "M5" H 4525 5650 39  0000 C CNN
-F 1 "narrower_0.3mm" H 4575 5600 39  0001 C CNN
-F 2 "Utility:trace_narrower_0.3mm" H 4525 5700 39  0001 C CNN
-F 3 "" H 4525 5700 39  0001 C CNN
-	1    4525 5700
-	1    0    0    1   
-$EndComp
-$Comp
-L narrower_0.3mm M4
-U 1 1 59547C6F
-P 4550 5100
-F 0 "M4" H 4550 5050 39  0000 C CNN
-F 1 "narrower_0.3mm" H 4600 5000 39  0001 C CNN
-F 2 "Utility:trace_narrower_0.3mm" H 4550 5100 39  0001 C CNN
-F 3 "" H 4550 5100 39  0001 C CNN
-	1    4550 5100
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	4625 5100 4650 5100
 Wire Wire Line
@@ -1371,93 +1439,27 @@ Wire Wire Line
 	4600 5700 4650 5700
 Wire Wire Line
 	4450 5700 4150 5700
-$Comp
-L narrower_0.3mm M1
-U 1 1 59544DCC
-P 4625 5975
-F 0 "M1" H 4625 5925 39  0000 C CNN
-F 1 "narrower_0.3mm" H 4675 5875 39  0001 C CNN
-F 2 "Utility:trace_narrower_0.3mm" H 4625 5975 39  0001 C CNN
-F 3 "" H 4625 5975 39  0001 C CNN
-	1    4625 5975
-	0    1    -1   0   
-$EndComp
-$Comp
-L narrower_0.3mm M7
-U 1 1 59547738
-P 3450 5700
-F 0 "M7" H 3450 5650 39  0000 C CNN
-F 1 "narrower_0.3mm" H 3500 5600 39  0001 C CNN
-F 2 "Utility:trace_narrower_0.3mm" H 3450 5700 39  0001 C CNN
-F 3 "" H 3450 5700 39  0001 C CNN
-	1    3450 5700
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	3450 5300 4300 5300
 Wire Wire Line
 	3450 5625 3450 5600
 Wire Wire Line
 	3450 5825 3450 5775
-$Comp
-L C C3
-U 1 1 5959E090
-P 8400 4225
-F 0 "C3" H 8425 4325 50  0000 L CNN
-F 1 "1uf" H 8425 4125 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 8438 4075 50  0001 C CNN
-F 3 "" H 8400 4225 50  0001 C CNN
-F 4 "RDER72E105MUB1H03B" H 8400 4225 60  0001 C CNN "Part"
-F 5 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
-F 6 "Murata" H 8400 4225 60  0001 C CNN "Mfgr"
-F 7 "490-8911-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
-	1    8400 4225
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8400 4075 8400 3975
 Connection ~ 8400 3975
 Wire Wire Line
 	8400 4375 8400 4475
 Connection ~ 8400 4475
-$Comp
-L TEST_1P W1
-U 1 1 5959F953
-P 4150 6950
-F 0 "W1" V 4225 7025 50  0000 C CNN
-F 1 "TEST_1P" H 4150 7150 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4350 6950 50  0001 C CNN
-F 3 "" H 4350 6950 50  0001 C CNN
-	1    4150 6950
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	4150 6825 4150 7150
 Connection ~ 4150 6950
-$Comp
-L TEST_1P W3
-U 1 1 595A1EBA
-P 6250 4875
-F 0 "W3" V 6325 4950 50  0000 C CNN
-F 1 "TEST_1P" H 6250 5075 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 6450 4875 50  0001 C CNN
-F 3 "" H 6450 4875 50  0001 C CNN
-	1    6250 4875
-	0    -1   1    0   
-$EndComp
-$Comp
-L TEST_1P W4
-U 1 1 595A2616
-P 6250 6000
-F 0 "W4" V 6325 6075 50  0000 C CNN
-F 1 "TEST_1P" H 6250 6200 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 6450 6000 50  0001 C CNN
-F 3 "" H 6450 6000 50  0001 C CNN
-	1    6250 6000
-	0    -1   1    0   
-$EndComp
 Connection ~ 6250 6000
 Wire Wire Line
 	6250 4475 6250 5500
 Connection ~ 6250 4875
+Wire Wire Line
+	3450 5300 3525 5300
+Wire Wire Line
+	3675 5300 4300 5300
+Text Label 4150 3725 0    39   ~ 0
+Vcc
 $EndSCHEMATC
