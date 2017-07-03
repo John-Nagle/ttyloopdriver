@@ -1017,13 +1017,10 @@
       (pins U1-10 R7-1 C5-1)
     )
     (class kicad_default "" /ENABLE /RxD "Net-(C10-Pad1)" "Net-(C7-Pad2)"
-      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J1-PadTB)"
-      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(M3-Pad1)" "Net-(Q1-Pad3)"
-      "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)"
-      "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(SW1-Pad3)" "Net-(SW2-Pad1)" "Net-(U2-Pad4)"
-      "Net-(U3-Pad1-2)" "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)"
-      "Net-(U3-Pad2-3)" "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)"
-      "Net-(U6-Pad3)" "Net-(U7-Pad3)" "Net-(U9-Pad1)"
+      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J2-PadS)"
+      "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(M3-Pad1)" "Net-(Q1-Pad3)" "Net-(R13-Pad2)"
+      "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)"
+      "Net-(U3-Pad3-5)" "Net-(U5-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
@@ -1032,8 +1029,8 @@
         (clearance 245.1)
       )
     )
-    (class HV /HVNEG /HVPOS "Net-(D1-Pad2)" "Net-(D10-Pad2)" "Net-(D6-Pad2)"
-      "Net-(JP1-Pad1)" "Net-(P1-Pad1)"
+    (class HV /HVNEG /HVPOS "Net-(C1-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
+      "Net-(D6-Pad2)" "Net-(JP1-Pad1)" "Net-(P1-Pad1)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
@@ -1042,7 +1039,7 @@
         (clearance 500.1)
       )
     )
-    (class PWR GND "Net-(C1-Pad1)"
+    (class PWR GND "Net-(C4-Pad1)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
@@ -1051,9 +1048,9 @@
         (clearance 280.1)
       )
     )
-    (class Thin /TxD "Net-(C3-Pad1)" "Net-(C4-Pad1)" "Net-(C5-Pad1)" "Net-(M1-Pad2)"
-      "Net-(M2-Pad1)" "Net-(M2-Pad2)" "Net-(M3-Pad2)" "Net-(M4-Pad2)" "Net-(M5-Pad2)"
-      "Net-(M7-Pad2)" "Net-(R2-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(U1-Pad3)"
+    (class Thin /TxD "Net-(C5-Pad1)" "Net-(M1-Pad2)" "Net-(M2-Pad1)" "Net-(M2-Pad2)"
+      "Net-(M3-Pad2)" "Net-(M4-Pad2)" "Net-(M5-Pad2)" "Net-(M7-Pad2)" "Net-(R2-Pad1)"
+      "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(U1-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
