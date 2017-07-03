@@ -56,7 +56,7 @@
       (place M7 159766 -112776 front 180 (PN narrower_0.3mm))
     )
     (component Capacitors_ThroughHole:CP_Radial_D8.0mm_P3.50mm
-      (place C4 144272 -96774 front 180 (PN 220uf))
+      (place C4 143764 -96774 front 180 (PN 220uf))
     )
     (component "TO_SOT_Packages_SMD:SOT-353_SC-70-5"
       (place U9 162052 -112141 front 0 (PN 74HC1GU04))
@@ -68,8 +68,9 @@
       (place T1 130302 -121412 front 90 (PN "Coilcraft-DA2032"))
     )
     (component Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm
-      (place C1 112268 -137541 front 0 (PN 1uf))
-      (place C2 112268 -131064 front 0 (PN 1uf))
+      (place C1 112014 -141224 front 0 (PN 1uf))
+      (place C2 112014 -135128 front 0 (PN 1uf))
+      (place C3 112014 -129032 front 0 (PN 1uf))
     )
     (component Resistors_SMD:R_1206
       (place R2 151511 -121666 front 180 (PN 100K))
@@ -77,11 +78,11 @@
       (place R9 151003 -100965 front 180 (PN 1K))
       (place R12 170942 -95504 front 270 (PN 390))
       (place R13 87122 -143002 front 0 (PN 3.3K))
-      (place R14 121412 -140208 front 0 (PN 1M))
-      (place R15 106426 -137160 front 0 (PN 560))
+      (place R14 123190 -137414 front 0 (PN 1M))
+      (place R15 99568 -130302 front 180 (PN 560))
       (place R16 151130 -95758 front 0 (PN 53.6K))
       (place R1 92202 -116078 front 0 (PN 10))
-      (place R3 143764 -121666 front 0 (PN 100m))
+      (place R3 143764 -121666 front 0 (PN 91m))
       (place R4 143764 -125857 front 0 (PN 23K))
       (place R6 143637 -131445 front 0 (PN 43K))
       (place R7 165100 -118364 front 0 (PN 2.49K))
@@ -92,12 +93,12 @@
       (place D2 119405 -89382.6 front 0 (PN 1.8V))
     )
     (component Capacitors_SMD:C_0805
-      (place C10 156718 -90932 front 180 (PN 0.1uF))
+      (place C10 157480 -91694 front 180 (PN 0.1uF))
       (place C7 87376 -116078 front 0 (PN 1000pf))
-      (place C3 97900 -127100 front 180 (PN 100pf))
+      (place C5 165354 -115570 front 0 (PN 100pf))
     )
     (component Resistors_SMD:R_2512
-      (place R5 113030 -111506 front 0 (PN 150))
+      (place R5 111760 -109220 front 0 (PN 150))
     )
     (component Mounting_Holes:MountingHole_2.5mm
       (place H3 170180 -148590 front 0 (PN MountingHole_2.5mm))
@@ -106,9 +107,12 @@
       (place H1 60960 -81026 front 0 (PN MountingHole_2.5mm))
     )
     (component Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm
-      (place W5 127254 -143764 front 0 (PN TEST_1P))
-      (place W3 111760 -143764 front 0 (PN TEST_1P))
-      (place W1 139446 -143764 front 0 (PN TEST_1P))
+      (place W5 122682 -143256 front 0 (PN TEST_1P))
+      (place W3 152908 -143510 front 0 (PN TEST_1P))
+      (place W1 139192 -143510 front 0 (PN TEST_1P))
+      (place W2 146050 -143510 front 0 (PN TEST_1P))
+      (place W4 159258 -143510 front 0 (PN TEST_1P))
+      (place W6 129286 -143256 front 0 (PN TEST_1P))
     )
     (component "Sockets_MOLEX_KK-System:Socket_MOLEX-KK-RM2-54mm_Lock_2pin_straight"
       (place P1 89662 -124460 front 180 (PN CONN_01X02))
@@ -143,9 +147,9 @@
       (place D13 167894 -89662 front 180 (PN LED_3))
     )
     (component "TO_SOT_Packages_SMD:TO-263-3_TabPin2"
-      (place Q1 149606 -111887 front 0 (PN IRL530NS))
+      (place Q1 149352 -111760 front 0 (PN IRL530NS))
     )
-    (component "SMD_Misc:SMD-6"
+    (component "SMD_Misc:DIP-6_SMD"
       (place U4 96520 -138684 front 90 (PN CPC1510G))
       (place U6 109728 -100584 front 90 (PN CPC1510G))
       (place U7 109728 -89408 front 90 (PN CPC1510G))
@@ -744,11 +748,9 @@
       (pin Rect[T]Pad_4550x5250_um 2@4 5800 2775)
       (pin Rect[T]Pad_4550x5250_um 2@5 950 -2775)
     )
-    (image "SMD_Misc:SMD-6"
-      (outline (path signal 150  1143 -3302  1397 -3302))
-      (outline (path signal 150  -1397 -3302  -1143 -3302))
-      (outline (path signal 150  -1397 3302  -1143 3302))
-      (outline (path signal 150  1143 3302  1397 3302))
+    (image "SMD_Misc:DIP-6_SMD"
+      (outline (path signal 150  -4318 -3302  4318 -3302))
+      (outline (path signal 150  -4318 3302  4318 3302))
       (outline (path signal 150  -3048 -2159  -3060.43 -2237.49  -3096.51 -2308.3  -3152.7 -2364.49
             -3223.51 -2400.57  -3302 -2413  -3380.49 -2400.57  -3451.3 -2364.49
             -3507.49 -2308.3  -3543.57 -2237.49  -3556 -2159  -3543.57 -2080.51
@@ -756,10 +758,6 @@
             -3223.51 -1917.43  -3152.7 -1953.51  -3096.51 -2009.7  -3060.43 -2080.51))
       (outline (path signal 150  -4318 -1016  -4318 -3302))
       (outline (path signal 150  -4318 3302  -4318 1016))
-      (outline (path signal 150  4318 3302  3810 3302))
-      (outline (path signal 150  4318 -3302  3810 -3302))
-      (outline (path signal 150  -4318 -3302  -3810 -3302))
-      (outline (path signal 150  -4318 3302  -3810 3302))
       (outline (path signal 150  4318 3302  4318 -3302))
       (pin Rect[T]Pad_650x1650_um 1 -2540 -4450)
       (pin Rect[T]Pad_650x1650_um 2 0 -4450)
@@ -885,12 +883,12 @@
   )
   (network
     (net "Net-(C4-Pad1)"
-      (pins M5-1 M4-1 C4-1 U9-5 T1-7 T1-8 T1-9 T1-10 R2-2 D2-1 W1-1 U3-"2-4" U5-2
-        R12-2 U8-2 U2-6 U6-4 U6-6 U7-4 U7-6)
+      (pins M5-1 M4-1 C4-1 U9-5 T1-7 T1-8 T1-9 T1-10 R2-2 D2-1 U3-"2-4" U5-2 R12-2
+        U8-2 U2-6 U6-4 U6-6 U7-4 U7-6 W2-1)
     )
     (net GND
-      (pins M1-1 C4-2 C10-2 R9-2 U3-"1-1" U3-"3-2" U5-1 J3-S R16-2 U8-1 C3-2 R3-2
-        R7-2 U2-2 D13-5 D13-3 D13-1 M7-1 U4-2)
+      (pins M1-1 C4-2 C10-2 W1-1 R9-2 U3-"1-1" U3-"3-2" U5-1 J3-S R16-2 U8-1 R3-2
+        R7-2 U2-2 D13-5 D13-3 D13-1 M7-1 C5-2 U4-2)
     )
     (net /TxD
       (pins U9-2 U3-"3-3" R15-2 R10-2)
@@ -902,16 +900,13 @@
       (pins U5-3 U6-2)
     )
     (net /HVNEG
-      (pins D10-1 T1-1 C1-2 W5-1 C2-2 J1-S R14-2 U8-3 R1-2)
+      (pins D10-1 T1-1 C1-2 W5-1 C2-2 J1-S R14-2 U8-3 R1-2 C3-2)
     )
     (net /HVPOS
       (pins D11-1 P1-2 C7-1 J1-T)
     )
     (net /ENABLE
       (pins U3-"1-3" U2-3)
-    )
-    (net "Net-(C3-Pad1)"
-      (pins U1-10 C3-1 R7-1)
     )
     (net "Net-(C7-Pad2)"
       (pins C7-2 R1-1)
@@ -965,7 +960,7 @@
       (pins R5-2 JP1-1 U8-4)
     )
     (net "Net-(C1-Pad1)"
-      (pins D6-1 D1-1 C1-1 W3-1 C2-1 R14-1 U4-4 U4-6)
+      (pins D6-1 D1-1 C1-1 C2-1 R14-1 C3-1 U4-4 U4-6 W6-1)
     )
     (net "Net-(R17-Pad2)"
       (pins R17-2 U7-1)
@@ -980,7 +975,7 @@
       (pins D2-2 R17-1 U3-"3-6")
     )
     (net "Net-(Q1-Pad3)"
-      (pins T1-3 T1-4 T1-5 T1-6 R4-1 R6-1 Q1-3)
+      (pins T1-3 T1-4 T1-5 T1-6 W3-1 R4-1 R6-1 Q1-3)
     )
     (net "Net-(R2-Pad1)"
       (pins U1-2 R2-1)
@@ -998,7 +993,7 @@
       (pins M2-1 Q1-1)
     )
     (net "Net-(M3-Pad1)"
-      (pins M3-1 R3-1 Q1-2 Q1-2@1 Q1-2@2 Q1-2@3 Q1-2@4 Q1-2@5)
+      (pins M3-1 R3-1 Q1-2 Q1-2@1 Q1-2@2 Q1-2@3 Q1-2@4 Q1-2@5 W4-1)
     )
     (net "Net-(M4-Pad2)"
       (pins M4-2 U1-1)
@@ -1017,6 +1012,9 @@
     )
     (net "Net-(M7-Pad2)"
       (pins U9-3 M7-2)
+    )
+    (net "Net-(C5-Pad1)"
+      (pins U1-10 R7-1 C5-1)
     )
     (class kicad_default "" /ENABLE /RxD "Net-(C10-Pad1)" "Net-(C7-Pad2)"
       "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J1-PadTB)"
@@ -1053,9 +1051,9 @@
         (clearance 280.1)
       )
     )
-    (class Thin /TxD "Net-(C3-Pad1)" "Net-(C4-Pad1)" "Net-(M1-Pad2)" "Net-(M2-Pad1)"
-      "Net-(M2-Pad2)" "Net-(M3-Pad2)" "Net-(M4-Pad2)" "Net-(M5-Pad2)" "Net-(M7-Pad2)"
-      "Net-(R2-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(U1-Pad3)"
+    (class Thin /TxD "Net-(C3-Pad1)" "Net-(C4-Pad1)" "Net-(C5-Pad1)" "Net-(M1-Pad2)"
+      "Net-(M2-Pad1)" "Net-(M2-Pad2)" "Net-(M3-Pad2)" "Net-(M4-Pad2)" "Net-(M5-Pad2)"
+      "Net-(M7-Pad2)" "Net-(R2-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(U1-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
