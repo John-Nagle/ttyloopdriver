@@ -120,7 +120,7 @@ $EndComp
 Text Notes 9900 2700 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
 Text Notes 10650 7650 0    60   ~ 12
-3.0
+3.1
 $Comp
 L GND #PWR02
 U 1 1 57EE08E1
@@ -834,28 +834,13 @@ U 1 1 5951F431
 P 5050 5500
 F 0 "U1" H 5275 6050 50  0000 R CNN
 F 1 "LT3750" H 5175 5600 50  0000 R CNB
-F 2 "Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm" H 5175 4925 50  0001 C CNN
+F 2 "SMD_Misc:LT3750" H 5175 4925 50  0001 C CNN
 F 3 "http://www.diodes.com/_files/datasheets/AP255x.pdf" H 5700 4800 50  0001 C CNN
 F 4 "Linear Technology" H 4975 6175 60  0001 C CNN "Mfgr"
 F 5 "Digikey" H 4725 6250 60  0001 C CNN "Vendor"
 F 6 "LT3750EMS#PBF-ND" H 5025 6325 60  0001 C CNN "Vendorpart"
 F 7 "LT3750EMS#PBF" H 4925 6400 60  0001 C CNN "Part"
 	1    5050 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Q_NMOS_GSD Q1
-U 1 1 5951D208
-P 6150 5700
-F 0 "Q1" H 6350 5750 50  0000 L CNN
-F 1 "IRL530NS" H 6350 5650 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:TO-263-3_TabPin2" H 6350 5800 50  0001 C CNN
-F 3 "https://www.infineon.com/dgdl/irl530nspbf.pdf?fileId=5546d462533600a40153565fb64c2562" H 6150 5700 50  0001 C CNN
-F 4 "Digikey" H 6150 5700 60  0001 C CNN "Vendor"
-F 5 "IRL530NSTRLPBFCT-ND" H 6150 5700 60  0001 C CNN "Vendorpart"
-F 6 "IRL" H 6150 5700 60  0001 C CNN "Mfgr"
-F 7 "IRL530NSTRLPBF" H 6150 5700 60  0001 C CNN "Part"
-	1    6150 5700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1502,4 +1487,21 @@ $EndComp
 Wire Wire Line
 	4375 7125 4150 7125
 Connection ~ 4150 7125
+Text Notes 7025 5850 0    59   ~ 12
+Changes from 3.0:\n- Change schematic componnet to reverse source and drain pin numbers on Q1.
+$Comp
+L Q_NMOS_GDS Q1
+U 1 1 59705707
+P 6150 5700
+F 0 "Q1" H 6350 5750 50  0000 L CNN
+F 1 "IRL530NS" H 6350 5650 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:TO-263-3_TabPin2" H 6350 5800 50  0001 C CNN
+F 3 "" H 6150 5700 50  0001 C CNN
+F 4 "IRL530NSTRLPBFCT-ND" H 6150 5700 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 6150 5700 60  0001 C CNN "Vendor"
+F 6 "IRL" H 6150 5700 60  0001 C CNN "Mfgr"
+F 7 "IRL530NSTRLPBF" H 6150 5700 60  0001 C CNN "Part"
+	1    6150 5700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
