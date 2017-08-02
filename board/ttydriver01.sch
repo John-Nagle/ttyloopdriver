@@ -1111,7 +1111,7 @@ F 3 "" H 4375 7125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7350 5675 0    59   ~ 12
-Changes from 3.0:\n- Changed schematic component to reverse source and drain pin numbers on Q1.\n- Added 3 additional bypass caps per LT3750 data sheet.\n- TODO: make C8 bigger.\n- Changed D1 for faster diode.
+Changes from 3.0:\n- Changed schematic component to reverse source and drain pin numbers on Q1.\n- Added 3 additional bypass caps per LT3750 data sheet.\n- Bigger cap for C8.\n- Changed D1 for faster diode.
 $Comp
 L Q_NMOS_GDS Q1
 U 1 1 59705707
@@ -1687,13 +1687,13 @@ L C C8
 U 1 1 59802F54
 P 6025 3975
 F 0 "C8" H 6050 4075 50  0000 L CNN
-F 1 "10uf" H 6050 3875 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 6063 3825 50  0001 C CNN
+F 1 "33uf" H 6050 3875 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 6063 3825 50  0001 C CNN
 F 3 "" H 6025 3975 50  0001 C CNN
 F 4 "Digikey" H 6025 3975 60  0001 C CNN "Vendor"
-F 5 "1276-2890-1-ND" H 6025 3975 60  0001 C CNN "Vendorpart"
-F 6 "Samsung" H 6025 3975 60  0001 C CNN "Mfgr"
-F 7 "CL21A106KAFN3NE" H 6025 3975 60  0001 C CNN "Part"
+F 5 "445-11710-1-ND" H 6025 3975 60  0001 C CNN "Vendorpart"
+F 6 "TDK" H 6025 3975 60  0001 C CNN "Mfgr"
+F 7 "C3216JB1E336M160AC" H 6025 3975 60  0001 C CNN "Part"
 	1    6025 3975
 	1    0    0    -1  
 $EndComp
