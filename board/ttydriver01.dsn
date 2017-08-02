@@ -3,7 +3,7 @@
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "4.0.6-e0-6349~53~ubuntu16.04.1")
+    (host_version "4.0.7-e1-6374~58~ubuntu16.04.1")
   )
   (resolution um 10)
   (unit um)
@@ -30,7 +30,8 @@
     (keepout "" (polygon B.Cu 0  66040 -78105  66040 -86360  55880 -86360  55880 -77470
             66040 -77470))
     (keepout "" (polygon F.Cu 0  55880 -147066  175260 -147066  175260 -152654  55880 -152400))
-    (keepout "" (polygon F.Cu 0  162814 -123698  160020 -123698  160020 -120904  162814 -120904))
+    (keepout "" (polygon F.Cu 0  144100 -127400  143700 -127400  143700 -124600  144100 -124600))
+    (keepout "" (polygon F.Cu 0  141800 -127400  141400 -127400  141400 -124600  141800 -124600))
     (via "Via[0-1]_1000:400_um")
     (rule
       (width 450)
@@ -42,10 +43,10 @@
   (placement
     (component Utility:trace_narrower_0.3mm
       (place M2 164338 -111506 front 0 (PN narrower_0.3mm))
-      (place M1 158000 -124000 front 270 (PN narrower_0.3mm))
-      (place M5 157000 -123000 front 180 (PN narrower_0.3mm))
-      (place M4 158000 -121000 front 90 (PN narrower_0.3mm))
-      (place M3 165227 -123825 front 0 (PN narrower_0.3mm))
+      (place M1 146750 -124750 front 90 (PN narrower_0.3mm))
+      (place M5 147750 -125500 front 0 (PN narrower_0.3mm))
+      (place M4 146250 -127250 front 270 (PN narrower_0.3mm))
+      (place M3 140000 -123750 front 90 (PN narrower_0.3mm))
       (place M7 159766 -112776 front 180 (PN narrower_0.3mm))
     )
     (component Fiducials_SEEED:Fiducial_Image_Seeed_Top
@@ -54,12 +55,12 @@
       (place REF1 68000 -139000 front 0 (PN Fiducial_Image_Seeed))
     )
     (component Diodes_SMD:SMA_Standard
-      (place D6 105918 -124206 front 0 (PN D))
-      (place D1 114300 -124206 front 0 (PN D))
+      (place D6 101000 -124000 front 0 (PN D))
     )
     (component Diodes_SMD:SMB_Standard
       (place D11 89916 -110744 front 0 (PN 120V))
       (place D10 81026 -110744 front 0 (PN 120V))
+      (place D1 108800 -124206 front 0 (PN D))
     )
     (component Capacitors_ThroughHole:CP_Radial_D8.0mm_P3.50mm
       (place C4 143764 -96774 front 180 (PN 220uf))
@@ -68,26 +69,26 @@
       (place U9 162052 -112141 front 0 (PN 74HC1GU04))
     )
     (component "Coilcraft:Coilcraft-DA2032-AL"
-      (place T1 130302 -121412 front 90 (PN "Coilcraft-DA2032"))
+      (place T1 124250 -119250 front 90 (PN "Coilcraft-DA2032"))
     )
     (component Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm
-      (place C1 112014 -141224 front 0 (PN 1uf))
-      (place C2 112014 -135128 front 0 (PN 1uf))
-      (place C3 112014 -129032 front 0 (PN 1uf))
+      (place C1 106500 -141250 front 0 (PN 1uf))
+      (place C2 106514 -135128 front 0 (PN 1uf))
+      (place C3 106514 -129032 front 0 (PN 1uf))
     )
     (component Resistors_SMD:R_1206
-      (place R2 151511 -121666 front 180 (PN 100K))
+      (place R2 151250 -120500 front 180 (PN 100K))
       (place R17 119634 -93218 front 180 (PN 510))
       (place R9 151003 -100965 front 180 (PN 1K))
       (place R12 170942 -95504 front 270 (PN 390))
       (place R13 87122 -143002 front 0 (PN 3.3K))
-      (place R14 123190 -137414 front 0 (PN 1M))
+      (place R14 117690 -137414 front 0 (PN 1M))
       (place R15 99568 -130302 front 180 (PN 560))
       (place R16 151130 -95758 front 0 (PN 53.6K))
       (place R1 92202 -116078 front 0 (PN 10))
-      (place R3 143764 -121666 front 0 (PN 91m))
-      (place R4 143764 -125857 front 0 (PN 23K))
-      (place R6 143637 -131445 front 0 (PN 43K))
+      (place R3 145500 -121250 front 0 (PN 91m))
+      (place R4 137000 -126750 front 0 (PN 23K))
+      (place R6 137000 -123100 front 0 (PN 43K))
       (place R7 165100 -118364 front 0 (PN 2.49K))
       (place R10 165354 -95504 front 90 (PN 390))
       (place R11 168148 -95504 front 270 (PN 390))
@@ -99,9 +100,11 @@
       (place C10 157480 -91694 front 180 (PN 0.1uF))
       (place C7 87376 -116078 front 0 (PN 1000pf))
       (place C5 165354 -115570 front 0 (PN 100pf))
+      (place C9 147250 -129250 front 180 (PN 10uf))
+      (place C11 151000 -125500 front 0 (PN 10uf))
     )
     (component Resistors_SMD:R_2512
-      (place R5 111760 -109220 front 0 (PN 150))
+      (place R5 106260 -109220 front 0 (PN 150))
     )
     (component Mounting_Holes:MountingHole_2.5mm
       (place H3 170180 -148590 front 0 (PN MountingHole_2.5mm))
@@ -121,7 +124,7 @@
       (place P1 89662 -124460 front 180 (PN CONN_01X02))
     )
     (component "Connect:PINHEAD1-2"
-      (place JP1 113030 -117602 front 180 (PN Jumper))
+      (place JP1 107530 -117602 front 180 (PN Jumper))
     )
     (component "cp2102:CP2102-breakout"
       (place U3 100330 -83820 front 180 (PN "CP2102-breakout"))
@@ -150,7 +153,7 @@
       (place D13 167894 -89662 front 180 (PN LED_3))
     )
     (component "TO_SOT_Packages_SMD:TO-263-3_TabPin2"
-      (place Q1 149352 -111760 front 0 (PN IRL530NS))
+      (place Q1 141500 -111500 front 90 (PN IRL530NS))
     )
     (component "SMD_Misc:DIP-6_SMD"
       (place U4 96520 -138684 front 90 (PN CPC1510G))
@@ -158,7 +161,10 @@
       (place U7 109728 -89408 front 90 (PN CPC1510G))
     )
     (component SMD_Misc:LT3750
-      (place U1 161417 -122301 front 0 (PN LT3750))
+      (place U1 142750 -126000 front 180 (PN LT3750))
+    )
+    (component Capacitors_SMD:C_1206
+      (place C8 124500 -105000 front 0 (PN 33uf))
     )
   )
   (library
@@ -794,6 +800,20 @@
       (pin Rect[T]Pad_889x305_um 9 2040 500)
       (pin Rect[T]Pad_889x305_um 10 2040 1000)
     )
+    (image Capacitors_SMD:C_1206
+      (outline (path signal 100  -1600 -800  -1600 800))
+      (outline (path signal 100  1600 -800  -1600 -800))
+      (outline (path signal 100  1600 800  1600 -800))
+      (outline (path signal 100  -1600 800  1600 800))
+      (outline (path signal 120  1000 1020  -1000 1020))
+      (outline (path signal 120  -1000 -1020  1000 -1020))
+      (outline (path signal 50  -2250 1050  2250 1050))
+      (outline (path signal 50  -2250 1050  -2250 -1050))
+      (outline (path signal 50  2250 -1050  2250 1050))
+      (outline (path signal 50  2250 -1050  -2250 -1050))
+      (pin Rect[T]Pad_1000x1600_um 1 -1500 0)
+      (pin Rect[T]Pad_1000x1600_um 2 1500 0)
+    )
     (padstack Round[T]Pad_1000_um
       (shape (circle F.Cu 1000))
       (attach off)
@@ -892,6 +912,10 @@
       (shape (rect F.Cu -500 -625 500 625))
       (attach off)
     )
+    (padstack Rect[T]Pad_1000x1600_um
+      (shape (rect F.Cu -500 -800 500 800))
+      (attach off)
+    )
     (padstack Rect[T]Pad_1060x650_um
       (shape (rect F.Cu -530 -325 530 325))
       (attach off)
@@ -920,7 +944,7 @@
   (network
     (net GND
       (pins C4-2 C10-2 W1-1 R9-2 U3-"1-1" U3-"3-2" U5-1 J3-S R16-2 U8-1 R3-2 R7-2
-        U2-2 D13-5 D13-3 D13-1 C5-2 U4-2 M1-1 M7-1)
+        U2-2 D13-5 D13-3 D13-1 C5-2 U4-2 M1-1 M7-1 C8-2 C9-1 C11-2)
     )
     (net /TxD
       (pins U9-2 U3-"3-3" R15-2 R10-2)
@@ -944,7 +968,7 @@
       (pins C7-2 R1-1)
     )
     (net "Net-(D1-Pad2)"
-      (pins D1-2 T1-12)
+      (pins T1-12 D1-2)
     )
     (net "Net-(D6-Pad2)"
       (pins D6-2 R5-1 JP1-2)
@@ -992,7 +1016,7 @@
       (pins R5-2 JP1-1 U8-4)
     )
     (net "Net-(C1-Pad1)"
-      (pins D6-1 D1-1 C1-1 C2-1 R14-1 C3-1 U4-4 U4-6 W6-1)
+      (pins D6-1 C1-1 C2-1 R14-1 C3-1 U4-4 U4-6 W6-1 D1-1)
     )
     (net "Net-(R17-Pad2)"
       (pins R17-2 U7-1)
@@ -1047,7 +1071,7 @@
     )
     (net /Vcc
       (pins M2-1 C4-1 T1-7 T1-8 T1-9 T1-10 R2-2 D2-1 U3-"2-4" U5-2 R12-2 U8-2 U2-6
-        U6-4 U6-6 U7-4 U7-6 W2-1 M5-1 M4-1)
+        U6-4 U6-6 U7-4 U7-6 W2-1 M5-1 M4-1 C8-1 C9-2 C11-1)
     )
     (net "Net-(Q1-Pad2)"
       (pins T1-3 T1-4 T1-5 T1-6 W3-1 R4-1 R6-1 Q1-2 Q1-2@1 Q1-2@2 Q1-2@3 Q1-2@4 Q1-2@5)
