@@ -30,8 +30,12 @@
     (keepout "" (polygon B.Cu 0  66040 -78105  66040 -86360  55880 -86360  55880 -77470
             66040 -77470))
     (keepout "" (polygon F.Cu 0  55880 -147066  175260 -147066  175260 -152654  55880 -152400))
-    (keepout "" (polygon F.Cu 0  144100 -127400  143700 -127400  143700 -124600  144100 -124600))
-    (keepout "" (polygon F.Cu 0  141800 -127400  141400 -127400  141400 -124600  141800 -124600))
+    (keepout "" (polygon F.Cu 0  142800 -124500  141500 -124500  141500 -127300  142800 -127300
+            142800 -127700  141100 -127700  141100 -124100  142800 -124100
+            142800 -124500))
+    (keepout "" (polygon F.Cu 0  139200 -127700  137500 -127700  137500 -127300  138800 -127300
+            138800 -124500  137600 -124500  137600 -124100  139200 -124100
+            139200 -127700))
     (via "Via[0-1]_1000:400_um")
     (rule
       (width 450)
@@ -42,12 +46,13 @@
   )
   (placement
     (component Utility:trace_narrower_0.3mm
-      (place M2 164338 -111506 front 0 (PN narrower_0.3mm))
-      (place M1 146750 -124750 front 90 (PN narrower_0.3mm))
-      (place M5 147750 -125500 front 0 (PN narrower_0.3mm))
-      (place M4 146250 -127250 front 270 (PN narrower_0.3mm))
-      (place M3 140000 -123750 front 90 (PN narrower_0.3mm))
+      (place M2 164500 -111400 front 0 (PN narrower_0.3mm))
+      (place M1 143700 -124100 front 90 (PN narrower_0.3mm))
+      (place M5 144900 -124900 front 0 (PN narrower_0.3mm))
+      (place M4 143700 -127300 front 270 (PN narrower_0.3mm))
+      (place M3 137500 -123400 front 90 (PN narrower_0.3mm))
       (place M7 159766 -112776 front 180 (PN narrower_0.3mm))
+      (place M6 154000 -91500 front 0 (PN narrower_0.3mm))
     )
     (component Fiducials_SEEED:Fiducial_Image_Seeed_Top
       (place REF3 168148 -139000 front 0 (PN Fiducial_Image_Seeed))
@@ -69,7 +74,7 @@
       (place U9 162052 -112141 front 0 (PN 74HC1GU04))
     )
     (component "Coilcraft:Coilcraft-DA2032-AL"
-      (place T1 124250 -119250 front 90 (PN "Coilcraft-DA2032"))
+      (place T1 122500 -119100 front 90 (PN "Coilcraft-DA2032"))
     )
     (component Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm
       (place C1 106500 -141250 front 0 (PN 1uf))
@@ -77,7 +82,7 @@
       (place C3 106514 -129032 front 0 (PN 1uf))
     )
     (component Resistors_SMD:R_1206
-      (place R2 151250 -120500 front 180 (PN 100K))
+      (place R2 146900 -127400 front 0 (PN 100K))
       (place R17 119634 -93218 front 180 (PN 510))
       (place R9 151003 -100965 front 180 (PN 1K))
       (place R12 170942 -95504 front 270 (PN 390))
@@ -86,9 +91,9 @@
       (place R15 99568 -130302 front 180 (PN 560))
       (place R16 151130 -95758 front 0 (PN 53.6K))
       (place R1 92202 -116078 front 0 (PN 10))
-      (place R3 145500 -121250 front 0 (PN 91m))
-      (place R4 137000 -126750 front 0 (PN 23K))
-      (place R6 137000 -123100 front 0 (PN 43K))
+      (place R3 142200 -121500 front 0 (PN 91m))
+      (place R4 134000 -128900 front 0 (PN 23K))
+      (place R6 134000 -122800 front 0 (PN 43K))
       (place R7 165100 -118364 front 0 (PN 2.49K))
       (place R10 165354 -95504 front 90 (PN 390))
       (place R11 168148 -95504 front 270 (PN 390))
@@ -97,11 +102,11 @@
       (place D2 119405 -89382.6 front 0 (PN 1.8V))
     )
     (component Capacitors_SMD:C_0805
-      (place C10 157480 -91694 front 180 (PN 0.1uF))
+      (place C10 157400 -91500 front 180 (PN 0.1uF))
       (place C7 87376 -116078 front 0 (PN 1000pf))
       (place C5 165354 -115570 front 0 (PN 100pf))
-      (place C9 147250 -129250 front 180 (PN 10uf))
-      (place C11 151000 -125500 front 0 (PN 10uf))
+      (place C9 144700 -129600 front 180 (PN 10uf))
+      (place C11 149300 -123800 front 0 (PN 10uf))
     )
     (component Resistors_SMD:R_2512
       (place R5 106260 -109220 front 0 (PN 150))
@@ -153,7 +158,7 @@
       (place D13 167894 -89662 front 180 (PN LED_3))
     )
     (component "TO_SOT_Packages_SMD:TO-263-3_TabPin2"
-      (place Q1 141500 -111500 front 90 (PN IRL530NS))
+      (place Q1 138900 -111400 front 90 (PN IRL530NS))
     )
     (component "SMD_Misc:DIP-6_SMD"
       (place U4 96520 -138684 front 90 (PN CPC1510G))
@@ -161,7 +166,7 @@
       (place U7 109728 -89408 front 90 (PN CPC1510G))
     )
     (component SMD_Misc:LT3750
-      (place U1 142750 -126000 front 180 (PN LT3750))
+      (place U1 140150 -125900 front 180 (PN LT3750))
     )
     (component Capacitors_SMD:C_1206
       (place C8 124500 -105000 front 0 (PN 33uf))
@@ -944,7 +949,7 @@
   (network
     (net GND
       (pins C4-2 C10-2 W1-1 R9-2 U3-"1-1" U3-"3-2" U5-1 J3-S R16-2 U8-1 R3-2 R7-2
-        U2-2 D13-5 D13-3 D13-1 C5-2 U4-2 M1-1 M7-1 C8-2 C9-1 C11-2)
+        D13-5 D13-3 D13-1 C5-2 U4-2 M1-1 M7-1 C8-2 C9-1 C11-2 M6-1)
     )
     (net /TxD
       (pins U9-2 U3-"3-3" R15-2 R10-2)
@@ -1076,20 +1081,29 @@
     (net "Net-(Q1-Pad2)"
       (pins T1-3 T1-4 T1-5 T1-6 W3-1 R4-1 R6-1 Q1-2 Q1-2@1 Q1-2@2 Q1-2@3 Q1-2@4 Q1-2@5)
     )
+    (net "Net-(M6-Pad2)"
+      (pins U2-2 M6-2)
+    )
     (class kicad_default "" /ENABLE /RxD "Net-(C10-Pad1)" "Net-(C7-Pad2)"
-      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J1-PadTB)"
-      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(M3-Pad1)" "Net-(R13-Pad2)"
-      "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)"
-      "Net-(SW1-Pad3)" "Net-(SW2-Pad1)" "Net-(U2-Pad4)" "Net-(U3-Pad1-2)"
-      "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)" "Net-(U3-Pad2-3)"
-      "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)" "Net-(U6-Pad3)" "Net-(U7-Pad3)"
-      "Net-(U9-Pad1)"
+      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J2-PadS)"
+      "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(M3-Pad1)" "Net-(R13-Pad2)" "Net-(R15-Pad1)"
+      "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(U3-Pad3-5)"
+      "Net-(U5-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
       (rule
         (width 450)
         (clearance 245.1)
+      )
+    )
+    (class GND GND
+      (circuit
+        (use_via Via[0-1]_1000:400_um)
+      )
+      (rule
+        (width 1000)
+        (clearance 280.1)
       )
     )
     (class HV /HVNEG /HVPOS "Net-(C1-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
@@ -1102,7 +1116,7 @@
         (clearance 500.1)
       )
     )
-    (class PWR /Vcc GND "Net-(Q1-Pad2)"
+    (class PWR /Vcc "Net-(Q1-Pad2)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
@@ -1112,8 +1126,8 @@
       )
     )
     (class Thin /TxD "Net-(C5-Pad1)" "Net-(M1-Pad2)" "Net-(M2-Pad2)" "Net-(M3-Pad2)"
-      "Net-(M4-Pad2)" "Net-(M5-Pad2)" "Net-(M7-Pad2)" "Net-(Q1-Pad1)" "Net-(R2-Pad1)"
-      "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(U1-Pad3)"
+      "Net-(M4-Pad2)" "Net-(M5-Pad2)" "Net-(M6-Pad2)" "Net-(M7-Pad2)" "Net-(Q1-Pad1)"
+      "Net-(R2-Pad1)" "Net-(R4-Pad2)" "Net-(R6-Pad2)" "Net-(U1-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
