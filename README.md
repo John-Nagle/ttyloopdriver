@@ -63,6 +63,18 @@ Efficiency calc:
 400mA at 4.8V is 1.92W. 1.92W x 20ms = 0.0384 watt-seconds = 0.0384 joules = 38.4 mJ
 
 Efficiency needed is 14.4 / 38.4 = 38%. Should be easily achieveable.
+
+### Update 2017-08-25
+
+Board 3.1, a completely new design using an LT3750 capacitor charging controller, works, except 
+that the current limiter U2 keeps tripping. Successful typing with a Model 15 Teletype.
+The capacitors charge to 122V in about 14ms, which is close to what simulation predicts.
+
+The AP2553W6 current limiter trips for about half a second about twice a minute on average. 
+If the current limiter is bypassed, it works fine.  Measured current through the current limiter,
+with a 2.2 ohm current sense resistor placed in series for testing,  is I = E/R = 0.5/2.2 = 227mA.
+This is well below the current limiter setpoint.  R1 at 56.3K ohms should result in a 400mA current
+limit. Unclear why the limiter is tripping. 
     
 
 # What it is
@@ -85,35 +97,56 @@ operation.  We reprogram it to map a request for 600 baud to 45 baud.
 We also reprogram it to request 500mA from the USB port.
 
 There are two power supplies for the output. One is a custom switching
-power supply which, during SPACE, charges up a pair of 1uF ceramic capacitors C2 and C11 to
-120V. These are through-hole components because very large SMT capacitors have capactance
+power supply which, during SPACE, charges up a pair of 1uF ceramic capacitors C1 and C2 to
+120V.  There's a board position for a C3 capacitor as well, in parallel with C1 and C2,
+but this has not been necessary. These are through-hole components because very large SMT capacitors have capactance
 which declines with voltage, which is unacceptable here. They're ceramics for low internal
 resistance. 
 
 These caps provide the initial power to pull in the selector magnet,
 pushing 60mA through the huge (measured) at 5.5H inductance of the magnet coils.
 The other is a 12V supply U8 which provides sustaining current at 60mA
-once C2 and C11 have discharged.  Both power supplies feed, through diodes D6,
+once C2 and C11 have discharged.  Both power supplies feed, through diode D6,
 a solid-state relay U4. The relay is controlled by the transmit
 data line TxD from U3.
 
-The switching power supply consists of an oscillator and a
-switcher. The oscillator, U1, is a classic 555 timer, set
-up for approximately 100KHz, 50% duty cycle.
+The switching power supply is controlled by an LT3750 capacitor charging
+controller. This is the right tool for the job, but with pin spacing of 0.5mm,
+is hard to solder. The LT3750 uses comparators and flip-flops to control
+charging. 
 
 The switcher is an isolated boost supply, consisting of
-U9, T1, C2, and some passives.  The oscillator signal
-turns the FET in U9 on and off. Turning Q1 off produces an inductive
-kick in T1, which has a 1:15 turns ratio.  This can produce
-over 120VDC, which is used to charge C2.  To limit the
-charge, D7, a 120V Zener diode, clamps the voltage
-to 120V. 
+U1, T1, C2, and some passives.  The controller signal
+turns the FET in Q1 on and off. Turning Q1 off produces an inductive
+kick in T1, which has a 1:10 turns ratio.  This can produce
+over 120VDC, which is used to charge C1 and C2.
 
-C2 charging occurs only during SPACE. During MARK, TxD goes high,
-and, through diode D9, forces the TR pin of U1 high. This
-stops the oscillator during MARK, when it's not needed. 
-The FET in U9 is thus turned off during MARK. 
+Charging occurs only during SPACE. During MARK, TxD goes high,
+inverter U9 inverts that signal, and so, on a MARK to SPACE
+transition, the CHARGE input of U1 sees an edge which starts the
+charging process.
 
+When the charging process starts, a flip-flop inside U1 turns
+on, and this turns on the GATE signal to Q1. This allows current
+to flow through T1. The current ramps up linearly as the inductor
+charges. Resistor R3, which is only 0.091 ohm, is used as a current
+sense resistor to tell U1 when to shut off GATE, stopping current
+though the transformer primary.  The value of R3 controls the maximum
+current the charger will draw.
+
+Then the transformer, disconnected from power, dumps its magnetic field
+into the secondary, charging C1 and C2 through D1. As this happens, the
+voltage across the transformer primary drops, and this is sensed via the
+RDCM pin of U1. When that voltage difference is near zero, a comparator
+in U1 turns the flip-flop back on, turning on GATE and starting the
+cycle again. That's the oscillator in this.
+
+There's also circuitry in U1 which senses the peak voltage level to which 
+the primary of U1 rises during each charge cycle via RVout. This
+is used to stop charging once the desired voltage has been reached.
+It takes about 14ms to charge C1 and C2 to 120V, and then the 
+charging stops.  The value of R4 controls this goal.
+ 
 The sustain supply U8 is always on, but there is no load on it
 during SPACE, because U4 is turned off.  So the two power
 supplies take turns drawing
