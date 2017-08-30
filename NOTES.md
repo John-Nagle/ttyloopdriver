@@ -98,7 +98,8 @@ overload. Need still more bypass caps.  The spikes are only
 about 25ns, and after the first few, they're small.
 Maybe a ferrite bead?
 
-Top green LED (TxD) is not lighting up.
+Top green LED (TxD) is not lighting up. (Was unsoldered pin;
+fixed. Not a design problem.)
 
 Notes:
 
@@ -113,7 +114,7 @@ is I = E/R = 0.5/2.2 = 227mA.
 Proposed changes:
 
 - Add 1uh inductor after pin 6 of U2.
-  DigiKey 1276-6207-1-ND
+  DigiKey 1276-6207-1-ND 
   Samsung CIG22E1R0MNE
   FIXED IND 1UH 2.3A 48 MOHM SMD 
   SMD form factor 1008
