@@ -133,5 +133,21 @@ Proposed changes:
   U2 completely. USB overcurrent protection is lost but
   the board will run Model 14 and 15 Teletypes. 
   
+  2017-08-30
+  
+  Improve sustain current regulation
+  
+  - Use 15V power supply instead of 12V
+     DigiKey 1470-1405-5-ND 
+     XP Power part IE0515S
+  - Use two current regulators in parallel to limit to 60mA
+     ON Semiconductor NSI45030AT1G
+     IC LED DRIVER LINEAR SOD-123 
+     DigiKey NSI45030AT1GOSTR-ND
+     $0.17ea.
+     Needs diode for reverse protection, which we already have
+     
+Get rid of JP1 and R5. Current regulation now fully automatic.
+  
 
 
