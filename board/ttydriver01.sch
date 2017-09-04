@@ -1320,8 +1320,6 @@ Wire Wire Line
 	7050 1525 6975 1525
 Connection ~ 6975 1525
 Wire Wire Line
-	3900 1950 5175 1950
-Wire Wire Line
 	6575 1850 3900 1850
 Wire Wire Line
 	6975 1750 3900 1750
@@ -1405,10 +1403,8 @@ Wire Wire Line
 	3025 4450 3025 2250
 Wire Wire Line
 	3025 2250 6775 2250
-Connection ~ 4650 1950
 Wire Wire Line
 	5175 2050 5175 1950
-Connection ~ 4650 3375
 Wire Wire Line
 	4650 4925 4625 4925
 Connection ~ 4650 4925
@@ -1652,4 +1648,7 @@ Text Notes 8625 1775 0    39   ~ 0
 60mA current limiter
 Text Notes 8050 4700 0    39   ~ 0
 C3 is not installed.
+Wire Wire Line
+	5175 1950 3900 1950
+Connection ~ 4650 1950
 $EndSCHEMATC
