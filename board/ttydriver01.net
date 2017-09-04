@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/john/projects/teletype/hardware/ttyloopdriver3/ttyloopdriver/board/ttydriver01.sch)
-    (date "Mon 04 Sep 2017 01:32:14 PM PDT")
+    (date "Mon 04 Sep 2017 03:26:27 PM PDT")
     (tool "Eeschema 4.0.7-e1-6374~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -162,13 +162,13 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5867392E))
     (comp (ref U8)
-      (value IE0512S)
+      (value IE0515S)
       (footprint DC-DC:IE0524S)
       (datasheet http://www.digikey.com/product-detail/en/xp-power/IE0524S/1470-1407-5-ND/4487788)
       (fields
         (field (name Mfgr) "XP Power")
-        (field (name Part) IE0512S)
-        (field (name Vendorpart) 1470-1402-5-ND)
+        (field (name Part) IE0515S)
+        (field (name Vendorpart) 1470-1405-5-ND)
         (field (name Vendor) Digikey))
       (libsource (lib ttypowerlib) (part IE0524S))
       (sheetpath (names /) (tstamps /))
