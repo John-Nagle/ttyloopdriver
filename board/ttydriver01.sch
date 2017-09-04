@@ -388,17 +388,17 @@ $EndComp
 $Comp
 L R R5
 U 1 1 5867C471
-P 8375 3600
-F 0 "R5" V 8455 3600 50  0000 C CNN
-F 1 "150" V 8375 3600 50  0000 C CNN
-F 2 "Resistors_SMD:R_2512" V 8305 3600 50  0001 C CNN
-F 3 "" H 8375 3600 50  0000 C CNN
-F 4 "PT150XCT-ND" V 8375 3600 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" V 8375 3600 60  0001 C CNN "Vendor"
-F 6 "Panasonic" V 8375 3600 60  0001 C CNN "Mfgr"
-F 7 "ERJ-1TYJ151U" V 8375 3600 60  0001 C CNN "Part"
-	1    8375 3600
-	0    1    1    0   
+P 8925 2375
+F 0 "R5" V 9005 2375 50  0000 C CNN
+F 1 "16" V 8925 2375 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 8855 2375 50  0001 C CNN
+F 3 "" H 8925 2375 50  0000 C CNN
+F 4 "Digikey" V 8925 2375 60  0001 C CNN "Vendor"
+F 5 "Panasonic" V 8925 2375 60  0001 C CNN "Mfgr"
+F 6 "P16082CT-ND" V 8925 2375 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-P08F16R0V" V 8925 2375 60  0001 C CNN "Part"
+	1    8925 2375
+	-1   0    0    1   
 $EndComp
 $Comp
 L R R10
@@ -415,8 +415,6 @@ F 7 "Panasonic" V 6925 2450 60  0001 C CNN "Mfgr"
 	1    6925 2450
 	0    1    1    0   
 $EndComp
-Text Notes 7800 3350 0    39   ~ 0
-Remove for \n55 ohm selector
 $Comp
 L GND #PWR08
 U 1 1 5867E37E
@@ -432,7 +430,7 @@ Text Notes 6225 2975 0    39   ~ 0
 Sustain supply
 Text Notes 3450 1700 0    39   ~ 0
 Keyboard supply
-Text Notes 9400 3150 0    39   ~ 0
+Text Notes 9400 3200 0    39   ~ 0
 Snubbing
 Text Notes 7850 4600 0    39   ~ 0
 120V pulse supply
@@ -665,17 +663,6 @@ F 5 "CUI" H 3050 7175 60  0001 C CNN "Mfgr"
 F 6 "Digikey" H 3050 7175 60  0001 C CNN "Vendor"
 F 7 "CP-M2509N-ND" H 3050 7175 60  0001 C CNN "Vendorpart"
 	1    3050 7175
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper JP1
-U 1 1 587153BF
-P 8375 3475
-F 0 "JP1" H 8375 3625 50  0000 C CNN
-F 1 "Jumper" H 8375 3700 50  0000 C CNN
-F 2 "Connect:PINHEAD1-2" H 8375 3475 50  0001 C CNN
-F 3 "" H 8375 3475 50  0000 C CNN
-	1    8375 3475
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1080,7 +1067,7 @@ F 3 "" H 4875 7125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7350 5675 0    59   ~ 12
-Changes from 3.0:\n- Changed schematic component to reverse source and drain pin numbers on Q1.\n- Added 3 additional bypass caps per LT3750 data sheet.\n- Bigger cap for C8.\n- Changed D1 for faster diode.
+Changes from 3.1:\n- Added inductor L1 to keep spikes from getting into xxx\n- Added active current limiter Q2 and removed current adjust jumper.
 $Comp
 L Q_NMOS_GDS Q1
 U 1 1 59705707
@@ -1315,8 +1302,6 @@ Wire Wire Line
 Connection ~ 8625 4475
 Connection ~ 9325 2925
 Wire Wire Line
-	8550 2925 9225 2925
-Wire Wire Line
 	9225 2925 9225 2875
 Wire Wire Line
 	2100 5375 2975 5375
@@ -1344,11 +1329,9 @@ Wire Wire Line
 	8725 3025 8725 3150
 Connection ~ 8725 3025
 Wire Wire Line
-	7700 3600 8225 3600
+	7700 3600 8725 3600
 Wire Wire Line
-	8725 3600 8525 3600
-Wire Wire Line
-	8725 3450 8725 3600
+	8725 3600 8725 3450
 Wire Wire Line
 	6725 3050 7700 3050
 Wire Wire Line
@@ -1444,12 +1427,6 @@ Wire Wire Line
 	9700 3250 9700 3300
 Wire Wire Line
 	9700 4075 9700 4050
-Wire Wire Line
-	8075 3475 8075 3600
-Connection ~ 8075 3600
-Wire Wire Line
-	8675 3475 8725 3475
-Connection ~ 8725 3475
 Wire Wire Line
 	2500 6800 2600 6800
 Wire Wire Line
@@ -1641,4 +1618,38 @@ Wire Wire Line
 	2975 3775 2975 3575
 Wire Wire Line
 	2975 3575 2900 3575
+$Comp
+L Q_NMOS_GDS Q2
+U 1 1 59ADC593
+P 8825 2000
+F 0 "Q2" H 9025 2050 50  0000 L CNN
+F 1 "DN2625" H 9025 1950 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-3_TabPin2" H 9025 2100 50  0001 C CNN
+F 3 "" H 8825 2000 50  0001 C CNN
+F 4 "DN2625K4-GCT-ND" H 8825 2000 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 8825 2000 60  0001 C CNN "Vendor"
+F 6 "DN2625K4-G" H 8825 2000 60  0001 C CNN "Part"
+F 7 "Microchip" H 8825 2000 60  0001 C CNN "Mfgr"
+	1    8825 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8925 2225 8925 2200
+Wire Wire Line
+	8925 2925 9225 2925
+Wire Wire Line
+	8550 2925 8550 1800
+Wire Wire Line
+	8925 2925 8925 2525
+Wire Wire Line
+	8625 2000 8625 2575
+Wire Wire Line
+	8625 2575 8925 2575
+Connection ~ 8925 2575
+Wire Wire Line
+	8550 1800 8925 1800
+Text Notes 8625 1775 0    39   ~ 0
+60mA current limiter
+Text Notes 8050 4700 0    39   ~ 0
+C3 is not installed.
 $EndSCHEMATC
