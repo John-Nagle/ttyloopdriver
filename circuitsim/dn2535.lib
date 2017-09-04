@@ -1,0 +1,11 @@
+*
+*DN2535 MODEL
+*
+.MODEL DN2535   NMOS (LEVEL=3   RS=1.05            NSUB=5.0E14
++DELTA=0.1      KAPPA=0.20      TPG=1              CGDO=3.1716E-10
++RD=11          VTO=-1.50       VMAX=1.0E7         ETA=0.0223089
++NFS=6.6E10     TOX=725E-10     LD=1.698E-9        UO=862.425
++XJ=6.4666E-7   THETA=1.0E-5    CGSO=2.50E-9       L=4.0E-6
++W=59E-3)
+.ENDS
+*
