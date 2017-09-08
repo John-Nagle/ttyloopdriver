@@ -1,1 +1,4 @@
-*.rb linguist-language=KiCad
+*.kicad-pcb linguist-language=KiCad
+*.pro linguist-language=KiCad
+*.sch linguist-language=KiCad
+*.kicad_mod linguist-language=KiCad
