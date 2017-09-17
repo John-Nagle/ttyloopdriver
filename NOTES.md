@@ -148,6 +148,16 @@ Proposed changes:
      Needs diode for reverse protection, which we already have
      
 Get rid of JP1 and R5. Current regulation now fully automatic.
+
+2017-09-15
+
+  Board version 3.2 built and tested. Successfully drives
+  Teletype Model 15 with 220 ohm selector and Teletype Model
+  14 with 55 ohm selector. The current limit is too high, though;
+  the 55 ohm selector is getting 80mA instead of 60. This is also
+  the current if the output is shorted, so the current limiter is 
+  working. It just needs adjustment. Changing R5 to 22 ohms should
+  fix it. 
   
 
 
