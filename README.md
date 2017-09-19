@@ -76,6 +76,17 @@ with a 2.2 ohm current sense resistor placed in series for testing,  is I = E/R 
 This is well below the current limiter setpoint.  R1 at 56.3K ohms should result in a 400mA current
 limit. Unclear why the limiter is tripping. 
     
+### Update 2017-09-18
+
+Board version 3.2 built and tested. Successfully drives
+Teletype Model 15 with 220 ohm selector and Teletype Model
+14 with 55 ohm selector. The current limit is too high, though;
+the 55 ohm selector is getting 80mA instead of 60. This is also
+the current if the output is shorted, so the current limiter is 
+working. It just needs adjustment. Changing R5 to 22 ohms should
+fix it. 
+  
+    
 
 # What it is
 
@@ -87,7 +98,15 @@ This approach uses only about 1 watt of power, drawing 200mA from the USB port.
 
 # How it works
 
-With a switching power supply, of course.
+The Teletype needs a current of 60mA and an initial voltage of 120V to operate the
+selector magnet. The 120V is needed to overcome the huge inductance of the selector
+magnet; once the magnet is charged, the required voltage is only a few volts. So the
+circuit charges up some capacitors and dumps them into the selector magnet at the start
+of each 1 bit (called "MARK" in the Teletype world). After a few milliseconds, a
+low-voltage sustain supply takes over to maintain the 60mA current. 
+
+All this is powered entirely from a USB port. So there's a custom switching power
+supply.
 
 ## Output to the Teletype
 
@@ -152,6 +171,17 @@ during SPACE, because U4 is turned off.  So the two power
 supplies take turns drawing
 power from the USB port, which keeps the peak current down.
 
+To allow this circuit to support various selector magnet resistances,
+there's a linear current regulator at the end, consisting of Q2 and R5.
+Q2 is a depletion-mode MOSFET, an unusual component useful for current
+regulation over a wide voltage range. This limits the output current to
+60mA. When driving a 220 ohm selector, this circuit isn't doing much
+current limiting, but when driving a 55 ohm selector, it is. It also
+provides short circuit protection, limiting short circuit current to
+60mA. (A previous version of the board had a removable jumper for
+adjusting the output current, but that was too 1980s. Now it's fully
+automatic.)
+
 ## Input from the keyboard
 
 On the keyboard side, U6, a very small 5V to 24V DC-DC
@@ -214,7 +244,7 @@ the Teletype selector magnet. The back to back 120V Zeners
 D10 and D11 protect against the inductive kickback spikes
 from the selector magnet.
 
-On the input side, C9, C1, C5, and L3 keep the inductive
+On the input side, C8, C12, and L3 keep the inductive
 kickback from T1 from getting back into the USB power supply.
 
 The AP2553W6 provides overload protection to the USB port.
@@ -224,21 +254,16 @@ The CPC1510G solid state relays also provide current limiting,
 in case the printer output is shorted. A dead short across the
 output will not damage anything. 
 
-When testing, an inductive load similar to a 4 Henry
-selector magnet must be attached to the printer jack.
-If a resistive load is used, when C2 dumps into the output,
-there will be excessive current flow, and the protection in
-U4 will trip.  Output will then be well below the expected 120V.
-
 On the Teletype side, everything is isolated from ground and from the USB side.
 
 ## Test points
 
-- W1 - low-voltage power (4.5-5V to W4 GND when powered up)
-- W2 - 100KHz 50% duty cycle oscillator (to W4 GND)
-- W3 - High side of 1uf cap. Charges to 120V (to W5)
-- W4 - low-voltage ground
+- W1 - low-voltage ground
+- W2 - low-voltage power (4.5-5V to W4 GND when powered up)
+- W3 - Low side of transformer primary. Watch the switcher action here.
+- W4 - High side of switcher current sense resistor
 - W5 - high-voltage ground
+- W6 - high-voltage high side
 
 ## Connectors
 
@@ -248,12 +273,6 @@ of machines.
 
 J2 is the 1/4" Teletype keyboard jack, supplying power for a Model 14/15 keyboard.
 If nothing is plugged in, the jack shorts and the BREAK button still works.
-
-P1 is a jumper for Teletypes wired with the selector magnets in series.
-
- 220 ohm selector magnet (series) -> jumper IN
-    
- 55 ohm selector magnet (parallel) -> jumper OUT
 
 P2 is a connection for a current meter.  A 100mA meter
 is suggested. If a meter is not used, this plug must
@@ -278,7 +297,7 @@ D13 is a 3-high set of green LEDs.
 
 This unit appears to most computers as a serial port. No special driver should be required.
 The port should be opened and set to 600 baud to request
-45 baud output.  (The CP2102 is programmed for this, because many systems can't request 45 baud. 600 baud is used
+45 baud output.  (The CP2102 must be programmed for this, because many systems can't request 45 baud. 600 baud is used
 because that speed was never used for any historical devices.)  When power is on,
 Data Set Ready will turn on. When power is on and the motor is running, Clear to Send will turn on.
 Power management works; if the computer goes to sleep or suspends, the board will turn off.
