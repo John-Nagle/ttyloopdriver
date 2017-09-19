@@ -124,7 +124,7 @@ resistance.
 
 These caps provide the initial power to pull in the selector magnet,
 pushing 60mA through the huge (measured) at 5.5H inductance of the magnet coils.
-The other is a 12V supply U8 which provides sustaining current at 60mA
+The other is a 15V supply U8 which provides sustaining current at 60mA
 once C2 and C11 have discharged.  Both power supplies feed, through diode D6,
 a solid-state relay U4. The relay is controlled by the transmit
 data line TxD from U3.
@@ -135,7 +135,7 @@ is hard to solder. The LT3750 uses comparators and flip-flops to control
 charging. 
 
 The switcher is an isolated boost supply, consisting of
-U1, T1, C2, and some passives.  The controller signal
+U1, T1, C1, C2, and some passives.  The controller signal GATE
 turns the FET in Q1 on and off. Turning Q1 off produces an inductive
 kick in T1, which has a 1:10 turns ratio.  This can produce
 over 120VDC, which is used to charge C1 and C2.
