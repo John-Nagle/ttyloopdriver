@@ -1052,7 +1052,7 @@ F 3 "" H 4875 7125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7350 5675 0    59   ~ 12
-Changes from 3.1:\n- Added inductor L1 to keep spikes from getting back into U2\n- Added active current limiter Q2 and removed current adjust jumper.\nChanges from 3.2:\n- Changed 16 ohm current limit resistor R5  to 22 ohms\n- Add another ferrite bead [TODO] \n- Add Zener to motor control circuit to pull up to 3.3V, not 5V. [TODO]
+Changes from 3.1:\n- Added inductor L1 to keep spikes from getting back into U2.\n- Added active current limiter Q2 and removed current adjust jumper.\nChanges from 3.2:\n- Changed 16 ohm current limit resistor R5  to 22 ohms per measurement.\n- Add another ferrite bead L2 to reduce current spike at turn-on.\n- Add 1.8V Zener to motor control circuit to pull up to 3.3V, not 5V.
 $Comp
 L Q_NMOS_GDS Q1
 U 1 1 59705707
@@ -1614,8 +1614,6 @@ Wire Wire Line
 	8550 1800 8925 1800
 Text Notes 8625 1775 0    39   ~ 0
 60mA current limiter
-Text Notes 8050 4700 0    39   ~ 0
-C3 is not installed.
 Wire Wire Line
 	5175 1950 3900 1950
 Connection ~ 4650 1950
