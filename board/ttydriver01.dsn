@@ -24,6 +24,11 @@
       (path pcb 0  55880 -77470  55880 -90170  55880 -152400  175260 -152400
             175260 -90170  175260 -77470  55880 -77470  55880 -77470)
     )
+    (plane @:no_net_0 (polygon F.Cu 0  122500 -133000  122500 -105000  56500 -105000  56500 -83000
+            173000 -83000  173000 -133000  157500 -133000  157500 -146500
+            135000 -146500  135000 -133500  122500 -133500))
+    (plane @:no_net_1 (polygon F.Cu 0  112000 -109000  118500 -109000  118500 -146500  84000 -146500
+            84000 -109000))
     (keepout "" (polygon F.Cu 0  175260 -82550  55880 -82550  55880 -77470  175260 -77470))
     (keepout "" (polygon B.Cu 0  165100 -77435.3  165100 -86960.3  175260 -86960.3  175260 -77435.3))
     (keepout "" (polygon B.Cu 0  165100 -152400  165100 -142875  175260 -142875  175260 -152400))
@@ -79,11 +84,10 @@
     (component Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm
       (place C1 106500 -141250 front 0 (PN 1uf))
       (place C2 106514 -135128 front 0 (PN 1uf))
-      (place C3 106514 -129032 front 0 (PN 1uf))
     )
     (component Resistors_SMD:R_1206
       (place R2 146900 -127400 front 0 (PN 100K))
-      (place R17 119634 -93218 front 180 (PN 1K))
+      (place R17 119634 -93218 front 180 (PN 560))
       (place R9 151003 -100965 front 180 (PN 1K))
       (place R12 170942 -95504 front 270 (PN 390))
       (place R13 87122 -143002 front 0 (PN 3.3K))
@@ -93,11 +97,11 @@
       (place R1 92202 -116078 front 0 (PN 10))
       (place R3 143000 -121500 front 0 (PN 91m))
       (place R4 134000 -127400 front 0 (PN 23K))
-      (place R6 134000 -124400 front 0 (PN 43K))
+      (place R6 134000 -124000 front 0 (PN 43K))
       (place R7 139100 -132000 front 0 (PN 2.49K))
       (place R10 165354 -95504 front 90 (PN 390))
       (place R11 168148 -95504 front 270 (PN 390))
-      (place R5 100700 -109200 front 180 (PN 16))
+      (place R5 100700 -109200 front 180 (PN 22))
     )
     (component "Diodes_SMD:D_SOD-123"
       (place D2 119405 -89382.6 front 0 (PN 1.8V))
@@ -132,7 +136,7 @@
     )
     (component "DC-DC:IE0524S"
       (place U5 128778 -92964 front 0 (PN IE0524S))
-      (place U8 128651 -101219 front 0 (PN IE0512S))
+      (place U8 128651 -101219 front 0 (PN IE0515S))
     )
     (component "Switchcraft:Switchcraft-SN37A12A"
       (place J1 61214 -122174 front 180 (PN "PRINTER JACK"))
@@ -169,6 +173,7 @@
     )
     (component "SMD_Misc:Samsung-Inductor-1008"
       (place L1 157400 -101100 front 0 (PN 1uH))
+      (place L2 87500 -136000 front 180 (PN 1uH))
     )
     (component "TO_SOT_Packages_SMD:TO-252-3_TabPin2"
       (place Q2 104400 -115000 front 0 (PN DN2625))
@@ -972,6 +977,10 @@
     )
   )
   (network
+    (net @:no_net_0
+    )
+    (net @:no_net_1
+    )
     (net GND
       (pins C4-2 C10-2 W1-1 R9-2 U3-"1-1" U3-"3-2" U5-1 J3-S R16-2 U8-1 R3-2 R7-2
         D13-5 D13-3 D13-1 C5-2 U4-2 M1-1 M7-1 C8-2 C9-1 C11-2 M6-1 C12-2)
@@ -986,7 +995,7 @@
       (pins U5-3 U6-2)
     )
     (net /HVNEG
-      (pins D10-1 T1-1 C1-2 W5-1 C2-2 J1-S R14-2 U8-3 R1-2 C3-2)
+      (pins D10-1 T1-1 C1-2 W5-1 C2-2 J1-S R14-2 U8-3 R1-2)
     )
     (net /HVPOS
       (pins D11-1 P1-2 C7-1 J1-T)
@@ -1043,7 +1052,7 @@
       (pins U3-"3-6" U3-"3-5" U7-2)
     )
     (net "Net-(C1-Pad1)"
-      (pins D6-1 C1-1 C2-1 R14-1 C3-1 U4-4 U4-6 W6-1 D1-1)
+      (pins D6-1 C1-1 C2-1 R14-1 W6-1 D1-1 L2-2)
     )
     (net "Net-(R17-Pad2)"
       (pins R17-2 U7-1)
@@ -1052,7 +1061,7 @@
       (pins R9-1 U3-"3-4" SW2-3)
     )
     (net "Net-(C10-Pad1)"
-      (pins C10-1 R17-1 SW1-1 U2-1)
+      (pins D2-1 C10-1 SW1-1 U2-1)
     )
     (net "Net-(R2-Pad1)"
       (pins R2-1 U1-2)
@@ -1094,8 +1103,8 @@
       (pins Q1-1 U1-7)
     )
     (net /Vcc
-      (pins M2-1 C4-1 T1-7 T1-8 T1-9 T1-10 R2-2 D2-1 U5-2 R12-2 U8-2 U6-4 U6-6 U7-4
-        U7-6 W2-1 M5-1 M4-1 C8-1 C9-2 C11-1 L1-2)
+      (pins M2-1 C4-1 T1-7 T1-8 T1-9 T1-10 R2-2 U5-2 R12-2 U8-2 U6-4 U6-6 U7-4 U7-6
+        W2-1 M5-1 M4-1 C8-1 C9-2 C11-1 L1-2)
     )
     (net "Net-(Q1-Pad2)"
       (pins T1-3 T1-4 T1-5 T1-6 W3-1 R4-1 R6-1 Q1-2 Q1-2@1 Q1-2@2 Q1-2@3 Q1-2@4 Q1-2@5)
@@ -1115,14 +1124,20 @@
     (net "Net-(Q2-Pad3)"
       (pins Q2-3 R5-2)
     )
+    (net "Net-(D2-Pad2)"
+      (pins D2-2 R17-1)
+    )
+    (net "Net-(L2-Pad1)"
+      (pins U4-4 U4-6 L2-1)
+    )
     (class kicad_default "" /ENABLE /RxD "Net-(C10-Pad1)" "Net-(C7-Pad2)"
-      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(J1-PadTB)"
-      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(M3-Pad1)" "Net-(R13-Pad2)"
-      "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R9-Pad1)" "Net-(SW1-Pad2)"
-      "Net-(SW1-Pad3)" "Net-(SW2-Pad1)" "Net-(U2-Pad4)" "Net-(U3-Pad1-2)"
-      "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)" "Net-(U3-Pad2-3)"
-      "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)" "Net-(U6-Pad3)" "Net-(U7-Pad3)"
-      "Net-(U9-Pad1)"
+      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J1-PadTB)"
+      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(L2-Pad1)" "Net-(M3-Pad1)"
+      "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)"
+      "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(SW1-Pad3)" "Net-(SW2-Pad1)" "Net-(U2-Pad4)"
+      "Net-(U3-Pad1-2)" "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)"
+      "Net-(U3-Pad2-3)" "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)"
+      "Net-(U6-Pad3)" "Net-(U7-Pad3)" "Net-(U9-Pad1)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
@@ -1141,7 +1156,7 @@
       )
     )
     (class HV /HVNEG /HVPOS "Net-(C1-Pad1)" "Net-(D1-Pad2)" "Net-(D10-Pad2)"
-      "Net-(D6-Pad2)" "Net-(JP1-Pad1)" "Net-(P1-Pad1)" "Net-(Q2-Pad2)" "Net-(Q2-Pad3)"
+      "Net-(D6-Pad2)" "Net-(P1-Pad1)" "Net-(Q2-Pad2)" "Net-(Q2-Pad3)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )
