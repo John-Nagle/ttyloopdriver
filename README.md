@@ -113,7 +113,7 @@ supply.
 At the USB end is a CP2012 breakout board U3.  The Silicon Labs CP2102 is a USB
 to serial converter, one of the few which can be reprogrammed for 45 baud
 operation.  We reprogram it to map a request for 600 baud to 45 baud.
-We also reprogram it to request 500mA from the USB port.
+We also reprogram it to request 400mA from the USB port.
 
 There are two power supplies for the output. One is a custom switching
 power supply which, during SPACE, charges up a pair of 1uF ceramic capacitors C1 and C2 to
@@ -214,9 +214,13 @@ device is plugged into the USB port, or when the laptop turns
 the port on.
 
 USB devices are guaranteed 100mA, but if you want 
-more than that, you have to ask. We ask for 500mA, the maximum
+more than that, you have to ask. We ask for 400mA, below the 500mA  maximum
 for USB versions 1 and 2, by programming a register in the CP2102
-USB interface.  If the host device says yes, the
+USB interface. We also set the speed for the serial port to 45 baud 
+when 600 baud is requested. Programming is done with Silicon Labs' Simplicity Studio
+program. 
+
+If the host device says yes to the request for 400mA, the
 CP2012 turns on /SUSPEND after successful completion of the
 power handshake.  Turning off the device in software (as when
 the host computer goes to sleep) will turn off /SUSPEND.
@@ -259,7 +263,7 @@ On the Teletype side, everything is isolated from ground and from the USB side.
 ## Test points
 
 - W1 - low-voltage ground
-- W2 - low-voltage power (4.5-5V to W4 GND when powered up)
+- W2 - low-voltage power (4.5-5V to W1 GND when powered up)
 - W3 - Low side of transformer primary. Watch the switcher action here.
 - W4 - High side of switcher current sense resistor
 - W5 - high-voltage ground
