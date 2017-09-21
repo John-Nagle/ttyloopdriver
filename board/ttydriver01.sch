@@ -120,7 +120,7 @@ $EndComp
 Text Notes 9900 2700 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
 Text Notes 10650 7650 0    60   ~ 12
-3.2
+3.3
 $Comp
 L GND #PWR02
 U 1 1 57EE08E1
@@ -373,30 +373,30 @@ $EndComp
 $Comp
 L D D6
 U 1 1 5867B233
-P 8725 3300
-F 0 "D6" V 8600 3350 50  0000 C CNN
-F 1 "D" V 8725 3200 50  0000 C CNN
-F 2 "Diodes_SMD:SMA_Standard" H 8725 3300 50  0001 C CNN
-F 3 "" H 8725 3300 50  0000 C CNN
-F 4 "S1GFSCT-ND" V 8725 3300 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" V 8725 3300 60  0001 C CNN "Vendor"
-F 6 "S1G" V 8725 3300 60  0001 C CNN "Part"
-F 7 "On" V 8725 3300 60  0001 C CNN "Mfgr"
-	1    8725 3300
-	0    1    1    0   
+P 8700 3600
+F 0 "D6" V 8575 3650 50  0000 C CNN
+F 1 "D" V 8700 3500 50  0000 C CNN
+F 2 "Diodes_SMD:SMA_Standard" H 8700 3600 50  0001 C CNN
+F 3 "" H 8700 3600 50  0000 C CNN
+F 4 "S1GFSCT-ND" V 8700 3600 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" V 8700 3600 60  0001 C CNN "Vendor"
+F 6 "S1G" V 8700 3600 60  0001 C CNN "Part"
+F 7 "On" V 8700 3600 60  0001 C CNN "Mfgr"
+	1    8700 3600
+	-1   0    0    1   
 $EndComp
 $Comp
 L R R5
 U 1 1 5867C471
 P 8925 2375
 F 0 "R5" V 9005 2375 50  0000 C CNN
-F 1 "16" V 8925 2375 50  0000 C CNN
+F 1 "22" V 8925 2375 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 8855 2375 50  0001 C CNN
 F 3 "" H 8925 2375 50  0000 C CNN
 F 4 "Digikey" V 8925 2375 60  0001 C CNN "Vendor"
 F 5 "Panasonic" V 8925 2375 60  0001 C CNN "Mfgr"
-F 6 "P16082CT-ND" V 8925 2375 60  0001 C CNN "Vendorpart"
-F 7 "ERJ-P08F16R0V" V 8925 2375 60  0001 C CNN "Part"
+F 6 "P22.1FCT-ND" V 8925 2375 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-8ENF22R1V" V 8925 2375 60  0001 C CNN "Part"
 	1    8925 2375
 	-1   0    0    1   
 $EndComp
@@ -995,21 +995,6 @@ F 3 "" H 3950 5725 39  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L C C3
-U 1 1 5959E090
-P 8400 4225
-F 0 "C3" H 8425 4325 50  0000 L CNN
-F 1 "1uf" H 8425 4125 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6.0mm_W4.4mm_P5.00mm" H 8438 4075 50  0001 C CNN
-F 3 "" H 8400 4225 50  0001 C CNN
-F 4 "RDER72E105MUB1H03B" H 8400 4225 60  0001 C CNN "Part"
-F 5 "Digikey" H 8400 4225 60  0001 C CNN "Vendor"
-F 6 "Murata" H 8400 4225 60  0001 C CNN "Mfgr"
-F 7 "490-8911-ND" H 8400 4225 60  0001 C CNN "Vendorpart"
-	1    8400 4225
-	1    0    0    -1  
-$EndComp
-$Comp
 L TEST_1P W1
 U 1 1 5959F953
 P 4650 6950
@@ -1067,7 +1052,7 @@ F 3 "" H 4875 7125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7350 5675 0    59   ~ 12
-Changes from 3.1:\n- Added inductor L1 to keep spikes from getting into xxx\n- Added active current limiter Q2 and removed current adjust jumper.
+Changes from 3.1:\n- Added inductor L1 to keep spikes from getting back into U2\n- Added active current limiter Q2 and removed current adjust jumper.\nChanges from 3.2:\n- Changed 16 ohm current limit resistor R5  to 22 ohms\n- Add another ferrite bead [TODO] \n- Add Zener to motor control circuit to pull up to 3.3V, not 5V. [TODO]
 $Comp
 L Q_NMOS_GDS Q1
 U 1 1 59705707
@@ -1324,13 +1309,6 @@ Wire Wire Line
 Wire Wire Line
 	6975 1750 3900 1750
 Wire Wire Line
-	8725 3025 8725 3150
-Connection ~ 8725 3025
-Wire Wire Line
-	7700 3600 8725 3600
-Wire Wire Line
-	8725 3600 8725 3450
-Wire Wire Line
 	6725 3050 7700 3050
 Wire Wire Line
 	7700 3050 7700 3600
@@ -1510,8 +1488,6 @@ Wire Wire Line
 Wire Wire Line
 	7000 5425 7000 5400
 Wire Wire Line
-	8975 3025 8975 3975
-Wire Wire Line
 	3950 5400 3950 5300
 Wire Wire Line
 	4650 1625 4650 6525
@@ -1535,12 +1511,6 @@ Wire Wire Line
 	3950 5650 3950 5600
 Wire Wire Line
 	3950 5850 3950 5800
-Wire Wire Line
-	8400 4075 8400 3975
-Connection ~ 8400 3975
-Wire Wire Line
-	8400 4375 8400 4475
-Connection ~ 8400 4475
 Wire Wire Line
 	4650 6825 4650 7150
 Connection ~ 4650 6950
@@ -1584,8 +1554,6 @@ Wire Wire Line
 Connection ~ 4200 3850
 Wire Wire Line
 	4200 4250 4200 4225
-Wire Wire Line
-	2600 6225 2600 4575
 Connection ~ 2600 4575
 Wire Wire Line
 	3250 6025 4650 6025
@@ -1600,13 +1568,13 @@ L R R17
 U 1 1 59A78514
 P 2600 6375
 F 0 "R17" V 2680 6375 50  0000 C CNN
-F 1 "1K" V 2600 6375 50  0000 C CNN
+F 1 "560" V 2600 6375 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206" V 2530 6375 50  0001 C CNN
 F 3 "" H 2600 6375 50  0001 C CNN
 F 4 "Panasonic" V 2600 6375 60  0001 C CNN "Mfgr"
 F 5 "Digikey" V 2600 6375 60  0001 C CNN "Vendor"
-F 6 "P1.0KECT-ND" V 2600 6375 60  0001 C CNN "Vendorpart"
-F 7 "ERJ-8GEYJ102V" V 2600 6375 60  0001 C CNN "Part"
+F 6 "P560FCT-ND" V 2600 6375 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-8ENF5600V" V 2600 6375 60  0001 C CNN "Part"
 	1    2600 6375
 	1    0    0    -1  
 $EndComp
@@ -1636,7 +1604,7 @@ Wire Wire Line
 Wire Wire Line
 	8550 2925 8550 1800
 Wire Wire Line
-	8925 2925 8925 2525
+	8925 2525 8925 2925
 Wire Wire Line
 	8625 2000 8625 2575
 Wire Wire Line
@@ -1651,4 +1619,47 @@ C3 is not installed.
 Wire Wire Line
 	5175 1950 3900 1950
 Connection ~ 4650 1950
+$Comp
+L D_Zener D2
+U 1 1 59C45DA8
+P 2600 6000
+F 0 "D2" H 2725 6025 50  0000 C CNN
+F 1 "1.8V" H 2450 6000 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 2600 6000 50  0001 C CNN
+F 3 "" H 2600 6000 50  0001 C CNN
+F 4 "Digikey" H 2600 6000 60  0001 C CNN "Vendor"
+F 5 "MMSZ4678-TPMSCT-ND" H 2600 6000 60  0001 C CNN "Vendorpart"
+F 6 "MMSZ4678-TP" H 2600 6000 60  0001 C CNN "Part"
+F 7 "Micro Commercial" H 2600 6000 60  0001 C CNN "Mfgr"
+	1    2600 6000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 6225 2600 6150
+Wire Wire Line
+	2600 5850 2600 4575
+$Comp
+L L L2
+U 1 1 59C4B034
+P 8975 3275
+F 0 "L2" V 8925 3275 50  0000 C CNN
+F 1 "1uH" V 9050 3275 50  0000 C CNN
+F 2 "SMD_Misc:Samsung-Inductor-1008" H 8975 3275 50  0001 C CNN
+F 3 "" H 8975 3275 50  0001 C CNN
+F 4 "Samsung" V 8975 3275 60  0001 C CNN "Mfgr"
+F 5 "CIG22E1R0MNE" V 8975 3275 60  0001 C CNN "Part"
+F 6 "Digikey" V 8975 3275 60  0001 C CNN "Vendor"
+F 7 "1276-6207-1-ND" V 8975 3275 60  0001 C CNN "Vendorpart"
+	1    8975 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3600 8550 3600
+Wire Wire Line
+	8975 3975 8975 3425
+Wire Wire Line
+	8850 3600 8975 3600
+Connection ~ 8975 3600
+Wire Wire Line
+	8975 3025 8975 3125
 $EndSCHEMATC
