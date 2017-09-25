@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.7-e1-6374~58~ubuntu16.04.1)
+(kicad_pcb (version 4) (host pcbnew 4.0.7-e2-6376~58~ubuntu16.04.1)
 
   (general
     (links 134)
     (no_connects 0)
-    (area 52.531429 76.251 193.291156 161.450001)
+    (area 55.804999 77.394999 175.335001 152.475001)
     (thickness 1.6)
     (drawings 11)
     (tracks 556)
@@ -622,7 +622,7 @@
       (net 1 GND))
     (model ${KISYS3DMOD}/Capacitors_THT.3dshapes/CP_Radial_D8.0mm_P3.50mm.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.3937 0.3937 0.3937))
+      (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -746,7 +746,7 @@
       (net 5 /HVNEG))
     (model ${KISYS3DMOD}/Capacitors_THT.3dshapes/C_Disc_D6.0mm_W4.4mm_P5.00mm.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.393701 0.393701 0.393701))
+      (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
@@ -1144,7 +1144,7 @@
       (net 5 /HVNEG))
     (model ${KISYS3DMOD}/Capacitors_THT.3dshapes/C_Disc_D6.0mm_W4.4mm_P5.00mm.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.393701 0.393701 0.393701))
+      (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
   )
