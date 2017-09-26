@@ -353,10 +353,10 @@
       (net 24 "Net-(C1-Pad1)"))
     (pad 2 smd rect (at 2 0) (size 2.5 1.8) (layers F.Cu F.Paste F.Mask)
       (net 10 "Net-(D6-Pad2)"))
-    (model Diodes_SMD.3dshapes/D_SMA_Standard.wrl
+    (model Diodes_SMD.3dshapes/D_SMA.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.3937 0.3937 0.3937))
-      (rotate (xyz 0 0 180))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -393,10 +393,10 @@
       (net 6 /HVPOS))
     (pad 2 smd rect (at 2.15 0) (size 2.5 2.3) (layers F.Cu F.Paste F.Mask)
       (net 11 "Net-(D10-Pad2)"))
-    (model Diodes_SMD.3dshapes/D_SMB_Standard.wrl
+    (model Diodes_SMD.3dshapes/D_SMB.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.3937 0.3937 0.3937))
-      (rotate (xyz 0 0 180))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -433,10 +433,10 @@
       (net 5 /HVNEG))
     (pad 2 smd rect (at 2.15 0) (size 2.5 2.3) (layers F.Cu F.Paste F.Mask)
       (net 11 "Net-(D10-Pad2)"))
-    (model Diodes_SMD.3dshapes/D_SMB_Standard.wrl
+    (model Diodes_SMD.3dshapes/D_SMB.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.3937 0.3937 0.3937))
-      (rotate (xyz 0 0 180))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -667,6 +667,11 @@
       (scale (xyz 0.075 0.075 0.075))
       (rotate (xyz 0 0 90))
     )
+    (model TO_SOT_Packages_SMD.3dshapes/SOT-353_SC-70-5.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Coilcraft:Coilcraft-DA2032-AL (layer F.Cu) (tedit 57E431C4) (tstamp 5951FC23)
@@ -827,7 +832,7 @@
     (model ${KISYS3DMOD}/Diodes_SMD.3dshapes/D_SOD-323.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1.25 1.25 1.25))
-      (rotate (xyz 0 0 180))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -1174,10 +1179,10 @@
       (net 18 "Net-(P1-Pad1)"))
     (pad 2 thru_hole oval (at 1.27 0 180) (size 1.80086 3.50012) (drill 1.19888) (layers *.Cu *.Mask)
       (net 6 /HVPOS))
-    (model Pin_Headers.3dshapes/Pin_Header_Straight_1x02_Pitch2.54mm.wrl
-      (at (xyz 0 0 0))
+    (model Connectors_Molex.3dshapes/Molex_KK-6410-02_02x2.54mm_Straight.wrl
+      (at (xyz 0.05 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 180))
     )
   )
 
@@ -2047,10 +2052,10 @@
       (net 42 "Net-(Q1-Pad2)"))
     (pad 2 smd rect (at 0.95 2.775 90) (size 4.55 5.25) (layers F.Cu F.Paste)
       (net 42 "Net-(Q1-Pad2)"))
-    (model ${KISYS3DMOD}/TO_SOT_Packages_SMD.3dshapes/TO-263-3Lead.wrl
-      (at (xyz -0.2 0 0))
+    (model TO_SOT_Packages_SMD.3dshapes/TO-263-3_TabPin2.wrl
+      (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 90))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -2633,10 +2638,10 @@
       (net 24 "Net-(C1-Pad1)"))
     (pad 2 smd rect (at 2.15 0) (size 2.5 2.3) (layers F.Cu F.Paste F.Mask)
       (net 9 "Net-(D1-Pad2)"))
-    (model Diodes_SMD.3dshapes/D_SMB_Standard.wrl
+    (model Diodes_SMD.3dshapes/D_SMB.wrl
       (at (xyz 0 0 0))
-      (scale (xyz 0.3937 0.3937 0.3937))
-      (rotate (xyz 0 0 180))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
     )
   )
 
@@ -2773,10 +2778,10 @@
       (net 46 "Net-(Q2-Pad2)"))
     (pad 2 smd rect (at 0.425 1.525) (size 3.05 2.75) (layers F.Cu F.Paste)
       (net 46 "Net-(Q2-Pad2)"))
-    (model TO_SOT_Packages_SMD.3dshapes/TO-252-2Lead.wrl
-      (at (xyz -0.155 0 0))
+    (model TO_SOT_Packages_SMD.3dshapes/TO-252-3_TabPin2.wrl
+      (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 90))
+      (rotate (xyz 0 0 0))
     )
   )
 
