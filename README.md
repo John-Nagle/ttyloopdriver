@@ -2,8 +2,15 @@
 Hardware device for driving antique Teletype machines
 
 ![Prototype board](board/images/ttydriverboxmed.jpg)
-WORK IN PROGRESS. 
+ 
 ## Status 
+
+Version 3.3 works, successfully driving a Model 15
+Teletype.
+
+## Version log
+
+### Version 1
 
 Version 1 not successful.  The 555 timer can't produce
 enough peak drive for the MOSFET, and only about 20V comes out.
@@ -75,6 +82,10 @@ If the current limiter is bypassed, it works fine.  Measured current through the
 with a 2.2 ohm current sense resistor placed in series for testing,  is I = E/R = 0.5/2.2 = 227mA.
 This is well below the current limiter setpoint.  R1 at 56.3K ohms should result in a 400mA current
 limit. Unclear why the limiter is tripping. 
+
+(Turned out that the current limiter was tripping because the circuit for motor control was
+back-feeding power into the U2 from the output side, which the current limiter detects as
+a fault condition.)
     
 ### Update 2017-09-18
 
@@ -85,6 +96,10 @@ the 55 ohm selector is getting 80mA instead of 60. This is also
 the current if the output is shorted, so the current limiter is 
 working. It just needs adjustment. Changing R5 to 22 ohms should
 fix it. 
+
+### Update 2017-10-12
+
+Board version 3.3.  Fully working board. 
   
     
 
@@ -308,5 +323,18 @@ Power management works; if the computer goes to sleep or suspends, the board wil
 
 ## Packaging
 
-The board is 75mm x 120mm, and will fit in a Hammond 1455K1202 box.
+The board is 75mm x 120mm, and will fit in a Hammond 1455K1202 box. Patterns for cutting the end plates for the box
+are in the directory "case".  The Corel Draw files will work with Epilog laser cutters. We use 1/16" black  acrylic.
+
+## Bill of materials
+
+The bill of materials is in "board/ttydriver01.xml", in KiCAD format.  If this file is run through the Python program
+in "tools/src/kicadbomtovendor.py", CSV files are generated. From the command line, when in the directory "board", try
+
+    python3 ../tools/src/kicadbomtovendor ttydriver01.xml --split=VENDOR
+    
+This will generate CSV files for Digikey, Robotshop, and Coilcraft. The Digikey CSV file can be read by most spreadsheet
+programs, and can be fed into the Digikey BOM system, which will look up and price all the parts. Various parts may be out
+of stock, but every part on that list has been shipped to us from DigiKey at least once. Substitute out of stock resistors
+and caps with equivalent parts if needed.
 

@@ -159,5 +159,19 @@ Get rid of JP1 and R5. Current regulation now fully automatic.
   working. It just needs adjustment. Changing R5 to 22 ohms should
   fix it. 
   
+2017-10-11
 
+  Board version 3.3 built and tested. Input current limit U2 is tripping.
+  Everything else works if U2 is bypassed. Looking at current on scope,
+  there are spikes to 700mA about 25ns wide. Will try changing L1 to
+  6.8uH to get spikes under contol.
 
+2017-10-12
+
+  Board works. Changed L1 to 6.8uH, but that wasn't the problem. The
+  problem was a bad solder joint at pin 1-4 of U3.  This is the ENABLE
+  signal that turns on the power. With the EN signal to U2 floating, 
+  the +5 power would randomly be on, off, or current-limited. Touching
+  a test probe to the board would change the situation. That's fixed.
+  Looking good. Board drove a Model 15 Teletype correctly, including
+  the motor control output.

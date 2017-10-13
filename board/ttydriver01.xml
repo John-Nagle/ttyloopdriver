@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver3/ttyloopdriver/board/ttydriver01.sch</source>
-    <date>Thu 21 Sep 2017 04:08:19 PM PDT</date>
-    <tool>Eeschema 4.0.7-e1-6374~58~ubuntu16.04.1</tool>
+    <date>Thu 12 Oct 2017 09:23:39 PM PDT</date>
+    <tool>Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -111,7 +111,7 @@
         <field name="Mfgr">Molex</field>
         <field name="Vendor">Digikey</field>
       </fields>
-      <libsource lib="conn" part="CONN_01X02"/>
+      <libsource lib="ttydriver01-cache" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57F43FF1</tstamp>
     </comp>
@@ -730,13 +730,13 @@
       <tstamp>59825DD5</tstamp>
     </comp>
     <comp ref="L1">
-      <value>1uH</value>
+      <value>6.8uH</value>
       <footprint>SMD_Misc:Samsung-Inductor-1008</footprint>
       <fields>
-        <field name="Mfgr">Samsung</field>
-        <field name="Part">CIG22E1R0MNE</field>
+        <field name="Mfgr">Murata</field>
+        <field name="Part">LQH2HPZ6R8MJRL</field>
         <field name="Vendor">Digikey</field>
-        <field name="Vendorpart">1276-6207-1-ND</field>
+        <field name="Vendorpart">490-15905-1-ND</field>
       </fields>
       <libsource lib="device" part="L"/>
       <sheetpath names="/" tstamps="/"/>
@@ -876,8 +876,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="conn" part="CONN_01X02">
-      <description>Connector, single row, 01x02, pin header</description>
+    <libpart lib="ttydriver01-cache" part="CONN_01X02">
       <footprints>
         <fp>Pin_Header_Straight_1X*</fp>
         <fp>Pin_Header_Angled_1X*</fp>
@@ -1172,14 +1171,17 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="device">
-      <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
     <library logical="conn">
       <uri>/usr/share/kicad/library/conn.lib</uri>
     </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
     <library logical="ttypowerlib">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver3/ttyloopdriver/board/ttypowerlib.lib</uri>
+    </library>
+    <library logical="ttydriver01-cache">
+      <uri>/home/john/projects/teletype/hardware/ttyloopdriver3/ttyloopdriver/board/ttydriver01-cache.lib</uri>
     </library>
   </libraries>
   <nets>
