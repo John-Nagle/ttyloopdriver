@@ -321,6 +321,11 @@ because that speed was never used for any historical devices.)  When power is on
 Data Set Ready will turn on. When power is on and the motor is running, Clear to Send will turn on.
 Power management works; if the computer goes to sleep or suspends, the board will turn off.
 
+## Firmware
+
+The USB to serial converter part on the board must be configured to output 45 baud. See the README file in the
+"firmware" directory for instructions.
+
 ## Packaging
 
 The board is 75mm x 120mm, and will fit in a Hammond 1455K1202 box. Patterns for cutting the end plates for the box

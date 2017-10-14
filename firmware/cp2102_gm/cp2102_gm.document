@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<document:XMLDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:document="http://www.silabs.com/config/document/document.ecore">
+  <documentObject id="cp2102" version="1.0">
+    <propertyValue propertyId="cp2102.baudrateAlias.01.actual" value="45"/>
+    <propertyValue propertyId="cp2102.baudrateAlias.01.baudConfig.BaudGen" value="21092"/>
+    <propertyValue propertyId="cp2102.baudrateAlias.01.baudConfig.Prescaler" value="12"/>
+    <propertyValue propertyId="cp2102.baudrateAlias.01.baudConfig.Timer0Reload" value="0"/>
+    <propertyValue propertyId="cp2102.baudrateAlias.01.desired" value="45"/>
+    <propertyValue propertyId="cp2102.baudrateAlias.image" value="FF F0 FF FA 01 00 60 E3 16 00 &#xA;FF F0 FF FA 01 00 60 E3 16 00 &#xA;FF EC FF F8 01 00 80 4F 12 00 &#xA;FF E6 FF F6 01 00 00 10 0E 00 &#xA;FF D6 FF F0 01 00 00 CA 08 00 &#xA;FF D0 FF EE 01 00 20 A1 07 00 &#xA;FF CC FF EC 01 00 00 08 07 00 &#xA;FF A2 FF DC 01 00 00 E8 03 00 &#xA;FF A0 FF DC 01 00 90 D0 03 00 &#xA;FF 98 FF D9 01 00 00 84 03 00 &#xA;FF 64 FF C5 01 00 00 58 02 00 &#xA;FF 44 FF B9 01 00 00 F4 01 00 &#xA;FF 30 FF B2 01 00 00 C2 01 00 &#xA;FE C8 FF 8B 01 00 00 2C 01 00 &#xA;FE 89 FF 73 01 00 00 FA 00 00 &#xA;FE 5F FF 63 01 00 00 E1 00 00 &#xA;FE 53 FF 5F 01 00 C0 DA 00 00 &#xA;FE 2B FF 50 01 00 00 C8 00 00 &#xA;FD 8F FF 15 01 00 00 96 00 00 &#xA;FC BF FE C7 01 00 80 70 00 00 &#xA;FB 1E FE 2B 01 00 00 4B 00 00 &#xA;FA 24 FE 0C 01 00 80 3E 00 00 &#xA;F9 7D FE 0C 01 00 40 38 00 00 &#xA;F6 3C FE 0C 01 00 80 25 00 00 &#xA;F2 FB FE 0C 01 00 20 1C 00 00 &#xA;EC 78 FE 0C 01 00 C0 12 00 00 &#xA;E8 90 FE 0C 01 00 A0 0F 00 00 &#xA;D8 F0 FE 0C 01 00 60 09 00 00 &#xA;CB EB FE 0C 01 00 08 07 00 00 &#xA;B1 E0 FE 0C 01 00 B0 04 00 00 &#xA;52 64 00 00 0C 00 2D 00 00 00 &#xA;B1 E0 FE 0C 04 00 2C 01 00 00 &#xA;"/>
+    <propertyValue propertyId="cp210x_base.customer.address" value="&#xA;&#xA;,  &#xA;"/>
+    <propertyValue propertyId="cp210x_base.customer.contactname" value=" "/>
+    <propertyValue propertyId="cp210x_base.serialization.serialKey" value="83CE7FAC-AA93-4CDB-A8D1-4F77B7D11F03"/>
+    <propertyValue propertyId="cp210x_base.set_ids.maxPower_real" value="200"/>
+    <propertyValue propertyId="cp210x_base.set_ids.maxPower_user" value="400"/>
+    <propertyValue propertyId="cp210x_base.set_ids.productString" value="CP2102 USB to UART Bridge Controller"/>
+  </documentObject>
+</document:XMLDocument>
