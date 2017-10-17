@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/john/projects/teletype/hardware/ttyloopdriver3/ttyloopdriver/board/ttydriver01.sch</source>
-    <date>Thu 12 Oct 2017 09:23:39 PM PDT</date>
+    <date>Tue 17 Oct 2017 10:42:22 AM PDT</date>
     <tool>Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -205,7 +205,7 @@
       <tstamp>5867471B</tstamp>
     </comp>
     <comp ref="J2">
-      <value>KEYBOARD JACK</value>
+      <value>1/4 in phone jack</value>
       <footprint>Switchcraft:Switchcraft-SN37A12A</footprint>
       <datasheet>http://www.switchcraft.com/Drawings/SN37A_SERIES_CD.pdf</datasheet>
       <fields>
@@ -332,7 +332,7 @@
       <fields>
         <field name="Mfgr">Ixys</field>
         <field name="Vendorpart">CLA272CT-ND</field>
-        <field name="Part">CPC1510GST</field>
+        <field name="Part">CPC1510GSTR</field>
         <field name="Vendor">Digikey</field>
       </fields>
       <libsource lib="ttypowerlib" part="G3VM401E"/>
@@ -374,7 +374,7 @@
       <tstamp>586C953C</tstamp>
     </comp>
     <comp ref="J1">
-      <value>PRINTER JACK</value>
+      <value>1/4 in phone jack</value>
       <footprint>Switchcraft:Switchcraft-SN37A12A</footprint>
       <datasheet>http://www.switchcraft.com/Drawings/SN37A_SERIES_CD.pdf</datasheet>
       <fields>
@@ -1171,17 +1171,17 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="conn">
-      <uri>/usr/share/kicad/library/conn.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
     <library logical="ttypowerlib">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver3/ttyloopdriver/board/ttypowerlib.lib</uri>
     </library>
     <library logical="ttydriver01-cache">
       <uri>/home/john/projects/teletype/hardware/ttyloopdriver3/ttyloopdriver/board/ttydriver01-cache.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
     </library>
   </libraries>
   <nets>
