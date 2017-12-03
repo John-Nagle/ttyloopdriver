@@ -1,107 +1,15 @@
 # ttyloopdriver
-Hardware device for driving antique Teletype machines
+Hardware device for driving antique Teletype machines.
+
+For use with 60mA current loop Teletypes at 45 baud.
 
 ![Prototype board](board/images/ttydriverboxmed.jpg)
  
 ## Status 
 
 Version 3.3 works, successfully driving a Model 15
-Teletype.
-
-## Version log
-
-### Version 1
-
-Version 1 not successful.  The 555 timer can't produce
-enough peak drive for the MOSFET, and only about 20V comes out.
-Redesign underway.
-
-### Update 2016-12-19
-
-Redesign complete. SPICE model (in directory "circuitsim/ttydriver.asc") works.  Gil Smith is building up a prototype for
-circuit testing.  If that works, a new PC board will be designed.
-
-The next PC board will have switches, LEDs, and phone jacks on the board, so no external wiring harness
-will be required.
-
-### Update 2017-04-18
-
-Board 2.0 will drive a Model 15 Teletype with a few changes to the board.  The keyboard side doesn't work.
-Board 2.1 being built.
-
-### Update 2017-04-21
-
-Board 2.1 will drive a Model 15 Teletype with the following fixes:
-
-- Bypass USB current limiter U2 by jumpering pins 1 to 6.  It's tripping at too low a current.  Check R16 value again.
-Printer side is then OK. After further testing, the current limiter is working fine; it trips if the printeroutput
-is shorted or there's no selector magnet plugged in. After about 10 seconds, U2 will cool down and re-enable power.
-
-- Keyboard side needs a lower value resistor for R9 than 2.2K. Not enough pulldown.
-
-- Jumpering R9 with a 1.5K resistor makes the keyboard side work. That's equivalent to an R9 value of about 
-900 ohms.  4.5V/900 = 5mA there, for 0.03W. OK.  Try 1K for R9.
-
-- Motor control LED is always on.  Probably a pullup resistor problem.  RTS is an active low. RTS signal
-shows 3V for OFF, 0.2V for ON in current circuit, but U7 remains on even for the OFF condition.
-R17 needs to be larger, or this needs a redesign.
-
-### Update 2017-05-13
-
-Board 2.2 not built; more pull-in energy is needed. The voltage decays too fast, and only
-one of three Teletypes will work with the 1uf @ 120V cap.  Board 2.3 will have 2uf @ 120V. 
-This should provide enough punch to pull in the selector fast enough. Github files are updated
-to Board v2.3.0, but the board has not been sent to fab yet.
-
-### Update 2017-05-15
-
-Board 2.3 sent to fab.
-
-### Update 2017-06-20
-
-Board 2.3 can't charge its 2uf of capacitors in less than 40ms.
-The LTSPICE model and the real board disagree in transformer current
-by about 2x. Unclear why.  Possible transformer saturation.
-
-Efficiency calc: 
-    
-2uf at 120V is  14.4mJ
-    
-400mA at 4.8V is 1.92W. 1.92W x 20ms = 0.0384 watt-seconds = 0.0384 joules = 38.4 mJ
-
-Efficiency needed is 14.4 / 38.4 = 38%. Should be easily achieveable.
-
-### Update 2017-08-25
-
-Board 3.1, a completely new design using an LT3750 capacitor charging controller, works, except 
-that the current limiter U2 keeps tripping. Successful typing with a Model 15 Teletype.
-The capacitors charge to 122V in about 14ms, which is close to what simulation predicts.
-
-The AP2553W6 current limiter trips for about half a second about twice a minute on average. 
-If the current limiter is bypassed, it works fine.  Measured current through the current limiter,
-with a 2.2 ohm current sense resistor placed in series for testing,  is I = E/R = 0.5/2.2 = 227mA.
-This is well below the current limiter setpoint.  R1 at 56.3K ohms should result in a 400mA current
-limit. Unclear why the limiter is tripping. 
-
-(Turned out that the current limiter was tripping because the circuit for motor control was
-back-feeding power into the U2 from the output side, which the current limiter detects as
-a fault condition.)
-    
-### Update 2017-09-18
-
-Board version 3.2 built and tested. Successfully drives
-Teletype Model 15 with 220 ohm selector and Teletype Model
-14 with 55 ohm selector. The current limit is too high, though;
-the 55 ohm selector is getting 80mA instead of 60. This is also
-the current if the output is shorted, so the current limiter is 
-working. It just needs adjustment. Changing R5 to 22 ohms should
-fix it. 
-
-### Update 2017-10-12
-
-Board version 3.3.  Fully working board. 
-  
-    
+Teletype. It's also been built by Steve Garrison and
+used to drive a Model 28 Teletype.
 
 # What it is
 
@@ -109,7 +17,6 @@ This is a board to allow connecting antique Teletype machines to a computer thro
 a USB port. It's for Teletype Model 14 and 15 machines, which use 60mA current
 loops.   This board needs no external power supply other than the USB port.
 This approach uses only about 1 watt of power, drawing 200mA from the USB port. 
-
 
 # How it works
 
@@ -324,7 +231,13 @@ Power management works; if the computer goes to sleep or suspends, the board wil
 ## Firmware
 
 The USB to serial converter part on the board must be configured to output 45 baud. See the README file in the
-"firmware" directory for instructions.
+"firmware" directory for instructions.  The driving software must request 600 baud to get 45 baud, because 45
+baud is no longer a standard baud rate.
+
+## Fabricating the PC board
+
+Standard Gerber and drill files are in "board/fab/fab.zip".  These are known to work with Seeed Studio
+in Shentzen, and should work with other board shops.
 
 ## Packaging
 
@@ -342,4 +255,87 @@ This will generate CSV files for Digikey, Robotshop, and Coilcraft. The Digikey 
 programs, and can be fed into the Digikey BOM system, which will look up and price all the parts. Various parts may be out
 of stock, but every part on that list has been shipped to us from DigiKey at least once. Substitute out of stock resistors
 and caps with equivalent parts if needed.
+
+## Assembly hints
+
+### CP2102 board mounting.
+
+Mount the CP2102 board to the main board without sockets using pin headers.  If you mount it with a socket,
+the board won't fit in the box. The CP2102 board comes with angled headers soldered on. Those have to be 
+removed.  Solder straight 0.10 inch headers soldered into all the connector holes on the CP2102 board.
+The CP2102 board comes with the needed header pins.
+
+### Part substitution
+
+The manufacturer isn't critical.  None of the resistors
+are doing anything exotic. R3, R5, and R16 are 1% for a reason;
+they're all for current sensing.  The others aren't critical and 5% resistors will work.
+
+### Soldering
+
+This board has been assembled by using solder paste for the surface mount
+parts, placing the parts, then reflowing in a reflow oven. It's a straightforward
+job by modern SMT standards. This will require SMT skills and tools. 
+U1 has 0.5mm pin spacing, which is tight. 
+
+Check for solder bridges, especially between pins of U1. The pads of U1 are laid out so that 
+solder bridges tend to occur near the ends of the pins, where you can
+get at them with copper braid and a pointed soldering iron tip.
+
+### Initial testing
+
+#### 1. Plug into a computer with a USB port.
+
+No software required yet.  See that the
+computer recognizes it as a USB device.
+
+#### 2. Power check
+
+W1 is ground, W2 is Vcc. Should see
+4.8V between those two with the power
+switch on.  Bottom green light should
+turn on. This may not happen unless some
+program has the USB port open, which turns
+it on.
+
+#### 3. Reprogram CP2102
+
+If you haven't reprogrammed the
+SiLabs baord for 45 baud, do so now.
+
+#### 4. Send data
+
+Send data from Baudotrss or Heavy
+Metal at 45 baud. Watch the lights on the
+serial board blink.  Top green light should
+blink.
+
+#### 5. Check high voltage.
+
+W5 is HV ground. W6 is the high side of
+the capacitors.  Expect to see 120V there
+with no load on the output.  You have to
+send some data to get a voltage there,
+because the switcher only charges the
+cap after a MARK to SPACE transition.
+R14 will discharge the caps in a few
+seconds, so after power-off it doesn't
+retain high voltage. So you need data
+to keep high voltage.
+
+#### 6. Check current
+
+With no data being sent but with something
+driving the port, hook up a current meter
+to the printer jack.  Should register 60mA,
+even into a dead short. The current limiter
+can handle this. Q2 will heat up, but it's
+rated for 150C and it only heats up to 80C or so
+driving a dead short for 20 minutes.
+
+#### 7. Connect a Teletype and send data
+
+If all those tests work, you're probably good
+to run a Teletype.  Enjoy!
+
 

@@ -1,3 +1,99 @@
+# Version log
+
+## Version 1
+
+Version 1 not successful.  The 555 timer can't produce
+enough peak drive for the MOSFET, and only about 20V comes out.
+Redesign underway.
+
+## Update 2016-12-19
+
+Redesign complete. SPICE model (in directory "circuitsim/ttydriver.asc") works.  Gil Smith is building up a prototype for
+circuit testing.  If that works, a new PC board will be designed.
+
+The next PC board will have switches, LEDs, and phone jacks on the board, so no external wiring harness
+will be required.
+
+## Update 2017-04-18
+
+Board 2.0 will drive a Model 15 Teletype with a few changes to the board.  The keyboard side doesn't work.
+Board 2.1 being built.
+
+## Update 2017-04-21
+
+Board 2.1 will drive a Model 15 Teletype with the following fixes:
+
+- Bypass USB current limiter U2 by jumpering pins 1 to 6.  It's tripping at too low a current.  Check R16 value again.
+Printer side is then OK. After further testing, the current limiter is working fine; it trips if the printeroutput
+is shorted or there's no selector magnet plugged in. After about 10 seconds, U2 will cool down and re-enable power.
+
+- Keyboard side needs a lower value resistor for R9 than 2.2K. Not enough pulldown.
+
+- Jumpering R9 with a 1.5K resistor makes the keyboard side work. That's equivalent to an R9 value of about 
+900 ohms.  4.5V/900 = 5mA there, for 0.03W. OK.  Try 1K for R9.
+
+- Motor control LED is always on.  Probably a pullup resistor problem.  RTS is an active low. RTS signal
+shows 3V for OFF, 0.2V for ON in current circuit, but U7 remains on even for the OFF condition.
+R17 needs to be larger, or this needs a redesign.
+
+## Update 2017-05-13
+
+Board 2.2 not built; more pull-in energy is needed. The voltage decays too fast, and only
+one of three Teletypes will work with the 1uf @ 120V cap.  Board 2.3 will have 2uf @ 120V. 
+This should provide enough punch to pull in the selector fast enough. Github files are updated
+to Board v2.3.0, but the board has not been sent to fab yet.
+
+## Update 2017-05-15
+
+Board 2.3 sent to fab.
+
+## Update 2017-06-20
+
+Board 2.3 can't charge its 2uf of capacitors in less than 40ms.
+The LTSPICE model and the real board disagree in transformer current
+by about 2x. Unclear why.  Possible transformer saturation.
+
+Efficiency calc: 
+    
+2uf at 120V is  14.4mJ
+    
+400mA at 4.8V is 1.92W. 1.92W x 20ms = 0.0384 watt-seconds = 0.0384 joules = 38.4 mJ
+
+Efficiency needed is 14.4 / 38.4 = 38%. Should be easily achieveable.
+
+## Update 2017-08-25
+
+Board 3.1, a completely new design using an LT3750 capacitor charging controller, works, except 
+that the current limiter U2 keeps tripping. Successful typing with a Model 15 Teletype.
+The capacitors charge to 122V in about 14ms, which is close to what simulation predicts.
+
+The AP2553W6 current limiter trips for about half a second about twice a minute on average. 
+If the current limiter is bypassed, it works fine.  Measured current through the current limiter,
+with a 2.2 ohm current sense resistor placed in series for testing,  is I = E/R = 0.5/2.2 = 227mA.
+This is well below the current limiter setpoint.  R1 at 56.3K ohms should result in a 400mA current
+limit. Unclear why the limiter is tripping. 
+
+(Turned out that the current limiter was tripping because the circuit for motor control was
+back-feeding power into the U2 from the output side, which the current limiter detects as
+a fault condition.)
+    
+## Update 2017-09-18
+
+Board version 3.2 built and tested. Successfully drives
+Teletype Model 15 with 220 ohm selector and Teletype Model
+14 with 55 ohm selector. The current limit is too high, though;
+the 55 ohm selector is getting 80mA instead of 60. This is also
+the current if the output is shorted, so the current limiter is 
+working. It just needs adjustment. Changing R5 to 22 ohms should
+fix it. 
+
+## Update 2017-10-12
+
+Board version 3.3.  Fully working board. Drives Teletype Model 15 and 14 successfully, both
+220 ohm and 55 ohm versions. Steve Garrison built a copy of the board and successfully drove a Model 28 with it.
+
+# Development notes
+
 New approach:
 Five 5V to 24V power supplies in series to charge a 2uf cap.
 
