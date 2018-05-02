@@ -3,7 +3,7 @@
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "4.0.7-e1-6374~58~ubuntu16.04.1")
+    (host_version "4.0.7-e2-6376~58~ubuntu16.04.1")
   )
   (resolution um 10)
   (unit um)
@@ -139,8 +139,8 @@
       (place U8 128651 -101219 front 0 (PN IE0515S))
     )
     (component "Switchcraft:Switchcraft-SN37A12A"
-      (place J1 61214 -122174 front 180 (PN "PRINTER JACK"))
-      (place J2 61214 -138430 front 180 (PN "KEYBOARD JACK"))
+      (place J1 61214 -122174 front 180 (PN "1/4 in phone jack"))
+      (place J2 61214 -138430 front 180 (PN "1/4 in phone jack"))
     )
     (component "CUI:MJ-2509N"
       (place J3 56000 -110000 front 270 (PN "MOTOR CTL RELAY JACK"))
@@ -169,14 +169,17 @@
       (place U1 140150 -125900 front 180 (PN LT3750))
     )
     (component Capacitors_SMD:C_1206
-      (place C8 124500 -105000 front 0 (PN 33uf))
+      (place C8 125500 -105000 front 0 (PN 33uf))
     )
     (component "SMD_Misc:Samsung-Inductor-1008"
-      (place L1 157400 -101100 front 0 (PN 1uH))
+      (place L1 157400 -101100 front 0 (PN 6.8uH))
       (place L2 87500 -136000 front 180 (PN 1uH))
     )
     (component "TO_SOT_Packages_SMD:TO-252-3_TabPin2"
       (place Q2 104400 -115000 front 0 (PN DN2625))
+    )
+    (component Resistors_SMD:R_2512
+      (place R18 119000 -101000 front 90 (PN 2.2K))
     )
   )
   (library
@@ -842,6 +845,20 @@
       (pin Rect[T]Pad_3050x2750_um 2@4 3775 1525)
       (pin Rect[T]Pad_3050x2750_um 2@5 425 -1525)
     )
+    (image Resistors_SMD:R_2512
+      (outline (path signal 100  -3150 -1600  -3150 1600))
+      (outline (path signal 100  3150 -1600  -3150 -1600))
+      (outline (path signal 100  3150 1600  3150 -1600))
+      (outline (path signal 100  -3150 1600  3150 1600))
+      (outline (path signal 120  2600 -1820  -2600 -1820))
+      (outline (path signal 120  -2600 1820  2600 1820))
+      (outline (path signal 50  -3850 1850  3850 1850))
+      (outline (path signal 50  -3850 1850  -3850 -1850))
+      (outline (path signal 50  3850 -1850  3850 1850))
+      (outline (path signal 50  3850 -1850  -3850 -1850))
+      (pin Rect[T]Pad_1000x3200_um 1 -3100 0)
+      (pin Rect[T]Pad_1000x3200_um 2 3100 0)
+    )
     (padstack Round[T]Pad_1000_um
       (shape (circle F.Cu 1000))
       (attach off)
@@ -943,6 +960,10 @@
       (shape (rect F.Cu -4700 -5400 4700 5400))
       (attach off)
     )
+    (padstack Rect[T]Pad_1000x3200_um
+      (shape (rect F.Cu -500 -1600 500 1600))
+      (attach off)
+    )
     (padstack Rect[T]Pad_1000x1250_um
       (shape (rect F.Cu -500 -625 500 625))
       (attach off)
@@ -991,9 +1012,6 @@
     (net /RxD
       (pins SW2-2 U6-5)
     )
-    (net "Net-(U5-Pad3)"
-      (pins U5-3 U6-2)
-    )
     (net /HVNEG
       (pins D10-1 T1-1 C1-2 W5-1 C2-2 J1-S R14-2 U8-3 R1-2)
     )
@@ -1028,7 +1046,7 @@
       (pins U5-4 J2-S J2-TB)
     )
     (net "Net-(J2-PadT)"
-      (pins J2-T R13-1)
+      (pins J2-T R13-1 R18-1)
     )
     (net "Net-(J3-PadT)"
       (pins J3-T R11-2 U7-5)
@@ -1130,14 +1148,14 @@
     (net "Net-(L2-Pad1)"
       (pins U4-4 U4-6 L2-1)
     )
+    (net "Net-(R18-Pad2)"
+      (pins U5-3 U6-2 R18-2)
+    )
     (class kicad_default "" /ENABLE /RxD "Net-(C10-Pad1)" "Net-(C7-Pad2)"
-      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J1-PadTB)"
-      "Net-(J2-PadS)" "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(L2-Pad1)" "Net-(M3-Pad1)"
-      "Net-(R13-Pad2)" "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)"
-      "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(SW1-Pad3)" "Net-(SW2-Pad1)" "Net-(U2-Pad4)"
-      "Net-(U3-Pad1-2)" "Net-(U3-Pad1-4)" "Net-(U3-Pad2-1)" "Net-(U3-Pad2-2)"
-      "Net-(U3-Pad2-3)" "Net-(U3-Pad3-5)" "Net-(U4-Pad3)" "Net-(U5-Pad3)"
-      "Net-(U6-Pad3)" "Net-(U7-Pad3)" "Net-(U9-Pad1)"
+      "Net-(D13-Pad2)" "Net-(D13-Pad4)" "Net-(D13-Pad6)" "Net-(D2-Pad2)" "Net-(J2-PadS)"
+      "Net-(J2-PadT)" "Net-(J3-PadT)" "Net-(L2-Pad1)" "Net-(M3-Pad1)" "Net-(R13-Pad2)"
+      "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad2)" "Net-(R18-Pad2)"
+      "Net-(R9-Pad1)" "Net-(SW1-Pad2)" "Net-(U3-Pad2-3)" "Net-(U3-Pad3-5)"
       (circuit
         (use_via Via[0-1]_1000:400_um)
       )

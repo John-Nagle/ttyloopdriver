@@ -120,7 +120,7 @@ $EndComp
 Text Notes 9900 2700 0    60   ~ 0
 120VDC 60mA out\nto Teletype selector magnet
 Text Notes 10650 7650 0    60   ~ 12
-3.3
+3.4
 $Comp
 L GND #PWR02
 U 1 1 57EE08E1
@@ -231,16 +231,16 @@ $EndComp
 $Comp
 L R R13
 U 1 1 57F4497E
-P 6725 1425
-F 0 "R13" V 6805 1425 50  0000 C CNN
-F 1 "3.3K" V 6725 1425 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 6655 1425 50  0001 C CNN
-F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6725 1425 50  0001 C CNN
-F 4 "Panasonic" V 6725 1425 60  0001 C CNN "Mfgr"
-F 5 "Digikey" V 6725 1425 60  0001 C CNN "Vendor"
-F 6 "P3.3KECT-ND" V 6725 1425 60  0001 C CNN "Vendorpart"
-F 7 "ERJ-8GEYJ332V" V 6725 1425 60  0001 C CNN "Part"
-	1    6725 1425
+P 6700 1425
+F 0 "R13" V 6780 1425 50  0000 C CNN
+F 1 "3.3K" V 6700 1425 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 6630 1425 50  0001 C CNN
+F 3 "http://www.seielect.com/catalog/SEI-CF_CFM.pdf" H 6700 1425 50  0001 C CNN
+F 4 "Panasonic" V 6700 1425 60  0001 C CNN "Mfgr"
+F 5 "Digikey" V 6700 1425 60  0001 C CNN "Vendor"
+F 6 "P3.3KECT-ND" V 6700 1425 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-8GEYJ332V" V 6700 1425 60  0001 C CNN "Part"
+	1    6700 1425
 	0    1    1    0   
 $EndComp
 Text Notes 9025 2525 0    60   ~ 0
@@ -292,16 +292,16 @@ $EndComp
 $Comp
 L G3VM401E U6
 U 1 1 57FDCEDB
-P 6125 1525
-F 0 "U6" H 6125 1525 60  0000 C CNN
-F 1 "CPC1510G" H 6125 1775 60  0000 C CNN
-F 2 "SMD_Misc:DIP-6_SMD" H 6125 1525 60  0001 C CNN
-F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 6125 1525 60  0001 C CNN
-F 4 "Ixys" H 6125 1525 60  0001 C CNN "Mfgr"
-F 5 "CLA272CT-ND" H 6125 1525 60  0001 C CNN "Vendorpart"
-F 6 "CPC1510GSTR" H 6125 1525 60  0001 C CNN "Part"
-F 7 "Digikey" H 6125 1525 60  0001 C CNN "Vendor"
-	1    6125 1525
+P 6025 1525
+F 0 "U6" H 6025 1525 60  0000 C CNN
+F 1 "CPC1510G" H 6025 1775 60  0000 C CNN
+F 2 "SMD_Misc:DIP-6_SMD" H 6025 1525 60  0001 C CNN
+F 3 "http://www.ixysic.com/home/pdfs.nsf/0/EDF21D8D80E72DDE85256E99004F4925/$file/CPC1510.pdf" H 6025 1525 60  0001 C CNN
+F 4 "Ixys" H 6025 1525 60  0001 C CNN "Mfgr"
+F 5 "CLA272CT-ND" H 6025 1525 60  0001 C CNN "Vendorpart"
+F 6 "CPC1510GSTR" H 6025 1525 60  0001 C CNN "Part"
+F 7 "Digikey" H 6025 1525 60  0001 C CNN "Vendor"
+	1    6025 1525
 	-1   0    0    -1  
 $EndComp
 Text Notes 5775 1125 0    60   ~ 0
@@ -1052,7 +1052,7 @@ F 3 "" H 4875 7125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7350 5675 0    59   ~ 12
-Changes from 3.1:\n- Added inductor L1 to keep spikes from getting back into U2.\n- Added active current limiter Q2 and removed current adjust jumper.\nChanges from 3.2:\n- Changed 16 ohm current limit resistor R5  to 22 ohms per measurement.\n- Add another ferrite bead L2 to reduce current spike at turn-on.\n- Add 1.8V Zener to motor control circuit to pull up to 3.3V, not 5V.
+Changes from 3.1:\n- Added inductor L1 to keep spikes from getting back into U2.\n- Added active current limiter Q2 and removed current adjust jumper.\nChanges from 3.2:\n- Changed 16 ohm current limit resistor R5  to 22 ohms per measurement.\n- Add another ferrite bead L2 to reduce current spike at turn-on.\n- Add 1.8V Zener to motor control circuit to pull up to 3.3V, not 5V.\nChanges from 3.3:\n- Added resistor to pull more current through keyboard noise filter
 $Comp
 L Q_NMOS_GDS Q1
 U 1 1 59705707
@@ -1198,6 +1198,83 @@ F 3 "" H 4200 4250 50  0000 C CNN
 	1    4200 4250
 	1    0    0    -1  
 $EndComp
+$Comp
+L R R17
+U 1 1 59A78514
+P 2600 6375
+F 0 "R17" V 2680 6375 50  0000 C CNN
+F 1 "560" V 2600 6375 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206" V 2530 6375 50  0001 C CNN
+F 3 "" H 2600 6375 50  0001 C CNN
+F 4 "Panasonic" V 2600 6375 60  0001 C CNN "Mfgr"
+F 5 "Digikey" V 2600 6375 60  0001 C CNN "Vendor"
+F 6 "P560FCT-ND" V 2600 6375 60  0001 C CNN "Vendorpart"
+F 7 "ERJ-8ENF5600V" V 2600 6375 60  0001 C CNN "Part"
+	1    2600 6375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GDS Q2
+U 1 1 59ADC593
+P 8825 2000
+F 0 "Q2" H 9025 2050 50  0000 L CNN
+F 1 "DN2625" H 9025 1950 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-3_TabPin2" H 9025 2100 50  0001 C CNN
+F 3 "" H 8825 2000 50  0001 C CNN
+F 4 "DN2625K4-GCT-ND" H 8825 2000 60  0001 C CNN "Vendorpart"
+F 5 "Digikey" H 8825 2000 60  0001 C CNN "Vendor"
+F 6 "DN2625K4-G" H 8825 2000 60  0001 C CNN "Part"
+F 7 "Microchip" H 8825 2000 60  0001 C CNN "Mfgr"
+	1    8825 2000
+	1    0    0    -1  
+$EndComp
+Text Notes 8625 1775 0    39   ~ 0
+60mA current limiter
+$Comp
+L D_Zener D2
+U 1 1 59C45DA8
+P 2600 6000
+F 0 "D2" H 2725 6025 50  0000 C CNN
+F 1 "1.8V" H 2450 6000 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 2600 6000 50  0001 C CNN
+F 3 "" H 2600 6000 50  0001 C CNN
+F 4 "Digikey" H 2600 6000 60  0001 C CNN "Vendor"
+F 5 "MMSZ4678-TPMSCT-ND" H 2600 6000 60  0001 C CNN "Vendorpart"
+F 6 "MMSZ4678-TP" H 2600 6000 60  0001 C CNN "Part"
+F 7 "Micro Commercial" H 2600 6000 60  0001 C CNN "Mfgr"
+	1    2600 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L L L2
+U 1 1 59C4B034
+P 8975 3275
+F 0 "L2" V 8925 3275 50  0000 C CNN
+F 1 "1uH" V 9050 3275 50  0000 C CNN
+F 2 "SMD_Misc:Samsung-Inductor-1008" H 8975 3275 50  0001 C CNN
+F 3 "" H 8975 3275 50  0001 C CNN
+F 4 "Samsung" V 8975 3275 60  0001 C CNN "Mfgr"
+F 5 "CIG22E1R0MNE" V 8975 3275 60  0001 C CNN "Part"
+F 6 "Digikey" V 8975 3275 60  0001 C CNN "Vendor"
+F 7 "1276-6207-1-ND" V 8975 3275 60  0001 C CNN "Vendorpart"
+	1    8975 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R18
+U 1 1 5AD973F1
+P 6700 1850
+F 0 "R18" V 6780 1850 50  0000 C CNN
+F 1 "2.2K" V 6700 1850 50  0000 C CNN
+F 2 "Resistors_SMD:R_2512" V 6630 1850 50  0001 C CNN
+F 3 "" H 6700 1850 50  0001 C CNN
+F 4 "Panasonic" V 6700 1850 60  0001 C CNN "Mfgr"
+F 5 "Digikey" V 6700 1850 60  0001 C CNN "Vendor"
+F 6 "ERJ-1TYJ222U " V 6700 1850 60  0001 C CNN "Part"
+F 7 "PT2.2KXCT-ND" V 6700 1850 60  0001 C CNN "Vendorpart"
+	1    6700 1850
+	0    1    1    0   
+$EndComp
 Connection ~ 9325 4475
 Wire Wire Line
 	8175 3975 8175 4075
@@ -1205,7 +1282,7 @@ Connection ~ 8175 3975
 Wire Wire Line
 	8175 4475 8175 4375
 Wire Wire Line
-	7900 3975 8975 3975
+	8975 3975 7900 3975
 Wire Wire Line
 	8550 2825 8600 2825
 Wire Wire Line
@@ -1252,16 +1329,14 @@ Wire Wire Line
 Wire Wire Line
 	3900 2050 4000 2050
 Wire Wire Line
-	5825 1425 5725 1425
+	5725 1425 5625 1425
 Wire Wire Line
-	5725 1425 5725 1625
-Connection ~ 5725 1625
+	5625 1425 5625 1625
+Connection ~ 5625 1625
 Wire Wire Line
-	6425 1525 6575 1525
+	6325 1525 6500 1525
 Wire Wire Line
-	6575 1525 6575 1850
-Wire Wire Line
-	6425 1425 6575 1425
+	6325 1425 6550 1425
 Wire Wire Line
 	1800 5575 1800 4575
 Wire Wire Line
@@ -1296,7 +1371,7 @@ Wire Wire Line
 Wire Wire Line
 	7625 3150 7625 4475
 Wire Wire Line
-	6875 1425 7050 1425
+	6850 1425 7050 1425
 Wire Wire Line
 	7050 1325 6975 1325
 Wire Wire Line
@@ -1305,7 +1380,7 @@ Wire Wire Line
 	7050 1525 6975 1525
 Connection ~ 6975 1525
 Wire Wire Line
-	6575 1850 3900 1850
+	3900 1850 6550 1850
 Wire Wire Line
 	6975 1750 3900 1750
 Wire Wire Line
@@ -1387,7 +1462,7 @@ Wire Wire Line
 	4650 4925 4625 4925
 Connection ~ 4650 4925
 Wire Wire Line
-	4650 1625 5825 1625
+	4650 1625 5725 1625
 Wire Wire Line
 	8725 3950 8725 3975
 Connection ~ 8725 3975
@@ -1422,7 +1497,7 @@ Wire Wire Line
 	2150 5650 2300 5650
 Connection ~ 2300 5650
 Wire Wire Line
-	1000 1525 5825 1525
+	1000 1525 5725 1525
 Wire Wire Line
 	8725 4550 8725 4475
 Connection ~ 8725 4475
@@ -1563,40 +1638,10 @@ Wire Wire Line
 Wire Wire Line
 	2700 4275 2500 4275
 Connection ~ 2500 4275
-$Comp
-L R R17
-U 1 1 59A78514
-P 2600 6375
-F 0 "R17" V 2680 6375 50  0000 C CNN
-F 1 "560" V 2600 6375 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206" V 2530 6375 50  0001 C CNN
-F 3 "" H 2600 6375 50  0001 C CNN
-F 4 "Panasonic" V 2600 6375 60  0001 C CNN "Mfgr"
-F 5 "Digikey" V 2600 6375 60  0001 C CNN "Vendor"
-F 6 "P560FCT-ND" V 2600 6375 60  0001 C CNN "Vendorpart"
-F 7 "ERJ-8ENF5600V" V 2600 6375 60  0001 C CNN "Part"
-	1    2600 6375
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2975 3775 2975 3575
 Wire Wire Line
 	2975 3575 2900 3575
-$Comp
-L Q_NMOS_GDS Q2
-U 1 1 59ADC593
-P 8825 2000
-F 0 "Q2" H 9025 2050 50  0000 L CNN
-F 1 "DN2625" H 9025 1950 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:TO-252-3_TabPin2" H 9025 2100 50  0001 C CNN
-F 3 "" H 8825 2000 50  0001 C CNN
-F 4 "DN2625K4-GCT-ND" H 8825 2000 60  0001 C CNN "Vendorpart"
-F 5 "Digikey" H 8825 2000 60  0001 C CNN "Vendor"
-F 6 "DN2625K4-G" H 8825 2000 60  0001 C CNN "Part"
-F 7 "Microchip" H 8825 2000 60  0001 C CNN "Mfgr"
-	1    8825 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8925 2225 8925 2200
 Wire Wire Line
@@ -1612,52 +1657,28 @@ Wire Wire Line
 Connection ~ 8925 2575
 Wire Wire Line
 	8550 1800 8925 1800
-Text Notes 8625 1775 0    39   ~ 0
-60mA current limiter
 Wire Wire Line
 	5175 1950 3900 1950
 Connection ~ 4650 1950
-$Comp
-L D_Zener D2
-U 1 1 59C45DA8
-P 2600 6000
-F 0 "D2" H 2725 6025 50  0000 C CNN
-F 1 "1.8V" H 2450 6000 50  0000 C CNN
-F 2 "Diodes_SMD:D_SOD-123" H 2600 6000 50  0001 C CNN
-F 3 "" H 2600 6000 50  0001 C CNN
-F 4 "Digikey" H 2600 6000 60  0001 C CNN "Vendor"
-F 5 "MMSZ4678-TPMSCT-ND" H 2600 6000 60  0001 C CNN "Vendorpart"
-F 6 "MMSZ4678-TP" H 2600 6000 60  0001 C CNN "Part"
-F 7 "Micro Commercial" H 2600 6000 60  0001 C CNN "Mfgr"
-	1    2600 6000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2600 6225 2600 6150
 Wire Wire Line
 	2600 5850 2600 4575
-$Comp
-L L L2
-U 1 1 59C4B034
-P 8975 3275
-F 0 "L2" V 8925 3275 50  0000 C CNN
-F 1 "1uH" V 9050 3275 50  0000 C CNN
-F 2 "SMD_Misc:Samsung-Inductor-1008" H 8975 3275 50  0001 C CNN
-F 3 "" H 8975 3275 50  0001 C CNN
-F 4 "Samsung" V 8975 3275 60  0001 C CNN "Mfgr"
-F 5 "CIG22E1R0MNE" V 8975 3275 60  0001 C CNN "Part"
-F 6 "Digikey" V 8975 3275 60  0001 C CNN "Vendor"
-F 7 "1276-6207-1-ND" V 8975 3275 60  0001 C CNN "Vendorpart"
-	1    8975 3275
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7700 3600 8550 3600
 Wire Wire Line
-	8975 3975 8975 3425
+	8975 3425 8975 3975
 Wire Wire Line
 	8850 3600 8975 3600
 Connection ~ 8975 3600
 Wire Wire Line
 	8975 3025 8975 3125
+Wire Wire Line
+	6900 1850 6900 1425
+Wire Wire Line
+	6850 1850 6900 1850
+Connection ~ 6900 1425
+Wire Wire Line
+	6500 1525 6500 1850
+Connection ~ 6500 1850
 $EndSCHEMATC
