@@ -215,9 +215,11 @@ SW2 is a BREAK button, interrupting the keyboard circuit.  This works even if no
 
 D13 is a 3-high set of green LEDs.
 
- Top - Power ON
+ Bottom - Power ON
+ 
  Middle - Motor ON
- Bottom - Data output
+ 
+ Top - Data output
  
 ## Computer interface
 
