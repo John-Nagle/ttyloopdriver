@@ -16,6 +16,7 @@ import xml.etree.ElementTree
 
 from collections import defaultdict
 
+
 #
 #   Main program
 #
@@ -145,7 +146,6 @@ class Converter(object):
         """
         Assemble output fields into a list
         """
-        s = ''  # empty line
         outfields = []  # output fields
         for fname in self.fieldlist:  # for all fields
             if fname in fieldvals:
