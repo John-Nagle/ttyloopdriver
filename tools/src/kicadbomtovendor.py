@@ -31,7 +31,7 @@ def main():
     splitcol = args.split  # split on this arg
     if splitcol is not None:
         splitcol = splitcol.upper()  # upper case column name
-        print('Split on column "%s".' % (splitcol,))  # split on this column
+        print('Split on column "{}".'.format(splitcol))  # split on this column
     #   Accumulate select keys
     if args.select is not None:
         for select in args.select:
@@ -47,7 +47,7 @@ def main():
             selects[k].add(v)  # add value to set for this key
         print("Selection rules: ")
         for (k, sset) in selects.items():
-            print('  Select if %s is in %s.' % (k, list(sset)))
+            print('  Select if {} is in {}.'.format(k, list(sset)))
     #   Process all files on command line
     for infname in args.files:
         print(infname)
@@ -121,21 +121,21 @@ class Converter(object):
             footprint = getattr(comp.find("footprint"), "text", "")
             value = comp.find("value").text
         except (ValueError, AttributeError) as message:
-            print("Required field missing from %s" % (comp.attrib))
+            print("Required field missing from {}".format(comp.attrib))
             exit(1)
         fieldvals["REF"] = ref
         fieldvals["FOOTPRINT"] = footprint
         fieldvals["VALUE"] = value
         fieldvals["QUANTITY"] = "1"  # one item at this point
         if self.verbose:
-            print("%s" % (fieldvals,))
+            print("{}".format(fieldvals))
         #   Get user-defined fields
         for field in comp.iter("field"):
             name = field.get("name")
             name = name.upper()
             fieldvals[name] = field.text
         if self.verbose:
-            print("%s" % (fieldvals,))
+            print("{}".format(fieldvals))
         if self.selectitem(fieldvals):  # if we want this item
             return (self.assembleline(fieldvals))  # return list of fields
         return (None)
@@ -206,7 +206,7 @@ class Converter(object):
             s = ",".join(row)
             outf.write(s + "\n")  # print to file
         outf.close()  # done
-        print('Created file "%s".' % (outfname), )  # report
+        print('Created file "{}".'.format(outfname))  # report
 
     def splitrows(self, splitcol, rows):
         """
@@ -217,7 +217,7 @@ class Converter(object):
         rowsets = {}  # col value, [rows]
         splitpos = self.fieldlist.index(splitcol)  # get index of split column
         if splitpos is None:  # must find
-            print('Column "%s" from --split not found in BOM' % (splitcol,))
+            print('Column "{}" from --split not found in BOM'.format(splitcol))
             exit(1)
         for row in rows:
             k = row[splitpos]  # get split column value
@@ -239,7 +239,7 @@ class Converter(object):
         for comp in root.iter("comp"):
             self.handlecomp1(comp)
         if self.verbose:
-            print("Field names found: %s" % (self.fieldset))
+            print("Field names found: {}".format(self.fieldset))
         self.fieldlist = list(self.fieldset)
         self.fieldlist.sort()  # sort in place
         #   Pass 2 - accumulate rows
