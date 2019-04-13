@@ -201,12 +201,11 @@ class Converter(object):
         Output one file containing given rows
         """
         heading = ",".join(self.fieldlist)  # heading line
-        outf = open(outfname, "w")  # open output file
-        outf.write(heading + "\n")  # heading line
-        for row in rows:  # output all rows
-            s = ",".join(row)
-            outf.write(s + "\n")  # print to file
-        outf.close()  # done
+        with open(outfname, "w") as outf:  # open output file
+            outf.write(heading + "\n")  # heading line
+            for row in rows:  # output all rows
+                s = ",".join(row)
+                outf.write(s + "\n")  # print to file
         print('Created file "{}".'.format(outfname))  # report
 
     def splitrows(self, splitcol, rows):
