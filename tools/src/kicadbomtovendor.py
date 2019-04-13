@@ -86,7 +86,7 @@ class Converter(object):
         """
         Clean up a string to avoid CSV format problems
         """
-        return (re.sub(r'\s+|,', ' ', s).strip())  # remove tabs, newlines, and commas
+        return re.sub(r'\s+|,', ' ', s).strip()  # remove tabs, newlines, and commas
 
     def handlecomp1(self, comp):
         """
@@ -106,10 +106,10 @@ class Converter(object):
         for k in self.selects:  # for all select rules
             if k not in fieldvals:  # if not found, fail, unless missing allowed
                 if "" not in self.selects[k]:  # if "--select FOO=" allow
-                    return (False)  # fails
+                    return False  # fails
             if fieldvals[k].upper() not in self.selects[k]:  # if no find
-                return (False)
-        return (True)  # no select succeeded
+                return False
+        return True  # no select succeeded
 
     def handlecomp2(self, comp):
         """
@@ -137,8 +137,8 @@ class Converter(object):
         if self.verbose:
             print("{}".format(fieldvals))
         if self.selectitem(fieldvals):  # if we want this item
-            return (self.assembleline(fieldvals))  # return list of fields
-        return (None)
+            return self.assembleline(fieldvals)  # return list of fields
+        return None
 
     def assembleline(self, fieldvals):
         """
@@ -152,20 +152,20 @@ class Converter(object):
             else:
                 val = ""  # empty string otherwise
             outfields.append(self.cleanstr(val))  # remove things not desirable in CSV files
-        return (outfields)  # ordered list of fields
+        return outfields  # ordered list of fields
 
     def issamepart(self, rowa, rowb):
         """
         True if both lists represent the same part
         """
         if rowa is None or rowb is None:
-            return (False)  # None doesn't match
+            return False  # None doesn't match
         for i in range(len(self.fieldlist)):  # across 3 lists in sync
             if self.fieldlist[i] in self.NOTDIFFERENTPART:  # some fields, such as REF, don't mean a new part
                 continue
             if rowa[i] != rowb[i]:
-                return (False)
-        return (True)  # all important fields matched
+                return False
+        return True  # all important fields matched
 
     def additems(self, rows):
         """
@@ -193,7 +193,7 @@ class Converter(object):
             prevrow[quanpos] = str(quan)  # do last item
             prevrow[refpos] = " ".join(refs)  # set list of refs
             outrows.append(prevrow)  # output stored row
-        return (outrows)  # return summed rows
+        return outrows  # return summed rows
 
     def outputfile(self, rows, outfname):
         """
@@ -227,7 +227,7 @@ class Converter(object):
             if k not in rowsets:
                 rowsets[k] = []  # add new output file
             rowsets[k].append(row)  # add this row to appropriate output file
-        return (rowsets)  # returns col value, [rows]
+        return rowsets  # returns col value, [rows]
 
     def convert(self, infname, outfname):
         """
