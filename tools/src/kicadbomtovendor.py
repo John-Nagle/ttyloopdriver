@@ -11,6 +11,7 @@
 #
 import argparse
 import re
+import sys
 import xml.etree.ElementTree
 
 
@@ -39,7 +40,7 @@ def main():
             if len(parts) != 2:  # must be COLUMN=VALUE
                 print('"--select COLUMN=VALUE" required.')
                 parser.print_help()
-                exit(1)
+                sys.exit(1)
             k = parts[0].strip().upper()
             v = parts[1].strip().upper()  # save selects as upper case
             if k not in selects:
@@ -56,11 +57,11 @@ def main():
         except ValueError:
             print("Input must be a .xml file.")
             parser.print_help()
-            exit(1)
+            sys.exit(1)
         if suffix.lower() != "xml":  # must be XML
             print("Input must be a .xml file.")
             parser.print_help()
-            exit(1)
+            sys.exit(1)
         cv = Converter(selects, splitcol, verbose)
         cv.convert(infname, outfname)
 
@@ -122,7 +123,7 @@ class Converter(object):
             value = comp.find("value").text
         except (ValueError, AttributeError) as message:
             print("Required field missing from {}".format(comp.attrib))
-            exit(1)
+            sys.exit(1)
         fieldvals["REF"] = ref
         fieldvals["FOOTPRINT"] = footprint
         fieldvals["VALUE"] = value
@@ -218,7 +219,7 @@ class Converter(object):
         splitpos = self.fieldlist.index(splitcol)  # get index of split column
         if splitpos is None:  # must find
             print('Column "{}" from --split not found in BOM'.format(splitcol))
-            exit(1)
+            sys.exit(1)
         for row in rows:
             k = row[splitpos]  # get split column value
             if k is None or k == "":
