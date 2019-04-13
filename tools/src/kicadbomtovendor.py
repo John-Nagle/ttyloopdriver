@@ -54,12 +54,7 @@ def main():
     #   Process all files on command line
     for infname in args.files:
         print(infname)
-        try:
-            outfname, suffix = os.path.splitext(infname)  # remove suffix
-        except ValueError:
-            print("Input must be a .xml file.")
-            parser.print_help()
-            sys.exit(1)
+        outfname, suffix = os.path.splitext(infname)  # remove suffix
         if suffix.lower() != "xml":  # must be XML
             print("Input must be a .xml file.")
             parser.print_help()
