@@ -10,11 +10,10 @@
 #
 #
 import argparse
+import os
 import re
 import sys
 import xml.etree.ElementTree
-import os
-
 from collections import defaultdict
 
 
