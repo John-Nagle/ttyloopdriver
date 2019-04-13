@@ -251,7 +251,7 @@ class Converter(object):
         rows = self.additems(rows)  # combine items
         #   Pass 4 - output rows
         if self.splitcol is None:  # all in one file
-            self.outputfile(outfname + self.OUTPUTSUFFIX)  # one file
+            self.outputfile(rows, outfname + self.OUTPUTSUFFIX)  # one file
         else:  # one file per column value
             rowsets = self.splitrows(self.splitcol, rows)
             for (colval, rows) in rowsets.items():  # output multiple files
