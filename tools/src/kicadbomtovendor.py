@@ -13,6 +13,7 @@ import argparse
 import re
 import sys
 import xml.etree.ElementTree
+import os
 
 from collections import defaultdict
 
@@ -48,13 +49,13 @@ def main():
 
             selects[k].add(v)  # add value to set for this key
         print("Selection rules: ")
-        for (k, sset) in selects.items():
+        for k, sset in selects.items():
             print('  Select if {} is in {}.'.format(k, list(sset)))
     #   Process all files on command line
     for infname in args.files:
         print(infname)
         try:
-            (outfname, suffix) = infname.rsplit(".", 1)  # remove suffix
+            outfname, suffix = os.path.splitext(infname)  # remove suffix
         except ValueError:
             print("Input must be a .xml file.")
             parser.print_help()
@@ -254,7 +255,7 @@ class Converter(object):
             self.outputfile(rows, outfname + self.OUTPUTSUFFIX)  # one file
         else:  # one file per column value
             rowsets = self.splitrows(self.splitcol, rows)
-            for (colval, rows) in rowsets.items():  # output multiple files
+            for colval, rows in rowsets.items():  # output multiple files
                 self.outputfile(rows, "{}-{}{}".format(outfname, colval, self.OUTPUTSUFFIX))
 
 
