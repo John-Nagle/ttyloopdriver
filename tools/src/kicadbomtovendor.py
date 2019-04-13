@@ -14,6 +14,7 @@ import re
 import sys
 import xml.etree.ElementTree
 
+from collections import defaultdict
 
 #
 #   Main program
@@ -28,7 +29,7 @@ def main():
     args = parser.parse_args()  # parse command line
     print(args)
     verbose = args.verbose
-    selects = {}  # dict of (k, set(v))
+    selects = defaultdict(set)  # dict of (k, set(v))
     splitcol = args.split  # split on this arg
     if splitcol is not None:
         splitcol = splitcol.upper()  # upper case column name
@@ -43,8 +44,7 @@ def main():
                 sys.exit(1)
             k = parts[0].strip().upper()
             v = parts[1].strip().upper()  # save selects as upper case
-            if k not in selects:
-                selects[k] = set()  # need set for this key
+
             selects[k].add(v)  # add value to set for this key
         print("Selection rules: ")
         for (k, sset) in selects.items():
@@ -215,7 +215,7 @@ class Converter(object):
 
         Usually used to break up a BOM by vendor
         """
-        rowsets = {}  # col value, [rows]
+        rowsets = defaultdict(list)  # col value, [rows]
         splitpos = self.fieldlist.index(splitcol)  # get index of split column
         if splitpos is None:  # must find
             print('Column "{}" from --split not found in BOM'.format(splitcol))
@@ -225,8 +225,6 @@ class Converter(object):
             if k is None or k == "":
                 k = "NONE"  # use NONE if no value available
             k = k.upper()  # always in upper case
-            if k not in rowsets:
-                rowsets[k] = []  # add new output file
             rowsets[k].append(row)  # add this row to appropriate output file
         return rowsets  # returns col value, [rows]
 
