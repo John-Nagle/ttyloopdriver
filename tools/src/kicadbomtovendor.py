@@ -187,7 +187,7 @@ class Converter(object):
                     quan = 0
                     refs = []
             prevrow = row  # process new row
-            quan = quan + int(row[quanpos])  # add this quantity
+            quan += int(row[quanpos])  # add this quantity
             refs.append(row[refpos])  # add to list of refs
 
         if prevrow is not None:  # end of file
