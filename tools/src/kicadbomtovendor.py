@@ -255,7 +255,7 @@ class Converter(object):
         else:  # one file per column value
             rowsets = self.splitrows(self.splitcol, rows)
             for (colval, rows) in rowsets.items():  # output multiple files
-                self.outputfile(rows, outfname + "-" + colval + self.OUTPUTSUFFIX)
+                self.outputfile(rows, "{}-{}{}".format(outfname, colval, self.OUTPUTSUFFIX))
 
 
 if __name__ == "__main__":
