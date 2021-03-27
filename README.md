@@ -277,13 +277,18 @@ they're all for current sensing.  The others aren't critical and 5% resistors wi
 As of March 2021, the SiLabs CP2102 USB to serial part is "not recommended for new designs".
 The "drop in replacement" CP2012N **will not work.** It will not run at speeds below 300 baud.
 
-From SiLabs' porting guide: 
+From [SiLabs' porting guide](https://www.silabs.com/documents/public/application-notes/an976-cp2102-3-4-9-to-cp2102n-porting-guide.pdf): 
 *"Baud Rate Aliasing is a feature that allows a device to use a pre-defined baud rate in place of a baud rate that is requested by the user.
 For example, a device using Baud Rate Aliasing can be programmed to use a baud rate of 45 bps whenever 300 bps is requested.
 Baud Rate Aliasing is not supported on the CP2102N.
 If Baud Rate Aliasing is used in a CP2102/9 design, the CP2102N is incompatible as a replacement."*
 
-Ref: https://www.silabs.com/documents/public/application-notes/an976-cp2102-3-4-9-to-cp2102n-porting-guide.pdf
+It's become difficult to find serial devices that will run at 45 baud.
+
+### Compatibiilty with Teletype model 15 machines with noise suppression capacitors.
+Some Model 15 teletypes have an RF noise suppression capacitor across the keyboard.
+The capacitor used is large enough to cause typing errors with this board, because the keyboard circuit doesn't draw
+enough power to discharge the capacitor. It may be necessary to disconnect the noise suppression option.
 
 ### Soldering
 
